@@ -1,6 +1,6 @@
 # ADui Skills Pack
 
-[简体中文](./README.md) | [English](./README.en.md)
+[简体中文](./README.md) | [English](./README.en.md) | [Wiki](https://github.com/adui-studio/adui-skills/wiki)
 
 [![版本](https://img.shields.io/github/v/release/adui-studio/adui-skills?include_prereleases&sort=semver)](https://github.com/adui-studio/adui-skills/releases)
 [![校验](https://github.com/adui-studio/adui-skills/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/adui-studio/adui-skills/actions/workflows/validate.yml)
@@ -155,7 +155,7 @@ Three.js / Babylon.js / CesiumJS / WebGL2 / WebGPU
 统一继承 3d Profile；按真实项目分别启用 threejs / babylonjs / cesiumjs / webgl2 / webgpu
 ```
 
-完整使用方法见 [docs/usage.md](./docs/usage.md)。
+完整使用方法见 [docs/usage.md](https://github.com/adui-studio/adui-skills/wiki/Usage)。
 
 ## ADui 功能开发流程
 
@@ -177,7 +177,7 @@ Review Git Diff
 按固定交付契约输出
 ```
 
-默认不会自动执行 `commit`、`push`、`merge` 或 `release`，除非用户明确要求。完整说明见 [docs/development.md](./docs/development.md)。
+默认不会自动执行 `commit`、`push`、`merge` 或 `release`，除非用户明确要求。完整说明见 [docs/development.md](https://github.com/adui-studio/adui-skills/wiki/Development)。
 
 
 ## Vite+ 与 NestJS + Prisma 专项能力
@@ -187,14 +187,14 @@ Review Git Diff
 
 Stack Router 会在同时检测到 NestJS 与 Prisma 时选择 `nestjs-prisma` 组合 Profile，避免普通 NestJS 或非 NestJS Prisma 项目误加载该 Skill。
 
-详细说明见 [Vite+ 工程规范](./docs/viteplus.md) 与 [NestJS + Prisma 集成规范](./docs/nestjs-prisma.md)。
+详细说明见 [Vite+ 工程规范](https://github.com/adui-studio/adui-skills/wiki/VitePlus) 与 [NestJS + Prisma 集成规范](https://github.com/adui-studio/adui-skills/wiki/NestJS-Prisma)。
 
 ## 3D / GPU 架构与 WebGL2
 
 - `adui-3d-architecture`：统一 Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU 的选型、坐标体系、多引擎边界、性能与资源生命周期。
 - `adui-webgl2`：原生 WebGL2 / GLSL ES 3.0 的 Pipeline、Shader、FBO、VAO、资源释放、Context Lost 与性能规范。
 
-所有 3D/GPU 专项 Profile 统一继承 `3d` Profile；只有 `webgl2` Profile 会额外加载 `adui-webgl2`。详细说明见 [3D / GPU 架构](./docs/3d-architecture.md) 与 [WebGL2 工程规范](./docs/webgl2.md)。
+所有 3D/GPU 专项 Profile 统一继承 `3d` Profile；只有 `webgl2` Profile 会额外加载 `adui-webgl2`。详细说明见 [3D / GPU 架构](https://github.com/adui-studio/adui-skills/wiki/3D-Architecture) 与 [WebGL2 工程规范](https://github.com/adui-studio/adui-skills/wiki/WebGL2)。
 
 ## 第三方 Skill 更新机制
 
@@ -236,7 +236,7 @@ npm run lock:init
 
 每周一 09:17（Asia/Shanghai）GitHub Actions 会自动检查上游变化；有实际变更时创建 PR，但**永远不会自动合并**。
 
-维护说明见 [docs/maintenance.md](./docs/maintenance.md)。
+维护说明见 [docs/maintenance.md](https://github.com/adui-studio/adui-skills/wiki/Maintenance)。
 
 ## 当前数据
 
@@ -248,23 +248,23 @@ npm run lock:init
 
 ## 文档
 
-- [使用方法](./docs/usage.md)
-- [功能开发规范](./docs/development.md)
-- [Vite+ 工程规范](./docs/viteplus.md)
-- [NestJS + Prisma 集成规范](./docs/nestjs-prisma.md)
-- [3D / GPU 架构](./docs/3d-architecture.md)
-- [WebGL2 工程规范](./docs/webgl2.md)
-- [Tauri v2 工程规范](./docs/tauri-v2.md)
-- [Profile 一键安装器](./docs/profile-installer.md)
-- [维护与每周更新](./docs/maintenance.md)
-- [架构说明](./docs/architecture.md)
-- [添加 Skill](./docs/adding-skills.md)
-- [安全规范](./docs/security.md)
-- [贡献指南](./CONTRIBUTING.md)
-- [发布流程](./docs/releasing.md)
-- [安全策略](./SECURITY.md)
+- [使用方法](https://github.com/adui-studio/adui-skills/wiki/Usage)
+- [功能开发规范](https://github.com/adui-studio/adui-skills/wiki/Development)
+- [Vite+ 工程规范](https://github.com/adui-studio/adui-skills/wiki/VitePlus)
+- [NestJS + Prisma 集成规范](https://github.com/adui-studio/adui-skills/wiki/NestJS-Prisma)
+- [3D / GPU 架构](https://github.com/adui-studio/adui-skills/wiki/3D-Architecture)
+- [WebGL2 工程规范](https://github.com/adui-studio/adui-skills/wiki/WebGL2)
+- [Tauri v2 工程规范](https://github.com/adui-studio/adui-skills/wiki/Tauri-v2)
+- [Profile 一键安装器](https://github.com/adui-studio/adui-skills/wiki/Profile-Installer)
+- [维护与每周更新](https://github.com/adui-studio/adui-skills/wiki/Maintenance)
+- [架构说明](https://github.com/adui-studio/adui-skills/wiki/Architecture)
+- [添加 Skill](https://github.com/adui-studio/adui-skills/wiki/Adding-Skills)
+- [安全规范](https://github.com/adui-studio/adui-skills/wiki/Security)
+- [贡献指南](https://github.com/adui-studio/adui-skills/wiki/Contributing)
+- [发布流程](https://github.com/adui-studio/adui-skills/wiki/Releasing)
+- [安全策略](https://github.com/adui-studio/adui-skills/wiki/Security-Policy)
 
-英文兜底：见 [README.en.md](./README.en.md) 及各文档对应的 `.en.md` 文件。
+英文兜底：见 [README.en.md](./README.en.md)；完整文档统一从 [GitHub Wiki](https://github.com/adui-studio/adui-skills/wiki) 阅读。
 
 ## Profile 一键安装
 
@@ -284,15 +284,15 @@ npm run profile:install -- vue unocss git --agent codex --pm pnpm
 npm run profile:auto-install -- D:\Projects\my-app --agent codex --dry-run
 ```
 
-即使命令从 ADui Skills Pack 仓库通过 npm 启动，`auto-install` 也会按目标项目识别 pnpm/yarn/bun，并在目标项目目录执行安装。第一次建议使用 `--dry-run`。实际安装必须显式指定 `--agent` 或 `--all-agents`。详见 [Profile 一键安装器](./docs/profile-installer.md)。
+即使命令从 ADui Skills Pack 仓库通过 npm 启动，`auto-install` 也会按目标项目识别 pnpm/yarn/bun，并在目标项目目录执行安装。第一次建议使用 `--dry-run`。实际安装必须显式指定 `--agent` 或 `--all-agents`。详见 [Profile 一键安装器](https://github.com/adui-studio/adui-skills/wiki/Profile-Installer)。
 
 ## Tauri v2
 
-Tauri Profile 现已包含 `adui-tauri-v2`，用于统一 IPC、State、Capability/Permission、插件、Shell/Sidecar、SQL、Updater 与构建发布规范。详见 [Tauri v2 工程规范](./docs/tauri-v2.md)。
+Tauri Profile 现已包含 `adui-tauri-v2`，用于统一 IPC、State、Capability/Permission、插件、Shell/Sidecar、SQL、Updater 与构建发布规范。详见 [Tauri v2 工程规范](https://github.com/adui-studio/adui-skills/wiki/Tauri-v2)。
 
 
 ## 发布与 skills.sh Pack
 
-GitHub Release 由 `v*` 标签触发，发布前会强制运行校验、测试和 Folder Hash Lock 完整性检查。完整流程见 [发布流程](./docs/releasing.md)。
+GitHub Release 由 `v*` 标签触发，发布前会强制运行校验、测试和 Folder Hash Lock 完整性检查。完整流程见 [发布流程](https://github.com/adui-studio/adui-skills/wiki/Releasing)。
 
 skills.sh Pack 需要登录 Vercel 后在网页创建。Pack URL 真实生成之前不会在仓库中伪造 `<pack-id>`。官方 Pack 创建完成后，可使用一条 `npx skills add https://skills.sh/p/<pack-id>` 安装 Pack。

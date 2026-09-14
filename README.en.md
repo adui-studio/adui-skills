@@ -1,6 +1,6 @@
 # ADui Skills Pack
 
-[简体中文](./README.md) | [English](./README.en.md)
+[简体中文](./README.md) | [English](./README.en.md) | [Wiki](https://github.com/adui-studio/adui-skills/wiki/Home-EN)
 
 [![Release](https://img.shields.io/github/v/release/adui-studio/adui-skills?include_prereleases&sort=semver)](https://github.com/adui-studio/adui-skills/releases)
 [![Validation](https://github.com/adui-studio/adui-skills/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/adui-studio/adui-skills/actions/workflows/validate.yml)
@@ -58,7 +58,7 @@ npm run updates:apply
 
 ## ADui feature development workflow
 
-`adui-feature-dev` standardizes feature work, bug fixes and refactoring into requirement understanding, minimal changes, quality gates, diff review and explicit delivery. Chinese documentation is canonical; see [docs/development.en.md](./docs/development.en.md) for the English fallback.
+`adui-feature-dev` standardizes feature work, bug fixes and refactoring into requirement understanding, minimal changes, quality gates, diff review and explicit delivery. Chinese documentation is canonical; see [docs/development.en.md](https://github.com/adui-studio/adui-skills/wiki/Development-EN) for the English fallback.
 
 
 ## Specialized Vite+ and NestJS + Prisma skills
@@ -90,33 +90,33 @@ A single unavailable third-party repository is reported as a warning and does no
 
 ## Documentation
 
-- [Usage](./docs/usage.en.md)
-- [Feature Development](./docs/development.en.md)
-- [Vite+](./docs/viteplus.en.md)
-- [NestJS + Prisma](./docs/nestjs-prisma.en.md)
-- [3D / GPU Architecture](./docs/3d-architecture.en.md)
-- [WebGL2](./docs/webgl2.en.md)
-- [Tauri v2](./docs/tauri-v2.en.md)
-- [Profile Installer](./docs/profile-installer.en.md)
-- [Maintenance](./docs/maintenance.en.md)
-- [Architecture](./docs/architecture.en.md)
-- [Adding Skills](./docs/adding-skills.en.md)
-- [Security](./docs/security.en.md)
-- [Contributing](./CONTRIBUTING.en.md)
-- [Release Process](./docs/releasing.en.md)
-- [Security Policy](./SECURITY.en.md)
+- [Usage](https://github.com/adui-studio/adui-skills/wiki/Usage-EN)
+- [Feature Development](https://github.com/adui-studio/adui-skills/wiki/Development-EN)
+- [Vite+](https://github.com/adui-studio/adui-skills/wiki/VitePlus-EN)
+- [NestJS + Prisma](https://github.com/adui-studio/adui-skills/wiki/NestJS-Prisma-EN)
+- [3D / GPU Architecture](https://github.com/adui-studio/adui-skills/wiki/3D-Architecture-EN)
+- [WebGL2](https://github.com/adui-studio/adui-skills/wiki/WebGL2-EN)
+- [Tauri v2](https://github.com/adui-studio/adui-skills/wiki/Tauri-v2-EN)
+- [Profile Installer](https://github.com/adui-studio/adui-skills/wiki/Profile-Installer-EN)
+- [Maintenance](https://github.com/adui-studio/adui-skills/wiki/Maintenance-EN)
+- [Architecture](https://github.com/adui-studio/adui-skills/wiki/Architecture-EN)
+- [Adding Skills](https://github.com/adui-studio/adui-skills/wiki/Adding-Skills-EN)
+- [Security](https://github.com/adui-studio/adui-skills/wiki/Security-EN)
+- [Contributing](https://github.com/adui-studio/adui-skills/wiki/Contributing-EN)
+- [Release Process](https://github.com/adui-studio/adui-skills/wiki/Releasing-EN)
+- [Security Policy](https://github.com/adui-studio/adui-skills/wiki/Security-Policy-EN)
 
-For the canonical documentation, use the Chinese files without the `.en` suffix.
+For documentation browsing, use the [GitHub Wiki](https://github.com/adui-studio/adui-skills/wiki/Home-EN). Chinese remains the canonical source language.
 
 ## Profile Installer
 
-Profiles can now be resolved and installed through the ADui Profile Manager with npm, pnpm, Yarn, or Bun. Package-manager selection follows `--pm` → `package.json#packageManager` → lockfiles → current execution environment → npm fallback. `auto-install` detects and installs inside the target project instead of assuming the package manager used to launch ADui. Actual installs still require an explicit agent target. See [Profile Installer](./docs/profile-installer.en.md).
+Profiles can now be resolved and installed through the ADui Profile Manager with npm, pnpm, Yarn, or Bun. Package-manager selection follows `--pm` → `package.json#packageManager` → lockfiles → current execution environment → npm fallback. `auto-install` detects and installs inside the target project instead of assuming the package manager used to launch ADui. Actual installs still require an explicit agent target. See [Profile Installer](https://github.com/adui-studio/adui-skills/wiki/Profile-Installer-EN).
 
 ## Tauri v2
 
-The Tauri profile now includes `adui-tauri-v2` for IPC, state, capabilities, permissions, plugins, sidecars, updater, and packaging conventions. See [Tauri v2 Engineering](./docs/tauri-v2.en.md).
+The Tauri profile now includes `adui-tauri-v2` for IPC, state, capabilities, permissions, plugins, sidecars, updater, and packaging conventions. See [Tauri v2 Engineering](https://github.com/adui-studio/adui-skills/wiki/Tauri-v2-EN).
 
 
 ## Release and skills.sh Pack
 
-GitHub releases are driven by `v*` tags and require validation, tests, and a complete Folder Hash lock. See [Release Process](./docs/releasing.en.md). The skills.sh Pack must be created after Vercel sign-in; the repository does not publish a fake pack ID before the real URL exists.
+GitHub releases are driven by `v*` tags and require validation, tests, and a complete Folder Hash lock. See [Release Process](https://github.com/adui-studio/adui-skills/wiki/Releasing-EN). The skills.sh Pack must be created after Vercel sign-in; the repository does not publish a fake pack ID before the real URL exists.
