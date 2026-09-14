@@ -93,6 +93,18 @@ NestJS + Prisma 集成：
 npx skills add https://github.com/adui-studio/adui-skills --skill adui-nestjs-prisma
 ```
 
+3D / GPU 架构决策：
+
+```bash
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-3d-architecture
+```
+
+原生 WebGL2：
+
+```bash
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-webgl2
+```
+
 
 ### 4. 安装 Registry 中的第三方 Skill
 
@@ -126,8 +138,8 @@ core + web + toolchain + react + tailwind + git
 NestJS + Prisma + PostgreSQL
 core + nestjs-prisma + postgresql + git
 
-Three.js / Babylon.js / CesiumJS
-按真实项目分别启用 threejs / babylonjs / cesiumjs
+Three.js / Babylon.js / CesiumJS / WebGL2 / WebGPU
+统一继承 3d Profile；按真实项目分别启用 threejs / babylonjs / cesiumjs / webgl2 / webgpu
 ```
 
 完整使用方法见 [docs/usage.md](./docs/usage.md)。
@@ -163,6 +175,13 @@ Review Git Diff
 Stack Router 会在同时检测到 NestJS 与 Prisma 时选择 `nestjs-prisma` 组合 Profile，避免普通 NestJS 或非 NestJS Prisma 项目误加载该 Skill。
 
 详细说明见 [Vite+ 工程规范](./docs/viteplus.md) 与 [NestJS + Prisma 集成规范](./docs/nestjs-prisma.md)。
+
+## 3D / GPU 架构与 WebGL2
+
+- `adui-3d-architecture`：统一 Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU 的选型、坐标体系、多引擎边界、性能与资源生命周期。
+- `adui-webgl2`：原生 WebGL2 / GLSL ES 3.0 的 Pipeline、Shader、FBO、VAO、资源释放、Context Lost 与性能规范。
+
+所有 3D/GPU 专项 Profile 统一继承 `3d` Profile；只有 `webgl2` Profile 会额外加载 `adui-webgl2`。详细说明见 [3D / GPU 架构](./docs/3d-architecture.md) 与 [WebGL2 工程规范](./docs/webgl2.md)。
 
 ## 第三方 Skill 更新机制
 
@@ -210,8 +229,8 @@ npm run lock:init
 
 - Registry：84 条记录
 - 启用并参与跟踪：83 个第三方 Skill
-- Profiles：28 个
-- ADui 自研核心 Skills：4 个（`adui-stack-router`、`adui-feature-dev`、`adui-viteplus`、`adui-nestjs-prisma`）
+- Profiles：29 个
+- ADui 自研核心 Skills：6 个（`adui-stack-router`、`adui-feature-dev`、`adui-viteplus`、`adui-nestjs-prisma`、`adui-3d-architecture`、`adui-webgl2`）
 - 已知停用项：`database-schema-design`（上游当前不可稳定访问）
 
 ## 文档
@@ -220,6 +239,8 @@ npm run lock:init
 - [功能开发规范](./docs/development.md)
 - [Vite+ 工程规范](./docs/viteplus.md)
 - [NestJS + Prisma 集成规范](./docs/nestjs-prisma.md)
+- [3D / GPU 架构](./docs/3d-architecture.md)
+- [WebGL2 工程规范](./docs/webgl2.md)
 - [维护与每周更新](./docs/maintenance.md)
 - [架构说明](./docs/architecture.md)
 - [添加 Skill](./docs/adding-skills.md)

@@ -11,11 +11,12 @@ core
 │   ├── react ── toolchain
 │   ├── tailwind
 │   ├── unocss
-│   ├── threejs ── toolchain
-│   ├── babylonjs ── toolchain
-│   ├── cesiumjs ── toolchain
-│   ├── webgl2 ── toolchain
-│   └── webgpu ── toolchain
+│   ├── 3d
+│   │   ├── threejs ── toolchain
+│   │   ├── babylonjs ── toolchain
+│   │   ├── cesiumjs ── toolchain
+│   │   ├── webgl2 ── toolchain
+│   │   └── webgpu ── toolchain
 ├── toolchain
 │   └── viteplus
 ├── pnpm
@@ -35,7 +36,7 @@ core
 └── git
 ```
 
-仓库中的 `profiles/*.json` 是权威定义。Skill 内置图只是安装到其他项目后的可移植快照。
+仓库中的 `profiles/*.json` 是权威定义。Skill 内置图只是安装到其他项目后的可移植快照。`3d` 是共享架构 Profile，本身通常不作为直接检测结果，而由具体 3D/GPU Profile 继承。
 
 ## 选择策略
 

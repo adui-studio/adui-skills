@@ -31,8 +31,10 @@ GitHub 是唯一事实源，CNB 为单向国内镜像。所有修改、PR、Rele
 - `adui-feature-dev`：统一需求理解、最小修改、测试验证、Review 与交付格式。
 - `adui-viteplus`：Vite+ 统一工具链专项规范。
 - `adui-nestjs-prisma`：NestJS 与 Prisma 同时存在时的工程胶水层。
+- `adui-3d-architecture`：Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU 的选型、坐标、性能和跨引擎边界。
+- `adui-webgl2`：原生 WebGL2 / GLSL ES 3.0 Pipeline、资源生命周期、调试和性能规范。
 
-两者关系：
+核心入口关系：
 
 ```text
 项目进入
@@ -45,6 +47,10 @@ adui-feature-dev
   ↓
 实现与验证
 ```
+
+## 3D / GPU Profile
+
+新增共享 `3d` Profile，包含 `adui-3d-architecture`。`threejs`、`babylonjs`、`cesiumjs`、`webgl2`、`webgpu` 均继承它；`webgl2` 额外加载 `adui-webgl2`。这样项目可以共享架构规则，同时保留各技术专项 Skill。
 
 ## 组合 Profile
 

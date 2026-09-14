@@ -2,6 +2,22 @@
 
 [简体中文](./CHANGELOG.md) | [English](./CHANGELOG.en.md)
 
+## v0.1.8
+
+### 新增
+
+- 正式实现 `adui-3d-architecture`，统一 Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU 的技术选型、坐标体系、多引擎集成、性能和资源生命周期。
+- 正式实现 `adui-webgl2`，覆盖原生 WebGL2 / GLSL ES 3.0 Pipeline、VAO/FBO/UBO、Shader 调试、Context Lost、资源释放和性能规范。
+- 新增共享 `3d` Profile，Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU 均继承该 Profile。
+- 新增 `docs/3d-architecture.md`、`docs/webgl2.md` 及英文兜底文档。
+- Stack Router 新增多 3D 引擎检测警告和 3D Profile 继承测试。
+
+### 改进
+
+- `webgl2` Profile 只在原生 WebGL2 场景加载 `adui-webgl2`。
+- 3D/GPU 专项 Profile 共享 `adui-3d-architecture`，避免重复规则。
+- 自动化测试增加 Three.js、WebGL2 和多引擎警告场景。
+
 ## v0.1.7
 
 ### 新增

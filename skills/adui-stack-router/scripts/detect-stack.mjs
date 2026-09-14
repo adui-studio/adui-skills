@@ -312,6 +312,11 @@ if (detections.has('uniapp') && detections.has('uniapp-x')) {
   warnings.push('同时检测到 uni-app 与 uni-app x 信号。UTS/UVue 也可能来自普通 uni-app 插件，请确认主应用运行时。');
 }
 
+const detected3dEngines = ['threejs', 'babylonjs', 'cesiumjs'].filter((id) => detections.has(id));
+if (detected3dEngines.length > 1) {
+  warnings.push(`同时检测到多个高层 3D 引擎/平台：${detected3dEngines.join(', ')}。请确认这是有意互操作还是遗留依赖，并先定义坐标、相机、渲染上下文和资源所有权。`);
+}
+
 const graph = readJson(PROFILE_GRAPH_PATH) ?? {};
 
 function expandProfile(name, result = new Set(), visiting = new Set()) {
@@ -352,7 +357,7 @@ for (const profile of directProfiles) expandProfile(profile, effectiveProfiles);
 const profileOrder = [
   'core', 'web', 'toolchain', 'viteplus', 'pnpm', 'vue', 'react', 'tailwind', 'unocss',
   'backend', 'database', 'prisma', 'nestjs-prisma', 'postgresql', 'mysql', 'sqlite', 'flutter', 'tauri',
-  'uniapp', 'uniapp-x', 'wechat-miniprogram', 'wechat-cloudbase', 'threejs', 'babylonjs',
+  'uniapp', 'uniapp-x', 'wechat-miniprogram', 'wechat-cloudbase', '3d', 'threejs', 'babylonjs',
   'cesiumjs', 'webgl2', 'webgpu', 'git',
 ];
 

@@ -31,6 +31,8 @@ npx skills add https://github.com/adui-studio/adui-skills --skill adui-stack-rou
 npx skills add https://github.com/adui-studio/adui-skills --skill adui-feature-dev
 npx skills add https://github.com/adui-studio/adui-skills --skill adui-viteplus
 npx skills add https://github.com/adui-studio/adui-skills --skill adui-nestjs-prisma
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-3d-architecture
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-webgl2
 ```
 
 Check upstream changes without writing:
@@ -58,6 +60,10 @@ npm run updates:apply
 
 The Stack Router uses the combined `nestjs-prisma` profile so NestJS-only or Prisma-only projects do not load this integration skill.
 
+## 3D / GPU architecture and WebGL2
+
+`adui-3d-architecture` provides engine selection, coordinate ownership, integration boundaries, performance budgets, and resource-lifecycle guidance across Three.js, Babylon.js, CesiumJS, WebGL2, and WebGPU. `adui-webgl2` adds raw WebGL2 / GLSL ES 3.0 pipeline, shader, framebuffer, context-loss, and disposal rules.
+
 ## Upstream tracking v2
 
 v0.1.4 tracks the Git tree SHA of each Skill folder (`skillFolderHash`) instead of relying on the GitHub commits-by-path API. Repositories are grouped by `source`, cloned once per run, and moved `SKILL.md` files can be auto-resolved by frontmatter `name`.
@@ -70,6 +76,8 @@ A single unavailable third-party repository is reported as a warning and does no
 - `adui-feature-dev`
 - `adui-viteplus`
 - `adui-nestjs-prisma`
+- `adui-3d-architecture`
+- `adui-webgl2`
 
 ## Documentation
 
@@ -77,6 +85,8 @@ A single unavailable third-party repository is reported as a warning and does no
 - [Feature Development](./docs/development.en.md)
 - [Vite+](./docs/viteplus.en.md)
 - [NestJS + Prisma](./docs/nestjs-prisma.en.md)
+- [3D / GPU Architecture](./docs/3d-architecture.en.md)
+- [WebGL2](./docs/webgl2.en.md)
 - [Maintenance](./docs/maintenance.en.md)
 - [Architecture](./docs/architecture.en.md)
 - [Adding Skills](./docs/adding-skills.en.md)

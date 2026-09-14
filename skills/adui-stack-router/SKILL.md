@@ -31,7 +31,7 @@ description: 检测当前代码仓库的技术栈，并选择最小且合适的 
 - NestJS 与 Prisma 同时存在时优先选择组合 Profile `nestjs-prisma`，不要让普通 NestJS 项目默认加载 Prisma 集成 Skill。
 - uni-app 与 uni-app x 分开判断；UTS/UVue 只是中等强度证据，必要时继续确认。
 - 原生微信小程序与 CloudBase 分开判断，只在实际使用 CloudBase 时加入 `wechat-cloudbase`。
-- Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU 可独立组合，但只有项目真实同时使用时才同时选择。
+- Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU 可独立组合；这些专项 Profile 统一继承 `3d`。检测到多个高层 3D 引擎时必须给出警告，并先确认坐标、相机、渲染上下文和资源所有权。
 - 目标目录本身是 Git 仓库/工作树时才选择 `git`。
 - 证据不足时输出候选或警告，不要伪造确定结论。
 

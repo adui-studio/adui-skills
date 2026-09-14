@@ -86,6 +86,17 @@ core + web + toolchain + uniapp + git
 - 底层 Raster / GLSL：WebGL2
 - GPU Compute / WGSL：WebGPU
 
+这些 Profile 统一继承 `3d`，因此会加载 `adui-3d-architecture`。原生 `webgl2` 还会加载 `adui-webgl2`。
+
+## 3D / GPU 架构 Skill
+
+```bash
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-3d-architecture
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-webgl2
+```
+
+如果项目还没确定引擎，先使用 `adui-3d-architecture`；如果已经确认使用 raw WebGL2，再加载 `adui-webgl2`。
+
 ## 安装第三方 Skill
 
 从 `registry/skills.json` 读取 `source` 和 `id`：

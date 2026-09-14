@@ -12,4 +12,4 @@ For feature work, bug fixes, or refactoring, follow `skills/adui-feature-dev/SKI
 
 ## Specialized local skills
 
-Use `adui-viteplus` only for actual Vite+ projects. Use `adui-nestjs-prisma` only when both NestJS and Prisma are present.
+Use `adui-viteplus` only for actual Vite+ projects. Use `adui-nestjs-prisma` only when both NestJS and Prisma are present. Use `adui-3d-architecture` for 3D/GPU technology selection and multi-engine boundaries. Use `adui-webgl2` only when the project directly uses raw WebGL2 APIs.

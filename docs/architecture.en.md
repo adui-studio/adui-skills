@@ -13,4 +13,4 @@ The repository has four layers: third-party Registry/Lock, declarative Profiles,
 
 ## Specialized local skills
 
-`adui-viteplus` owns Vite+ toolchain integration. `adui-nestjs-prisma` is selected through the combined `nestjs-prisma` profile only when both stacks are detected.
+`adui-viteplus` owns Vite+ toolchain integration. `adui-nestjs-prisma` is selected through the combined `nestjs-prisma` profile only when both stacks are detected. `adui-3d-architecture` is shared through the `3d` profile by Three.js, Babylon.js, CesiumJS, WebGL2, and WebGPU. `adui-webgl2` is added only to the raw WebGL2 profile.

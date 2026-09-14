@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "name": "ADui 3D / GPU 架构",
+  "description": "Shared 3D/GPU architecture profile for engine selection, coordinates, integration, performance, and resource lifecycle.",
+  "extends": [
+    "core"
+  ],
+  "skills": [],
+  "localSkills": [
+    "adui-3d-architecture"
+  ]
+}

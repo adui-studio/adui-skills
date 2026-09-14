@@ -4,7 +4,8 @@
   "description": "WebGPU and WGSL rendering/compute profile.",
   "extends": [
     "web",
-    "toolchain"
+    "toolchain",
+    "3d"
   ],
   "skills": [
     "webgpu"

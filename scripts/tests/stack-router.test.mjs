@@ -77,3 +77,46 @@ test('vite-plus 优先于普通 Vite toolchain 直接 Profile', () => {
     assert.ok(result.effectiveProfiles.includes('toolchain'));
   });
 });
+
+test('Three.js 项目自动继承 3d 架构 Profile', () => {
+  withProject({
+    'package.json': {
+      dependencies: {
+        three: '^0.180.0',
+      },
+    },
+  }, (root) => {
+    const result = detect(root);
+    assert.ok(result.directProfiles.includes('threejs'));
+    assert.ok(!result.directProfiles.includes('3d'));
+    assert.ok(result.effectiveProfiles.includes('3d'));
+  });
+});
+
+test('原生 WebGL2 项目加载 webgl2 与 3d Profile', () => {
+  withProject({
+    'package.json': { devDependencies: { vite: '^8.0.0' } },
+    'src/renderer.ts': "const gl = canvas.getContext('webgl2');\n",
+  }, (root) => {
+    const result = detect(root);
+    assert.ok(result.directProfiles.includes('webgl2'));
+    assert.ok(result.effectiveProfiles.includes('3d'));
+    assert.ok(result.effectiveProfiles.includes('webgl2'));
+  });
+});
+
+test('同时检测到多个高层 3D 引擎时给出架构警告', () => {
+  withProject({
+    'package.json': {
+      dependencies: {
+        three: '^0.180.0',
+        cesium: '^1.133.0',
+      },
+    },
+  }, (root) => {
+    const result = detect(root);
+    assert.ok(result.directProfiles.includes('threejs'));
+    assert.ok(result.directProfiles.includes('cesiumjs'));
+    assert.ok(result.warnings.some((item) => item.includes('多个高层 3D 引擎')));
+  });
+});

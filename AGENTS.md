@@ -47,3 +47,5 @@ npm run validate
 
 - Vite+ 项目优先使用 `adui-viteplus`，不要把普通 Vite 项目自动迁移到 Vite+。
 - NestJS 与 Prisma 同时存在时使用 `adui-nestjs-prisma`；只有其中一个技术时不要加载该组合 Skill。
+- 3D / GPU 选型和多引擎协同时使用 `adui-3d-architecture`；不要因个人熟悉度默认指定引擎。
+- 只有项目直接使用原生 WebGL2 API 时加载 `adui-webgl2`；Three.js/Babylon.js/CesiumJS 项目不要无故下沉到 raw WebGL2。

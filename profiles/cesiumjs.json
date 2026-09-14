@@ -4,7 +4,8 @@
   "description": "Official CesiumJS domain-skill profile for globe, GIS, terrain, 3D Tiles, interaction, models, and shaders.",
   "extends": [
     "web",
-    "toolchain"
+    "toolchain",
+    "3d"
   ],
   "skills": [
     "using-cesiumjs-skills",

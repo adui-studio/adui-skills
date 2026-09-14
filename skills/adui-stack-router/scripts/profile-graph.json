@@ -71,25 +71,33 @@
   ],
   "threejs": [
     "web",
-    "toolchain"
+    "toolchain",
+    "3d"
   ],
   "babylonjs": [
     "web",
-    "toolchain"
+    "toolchain",
+    "3d"
   ],
   "cesiumjs": [
     "web",
-    "toolchain"
+    "toolchain",
+    "3d"
   ],
   "webgl2": [
     "web",
-    "toolchain"
+    "toolchain",
+    "3d"
   ],
   "webgpu": [
     "web",
-    "toolchain"
+    "toolchain",
+    "3d"
   ],
   "git": [
+    "core"
+  ],
+  "3d": [
     "core"
   ]
 }

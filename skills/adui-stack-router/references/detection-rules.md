@@ -29,6 +29,8 @@
 | WebGPU | `navigator.gpu`、`GPUDevice`、`@webgpu/types` | WGSL | `webgpu` |
 | WebGL2 | `getContext('webgl2')`、`WebGL2RenderingContext` | GLSL ES 3.0 | `webgl2` |
 
+所有 3D/GPU 专项 Profile 会继承共享 `3d` Profile。如果同时检测到 Three.js、Babylon.js、CesiumJS 中的多个高层引擎，输出架构警告，不自动假设它们应共享 Camera、Scene、Context 或坐标对象。
+
 ## 数据库
 
 优先使用 datasource 声明，不优先使用驱动包猜测：

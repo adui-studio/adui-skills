@@ -6,3 +6,6 @@ Keep Tailwind and UnoCSS independent, distinguish Vite+ from normal Vite, prefer
 
 
 When both NestJS and Prisma have strong evidence, select the combined `nestjs-prisma` profile; do not attach Prisma integration rules to NestJS-only projects.
+
+
+3D/GPU profiles inherit the shared `3d` profile. If multiple high-level engines such as Three.js, Babylon.js, and CesiumJS are detected, emit an architecture warning and require explicit coordinate, camera, context, and resource-ownership decisions.

@@ -4,7 +4,8 @@
   "description": "Babylon.js real-time 3D engine profile.",
   "extends": [
     "web",
-    "toolchain"
+    "toolchain",
+    "3d"
   ],
   "skills": [
     "babylonjs-engine"

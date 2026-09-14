@@ -12,6 +12,17 @@
 - Added Chinese-first Vite+ and NestJS + Prisma documentation with English fallbacks.
 [简体中文](./CHANGELOG.md) | [English](./CHANGELOG.en.md)
 
+## v0.1.8
+
+### Added
+
+- Implemented `adui-3d-architecture` for engine selection, coordinates, integration boundaries, performance, and resource lifecycle.
+- Implemented `adui-webgl2` for raw WebGL2 / GLSL ES 3.0 engineering.
+- Added the shared `3d` profile inherited by Three.js, Babylon.js, CesiumJS, WebGL2, and WebGPU.
+- Added 3D architecture and WebGL2 documentation with English fallbacks.
+- Added router coverage for 3D profile inheritance and multi-engine warnings.
+
+
 ## v0.1.6
 
 ### Added
