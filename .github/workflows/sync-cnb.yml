@@ -25,21 +25,40 @@ jobs:
       - name: Checkout GitHub repository
         uses: actions/checkout@v4
         with:
+          # 始终同步 GitHub main，而不是使用 detached HEAD
+          ref: main
+
+          # 获取完整 Git 历史
           fetch-depth: 0
+
+          # 获取所有 Tags
           fetch-tags: true
+
+          # Checkout 完成后不保留 GitHub Token
+          # 防止和后面的 CNB 凭据混用
           persist-credentials: false
 
-      - name: Fetch main branch and tags
+      - name: Verify repository
         shell: bash
         run: |
           set -euo pipefail
 
-          git fetch origin \
-            "+refs/heads/main:refs/remotes/origin/main" \
-            --tags \
-            --force
+          echo "Repository:"
+          git remote -v
 
-      - name: Configure CNB credentials
+          echo
+          echo "Current branch:"
+          git branch --show-current
+
+          echo
+          echo "Current commit:"
+          git log -1 --oneline
+
+          echo
+          echo "Tags:"
+          git tag --list
+
+      - name: Check CNB token
         shell: bash
         env:
           CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
@@ -47,9 +66,16 @@ jobs:
           set -euo pipefail
 
           if [ -z "${CNB_TOKEN:-}" ]; then
-            echo "::error::CNB_TOKEN is not configured."
+            echo "::error::CNB_TOKEN is empty or not configured."
             exit 1
           fi
+
+          echo "CNB_TOKEN is configured."
+
+      - name: Configure CNB authentication
+        shell: bash
+        run: |
+          set -euo pipefail
 
           cat > /tmp/cnb-askpass.sh <<'EOF'
           #!/usr/bin/env sh
@@ -61,12 +87,28 @@ jobs:
             *Password*)
               echo "$CNB_TOKEN"
               ;;
+            *)
+              echo ""
+              ;;
           esac
           EOF
 
           chmod 700 /tmp/cnb-askpass.sh
 
-      - name: Sync main branch and tags
+      - name: Configure CNB remote
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git remote remove cnb 2>/dev/null || true
+
+          git remote add cnb \
+            "https://cnb.cool/adui-studio/adui-skills"
+
+          echo "CNB remote:"
+          git remote get-url cnb
+
+      - name: Sync main branch to CNB
         shell: bash
         env:
           CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
@@ -75,18 +117,39 @@ jobs:
         run: |
           set -euo pipefail
 
-          CNB_REPOSITORY="https://cnb.cool/adui-studio/adui-skills"
-
-          echo "Syncing main branch..."
+          echo "Pushing main branch to CNB..."
 
           git push \
-            "$CNB_REPOSITORY" \
-            "refs/remotes/origin/main:refs/heads/main"
+            cnb \
+            HEAD:refs/heads/main
 
-          echo "Syncing tags..."
+          echo "Main branch synchronized successfully."
 
-          git push \
-            "$CNB_REPOSITORY" \
-            "refs/tags/*:refs/tags/*"
+      - name: Sync tags to CNB
+        shell: bash
+        env:
+          CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
+          GIT_ASKPASS: /tmp/cnb-askpass.sh
+          GIT_TERMINAL_PROMPT: "0"
+        run: |
+          set -euo pipefail
 
-          echo "GitHub -> CNB synchronization completed."
+          echo "Pushing tags to CNB..."
+
+          git push cnb --tags
+
+          echo "Tags synchronized successfully."
+
+      - name: Sync summary
+        shell: bash
+        run: |
+          {
+            echo "## CNB Sync"
+            echo
+            echo "- GitHub: \`${GITHUB_REPOSITORY}\`"
+            echo "- Branch: \`main\`"
+            echo "- CNB: \`adui-studio/adui-skills\`"
+            echo "- Commit: \`${GITHUB_SHA}\`"
+            echo
+            echo "✅ GitHub → CNB synchronization completed."
+          } >> "$GITHUB_STEP_SUMMARY"
