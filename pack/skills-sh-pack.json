@@ -62,6 +62,54 @@
       "repoStars": 5879,
       "auditStatus": "unknown",
       "selectedAt": "2026-09-14T11:26:44.345Z"
+    },
+    {
+      "key": "antfu/skills@vue",
+      "source": "antfu/skills",
+      "name": "vue",
+      "skillsShUrl": "https://skills.sh/antfu/skills/vue",
+      "category": "vue",
+      "categoryName": "Vue",
+      "installs": 33721,
+      "repoStars": 5879,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-14T12:00:14.649Z"
+    },
+    {
+      "key": "affaan-m/ecc@nextjs-turbopack",
+      "source": "affaan-m/ecc",
+      "name": "nextjs-turbopack",
+      "skillsShUrl": "https://skills.sh/affaan-m/ecc/nextjs-turbopack",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 8862,
+      "repoStars": 258049,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-14T12:00:14.649Z"
+    },
+    {
+      "key": "nextlevelbuilder/ui-ux-pro-max-skill@ckm:design-system",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "name": "ckm:design-system",
+      "skillsShUrl": "https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ckm:design-system",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 32869,
+      "repoStars": 127509,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-14T12:00:14.649Z"
+    },
+    {
+      "key": "addyosmani/agent-skills@git-workflow-and-versioning",
+      "source": "addyosmani/agent-skills",
+      "name": "git-workflow-and-versioning",
+      "skillsShUrl": "https://skills.sh/addyosmani/agent-skills/git-workflow-and-versioning",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 32430,
+      "repoStars": 94204,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-14T12:00:14.649Z"
     }
   ]
 }
