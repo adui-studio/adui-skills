@@ -20,6 +20,8 @@ const pages = [
   ['docs/usage.en.md', 'Usage-EN', 'Usage'],
   ['docs/profile-installer.md', 'Profile-Installer', 'Profile 一键安装器'],
   ['docs/profile-installer.en.md', 'Profile-Installer-EN', 'Profile Installer'],
+  ['docs/weekly-ranking.md', 'Weekly-Skills-Ranking', 'skills.sh 每周分类排行'],
+  ['docs/weekly-ranking.en.md', 'Weekly-Skills-Ranking-EN', 'Weekly skills.sh Ranking'],
   ['docs/architecture.md', 'Architecture', '总体架构'],
   ['docs/architecture.en.md', 'Architecture-EN', 'Architecture'],
   ['docs/development.md', 'Development', '功能开发规范'],
@@ -56,7 +58,6 @@ const pages = [
 
 const existingPages = pages.filter(([source]) => fs.existsSync(path.join(repoRoot, source)));
 const sourceToSlug = new Map(existingPages.map(([source, slug]) => [source, slug]));
-const sourceToTitle = new Map(existingPages.map(([source, , title]) => [source, title]));
 
 function rewriteMarkdownLinks(content, sourcePath) {
   const sourceDir = path.posix.dirname(sourcePath);
@@ -135,6 +136,7 @@ function buildHome() {
     `## 从这里开始\n\n` +
     `- [[使用指南|Usage]]\n` +
     `- [[Profile 一键安装器|Profile-Installer]]\n` +
+    `- [[skills.sh 每周分类排行|Weekly-Skills-Ranking]]\n` +
     `- [[总体架构|Architecture]]\n` +
     `- [[功能开发规范|Development]]\n` +
     `- [[维护与每周更新|Maintenance]]\n` +
@@ -162,6 +164,7 @@ function buildHome() {
     `## Start here\n\n` +
     `- [[Usage|Usage-EN]]\n` +
     `- [[Profile Installer|Profile-Installer-EN]]\n` +
+    `- [[Weekly skills.sh Ranking|Weekly-Skills-Ranking-EN]]\n` +
     `- [[Architecture|Architecture-EN]]\n` +
     `- [[Feature Development|Development-EN]]\n` +
     `- [[Maintenance|Maintenance-EN]]\n` +
@@ -179,7 +182,8 @@ function buildSidebar() {
   const sidebar = `# ADui Skills Pack\n\n` +
     `- [[首页|Home]]\n` +
     `- [[使用指南|Usage]]\n` +
-    `- [[Profile 一键安装器|Profile-Installer]]\n\n` +
+    `- [[Profile 一键安装器|Profile-Installer]]\n` +
+    `- [[skills.sh 每周分类排行|Weekly-Skills-Ranking]]\n\n` +
     `## 工程体系\n\n` +
     `- [[总体架构|Architecture]]\n` +
     `- [[功能开发规范|Development]]\n` +
