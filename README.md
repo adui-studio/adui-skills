@@ -152,7 +152,7 @@ npm run updates:check
 npm run updates:apply
 ```
 
-每周更新和每周排行都只会创建 PR，**永远不会自动合并**。
+第三方 Registry 更新与 Pack 候选变更仍然只通过 PR Review，**永远不会自动合并**；排行榜展示页则由每周 Workflow 自动刷新。
 
 ## 文档
 
