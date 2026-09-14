@@ -125,6 +125,22 @@ export function replaceRankingBlock(content, block) {
   return `${content.trimEnd()}\n\n${block}\n`;
 }
 
+export function replaceSkillsBadge(content, packUrl) {
+  const packBadge = `[![ADui Skills Pack](https://img.shields.io/badge/skills.sh-ADui%20Skills%20Pack-000000?logo=vercel)](${packUrl})`;
+  const badgePattern = /^\[!\[[^\]]*skills\.sh[^\]]*\]\([^\n]+\)\]\(https:\/\/skills\.sh\/[^\n]+\)$/im;
+
+  if (badgePattern.test(content)) {
+    return content.replace(badgePattern, packBadge);
+  }
+
+  const licenseBadgePattern = /^(\[!\[License: MIT\][^\n]+\])$/m;
+  if (licenseBadgePattern.test(content)) {
+    return content.replace(licenseBadgePattern, `$1\n${packBadge}`);
+  }
+
+  return content;
+}
+
 function main() {
   const args = process.argv.slice(2);
   const reportPath = path.resolve(repoRoot, argValue(args, '--report', 'reports/skills-sh/latest.md'));
@@ -132,13 +148,19 @@ function main() {
   const readmeEnPath = path.resolve(repoRoot, argValue(args, '--readme-en', 'README.en.md'));
 
   const data = parseWeeklyRanking(readText(reportPath));
-  const readme = replaceRankingBlock(readText(readmePath), buildChineseBlock(data));
-  const readmeEn = replaceRankingBlock(readText(readmeEnPath), buildEnglishBlock(data));
+  const readme = replaceSkillsBadge(
+    replaceRankingBlock(readText(readmePath), buildChineseBlock(data)),
+    data.packUrl,
+  );
+  const readmeEn = replaceSkillsBadge(
+    replaceRankingBlock(readText(readmeEnPath), buildEnglishBlock(data)),
+    data.packUrl,
+  );
 
   writeText(readmePath, readme);
   writeText(readmeEnPath, readmeEn);
 
-  console.log(`排行榜摘要已更新：${path.relative(repoRoot, readmePath)} / ${path.relative(repoRoot, readmeEnPath)}`);
+  console.log(`排行榜摘要与 Pack Badge 已更新：${path.relative(repoRoot, readmePath)} / ${path.relative(repoRoot, readmeEnPath)}`);
   console.log(`分类数量：${data.rows.length}`);
 }
 
