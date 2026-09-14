@@ -20,6 +20,7 @@
     "profile:install": "node scripts/profile-manager.mjs install",
     "profile:auto-install": "node scripts/profile-manager.mjs auto-install",
     "test:profiles": "node --test scripts/tests/profile-manager.test.mjs scripts/tests/package-manager.test.mjs",
+    "wiki:build": "node scripts/build-wiki.mjs",
     "release:check": "node scripts/release-check.mjs",
     "release:package": "node scripts/build-release.mjs"
   },
