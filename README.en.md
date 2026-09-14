@@ -5,7 +5,7 @@
 [![Release](https://img.shields.io/github/v/release/adui-studio/adui-skills?include_prereleases&sort=semver)](https://github.com/adui-studio/adui-skills/releases)
 [![Validation](https://github.com/adui-studio/adui-skills/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/adui-studio/adui-skills/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![skills.sh](https://skills.sh/b/adui-studio/adui-skills)](https://skills.sh/adui-studio/adui-skills)
+[![ADui Skills Pack](https://img.shields.io/badge/skills.sh-ADui%20Skills%20Pack-000000?logo=vercel)](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
 
 > **Current release: v0.2.0 Public Preview.** Registry/Profile schema and installer UX may continue to evolve before `v1.0.0`.
 
@@ -115,6 +115,18 @@ automated PR for manual review
 
 Selection history is **append-only**: previous selections are never deleted, replaced, or overwritten.
 
+<!-- skills-sh-weekly-ranking:start -->
+## skills.sh Weekly Category Leaderboard
+
+> Updated weekly. The first leaderboard will be generated after the Workflow runs once · [Latest full ranking in Wiki](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-Latest) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
+
+| Category | #1 Skill | Source | Installs | Stars | Audit |
+| --- | --- | --- | ---: | ---: | --- |
+| - | Waiting for first automated refresh | - | - | - | - |
+
+> README shows the #1 Skill for each category; Wiki / `reports/skills-sh/latest.md` shows the Top 5 per category. Pack candidates remain append-only and never replace existing Skills.
+<!-- skills-sh-weekly-ranking:end -->
+
 Preview locally:
 
 ```bash
@@ -140,7 +152,7 @@ npm run updates:check
 npm run updates:apply
 ```
 
-Weekly upstream updates and weekly ranking automation only open pull requests and **never auto-merge**.
+Third-party Registry updates and Pack candidate changes still require Pull Request review and **never auto-merge**; the public leaderboard page itself is refreshed automatically by the weekly Workflow.
 
 ## Documentation
 
@@ -150,6 +162,7 @@ Browse detailed documentation in the GitHub Wiki:
 - [Usage](https://github.com/adui-studio/adui-skills/wiki/Usage-EN)
 - [Profile Installer](https://github.com/adui-studio/adui-skills/wiki/Profile-Installer-EN)
 - [Weekly skills.sh Ranking](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-EN)
+- [Latest full skills.sh ranking](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-Latest)
 - [Feature Development](https://github.com/adui-studio/adui-skills/wiki/Development-EN)
 - [Architecture](https://github.com/adui-studio/adui-skills/wiki/Architecture-EN)
 - [Vite+](https://github.com/adui-studio/adui-skills/wiki/VitePlus-EN)

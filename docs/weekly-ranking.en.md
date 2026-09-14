@@ -18,6 +18,23 @@ Install:
 npx skills add https://skills.sh/p/DCh7RQegkqCXcXn8
 ```
 
+## Leaderboard publishing
+
+The leaderboard is published as visible project content instead of living only in Actions logs:
+
+- README: current #1 Skill in every category;
+- GitHub Wiki: `Weekly-Skills-Ranking-Latest` with Top 5 per category;
+- repository snapshot: `reports/skills-sh/latest.md`;
+- historical snapshots: `reports/skills-sh/YYYY-MM-DD.md`.
+
+Latest full leaderboard:
+
+```text
+https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-Latest
+```
+
+The weekly Workflow refreshes the Wiki page directly with `WIKI_TOKEN`, so the public leaderboard does not depend on the candidate Pull Request being merged. README and repository report snapshots are updated by the weekly ranking PR.
+
 ## Flow
 
 ```text
@@ -29,6 +46,8 @@ GitHub Stars gate
       ↓
 best-effort skills.sh audit check
       ↓
+publish README #1 summary + Wiki Top 5 leaderboard
+      ↓
 exclude skills already in the Pack
       ↓
 exclude previously selected skills
@@ -37,9 +56,7 @@ pick the best candidate per category
       ↓
 append to pack/skills-sh-pack.json
       ↓
-write a weekly report
-      ↓
-manual Pull Request review
+write weekly report and Pull Request
 ```
 
 Workflow:
@@ -57,11 +74,11 @@ Categories are configured in `config/skills-sh-ranking.json`. The default set co
 ## Default quality gates
 
 ```text
-Search results       : 20
-Report Top N         : 5
-Minimum installs     : 5000
-Minimum GitHub stars : 100
-Blocked risk levels  : HIGH / CRITICAL
+Search results        : 20
+Report Top N          : 5
+Minimum installs      : 5000
+Minimum GitHub stars  : 100
+Blocked risk levels   : HIGH / CRITICAL
 Candidate per category: 1
 ```
 
@@ -93,7 +110,7 @@ Write append-only selection state:
 npm run pack:ranking:apply
 ```
 
-The scheduled workflow is the preferred path because it opens a Pull Request for review.
+Candidate changes still go through manual Pull Request review and are never auto-merged.
 
 ## Pack write limitation
 
@@ -102,9 +119,9 @@ The public skills.sh documentation currently exposes read APIs for discovery, le
 Therefore the automation boundary is currently:
 
 ```text
-automated discovery + ranking + gates + selection + PR
-                                      ↓
-                     confirm additions in the Pack UI
+automated leaderboard publishing + discovery + gates + selection + PR
+                                                        ↓
+                                       confirm additions in the Pack UI
 ```
 
 This avoids relying on undocumented internal APIs, browser cookies, or stored login sessions. If skills.sh adds an official Pack mutation API later, a sync adapter can be added without changing the ranking and selection model.

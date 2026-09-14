@@ -18,6 +18,23 @@ https://www.skills.sh/p/DCh7RQegkqCXcXn8
 npx skills add https://skills.sh/p/DCh7RQegkqCXcXn8
 ```
 
+## 排行榜展示
+
+排行榜不是只放在 Actions 日志里，而是作为公开内容持续展示：
+
+- README：展示每个分类当前第 1 名；
+- GitHub Wiki：`Weekly-Skills-Ranking-Latest` 展示每个分类 Top 5；
+- 仓库快照：`reports/skills-sh/latest.md`；
+- 历史快照：`reports/skills-sh/YYYY-MM-DD.md`。
+
+最新完整榜单：
+
+```text
+https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-Latest
+```
+
+GitHub Wiki 最新榜单由每周 Workflow 使用 `WIKI_TOKEN` 直接刷新，因此榜单展示不依赖候选 PR 是否合并。README 和仓库内报告快照会随每周排行榜 PR 更新。
+
 ## 工作流
 
 ```text
@@ -29,6 +46,8 @@ GitHub Stars 门禁
       ↓
 skills.sh Audit 最佳努力安全检查
       ↓
+生成 README 第 1 名摘要 + Wiki Top 5 完整榜单
+      ↓
 排除 Pack 已存在 Skill
       ↓
 排除历史已经选择的 Skill
@@ -37,9 +56,7 @@ skills.sh Audit 最佳努力安全检查
       ↓
 追加到 pack/skills-sh-pack.json
       ↓
-生成每周报告
-      ↓
-Pull Request 人工 Review
+生成每周报告与 Pull Request
 ```
 
 工作流文件：
@@ -123,25 +140,7 @@ npm run pack:ranking
 npm run pack:ranking:apply
 ```
 
-通常不建议在本地直接合并选择结果；每周 Workflow 会自动创建 PR，由人工 Review 后再合并。
-
-## 报告
-
-当本周存在新候选时，会新增：
-
-```text
-reports/skills-sh/YYYY-MM-DD.md
-```
-
-报告包含：
-
-- 当前 Pack Skill 数；
-- 本周建议追加；
-- 每个分类 Top 排行；
-- installs；
-- GitHub Stars；
-- Audit 状态；
-- 被跳过的原因。
+候选变化仍由 Pull Request 人工 Review，不自动合并。
 
 ## Pack 自动写入限制
 
@@ -150,11 +149,9 @@ reports/skills-sh/YYYY-MM-DD.md
 因此当前自动化边界是：
 
 ```text
-自动发现 + 自动排行 + 自动门禁 + 自动选择 + 自动 PR
-                                      ↓
-                         skills.sh Pack 页面人工确认追加
+自动展示排行榜 + 自动发现 + 自动门禁 + 自动选择 + 自动 PR
+                                              ↓
+                                 skills.sh Pack 页面人工确认追加
 ```
 
-这不是为了减少自动化程度，而是避免依赖未公开的内部接口、浏览器 Cookie 或长期保存登录会话。
-
-一旦 skills.sh 官方提供 Pack 写入 API，可以在保持 `append-only` 规则的前提下增加同步适配器，而无需改动排行与选择逻辑。
+不会依赖未公开的内部接口、浏览器 Cookie 或长期保存登录会话。一旦 skills.sh 官方提供 Pack 写入 API，可以在保持 `append-only` 规则的前提下增加同步适配器，而无需改动排行与选择逻辑。

@@ -5,7 +5,7 @@
 [![版本](https://img.shields.io/github/v/release/adui-studio/adui-skills?include_prereleases&sort=semver)](https://github.com/adui-studio/adui-skills/releases)
 [![校验](https://github.com/adui-studio/adui-skills/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/adui-studio/adui-skills/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![skills.sh](https://skills.sh/b/adui-studio/adui-skills)](https://skills.sh/adui-studio/adui-skills)
+[![ADui Skills Pack](https://img.shields.io/badge/skills.sh-ADui%20Skills%20Pack-000000?logo=vercel)](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
 
 > **当前版本：v0.2.0 Public Preview。** `v0.2.x` 面向公开试用，Registry/Profile Schema 与安装体验在 `v1.0.0` 前仍可能继续演进。
 
@@ -115,6 +115,18 @@ append-only 候选历史
 
 候选历史采用 **append-only**：不会删除、替换或覆盖之前已经选择的 Skill。
 
+<!-- skills-sh-weekly-ranking:start -->
+## skills.sh 本周分类排行榜
+
+> 每周自动更新。首次榜单将在 Workflow 第一次运行后生成 · [查看 Wiki 最新完整榜单](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-Latest) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
+
+| 分类 | 第 1 名 | Source | Installs | Stars | Audit |
+| --- | --- | --- | ---: | ---: | --- |
+| - | 等待首次自动刷新 | - | - | - | - |
+
+> README 展示每个分类第 1 名；Wiki / `reports/skills-sh/latest.md` 展示每个分类 Top 5。候选仍遵循 append-only，不删除、不替换已有 Skill。
+<!-- skills-sh-weekly-ranking:end -->
+
 本地预览：
 
 ```bash
@@ -140,7 +152,7 @@ npm run updates:check
 npm run updates:apply
 ```
 
-每周更新和每周排行都只会创建 PR，**永远不会自动合并**。
+第三方 Registry 更新与 Pack 候选变更仍然只通过 PR Review，**永远不会自动合并**；排行榜展示页则由每周 Workflow 自动刷新。
 
 ## 文档
 
@@ -150,6 +162,7 @@ npm run updates:apply
 - [使用方法](https://github.com/adui-studio/adui-skills/wiki/Usage)
 - [Profile 一键安装器](https://github.com/adui-studio/adui-skills/wiki/Profile-Installer)
 - [skills.sh 每周分类排行](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking)
+- [skills.sh 最新完整榜单](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-Latest)
 - [功能开发规范](https://github.com/adui-studio/adui-skills/wiki/Development)
 - [总体架构](https://github.com/adui-studio/adui-skills/wiki/Architecture)
 - [Vite+ 工程规范](https://github.com/adui-studio/adui-skills/wiki/VitePlus)
