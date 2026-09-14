@@ -1,5 +1,559 @@
 {
   "version": 2,
-  "generatedAt": null,
-  "skills": {}
+  "generatedAt": "2026-09-14T08:59:55.504Z",
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "repoCommit": "d667282815248da03a08a18272b5d2eef9caf77c",
+      "committedAt": "2026-09-11T22:55:44Z"
+    },
+    "writing-plans": {
+      "source": "obra/superpowers",
+      "skillPath": "skills/writing-plans/SKILL.md",
+      "skillFolderHash": "e4d3c3faf3853a453016cece5de2ca0581807742",
+      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "committedAt": "2026-08-12T09:53:21-07:00"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "skillFolderHash": "ab83fc82f82582e047d96fc516bac9bc03095ee0",
+      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "committedAt": "2026-08-12T09:53:21-07:00"
+    },
+    "test-driven-development": {
+      "source": "obra/superpowers",
+      "skillPath": "skills/test-driven-development/SKILL.md",
+      "skillFolderHash": "a82cf8b413600c6bd7c4b482272d7990e9588cf1",
+      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "committedAt": "2026-08-12T09:53:21-07:00"
+    },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "skillPath": "skills/verification-before-completion/SKILL.md",
+      "skillFolderHash": "a4cb0b69aaefeab540947a7f1642bdaad810e37a",
+      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "committedAt": "2026-08-12T09:53:21-07:00"
+    },
+    "requesting-code-review": {
+      "source": "obra/superpowers",
+      "skillPath": "skills/requesting-code-review/SKILL.md",
+      "skillFolderHash": "2ef6b5734813e7504d9866a7ec1ae89b505bfe70",
+      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "committedAt": "2026-08-12T09:53:21-07:00"
+    },
+    "repomix-explorer": {
+      "source": "yamadashy/repomix",
+      "skillPath": "skills/repomix-explorer/SKILL.md",
+      "skillFolderHash": "b00026a3da8b396ae3637adf2cd2e6432fe8cf76",
+      "repoCommit": "6c5ead0d2b83911d4284be9f3424e7381ae44763",
+      "committedAt": "2026-09-13T15:38:37+09:00"
+    },
+    "security-guidance": {
+      "source": "owasp/secure-agent-playbook",
+      "skillPath": "plugins/code-security-skills/skills/security-guidance/SKILL.md",
+      "skillFolderHash": "8457cc635b97e3f4b08d4001ccb3cac5879c1fc4",
+      "repoCommit": "79fea6b9115b55687818f8c4073844ee9ba907a6",
+      "committedAt": "2026-06-02T13:21:37Z"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "d79e2a5bb4df4a386c2adcdd9ab8709bba28c3f6",
+      "repoCommit": "34040c9c568585f6929bedeaad110ad08f079624",
+      "committedAt": "2026-09-10T12:44:08-07:00"
+    },
+    "webapp-testing": {
+      "source": "anthropics/skills",
+      "skillPath": "skills/webapp-testing/SKILL.md",
+      "skillFolderHash": "5ffb7dc66b9fd4c25c3e400a4c00da99a349b714",
+      "repoCommit": "34040c9c568585f6929bedeaad110ad08f079624",
+      "committedAt": "2026-09-10T12:44:08-07:00"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "skillFolderHash": "3116f3e62dbd02b44a598b1aa690d2a8938e8f89",
+      "repoCommit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "committedAt": "2026-08-28T15:36:07+02:00"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillFolderHash": "343db72180d05814949fef7d46be96b5c6ee86b3",
+      "repoCommit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "committedAt": "2026-08-28T15:36:07+02:00"
+    },
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "skillPath": "skills/composition-patterns/SKILL.md",
+      "skillFolderHash": "bf90d0a4b83ea054653350f9c67f6de235d3a368",
+      "repoCommit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "committedAt": "2026-08-28T15:36:07+02:00"
+    },
+    "fixing-accessibility": {
+      "source": "ibelick/ui-skills",
+      "skillPath": "skills/fixing-accessibility/SKILL.md",
+      "skillFolderHash": "e825388bce62e4456ed3b2b899c9bc58f5873c5b",
+      "repoCommit": "79081abff1e887d55920f3debc11d78fea83a1b3",
+      "committedAt": "2026-09-13T10:31:49+02:00"
+    },
+    "fixing-metadata": {
+      "source": "ibelick/ui-skills",
+      "skillPath": "skills/fixing-metadata/SKILL.md",
+      "skillFolderHash": "2906fa056416dff36892d1ff17c37de3090625b6",
+      "repoCommit": "79081abff1e887d55920f3debc11d78fea83a1b3",
+      "committedAt": "2026-09-13T10:31:49+02:00"
+    },
+    "fixing-motion-performance": {
+      "source": "ibelick/ui-skills",
+      "skillPath": "skills/fixing-motion-performance/SKILL.md",
+      "skillFolderHash": "76e5757bd2eb8ff38ff667eca9b665cbd707a386",
+      "repoCommit": "79081abff1e887d55920f3debc11d78fea83a1b3",
+      "committedAt": "2026-09-13T10:31:49+02:00"
+    },
+    "playwright-best-practices": {
+      "source": "currents-dev/playwright-best-practices-skill",
+      "skillPath": "playwright-best-practices/SKILL.md",
+      "skillFolderHash": "b4620eb2cfc6b58173cda800b7c7578190dfd632",
+      "repoCommit": "283d5cbc5d11aac1abda058b16ad22c317d54dc0",
+      "committedAt": "2026-07-21T01:01:56-05:00"
+    },
+    "vue-best-practices": {
+      "source": "vuejs-ai/skills",
+      "skillPath": "skills/vue-best-practices/SKILL.md",
+      "skillFolderHash": "86b8f7ca082668082f9251782859b316a1c046de",
+      "repoCommit": "c9d355ff23f654309dd02006be671859df0a134c",
+      "committedAt": "2026-03-26T06:50:25+01:00"
+    },
+    "vue-router-best-practices": {
+      "source": "vuejs-ai/skills",
+      "skillPath": "skills/vue-router-best-practices/SKILL.md",
+      "skillFolderHash": "0a68887518bd72091266aa97352e19347bf00666",
+      "repoCommit": "c9d355ff23f654309dd02006be671859df0a134c",
+      "committedAt": "2026-03-26T06:50:25+01:00"
+    },
+    "vue-pinia-best-practices": {
+      "source": "vuejs-ai/skills",
+      "skillPath": "skills/vue-pinia-best-practices/SKILL.md",
+      "skillFolderHash": "4c331972ffdfb75666dc449fb3a4c18c37d53693",
+      "repoCommit": "c9d355ff23f654309dd02006be671859df0a134c",
+      "committedAt": "2026-03-26T06:50:25+01:00"
+    },
+    "vue-testing-best-practices": {
+      "source": "vuejs-ai/skills",
+      "skillPath": "skills/vue-testing-best-practices/SKILL.md",
+      "skillFolderHash": "c42b78ec2e00e02c2ed926495460b11936b63e12",
+      "repoCommit": "c9d355ff23f654309dd02006be671859df0a134c",
+      "committedAt": "2026-03-26T06:50:25+01:00"
+    },
+    "vue-debug-guides": {
+      "source": "vuejs-ai/skills",
+      "skillPath": "skills/vue-debug-guides/SKILL.md",
+      "skillFolderHash": "63f4b12e3086b2ad3a100cb3dd6c27ea32424ac6",
+      "repoCommit": "c9d355ff23f654309dd02006be671859df0a134c",
+      "committedAt": "2026-03-26T06:50:25+01:00"
+    },
+    "vue": {
+      "source": "antfu/skills",
+      "skillPath": "skills/vue/SKILL.md",
+      "skillFolderHash": "cff239de1fa9a889b40166c85d13157b8ae5408c",
+      "repoCommit": "a74f281a27dadc02397bc1a174b0f2c97531b6ae",
+      "committedAt": "2026-06-23T09:14:36+09:00"
+    },
+    "vueuse-functions": {
+      "source": "antfu/skills",
+      "skillPath": "skills/vueuse-functions/SKILL.md",
+      "skillFolderHash": "e5dae44ad9e9656ef024360cd86c8ba7b1c0ba93",
+      "repoCommit": "a74f281a27dadc02397bc1a174b0f2c97531b6ae",
+      "committedAt": "2026-06-23T09:14:36+09:00"
+    },
+    "unocss": {
+      "source": "antfu/skills",
+      "skillPath": "skills/unocss/SKILL.md",
+      "skillFolderHash": "452e862171de4e1b618b6602b8f073375811bca8",
+      "repoCommit": "a74f281a27dadc02397bc1a174b0f2c97531b6ae",
+      "committedAt": "2026-06-23T09:14:36+09:00"
+    },
+    "vite": {
+      "source": "antfu/skills",
+      "skillPath": "skills/vite/SKILL.md",
+      "skillFolderHash": "3c0dc60ce4ffc34fca02aaa7eb21130ae48c8dff",
+      "repoCommit": "a74f281a27dadc02397bc1a174b0f2c97531b6ae",
+      "committedAt": "2026-06-23T09:14:36+09:00"
+    },
+    "vitest": {
+      "source": "antfu/skills",
+      "skillPath": "skills/vitest/SKILL.md",
+      "skillFolderHash": "6e59e3b95305499c21fc401b3dbddedbb8ead8a6",
+      "repoCommit": "a74f281a27dadc02397bc1a174b0f2c97531b6ae",
+      "committedAt": "2026-06-23T09:14:36+09:00"
+    },
+    "pnpm": {
+      "source": "antfu/skills",
+      "skillPath": "skills/pnpm/SKILL.md",
+      "skillFolderHash": "4be8fd8b101fbcba93f2fbc432802034b294c790",
+      "repoCommit": "a74f281a27dadc02397bc1a174b0f2c97531b6ae",
+      "committedAt": "2026-06-23T09:14:36+09:00"
+    },
+    "tailwind-design-system": {
+      "source": "wshobson/agents",
+      "skillPath": "plugins/frontend-mobile-development/skills/tailwind-design-system/SKILL.md",
+      "skillFolderHash": "a2164c2d9785aada08dfe3f5e792657c9acafc52",
+      "repoCommit": "4236bb91f8395b0435f1d8b8baf9e8e4c69a8620",
+      "committedAt": "2026-09-13T10:43:53-04:00"
+    },
+    "typescript-advanced-types": {
+      "source": "wshobson/agents",
+      "skillPath": "plugins/javascript-typescript/skills/typescript-advanced-types/SKILL.md",
+      "skillFolderHash": "7e9663cb1d15ca0aff369d35a31348b7e8cf5e95",
+      "repoCommit": "4236bb91f8395b0435f1d8b8baf9e8e4c69a8620",
+      "committedAt": "2026-09-13T10:43:53-04:00"
+    },
+    "git-advanced-workflows": {
+      "source": "wshobson/agents",
+      "skillPath": "plugins/developer-essentials/skills/git-advanced-workflows/SKILL.md",
+      "skillFolderHash": "b64f19edd9b744658a0be5b93b1569d9d0c4c619",
+      "repoCommit": "4236bb91f8395b0435f1d8b8baf9e8e4c69a8620",
+      "committedAt": "2026-09-13T10:43:53-04:00"
+    },
+    "changelog-automation": {
+      "source": "wshobson/agents",
+      "skillPath": "plugins/documentation-generation/skills/changelog-automation/SKILL.md",
+      "skillFolderHash": "bda1b5d9da08093d0be956a3098e1c41e4e3d29b",
+      "repoCommit": "4236bb91f8395b0435f1d8b8baf9e8e4c69a8620",
+      "committedAt": "2026-09-13T10:43:53-04:00"
+    },
+    "tailwindcss": {
+      "source": "hairyf/skills",
+      "skillPath": "skills/tailwindcss/SKILL.md",
+      "skillFolderHash": "7b8035d2b0740535dab2c549847075dacc247afe",
+      "repoCommit": "4f463c746d271df0a3c7ab0f9821a04c756178ed",
+      "committedAt": "2026-08-11T01:27:51+08:00"
+    },
+    "nestjs-best-practices": {
+      "source": "kadajett/agent-nestjs-skills",
+      "skillPath": "skills/nestjs-best-practices/SKILL.md",
+      "skillFolderHash": "904db2759aaf1bd0e30eadedcd00efbd6367cc9f",
+      "repoCommit": "3986e0cede33958e000f959031cbee0cd83c2941",
+      "committedAt": "2026-07-22T22:35:51-04:00"
+    },
+    "prisma-cli": {
+      "source": "prisma/skills",
+      "skillPath": "prisma-cli/SKILL.md",
+      "skillFolderHash": "fcfa072aafa008590556d3f140bbf2e12942fadc",
+      "repoCommit": "1123817e60d15ca0f3af91878923241dee7e3b09",
+      "committedAt": "2026-09-08T20:26:26+05:30"
+    },
+    "prisma-client-api": {
+      "source": "prisma/skills",
+      "skillPath": "prisma-client-api/SKILL.md",
+      "skillFolderHash": "f6fc13451003b16376a906ca2b4a12ceaa4ecfe4",
+      "repoCommit": "1123817e60d15ca0f3af91878923241dee7e3b09",
+      "committedAt": "2026-09-08T20:26:26+05:30"
+    },
+    "prisma-database-setup": {
+      "source": "prisma/skills",
+      "skillPath": "prisma-database-setup/SKILL.md",
+      "skillFolderHash": "363365e393a5316b9991dbbdf1e93c2dd1da8cdc",
+      "repoCommit": "1123817e60d15ca0f3af91878923241dee7e3b09",
+      "committedAt": "2026-09-08T20:26:26+05:30"
+    },
+    "sql-queries": {
+      "source": "anthropics/knowledge-work-plugins",
+      "skillPath": "data/skills/sql-queries/SKILL.md",
+      "skillFolderHash": "508444de634ec4ba9178750b6cbc897fe9f9c169",
+      "repoCommit": "8f877b63d26c68c0c5528e82892fe32d016a8ddc",
+      "committedAt": "2026-09-13T19:09:03-04:00"
+    },
+    "postgres-best-practices": {
+      "source": "neondatabase/postgres-skills",
+      "skillPath": "skills/postgres-best-practices/SKILL.md",
+      "skillFolderHash": "c8afeefe0d18343e04033318bcbec5b329cacb34",
+      "repoCommit": "27fe45e0f71ea89a6eaf9ea4d2e4068957c81c26",
+      "committedAt": "2026-08-25T12:56:29-07:00"
+    },
+    "mysql": {
+      "source": "planetscale/database-skills",
+      "skillPath": "skills/mysql/SKILL.md",
+      "skillFolderHash": "a2d3f6d189cb2847d659da7108b399df9ac08875",
+      "repoCommit": "73b20b7eb64716d8c7100c054f0677c0c6e77e30",
+      "committedAt": "2026-08-28T11:20:32-04:00"
+    },
+    "sqlite-best-practices": {
+      "source": "erayack/sqlite-best-practices",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "97be2d67f3ef87e197b23f04882010263837d031",
+      "repoCommit": "0385ab90416b4ed6bb80bbfad69befc49114c29b",
+      "committedAt": "2026-02-07T13:19:46+03:00"
+    },
+    "flutter-apply-architecture-best-practices": {
+      "source": "flutter/agent-plugins",
+      "skillPath": "skills/flutter-apply-architecture-best-practices/SKILL.md",
+      "skillFolderHash": "d5a184eff2ce5a111d4f290efd2ba5511b8a6d69",
+      "repoCommit": "7cdb7d3c33679ef14a7a7584cec1d5ecb8752586",
+      "committedAt": "2026-09-11T09:39:12-07:00"
+    },
+    "flutter-build-responsive-layout": {
+      "source": "flutter/agent-plugins",
+      "skillPath": "skills/flutter-build-responsive-layout/SKILL.md",
+      "skillFolderHash": "018c3c52c14b46fe242ef0b1336a7b07d5d860be",
+      "repoCommit": "7cdb7d3c33679ef14a7a7584cec1d5ecb8752586",
+      "committedAt": "2026-09-11T09:39:12-07:00"
+    },
+    "flutter-fix-layout-issues": {
+      "source": "flutter/agent-plugins",
+      "skillPath": "skills/flutter-fix-layout-issues/SKILL.md",
+      "skillFolderHash": "2227ad7b018a7b381a701aedabe74555667add58",
+      "repoCommit": "7cdb7d3c33679ef14a7a7584cec1d5ecb8752586",
+      "committedAt": "2026-09-11T09:39:12-07:00"
+    },
+    "flutter-add-widget-test": {
+      "source": "flutter/agent-plugins",
+      "skillPath": "skills/flutter-add-widget-test/SKILL.md",
+      "skillFolderHash": "8b4202131bb2f3e47c7a512f6fe401ea2fc40046",
+      "repoCommit": "7cdb7d3c33679ef14a7a7584cec1d5ecb8752586",
+      "committedAt": "2026-09-11T09:39:12-07:00"
+    },
+    "flutter-add-integration-test": {
+      "source": "flutter/agent-plugins",
+      "skillPath": "skills/flutter-add-integration-test/SKILL.md",
+      "skillFolderHash": "2662e110e1aa719a30b58536fce6fca7793fe690",
+      "repoCommit": "7cdb7d3c33679ef14a7a7584cec1d5ecb8752586",
+      "committedAt": "2026-09-11T09:39:12-07:00"
+    },
+    "dart-run-static-analysis": {
+      "source": "dart-lang/skills",
+      "skillPath": "skills/dart-run-static-analysis/SKILL.md",
+      "skillFolderHash": "333a193146ab5f5876093beb7896ff792f9df467",
+      "repoCommit": "26b2dcc5654cbbc3b2ec56ea94719469bc8bae9e",
+      "committedAt": "2026-09-10T12:45:58-07:00"
+    },
+    "tauri-setup": {
+      "source": "full-stack-skills/tauri-skills",
+      "skillPath": "skills/tauri-setup/SKILL.md",
+      "skillFolderHash": "8b55b08fcd2321cd1a2390e4feacc36962fd6d2f",
+      "repoCommit": "9356c6886fc65f9e2819febc92c72996dc7f0849",
+      "committedAt": "2026-09-11T21:43:48+08:00"
+    },
+    "tauri-config": {
+      "source": "full-stack-skills/tauri-skills",
+      "skillPath": "skills/tauri-config/SKILL.md",
+      "skillFolderHash": "c903bc040bd54dbad2ec771ad23db85fef59d9c7",
+      "repoCommit": "9356c6886fc65f9e2819febc92c72996dc7f0849",
+      "committedAt": "2026-09-11T21:43:48+08:00"
+    },
+    "tauri-app-sql": {
+      "source": "full-stack-skills/tauri-skills",
+      "skillPath": "skills/tauri-app-sql/SKILL.md",
+      "skillFolderHash": "ffa946183489eb409f8440531d6c7c5e12f9c817",
+      "repoCommit": "9356c6886fc65f9e2819febc92c72996dc7f0849",
+      "committedAt": "2026-09-11T21:43:48+08:00"
+    },
+    "uni-app": {
+      "source": "uni-helper/skills",
+      "skillPath": "skills/uniapp/SKILL.md",
+      "skillFolderHash": "135ce6509145d89b9107c99d4bdb01d9ce6abcc3",
+      "repoCommit": "15909ff061a38819ad45ad2d89db3b66938eaf84",
+      "committedAt": "2026-01-30T18:07:44+08:00"
+    },
+    "uni-helper": {
+      "source": "uni-helper/skills",
+      "skillPath": "skills/uni-helper/SKILL.md",
+      "skillFolderHash": "e354e65c9bc34ca30535d05f64213afb122da9dc",
+      "repoCommit": "15909ff061a38819ad45ad2d89db3b66938eaf84",
+      "committedAt": "2026-01-30T18:07:44+08:00"
+    },
+    "uniappx-project": {
+      "source": "full-stack-skills/uniapp-skills",
+      "skillPath": "skills/uniappx-project/SKILL.md",
+      "skillFolderHash": "9bfc6989c12acad441db4d4aceaaa30836771b27",
+      "repoCommit": "3782329a08d632661cb92f6f02bb8c9d64550d15",
+      "committedAt": "2026-09-11T21:43:48+08:00"
+    },
+    "uniapp-mini": {
+      "source": "full-stack-skills/uniapp-skills",
+      "skillPath": "skills/uniapp-mini/SKILL.md",
+      "skillFolderHash": "ef946486e748468029024cfe6e64d1b64ae129eb",
+      "repoCommit": "3782329a08d632661cb92f6f02bb8c9d64550d15",
+      "committedAt": "2026-09-11T21:43:48+08:00"
+    },
+    "wechat-miniprogram": {
+      "source": "joneqian/claude-skills-suite",
+      "skillPath": "skills/wechat-miniprogram/SKILL.md",
+      "skillFolderHash": "db1db031b0d13d2f54d24543f10a776342184058",
+      "repoCommit": "58444a34b26d3583d6390fada5f16f60775ef1b9",
+      "committedAt": "2026-02-10T11:27:39+08:00"
+    },
+    "miniprogram-development": {
+      "source": "tencentcloudbase/skills",
+      "skillPath": "skills/miniprogram-development/SKILL.md",
+      "skillFolderHash": "02bbed9fdbd1be4fd08be4c6a317c6e0404c3ecd",
+      "repoCommit": "2d12e2b68f36599c5253ea4ef58acfd64ce581e9",
+      "committedAt": "2026-09-14T04:58:15Z"
+    },
+    "threejs-fundamentals": {
+      "source": "cloudai-x/threejs-skills",
+      "skillPath": "skills/threejs-fundamentals/SKILL.md",
+      "skillFolderHash": "918e26abdcc434d3ef7563043a25a97a6209b411",
+      "repoCommit": "b1c623076c661fc9b03dac19292e825a5d106823",
+      "committedAt": "2026-01-20T00:13:16+03:00"
+    },
+    "threejs-webgl": {
+      "source": "freshtechbro/claudedesignskills",
+      "skillPath": ".claude/skills/threejs-webgl/SKILL.md",
+      "skillFolderHash": "1b1c5c4a3cc47f16a7005140d5ee5421a78126a4",
+      "repoCommit": "1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd",
+      "committedAt": "2025-11-19T19:57:57-06:00"
+    },
+    "babylonjs-engine": {
+      "source": "freshtechbro/claudedesignskills",
+      "skillPath": ".claude/skills/babylonjs-engine/SKILL.md",
+      "skillFolderHash": "f798d4a00019fd9b93d1459ff5076923ae0d2860",
+      "repoCommit": "1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd",
+      "committedAt": "2025-11-19T19:57:57-06:00"
+    },
+    "webgpu": {
+      "source": "cazala/webgpu-skill",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "96075463ffae99339bee4b4f13df1ce3681f921e",
+      "repoCommit": "e4398058672173cf596379a816bb99fdb67c71b8",
+      "committedAt": "2026-07-23T12:09:18-03:00"
+    },
+    "using-cesiumjs-skills": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/using-cesiumjs-skills/SKILL.md",
+      "skillFolderHash": "f6a0662d661be5572e48e6e395a32ba4a2e173ea",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-viewer-setup": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-viewer-setup/SKILL.md",
+      "skillFolderHash": "f2ac8f9c301388334b9d109fd3c4487403f42ece",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-camera": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-camera/SKILL.md",
+      "skillFolderHash": "39b46ef06162f76cf9247d06c1afea43ce1b016a",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-entities": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-entities/SKILL.md",
+      "skillFolderHash": "b66cadf575e652b4a27440260ddd69f74b748287",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-3d-tiles": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-3d-tiles/SKILL.md",
+      "skillFolderHash": "e37244bddc59f602822d7fd5c16c705449894882",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-imagery": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-imagery/SKILL.md",
+      "skillFolderHash": "139a51748f56f8ec33bbc0fc5798c8fe59caa66e",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-terrain-environment": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-terrain-environment/SKILL.md",
+      "skillFolderHash": "26bfd7b11e0d63cceb0b3223118a1ebc5b225141",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-primitives": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-primitives/SKILL.md",
+      "skillFolderHash": "0d1ef9dd657982de4172e3a0276e6f219bbc6694",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-materials-shaders": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-materials-shaders/SKILL.md",
+      "skillFolderHash": "2776bc6609d8723394bde45ab09067d470326bed",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-custom-shader": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-custom-shader/SKILL.md",
+      "skillFolderHash": "0901c877ddf562a8abafe158fc54e9f3575b1c72",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-time-properties": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-time-properties/SKILL.md",
+      "skillFolderHash": "ffddb788342f0a28d272e3a9faf57d810b8839a3",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-spatial-math": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-spatial-math/SKILL.md",
+      "skillFolderHash": "c9814c001e3528f97f4b4b85ab8f86f6a042cff6",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-interaction": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-interaction/SKILL.md",
+      "skillFolderHash": "6fef3e60e52c79c1d09ad4f3d88be30da3aa175d",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-models-particles": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-models-particles/SKILL.md",
+      "skillFolderHash": "1f33c857cdd06e3556ad32ea413f7e0f3970db9e",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "cesiumjs-core-utilities": {
+      "source": "CesiumGS/cesiumjs-skills",
+      "skillPath": "skills/cesiumjs-core-utilities/SKILL.md",
+      "skillFolderHash": "661232f4ad4f66b51d29971b8428c0759df77a23",
+      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
+      "committedAt": "2026-08-07T09:13:44-05:00"
+    },
+    "git-workflow-and-versioning": {
+      "source": "addyosmani/agent-skills",
+      "skillPath": "skills/git-workflow-and-versioning/SKILL.md",
+      "skillFolderHash": "92d87ae1fe98e6b67403bace2ef01264f9664468",
+      "repoCommit": "be4e44a9fbc5e8df0beaefadbb28bd22ee61cc39",
+      "committedAt": "2026-09-11T20:14:58-07:00"
+    },
+    "git-commit": {
+      "source": "github/awesome-copilot",
+      "skillPath": "skills/git-commit/SKILL.md",
+      "skillFolderHash": "883a6a7466f55a9cd9f22cf1cce2d9333fc9b998",
+      "repoCommit": "1899b18da3fa5183652f86165917d553cba1850a",
+      "committedAt": "2026-09-14T05:45:01Z"
+    },
+    "review-pr": {
+      "source": "warpdotdev/common-skills",
+      "skillPath": ".agents/skills/review-pr/SKILL.md",
+      "skillFolderHash": "ee744db4e23be67660abd81db265632ca67479b5",
+      "repoCommit": "b811c24365ae505bfc9646458957b886e29110b5",
+      "committedAt": "2026-09-02T21:46:12-04:00"
+    },
+    "release-skills": {
+      "source": "jimliu/baoyu-skills",
+      "skillPath": ".claude/skills/release-skills/SKILL.md",
+      "skillFolderHash": "97438b3170eb850ba3a92de132d6866616cf338e",
+      "repoCommit": "1567581c26ec29f4216c6e6835415bf30343b0e3",
+      "committedAt": "2026-09-10T10:13:43-05:00"
+    }
+  }
 }
