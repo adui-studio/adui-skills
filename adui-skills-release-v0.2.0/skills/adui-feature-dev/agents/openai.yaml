@@ -1,0 +1,3 @@
+interface:
+  display_name: "ADui 功能开发"
+  short_description: "按 ADui 规范完成需求理解、最小实现、测试验证与交付。"

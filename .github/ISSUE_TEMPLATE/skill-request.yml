@@ -1,0 +1,36 @@
+name: Skill / Profile 建议
+about: 建议新的 ADui Skill、第三方 Skill 或 Profile 组合
+labels: ['enhancement']
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 类型
+      options:
+        - ADui 自研 Skill
+        - 第三方 Skill 收录
+        - Profile / 路由规则
+        - Profile Installer
+        - 文档或发布能力
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景
+      description: 请描述输入、期望输出以及为什么现有能力不足。
+    validations:
+      required: true
+  - type: input
+    id: upstream
+    attributes:
+      label: 上游地址（如适用）
+      placeholder: owner/repo 或公开文档地址
+  - type: textarea
+    id: notes
+    attributes:
+      label: 补充说明
+      description: 技术栈、Agent、兼容性或安全注意事项。
+  - type: markdown
+    attributes:
+      value: 'English fallback: describe the use case, expected result, upstream source if applicable, and compatibility/security considerations.'

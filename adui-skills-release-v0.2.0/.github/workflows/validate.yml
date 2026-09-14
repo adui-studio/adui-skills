@@ -1,0 +1,44 @@
+name: 校验 ADui Skills Pack
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: 校验 Registry、Profiles 与本地 Skills
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v5
+
+      - name: 配置 Node.js 22
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: 执行完整校验
+        run: npm run validate
+
+      - name: 运行自动化测试
+        run: npm test
+
+      - name: 输出 Git 状态摘要
+        if: always()
+        shell: bash
+        run: |
+          echo "当前 Git 状态："
+          git status --short
+          echo
+          echo "English fallback: repository validation finished; see previous steps for details."

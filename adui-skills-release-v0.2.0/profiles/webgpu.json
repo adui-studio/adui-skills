@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "ADui WebGPU",
+  "description": "WebGPU and WGSL rendering/compute profile.",
+  "extends": [
+    "web",
+    "toolchain",
+    "3d"
+  ],
+  "skills": [
+    "webgpu"
+  ],
+  "localSkills": []
+}

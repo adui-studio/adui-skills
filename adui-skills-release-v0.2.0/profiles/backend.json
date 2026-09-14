@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "name": "ADui Backend",
+  "description": "NestJS 与高级 TypeScript 后端工程 Profile。",
+  "extends": [
+    "core"
+  ],
+  "skills": [
+    "nestjs-best-practices",
+    "typescript-advanced-types"
+  ],
+  "localSkills": []
+}

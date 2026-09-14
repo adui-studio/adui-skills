@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/adui-studio/adui-skills/raw/main/registry/skills.schema.json",
+  "title": "ADui Skills Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "updatedAt",
+    "skills"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "updatedAt": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "source",
+          "skillPath",
+          "autoResolvePath",
+          "status",
+          "category",
+          "tier",
+          "official",
+          "enabled",
+          "profiles",
+          "description",
+          "skillsShUrl"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+          },
+          "skillPath": {
+            "type": ["string", "null"]
+          },
+          "autoResolvePath": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": ["active", "upstream-unavailable", "deprecated"]
+          },
+          "category": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+          },
+          "tier": {
+            "enum": ["S+", "S", "A+", "A", "B"]
+          },
+          "official": {
+            "type": "boolean"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "profiles": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9-]*$"
+            },
+            "uniqueItems": true
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "skillsShUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
