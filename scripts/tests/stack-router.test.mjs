@@ -4,9 +4,11 @@ import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
 
-const repoRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../..');
-const router = path.join(repoRoot, 'skills/adui-stack-router/scripts/detect-stack.mjs');
+const testFileDir = path.dirname(fileURLToPath(import.meta.url));
+const repoRoot = path.resolve(testFileDir, '..', '..');
+const router = path.join(repoRoot, 'skills', 'adui-stack-router', 'scripts', 'detect-stack.mjs');
 
 function withProject(files, callback) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'adui-router-'));
@@ -25,6 +27,10 @@ function withProject(files, callback) {
 function detect(root) {
   return JSON.parse(execFileSync(process.execPath, [router, root, '--json'], { encoding: 'utf8' }));
 }
+
+test('Stack Router 测试入口可跨平台解析', () => {
+  assert.ok(fs.existsSync(router), `Stack Router 脚本不存在：${router}`);
+});
 
 test('NestJS + Prisma 自动组合 nestjs-prisma Profile', () => {
   withProject({

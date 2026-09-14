@@ -2,6 +2,19 @@
 
 [简体中文](./CHANGELOG.md) | [English](./CHANGELOG.en.md)
 
+## v0.1.10
+
+### 修复
+
+- 修复 Windows 下 `scripts/tests/stack-router.test.mjs` 使用 `new URL(import.meta.url).pathname` 导致盘符被重复解析为 `D:\\D:\\...` 的问题。
+- 统一改用 Node.js `fileURLToPath(import.meta.url)` 将 `file:` URL 转为本地文件系统路径，兼容 Windows 盘符、空格和 URL 编码字符。
+- 新增 Stack Router 测试入口存在性检查，让路径解析错误能够以更直接的错误信息暴露。
+
+### 验证
+
+- `npm test` 现在包含 16 个测试；Stack Router 的 8 个测试均使用跨平台路径解析。
+
+
 ## v0.1.8
 
 ### 新增

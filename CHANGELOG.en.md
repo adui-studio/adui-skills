@@ -12,6 +12,15 @@
 - Added Chinese-first Vite+ and NestJS + Prisma documentation with English fallbacks.
 [简体中文](./CHANGELOG.md) | [English](./CHANGELOG.en.md)
 
+## v0.1.10
+
+### Fixed
+
+- Fixed Windows path resolution in `scripts/tests/stack-router.test.mjs` by replacing raw `URL.pathname` handling with `fileURLToPath(import.meta.url)`.
+- Added an explicit Stack Router entrypoint existence check for clearer cross-platform failures.
+- The full test suite now contains 16 tests.
+
+
 ## v0.1.8
 
 ### Added
