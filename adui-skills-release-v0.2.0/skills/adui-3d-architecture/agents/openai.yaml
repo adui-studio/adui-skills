@@ -1,3 +1,0 @@
-interface:
-  display_name: "ADui 3D 架构"
-  short_description: "Three.js、Babylon.js、CesiumJS、WebGL2 与 WebGPU 技术选型和架构决策。"

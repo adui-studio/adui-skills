@@ -1,3 +1,0 @@
-interface:
-  display_name: "ADui 技术栈路由器"
-  short_description: "检测项目技术栈并路由到最小 ADui Profiles"
