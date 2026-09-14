@@ -69,7 +69,24 @@ It runs every Monday at 09:37 Asia/Shanghai and can also be triggered manually.
 
 ## Categories
 
-Categories are configured in `config/skills-sh-ranking.json`. The default set covers frontend/React, Vue, Next.js, Design/UI, mobile, agent workflows, databases, testing, backend/API, Git/delivery, 3D/GPU, and tooling.
+Categories are configured in `config/skills-sh-ranking.json`. The default set now contains 14 categories:
+
+- Frontend
+- React
+- Vue
+- Next.js
+- Design / UI
+- UX
+- Mobile
+- Agent workflows
+- Databases
+- Testing
+- Backend / API
+- Git / delivery
+- 3D / GPU
+- Tooling
+
+Frontend and React are ranked separately so general frontend skills are not continuously displaced by React-specific results. UX is also a dedicated category rather than being folded into Design / UI.
 
 ## Default quality gates
 
@@ -80,6 +97,7 @@ Minimum installs      : 5000
 Minimum GitHub stars  : 100
 Blocked risk levels   : HIGH / CRITICAL
 Candidate per category: 1
+Maximum new per run   : 14
 ```
 
 Audit checks are best-effort. Explicit `fail`, `HIGH`, or `CRITICAL` findings block a candidate. If the audit endpoint is unavailable, the report uses `unknown` rather than inventing a safe result.

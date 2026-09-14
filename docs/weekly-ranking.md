@@ -69,12 +69,14 @@ skills.sh Audit 最佳努力安全检查
 
 ## 分类
 
-分类由 `config/skills-sh-ranking.json` 管理，当前覆盖：
+分类由 `config/skills-sh-ranking.json` 管理，当前共 14 类：
 
-- 前端 / React
+- 前端
+- React
 - Vue
 - Next.js
 - 设计 / UI
+- UX
 - 移动端
 - Agent 工作流
 - 数据库
@@ -83,6 +85,8 @@ skills.sh Audit 最佳努力安全检查
 - Git / 交付
 - 3D / GPU
 - 工程化
+
+其中“前端”和“React”独立排行，避免通用前端能力长期被 React 结果占据；“UX”也作为独立分类，与视觉设计 / UI 排行分开。
 
 每个分类通过 skills.sh 搜索查询获得候选，然后按安装量排序。
 
@@ -97,6 +101,7 @@ skills.sh Audit 最佳努力安全检查
 最低 GitHub Stars  : 100
 阻断风险等级       : HIGH / CRITICAL
 每分类候选         : 1
+单次最多新增       : 14
 ```
 
 GitHub Stars 用来过滤过于冷门的来源仓库；skills.sh Audit 采用最佳努力模式：如果能读取到审计结果，则 `fail`、`HIGH`、`CRITICAL` 会阻断候选；如果审计端点暂时不可用，则报告为 `unknown`，但不会伪造安全结论。
