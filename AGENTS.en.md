@@ -9,3 +9,7 @@ Run `npm run validate` before completion.
 ## Feature development
 
 For feature work, bug fixes, or refactoring, follow `skills/adui-feature-dev/SKILL.md`. Use `adui-stack-router` first when the project stack is unclear.
+
+## Specialized local skills
+
+Use `adui-viteplus` only for actual Vite+ projects. Use `adui-nestjs-prisma` only when both NestJS and Prisma are present.

@@ -16,3 +16,7 @@ Delivery order:
 6. Unresolved questions.
 
 Use minimal changes, follow existing repository conventions, never claim unexecuted validation, and do not commit/push/merge/release unless explicitly requested.
+
+## Specialized routing
+
+Add `adui-viteplus` for real Vite+ projects. Add `adui-nestjs-prisma` only when both NestJS and Prisma are present.

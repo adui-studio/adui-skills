@@ -29,6 +29,8 @@ GitHub 是唯一事实源，CNB 为单向国内镜像。所有修改、PR、Rele
 
 - `adui-stack-router`：只读检测技术栈并解析最小 Profile 集。
 - `adui-feature-dev`：统一需求理解、最小修改、测试验证、Review 与交付格式。
+- `adui-viteplus`：Vite+ 统一工具链专项规范。
+- `adui-nestjs-prisma`：NestJS 与 Prisma 同时存在时的工程胶水层。
 
 两者关系：
 
@@ -43,3 +45,7 @@ adui-feature-dev
   ↓
 实现与验证
 ```
+
+## 组合 Profile
+
+`nestjs-prisma` 同时继承 `backend` 与 `prisma`，仅在 Stack Router 同时检测到 NestJS 和 Prisma 时作为直接 Profile。这样可以避免 `backend` 对所有 NestJS 项目强制加载 Prisma 集成规则。

@@ -11,3 +11,7 @@ npm run validate
 ```
 
 Use `npm run updates:check` for Registry changes and `npm run detect:stack -- <project-root>` for router changes. Third-party upstream updates must be reviewed manually and never auto-merged.
+
+## Local skill references
+
+`localSkills` may reference only ADui skills that already exist and pass validation. Planned skills are added to profiles only after implementation and validation.

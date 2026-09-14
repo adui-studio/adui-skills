@@ -10,3 +10,7 @@ The repository has four layers: third-party Registry/Lock, declarative Profiles,
 
 - `adui-stack-router`: read-only stack detection and minimal Profile routing.
 - `adui-feature-dev`: requirement understanding, minimal implementation, verification, review and delivery workflow.
+
+## Specialized local skills
+
+`adui-viteplus` owns Vite+ toolchain integration. `adui-nestjs-prisma` is selected through the combined `nestjs-prisma` profile only when both stacks are detected.

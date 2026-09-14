@@ -22,6 +22,7 @@ core
 ├── backend
 ├── database
 │   ├── prisma
+│   │   └── nestjs-prisma ── backend
 │   ├── postgresql
 │   ├── mysql
 │   └── sqlite
@@ -62,6 +63,28 @@ vue
 unocss
 database
 prisma
+postgresql
+git
+```
+
+### NestJS + Prisma + PostgreSQL
+
+直接：
+
+```text
+nestjs-prisma
+postgresql
+git
+```
+
+有效：
+
+```text
+core
+backend
+database
+prisma
+nestjs-prisma
 postgresql
 git
 ```

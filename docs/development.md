@@ -45,3 +45,8 @@ adui-feature-dev
 ## Git
 
 默认不自动执行 `commit`、`push`、`merge` 或 `release`。只有用户明确要求时才进行对应写操作。
+
+## 专项 Skill 路由
+
+- 检测到 Vite+：在框架 Skill 之外增加 `adui-viteplus`。
+- 同时检测到 NestJS + Prisma：增加 `adui-nestjs-prisma`，不要只凭 NestJS 或 Prisma 单独信号加载。

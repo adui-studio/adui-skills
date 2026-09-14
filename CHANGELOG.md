@@ -2,6 +2,23 @@
 
 [简体中文](./CHANGELOG.md) | [English](./CHANGELOG.en.md)
 
+## v0.1.7
+
+### 新增
+
+- 正式实现 `adui-viteplus`，覆盖 Vite+ 配置、`vp` 命令、质量检查、Vitest、tsdown 打包与渐进迁移。
+- 正式实现 `adui-nestjs-prisma`，覆盖 NestJS 模块边界、Prisma 数据访问、事务、错误映射、迁移与测试。
+- 新增 `nestjs-prisma` 组合 Profile，仅在 NestJS 与 Prisma 同时存在时加载。
+- 新增 Stack Router 自动化测试，验证 NestJS + Prisma 组合路由与 Vite+ 优先级。
+- 新增 `docs/viteplus.md`、`docs/nestjs-prisma.md` 及英文兜底文档。
+
+### 改进
+
+- `backend` Profile 不再默认加载 Prisma 集成 Skill。
+- GitHub 校验 Workflow 改为运行全部自动化测试。
+- 清理尚未实现的 `adui-tauri-v2`、`adui-webgl2`、`adui-3d-architecture` Profile 引用，保证 `localSkills` 只指向真实存在的 Skill。
+
+
 ## v0.1.6
 
 ### 新增

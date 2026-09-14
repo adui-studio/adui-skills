@@ -1,5 +1,15 @@
 # Changelog
 
+
+
+## v0.1.7
+
+### Added
+
+- Implemented `adui-viteplus` for the Vite+ unified toolchain.
+- Implemented `adui-nestjs-prisma` for NestJS/Prisma integration.
+- Added the combined `nestjs-prisma` profile and router tests.
+- Added Chinese-first Vite+ and NestJS + Prisma documentation with English fallbacks.
 [简体中文](./CHANGELOG.md) | [English](./CHANGELOG.en.md)
 
 ## v0.1.6

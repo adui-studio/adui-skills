@@ -81,6 +81,18 @@ npx skills add https://github.com/adui-studio/adui-skills --skill adui-feature-d
 ```
 
 推荐先用 `adui-stack-router` 识别项目，再用 `adui-feature-dev` 约束需求理解、最小改动、测试验证和交付。
+Vite+ 专项工具链：
+
+```bash
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-viteplus
+```
+
+NestJS + Prisma 集成：
+
+```bash
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-nestjs-prisma
+```
+
 
 ### 4. 安装 Registry 中的第三方 Skill
 
@@ -112,7 +124,7 @@ React + Tailwind CSS
 core + web + toolchain + react + tailwind + git
 
 NestJS + Prisma + PostgreSQL
-core + backend + database + prisma + postgresql + git
+core + nestjs-prisma + postgresql + git
 
 Three.js / Babylon.js / CesiumJS
 按真实项目分别启用 threejs / babylonjs / cesiumjs
@@ -141,6 +153,16 @@ Review Git Diff
 ```
 
 默认不会自动执行 `commit`、`push`、`merge` 或 `release`，除非用户明确要求。完整说明见 [docs/development.md](./docs/development.md)。
+
+
+## Vite+ 与 NestJS + Prisma 专项能力
+
+- `adui-viteplus`：仅在真实 Vite+ 项目中启用，统一 `vp check/test/build/pack`、`vite.config.ts` 与渐进式迁移规则。
+- `adui-nestjs-prisma`：仅在 NestJS 与 Prisma 同时存在时启用，补充模块边界、数据访问、事务、错误映射、迁移与真实数据库测试规范。
+
+Stack Router 会在同时检测到 NestJS 与 Prisma 时选择 `nestjs-prisma` 组合 Profile，避免普通 NestJS 或非 NestJS Prisma 项目误加载该 Skill。
+
+详细说明见 [Vite+ 工程规范](./docs/viteplus.md) 与 [NestJS + Prisma 集成规范](./docs/nestjs-prisma.md)。
 
 ## 第三方 Skill 更新机制
 
@@ -188,14 +210,16 @@ npm run lock:init
 
 - Registry：84 条记录
 - 启用并参与跟踪：83 个第三方 Skill
-- Profiles：27 个
-- ADui 自研核心 Skills：2 个（`adui-stack-router`、`adui-feature-dev`）
+- Profiles：28 个
+- ADui 自研核心 Skills：4 个（`adui-stack-router`、`adui-feature-dev`、`adui-viteplus`、`adui-nestjs-prisma`）
 - 已知停用项：`database-schema-design`（上游当前不可稳定访问）
 
 ## 文档
 
 - [使用方法](./docs/usage.md)
 - [功能开发规范](./docs/development.md)
+- [Vite+ 工程规范](./docs/viteplus.md)
+- [NestJS + Prisma 集成规范](./docs/nestjs-prisma.md)
 - [维护与每周更新](./docs/maintenance.md)
 - [架构说明](./docs/architecture.md)
 - [添加 Skill](./docs/adding-skills.md)

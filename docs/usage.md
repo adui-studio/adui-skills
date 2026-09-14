@@ -63,7 +63,7 @@ core + web + toolchain + react + tailwind + git
 ### NestJS + Prisma + PostgreSQL
 
 ```text
-core + backend + database + prisma + postgresql + git
+core + nestjs-prisma + postgresql + git
 ```
 
 ### Tauri + Vue
@@ -103,3 +103,31 @@ npx skills add vuejs-ai/skills --skill vue-best-practices
 ## 语言
 
 仓库文档默认中文。英文用户使用对应 `.en.md` 文件。
+
+## Vite+ 专项
+
+当 Stack Router 检测到 `vite-plus` 或 `vite.config.*` 从 `vite-plus` 导入时启用：
+
+```text
+core + toolchain + viteplus
+```
+
+安装：
+
+```bash
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-viteplus
+```
+
+## NestJS + Prisma 专项
+
+仅在两者同时存在时启用：
+
+```text
+core + backend + database + prisma + nestjs-prisma
+```
+
+安装：
+
+```bash
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-nestjs-prisma
+```

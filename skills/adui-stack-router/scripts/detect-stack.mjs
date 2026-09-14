@@ -300,6 +300,10 @@ if (detections.has('tailwind') && detections.has('unocss')) {
   }
 }
 
+if (detections.has('nestjs') && detections.has('prisma')) {
+  addDetection('nestjs-prisma', 'nestjs-prisma', 'high', '同时检测到 NestJS 与 Prisma');
+}
+
 if (detections.has('prisma') && !['postgresql', 'mysql', 'sqlite'].some((id) => detections.has(id))) {
   warnings.push('检测到 Prisma，但无法确定数据库 provider。选择数据库引擎 Profile 前，请检查 datasource 配置。');
 }
@@ -347,7 +351,7 @@ for (const profile of directProfiles) expandProfile(profile, effectiveProfiles);
 
 const profileOrder = [
   'core', 'web', 'toolchain', 'viteplus', 'pnpm', 'vue', 'react', 'tailwind', 'unocss',
-  'backend', 'database', 'prisma', 'postgresql', 'mysql', 'sqlite', 'flutter', 'tauri',
+  'backend', 'database', 'prisma', 'nestjs-prisma', 'postgresql', 'mysql', 'sqlite', 'flutter', 'tauri',
   'uniapp', 'uniapp-x', 'wechat-miniprogram', 'wechat-cloudbase', 'threejs', 'babylonjs',
   'cesiumjs', 'webgl2', 'webgpu', 'git',
 ];
@@ -383,7 +387,7 @@ console.log(`项目：${root}`);
 console.log('');
 console.log('检测到的技术栈');
 if (result.detected.length === 0) {
-  console.log('- No supported stack signals detected');
+  console.log('- 未检测到受支持的技术栈信号');
 } else {
   for (const item of result.detected) {
     console.log(`- ${item.id} — ${item.confidence}`);

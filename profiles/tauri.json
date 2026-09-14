@@ -11,7 +11,5 @@
     "tauri-config",
     "tauri-app-sql"
   ],
-  "localSkills": [
-    "adui-tauri-v2"
-  ]
+  "localSkills": []
 }

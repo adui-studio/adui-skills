@@ -31,8 +31,8 @@ jobs:
       - name: 执行完整校验
         run: npm run validate
 
-      - name: 运行上游跟踪器单元测试
-        run: npm run test:updates
+      - name: 运行自动化测试
+        run: npm test
 
       - name: 输出 Git 状态摘要
         if: always()

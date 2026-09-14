@@ -28,6 +28,7 @@ description: 检测当前代码仓库的技术栈，并选择最小且合适的 
 - Tailwind CSS 与 UnoCSS 同时出现时，检查实际配置和 import，不要因为包都存在就默认同时启用。
 - PostgreSQL、MySQL、SQLite 优先依据 Prisma datasource provider 或显式驱动判断，不要无依据同时启用。
 - Vite+ 与普通 Vite 分开判断，只在项目确实使用 Vite+ 时选择 `viteplus`。
+- NestJS 与 Prisma 同时存在时优先选择组合 Profile `nestjs-prisma`，不要让普通 NestJS 项目默认加载 Prisma 集成 Skill。
 - uni-app 与 uni-app x 分开判断；UTS/UVue 只是中等强度证据，必要时继续确认。
 - 原生微信小程序与 CloudBase 分开判断，只在实际使用 CloudBase 时加入 `wechat-cloudbase`。
 - Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU 可独立组合，但只有项目真实同时使用时才同时选择。
@@ -47,13 +48,15 @@ description: 检测当前代码仓库的技术栈，并选择最小且合适的 
 检测到的技术栈
 - Vue 3 — 高 — package.json: dependencies.vue
 - UnoCSS — 高 — uno.config.ts + unocss dependency
+- NestJS — 高 — package.json: @nestjs/core
 - Prisma — 高 — prisma/schema.prisma
+- NestJS + Prisma — 高 — 同时检测到两者
 - PostgreSQL — 高 — Prisma datasource provider=postgresql
 
 直接 Profiles
 - vue
 - unocss
-- prisma
+- nestjs-prisma
 - postgresql
 - git
 
@@ -63,8 +66,10 @@ description: 检测当前代码仓库的技术栈，并选择最小且合适的 
 - toolchain
 - vue
 - unocss
+- backend
 - database
 - prisma
+- nestjs-prisma
 - postgresql
 - git
 

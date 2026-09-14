@@ -1,3 +1,3 @@
 interface:
-  display_name: "ADui Viteplus"
-  short_description: "Vite+ development conventions covering vp, Vite, Vitest, Oxc, Rolldown, tsdown and related tooling."
+  display_name: "ADui Vite+"
+  short_description: "按 Vite+ 统一工具链规范完成配置、检查、测试、构建、打包与迁移。"

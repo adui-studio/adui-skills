@@ -29,6 +29,8 @@ Install an ADui-maintained Skill:
 ```bash
 npx skills add https://github.com/adui-studio/adui-skills --skill adui-stack-router
 npx skills add https://github.com/adui-studio/adui-skills --skill adui-feature-dev
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-viteplus
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-nestjs-prisma
 ```
 
 Check upstream changes without writing:
@@ -48,6 +50,14 @@ npm run updates:apply
 
 `adui-feature-dev` standardizes feature work, bug fixes and refactoring into requirement understanding, minimal changes, quality gates, diff review and explicit delivery. Chinese documentation is canonical; see [docs/development.en.md](./docs/development.en.md) for the English fallback.
 
+
+## Specialized Vite+ and NestJS + Prisma skills
+
+- `adui-viteplus` is used only for real Vite+ projects and coordinates `vp check`, `vp test`, `vp build`, `vp pack`, configuration, and incremental migration.
+- `adui-nestjs-prisma` is selected only when both NestJS and Prisma are detected. It adds integration rules for module boundaries, data access, transactions, migrations, error mapping, and real database testing.
+
+The Stack Router uses the combined `nestjs-prisma` profile so NestJS-only or Prisma-only projects do not load this integration skill.
+
 ## Upstream tracking v2
 
 v0.1.4 tracks the Git tree SHA of each Skill folder (`skillFolderHash`) instead of relying on the GitHub commits-by-path API. Repositories are grouped by `source`, cloned once per run, and moved `SKILL.md` files can be auto-resolved by frontmatter `name`.
@@ -58,11 +68,15 @@ A single unavailable third-party repository is reported as a warning and does no
 
 - `adui-stack-router`
 - `adui-feature-dev`
+- `adui-viteplus`
+- `adui-nestjs-prisma`
 
 ## Documentation
 
 - [Usage](./docs/usage.en.md)
 - [Feature Development](./docs/development.en.md)
+- [Vite+](./docs/viteplus.en.md)
+- [NestJS + Prisma](./docs/nestjs-prisma.en.md)
 - [Maintenance](./docs/maintenance.en.md)
 - [Architecture](./docs/architecture.en.md)
 - [Adding Skills](./docs/adding-skills.en.md)

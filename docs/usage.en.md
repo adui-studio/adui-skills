@@ -34,3 +34,7 @@ npx skills add https://github.com/adui-studio/adui-skills --skill adui-feature-d
 ```
 
 Recommended flow: stack router → minimal profiles → feature development → verification and delivery. See [development.en.md](./development.en.md).
+
+## Specialized profiles
+
+Use `viteplus` only for actual Vite+ projects. Use `nestjs-prisma` only when both NestJS and Prisma are detected; it inherits the backend and Prisma profiles.

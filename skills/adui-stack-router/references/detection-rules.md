@@ -21,6 +21,7 @@
 | UnoCSS | `unocss` / `@unocss/*`、`uno.config.*` | 原子类本身不足 | `unocss` |
 | NestJS | `@nestjs/core` | Nest decorators | `backend` |
 | Prisma | `prisma` / `@prisma/client`、`schema.prisma` | `PrismaClient` | `prisma` |
+| NestJS + Prisma | 同时检测到 `@nestjs/core` 与 Prisma | 两类配置同时存在 | `nestjs-prisma` |
 | Tauri | `src-tauri/`、`@tauri-apps/api` | `tauri.conf.json` | `tauri` |
 | Three.js | `three` / `@react-three/fiber` | Three import | `threejs` |
 | Babylon.js | `@babylonjs/*` | Babylon import | `babylonjs` |

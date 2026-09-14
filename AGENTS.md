@@ -42,3 +42,8 @@ npm run validate
 ## 功能开发约定
 
 处理仓库内的功能开发、Bug 修复或重构时，遵循 `skills/adui-feature-dev/SKILL.md`：先理解需求与上下文，采用最小必要改动，完成实际验证，再交付结果。技术栈不明确时先使用 `adui-stack-router`。
+
+## 专项自研 Skill
+
+- Vite+ 项目优先使用 `adui-viteplus`，不要把普通 Vite 项目自动迁移到 Vite+。
+- NestJS 与 Prisma 同时存在时使用 `adui-nestjs-prisma`；只有其中一个技术时不要加载该组合 Skill。

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "name": "ADui Backend",
-  "description": "NestJS and advanced TypeScript backend engineering profile.",
+  "description": "NestJS 与高级 TypeScript 后端工程 Profile。",
   "extends": [
     "core"
   ],
@@ -9,7 +9,5 @@
     "nestjs-best-practices",
     "typescript-advanced-types"
   ],
-  "localSkills": [
-    "adui-nestjs-prisma"
-  ]
+  "localSkills": []
 }

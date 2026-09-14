@@ -37,3 +37,7 @@ fix(update): 修复上游路径自动解析
 ci: 调整每周更新 Workflow
 docs: 更新中文与英文兜底文档
 ```
+
+## Local Skill 引用规则
+
+`profiles/*.json` 的 `localSkills` 只能引用仓库中已经存在且通过校验的 ADui Skill。规划中的 Skill 不提前写入 Profile；等实现、校验和打包完成后再加入。

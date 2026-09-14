@@ -1,7 +1,7 @@
 {
   "version": 1,
   "name": "ADui Prisma",
-  "description": "Prisma CLI, Prisma Client, migrations, and database setup profile.",
+  "description": "Prisma CLI、Prisma Client、迁移与数据库接入 Profile。",
   "extends": [
     "database"
   ],
