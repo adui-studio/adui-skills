@@ -120,3 +120,22 @@ test('同时检测到多个高层 3D 引擎时给出架构警告', () => {
     assert.ok(result.warnings.some((item) => item.includes('多个高层 3D 引擎')));
   });
 });
+
+test('Tauri v2 项目检测 tauri Profile', () => {
+  withProject({
+    'package.json': {
+      dependencies: {
+        '@tauri-apps/api': '^2.0.0',
+      },
+      devDependencies: {
+        vite: '^8.0.0',
+      },
+    },
+    'src-tauri/tauri.conf.json': '{"productName":"demo"}',
+  }, (root) => {
+    const result = detect(root);
+    assert.ok(result.directProfiles.includes('tauri'));
+    assert.ok(result.effectiveProfiles.includes('tauri'));
+    assert.ok(result.effectiveProfiles.includes('toolchain'));
+  });
+});

@@ -1,6 +1,6 @@
 {
   "name": "@adui-studio/adui-skills",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": true,
   "description": "ADui 的全栈、跨端、3D/GPU 与 Git Agent Skills 精选、路由和维护体系。",
   "type": "module",
@@ -13,7 +13,13 @@
     "updates:apply": "node scripts/check-updates.mjs --write --prune --report tmp/skill-updates.md",
     "test": "node --test scripts/tests/*.test.mjs",
     "test:updates": "node --test scripts/tests/check-updates.test.mjs",
-    "test:router": "node --test scripts/tests/stack-router.test.mjs"
+    "test:router": "node --test scripts/tests/stack-router.test.mjs",
+    "profile:list": "node scripts/profile-manager.mjs list",
+    "profile:show": "node scripts/profile-manager.mjs show",
+    "profile:plan": "node scripts/profile-manager.mjs plan",
+    "profile:install": "node scripts/profile-manager.mjs install",
+    "profile:auto-install": "node scripts/profile-manager.mjs auto-install",
+    "test:profiles": "node --test scripts/tests/profile-manager.test.mjs"
   },
   "engines": {
     "node": ">=22"

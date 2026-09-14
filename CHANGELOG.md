@@ -70,3 +70,12 @@
 - 单个第三方仓库失败默认只警告，不阻塞其他 Skill 更新。
 - `uniapp-mini-guide` 更正为 `uniapp-mini`。
 - 暂停 `database-schema-design`，等待可靠上游恢复或替代。
+
+## 0.1.9
+
+### 新增
+
+- 实现 `adui-tauri-v2`，覆盖 Tauri v2 IPC、State、Capability/Permission、插件、Shell/Sidecar、SQL、Updater 与构建发布规范。
+- 新增 Profile 一键安装器 `scripts/profile-manager.mjs`，支持 Profile 继承解析、安装计划、项目/全局安装、指定 Agent 与基于 Stack Router 的自动安装。
+- 新增 `docs/tauri-v2.md` 与 `docs/profile-installer.md`，中文为默认，英文文档兜底。
+- Tauri Profile 正式启用 `adui-tauri-v2`。

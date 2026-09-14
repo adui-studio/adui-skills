@@ -47,3 +47,7 @@
 - Migrated upstream tracking to Registry/Lock v2 using Skill-folder Git tree hashes.
 - Added path auto-resolution and tolerant partial upstream failures.
 - Corrected known Skill paths and disabled unavailable `database-schema-design`.
+
+## 0.1.9
+
+English fallback: added `adui-tauri-v2`, the executable ADui Profile Manager, Tauri/profile installer documentation, and enabled the local Tauri skill in the Tauri profile.

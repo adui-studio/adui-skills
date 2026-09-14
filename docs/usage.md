@@ -142,3 +142,40 @@ core + backend + database + prisma + nestjs-prisma
 ```bash
 npx skills add https://github.com/adui-studio/adui-skills --skill adui-nestjs-prisma
 ```
+
+## Profile 一键安装器
+
+查看 Profile：
+
+```powershell
+npm run profile:list
+npm run profile:show -- vue
+```
+
+生成安装计划：
+
+```powershell
+npm run profile:plan -- vue unocss git --agent codex
+```
+
+执行安装：
+
+```powershell
+npm run profile:install -- vue unocss git --agent codex
+```
+
+根据项目自动检测并安装：
+
+```powershell
+npm run profile:auto-install -- D:\Projects\my-app --agent codex --dry-run
+```
+
+第一次建议保留 `--dry-run`。详细参数见 [profile-installer.md](./profile-installer.md)。
+
+## Tauri v2 专项
+
+```bash
+npx skills add https://github.com/adui-studio/adui-skills --skill adui-tauri-v2
+```
+
+Tauri Profile 同时加载 `tauri-setup`、`tauri-config`、`tauri-app-sql` 与 ADui 自研的 `adui-tauri-v2`。详细说明见 [tauri-v2.md](./tauri-v2.md)。

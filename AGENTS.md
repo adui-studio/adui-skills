@@ -49,3 +49,5 @@ npm run validate
 - NestJS 与 Prisma 同时存在时使用 `adui-nestjs-prisma`；只有其中一个技术时不要加载该组合 Skill。
 - 3D / GPU 选型和多引擎协同时使用 `adui-3d-architecture`；不要因个人熟悉度默认指定引擎。
 - 只有项目直接使用原生 WebGL2 API 时加载 `adui-webgl2`；Three.js/Babylon.js/CesiumJS 项目不要无故下沉到 raw WebGL2。
+- Tauri v2 项目优先使用 `adui-tauri-v2`；新增系统能力必须同时审查 IPC、Capability/Permission、scope、平台差异和资源生命周期。
+- Profile 安装统一使用 `scripts/profile-manager.mjs`；实际安装必须显式指定 Agent 或 `--all-agents`，避免非交互环境出现假成功。

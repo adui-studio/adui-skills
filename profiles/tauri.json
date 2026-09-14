@@ -1,7 +1,7 @@
 {
   "version": 1,
   "name": "ADui Tauri",
-  "description": "Tauri v2 setup, configuration, database integration, and ADui architecture conventions.",
+  "description": "Tauri v2 桌面/跨端 Profile：环境、配置、SQL 集成，以及 ADui 的 IPC、Capability、Permission、Sidecar、Updater 与发布工程规范。",
   "extends": [
     "core",
     "toolchain"
@@ -11,5 +11,7 @@
     "tauri-config",
     "tauri-app-sql"
   ],
-  "localSkills": []
+  "localSkills": [
+    "adui-tauri-v2"
+  ]
 }

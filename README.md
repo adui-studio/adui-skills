@@ -230,7 +230,7 @@ npm run lock:init
 - Registry：84 条记录
 - 启用并参与跟踪：83 个第三方 Skill
 - Profiles：29 个
-- ADui 自研核心 Skills：6 个（`adui-stack-router`、`adui-feature-dev`、`adui-viteplus`、`adui-nestjs-prisma`、`adui-3d-architecture`、`adui-webgl2`）
+- ADui 自研核心 Skills：7 个（`adui-stack-router`、`adui-feature-dev`、`adui-viteplus`、`adui-nestjs-prisma`、`adui-3d-architecture`、`adui-webgl2`、`adui-tauri-v2`）
 - 已知停用项：`database-schema-design`（上游当前不可稳定访问）
 
 ## 文档
@@ -241,6 +241,8 @@ npm run lock:init
 - [NestJS + Prisma 集成规范](./docs/nestjs-prisma.md)
 - [3D / GPU 架构](./docs/3d-architecture.md)
 - [WebGL2 工程规范](./docs/webgl2.md)
+- [Tauri v2 工程规范](./docs/tauri-v2.md)
+- [Profile 一键安装器](./docs/profile-installer.md)
 - [维护与每周更新](./docs/maintenance.md)
 - [架构说明](./docs/architecture.md)
 - [添加 Skill](./docs/adding-skills.md)
@@ -248,3 +250,25 @@ npm run lock:init
 - [贡献指南](./CONTRIBUTING.md)
 
 英文兜底：见 [README.en.md](./README.en.md) 及各文档对应的 `.en.md` 文件。
+
+## Profile 一键安装
+
+现在 `profiles/*.json` 可以直接生成并执行安装计划：
+
+```powershell
+npm run profile:list
+npm run profile:plan -- vue unocss git --agent codex
+npm run profile:install -- vue unocss git --agent codex
+```
+
+根据项目技术栈自动安装：
+
+```powershell
+npm run profile:auto-install -- D:\Projects\my-app --agent codex --dry-run
+```
+
+第一次建议使用 `--dry-run`。实际安装必须显式指定 `--agent` 或 `--all-agents`。详见 [Profile 一键安装器](./docs/profile-installer.md)。
+
+## Tauri v2
+
+Tauri Profile 现已包含 `adui-tauri-v2`，用于统一 IPC、State、Capability/Permission、插件、Shell/Sidecar、SQL、Updater 与构建发布规范。详见 [Tauri v2 工程规范](./docs/tauri-v2.md)。

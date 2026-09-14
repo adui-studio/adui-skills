@@ -1,3 +1,3 @@
 interface:
-  display_name: "ADui Tauri V2"
-  short_description: "Tauri v2 architecture and development conventions including IPC, commands, capabilities, permissions, plugins and packaging."
+  display_name: "ADui Tauri v2"
+  short_description: "Tauri v2 架构、IPC、权限、安全、Sidecar 与发布工程规范"

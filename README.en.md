@@ -78,6 +78,7 @@ A single unavailable third-party repository is reported as a warning and does no
 - `adui-nestjs-prisma`
 - `adui-3d-architecture`
 - `adui-webgl2`
+- `adui-tauri-v2`
 
 ## Documentation
 
@@ -87,6 +88,8 @@ A single unavailable third-party repository is reported as a warning and does no
 - [NestJS + Prisma](./docs/nestjs-prisma.en.md)
 - [3D / GPU Architecture](./docs/3d-architecture.en.md)
 - [WebGL2](./docs/webgl2.en.md)
+- [Tauri v2](./docs/tauri-v2.en.md)
+- [Profile Installer](./docs/profile-installer.en.md)
 - [Maintenance](./docs/maintenance.en.md)
 - [Architecture](./docs/architecture.en.md)
 - [Adding Skills](./docs/adding-skills.en.md)
@@ -94,3 +97,11 @@ A single unavailable third-party repository is reported as a warning and does no
 - [Contributing](./CONTRIBUTING.en.md)
 
 For the canonical documentation, use the Chinese files without the `.en` suffix.
+
+## Profile Installer
+
+Profiles can now be resolved and installed through the ADui Profile Manager. Actual installs require an explicit agent target. See [Profile Installer](./docs/profile-installer.en.md).
+
+## Tauri v2
+
+The Tauri profile now includes `adui-tauri-v2` for IPC, state, capabilities, permissions, plugins, sidecars, updater, and packaging conventions. See [Tauri v2 Engineering](./docs/tauri-v2.en.md).

@@ -41,3 +41,11 @@ Recommended flow: stack router → minimal profiles → feature development → 
 ## Specialized profiles
 
 Use `viteplus` only for actual Vite+ projects. Use `nestjs-prisma` only when both NestJS and Prisma are detected; it inherits the backend and Prisma profiles.
+
+## Profile installer
+
+Use `npm run profile:list`, `profile:show`, `profile:plan`, `profile:install`, or `profile:auto-install`. Actual installs require an explicit agent target. See [profile-installer.en.md](./profile-installer.en.md).
+
+## Tauri v2
+
+Install `adui-tauri-v2` directly or use the `tauri` profile. See [tauri-v2.en.md](./tauri-v2.en.md).
