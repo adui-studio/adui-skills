@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "packUrl": "https://www.skills.sh/p/DCh7RQegkqCXcXn8",
+  "searchLimit": 20,
+  "reportTopN": 5,
+  "maxNewPerRun": 12,
+  "minInstalls": 5000,
+  "minRepoStars": 100,
+  "blockedRiskLevels": ["HIGH", "CRITICAL"],
+  "categories": [
+    { "id": "frontend-react", "name": "前端 / React", "query": "react frontend" },
+    { "id": "vue", "name": "Vue", "query": "vue" },
+    { "id": "nextjs", "name": "Next.js", "query": "nextjs" },
+    { "id": "design-ui", "name": "设计 / UI", "query": "design ui" },
+    { "id": "mobile", "name": "移动端", "query": "mobile flutter react native" },
+    { "id": "agent-workflows", "name": "Agent 工作流", "query": "agent workflow" },
+    { "id": "databases", "name": "数据库", "query": "database postgres prisma sql" },
+    { "id": "testing", "name": "测试", "query": "testing playwright tdd" },
+    { "id": "backend-api", "name": "后端 / API", "query": "backend api nestjs" },
+    { "id": "git-delivery", "name": "Git / 交付", "query": "git github release" },
+    { "id": "3d-gpu", "name": "3D / GPU", "query": "threejs cesium webgl webgpu" },
+    { "id": "tooling", "name": "工程化", "query": "vite build tooling" }
+  ]
+}
