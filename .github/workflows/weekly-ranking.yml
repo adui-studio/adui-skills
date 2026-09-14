@@ -41,19 +41,25 @@ jobs:
         run: |
           set -euo pipefail
 
-          DATE="$(date -u +%F)"
+          DATE="$(TZ=Asia/Shanghai date +%F)"
           REPORT="reports/skills-sh/${DATE}.md"
+          LATEST="reports/skills-sh/latest.md"
 
           node scripts/skills-sh-ranking.mjs \
             --write \
             --report "$REPORT"
 
-      - name: 候选变更后运行测试
-        if: steps.ranking.outputs.changed == 'true'
+          cp "$REPORT" "$LATEST"
+
+          node scripts/update-ranking-display.mjs \
+            --report "$LATEST" \
+            --readme README.md \
+            --readme-en README.en.md
+
+      - name: 运行测试
         run: npm test
 
       - name: 准备每周排行分支
-        if: steps.ranking.outputs.changed == 'true'
         id: branch
         shell: bash
         run: |
@@ -68,20 +74,24 @@ jobs:
           git fetch origin "${BRANCH}:refs/remotes/origin/${BRANCH}" || true
           git checkout -B "$BRANCH"
 
-          git add pack/skills-sh-pack.json reports/skills-sh
+          git add \
+            pack/skills-sh-pack.json \
+            reports/skills-sh \
+            README.md \
+            README.en.md
 
           if git diff --cached --quiet; then
-            echo "没有需要提交的 Pack 候选变化。"
+            echo "排行榜与 Pack 候选均无变化。"
             echo "committed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          git commit -m "chore(pack): 每周补充 skills.sh 优选候选"
+          git commit -m "chore(rankings): 更新 skills.sh 每周分类排行"
           git push --force-with-lease origin "HEAD:${BRANCH}"
           echo "committed=true" >> "$GITHUB_OUTPUT"
 
       - name: 创建或更新 Pull Request
-        if: steps.ranking.outputs.changed == 'true' && steps.branch.outputs.committed == 'true'
+        if: steps.branch.outputs.committed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: ${{ steps.branch.outputs.name }}
@@ -90,7 +100,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          TITLE="chore(pack): 每周补充 skills.sh 优选 Skill"
+          TITLE="chore(rankings): 更新 skills.sh 每周分类排行"
 
           if gh pr view "$BRANCH" --json number,url >/dev/null 2>&1; then
             gh pr edit "$BRANCH" \
@@ -118,8 +128,10 @@ jobs:
             echo "- 当前读取 Pack Skill 数：\`${{ steps.ranking.outputs.pack_count || '0' }}\`"
             echo "- 本周新增候选：\`${{ steps.ranking.outputs.selected_count || '0' }}\`"
             echo "- 是否产生候选变更：\`${{ steps.ranking.outputs.changed || 'false' }}\`"
+            echo "- README：展示每个分类第 1 名"
+            echo "- 完整排行：\`reports/skills-sh/latest.md\`，每分类 Top 5"
             echo
-            echo "候选清单只追加，不删除历史记录；PR 永远不会自动合并。"
+            echo "排行榜每周更新；候选清单只追加，不删除历史记录；PR 永远不会自动合并。"
             echo
             echo "skills.sh 暂无公开 Pack 写入 API，最终加入 Pack 需要在 Pack 管理页确认。"
           } >> "$GITHUB_STEP_SUMMARY"
