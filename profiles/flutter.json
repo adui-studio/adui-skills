@@ -1,5 +1,20 @@
 {
+  "version": 1,
   "name": "ADui Flutter",
-  "description": "Flutter and Dart application development.",
-  "skills": []
+  "description": "Flutter and Dart architecture, responsive layout, state, navigation, HTTP, testing, and static-analysis profile.",
+  "extends": [
+    "core"
+  ],
+  "skills": [
+    "flutter-apply-architecture-best-practices",
+    "flutter-build-responsive-layout",
+    "flutter-fix-layout-issues",
+    "flutter-managing-state",
+    "flutter-implementing-navigation-and-routing",
+    "flutter-handling-http-and-json",
+    "flutter-add-widget-test",
+    "flutter-add-integration-test",
+    "dart-run-static-analysis"
+  ],
+  "localSkills": []
 }

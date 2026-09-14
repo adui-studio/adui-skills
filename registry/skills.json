@@ -1,6 +1,1275 @@
 {
   "$schema": "./skills.schema.json",
   "version": 1,
-  "updatedAt": null,
-  "skills": []
+  "updatedAt": "2026-09-14",
+  "skills": [
+    {
+      "id": "find-skills",
+      "name": "Find Skills",
+      "source": "vercel-labs/skills",
+      "upstreamPath": "skills/find-skills",
+      "category": "core/discovery",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "core"
+      ],
+      "description": "Discover and install suitable skills from the open Agent Skills ecosystem.",
+      "skillsShUrl": "https://www.skills.sh/vercel-labs/skills/find-skills"
+    },
+    {
+      "id": "writing-plans",
+      "name": "Writing Plans",
+      "source": "obra/superpowers",
+      "upstreamPath": "skills/writing-plans",
+      "category": "core/planning",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "core"
+      ],
+      "description": "Create implementation plans for multi-step engineering work.",
+      "skillsShUrl": "https://www.skills.sh/obra/superpowers/writing-plans"
+    },
+    {
+      "id": "systematic-debugging",
+      "name": "Systematic Debugging",
+      "source": "obra/superpowers",
+      "upstreamPath": "skills/systematic-debugging",
+      "category": "core/debugging",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "core"
+      ],
+      "description": "Require root-cause investigation before attempting fixes.",
+      "skillsShUrl": "https://www.skills.sh/obra/superpowers/systematic-debugging"
+    },
+    {
+      "id": "test-driven-development",
+      "name": "Test Driven Development",
+      "source": "obra/superpowers",
+      "upstreamPath": "skills/test-driven-development",
+      "category": "core/testing",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "core"
+      ],
+      "description": "Apply a red-green-refactor loop to implementation and bug fixes.",
+      "skillsShUrl": "https://www.skills.sh/obra/superpowers/test-driven-development"
+    },
+    {
+      "id": "verification-before-completion",
+      "name": "Verification Before Completion",
+      "source": "obra/superpowers",
+      "upstreamPath": "skills/verification-before-completion",
+      "category": "core/verification",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "core"
+      ],
+      "description": "Require fresh verification evidence before claiming completion.",
+      "skillsShUrl": "https://www.skills.sh/obra/superpowers/verification-before-completion"
+    },
+    {
+      "id": "requesting-code-review",
+      "name": "Requesting Code Review",
+      "source": "obra/superpowers",
+      "upstreamPath": "skills/requesting-code-review",
+      "category": "core/review",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "core"
+      ],
+      "description": "Request focused code review before merging or completing major work.",
+      "skillsShUrl": "https://www.skills.sh/obra/superpowers/requesting-code-review"
+    },
+    {
+      "id": "repomix-explorer",
+      "name": "Repomix Explorer",
+      "source": "yamadashy/repomix",
+      "upstreamPath": null,
+      "category": "core/codebase",
+      "tier": "A+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "core"
+      ],
+      "description": "Explore and summarize local or remote repositories using Repomix.",
+      "skillsShUrl": "https://www.skills.sh/yamadashy/repomix/repomix-explorer"
+    },
+    {
+      "id": "security-guidance",
+      "name": "Security Guidance",
+      "source": "owasp/secure-agent-playbook",
+      "upstreamPath": "skills/security-guidance",
+      "category": "core/security",
+      "tier": "A+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "core",
+        "backend"
+      ],
+      "description": "Apply OWASP ASVS-oriented security guidance to security-sensitive changes.",
+      "skillsShUrl": "https://www.skills.sh/owasp/secure-agent-playbook/security-guidance",
+      "notes": "Security audit snapshot can change; review upstream before enabling globally."
+    },
+    {
+      "id": "frontend-design",
+      "name": "Frontend Design",
+      "source": "anthropics/skills",
+      "upstreamPath": "skills/frontend-design",
+      "category": "web/ui",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "web"
+      ],
+      "description": "Create distinctive production-grade frontend interfaces and avoid generic AI aesthetics.",
+      "skillsShUrl": "https://www.skills.sh/anthropics/skills/frontend-design"
+    },
+    {
+      "id": "web-design-guidelines",
+      "name": "Web Design Guidelines",
+      "source": "vercel-labs/agent-skills",
+      "upstreamPath": "skills/web-design-guidelines",
+      "category": "web/ui-review",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "web"
+      ],
+      "description": "Audit frontend code against current web interface, UX, and accessibility guidelines.",
+      "skillsShUrl": "https://www.skills.sh/vercel-labs/agent-skills/web-design-guidelines"
+    },
+    {
+      "id": "fixing-accessibility",
+      "name": "Fixing Accessibility",
+      "source": "ibelick/ui-skills",
+      "upstreamPath": "skills/fixing-accessibility",
+      "category": "web/accessibility",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "web"
+      ],
+      "description": "Audit and fix accessibility issues with minimal targeted changes.",
+      "skillsShUrl": "https://www.skills.sh/ibelick/ui-skills/fixing-accessibility"
+    },
+    {
+      "id": "fixing-metadata",
+      "name": "Fixing Metadata",
+      "source": "ibelick/ui-skills",
+      "upstreamPath": "skills/fixing-metadata",
+      "category": "web/metadata",
+      "tier": "A+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "web"
+      ],
+      "description": "Audit and fix titles, canonical URLs, social metadata, manifests, and structured data.",
+      "skillsShUrl": "https://www.skills.sh/ibelick/ui-skills/fixing-metadata"
+    },
+    {
+      "id": "fixing-motion-performance",
+      "name": "Fixing Motion Performance",
+      "source": "ibelick/ui-skills",
+      "upstreamPath": "skills/fixing-motion-performance",
+      "category": "web/performance",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "web"
+      ],
+      "description": "Audit and fix animation and motion performance problems.",
+      "skillsShUrl": "https://www.skills.sh/ibelick/ui-skills/fixing-motion-performance"
+    },
+    {
+      "id": "webapp-testing",
+      "name": "Web App Testing",
+      "source": "anthropics/skills",
+      "upstreamPath": "skills/webapp-testing",
+      "category": "web/testing",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "web"
+      ],
+      "description": "Test local web apps using Playwright-based browser automation workflows.",
+      "skillsShUrl": "https://www.skills.sh/anthropics/skills/webapp-testing"
+    },
+    {
+      "id": "playwright-best-practices",
+      "name": "Playwright Best Practices",
+      "source": "currents-dev/playwright-best-practices-skill",
+      "upstreamPath": null,
+      "category": "web/testing",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "web"
+      ],
+      "description": "Write and maintain robust Playwright E2E, component, API, and visual tests.",
+      "skillsShUrl": "https://www.skills.sh/currents-dev/playwright-best-practices-skill/playwright-best-practices"
+    },
+    {
+      "id": "vue-best-practices",
+      "name": "Vue Best Practices",
+      "source": "vuejs-ai/skills",
+      "upstreamPath": "skills/vue-best-practices",
+      "category": "web/vue",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "vue"
+      ],
+      "description": "Vue 3 Composition API and TypeScript engineering best practices.",
+      "skillsShUrl": "https://www.skills.sh/vuejs-ai/skills/vue-best-practices"
+    },
+    {
+      "id": "vue",
+      "name": "Vue",
+      "source": "antfu/skills",
+      "upstreamPath": "skills/vue",
+      "category": "web/vue",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "vue"
+      ],
+      "description": "Modern Vue 3.5 Composition API, script setup, and reactivity reference.",
+      "skillsShUrl": "https://www.skills.sh/antfu/skills/vue"
+    },
+    {
+      "id": "vue-router-best-practices",
+      "name": "Vue Router Best Practices",
+      "source": "vuejs-ai/skills",
+      "upstreamPath": "skills/vue-router-best-practices",
+      "category": "web/vue",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "vue"
+      ],
+      "description": "Vue Router navigation, lifecycle, guard, and cleanup patterns.",
+      "skillsShUrl": "https://www.skills.sh/vuejs-ai/skills/vue-router-best-practices"
+    },
+    {
+      "id": "vue-pinia-best-practices",
+      "name": "Vue Pinia Best Practices",
+      "source": "vuejs-ai/skills",
+      "upstreamPath": "skills/vue-pinia-best-practices",
+      "category": "web/vue",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "vue"
+      ],
+      "description": "Pinia store architecture, reactivity, and state-management patterns.",
+      "skillsShUrl": "https://www.skills.sh/vuejs-ai/skills/vue-pinia-best-practices"
+    },
+    {
+      "id": "vue-testing-best-practices",
+      "name": "Vue Testing Best Practices",
+      "source": "vuejs-ai/skills",
+      "upstreamPath": "skills/vue-testing-best-practices",
+      "category": "web/vue",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "vue"
+      ],
+      "description": "Vue unit, component, async, Pinia, Teleport, and E2E testing guidance.",
+      "skillsShUrl": "https://www.skills.sh/vuejs-ai/skills/vue-testing-best-practices"
+    },
+    {
+      "id": "vue-debug-guides",
+      "name": "Vue Debug Guides",
+      "source": "vuejs-ai/skills",
+      "upstreamPath": "skills/vue-debug-guides",
+      "category": "web/vue",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "vue"
+      ],
+      "description": "Debug Vue reactivity, runtime warnings, async errors, and hydration issues.",
+      "skillsShUrl": "https://www.skills.sh/vuejs-ai/skills/vue-debug-guides"
+    },
+    {
+      "id": "vueuse-functions",
+      "name": "VueUse Functions",
+      "source": "antfu/skills",
+      "upstreamPath": "skills/vueuse-functions",
+      "category": "web/vue",
+      "tier": "A+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "vue"
+      ],
+      "description": "Map Vue requirements to VueUse composables when the dependency is appropriate.",
+      "skillsShUrl": "https://www.skills.sh/antfu/skills/vueuse-functions"
+    },
+    {
+      "id": "vercel-react-best-practices",
+      "name": "Vercel React Best Practices",
+      "source": "vercel-labs/agent-skills",
+      "upstreamPath": "skills/vercel-react-best-practices",
+      "category": "web/react",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "react"
+      ],
+      "description": "React performance and architecture rules covering waterfalls, bundles, rendering, hydration, and server/client patterns.",
+      "skillsShUrl": "https://www.skills.sh/vercel-labs/agent-skills/vercel-react-best-practices"
+    },
+    {
+      "id": "vercel-composition-patterns",
+      "name": "Vercel Composition Patterns",
+      "source": "vercel-labs/agent-skills",
+      "upstreamPath": "skills/vercel-composition-patterns",
+      "category": "web/react",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "react"
+      ],
+      "description": "Scalable React component APIs using composition, context, variants, and compound components.",
+      "skillsShUrl": "https://www.skills.sh/vercel-labs/agent-skills/vercel-composition-patterns"
+    },
+    {
+      "id": "tailwind-design-system",
+      "name": "Tailwind Design System",
+      "source": "wshobson/agents",
+      "upstreamPath": "skills/tailwind-design-system",
+      "category": "web/tailwind",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "tailwind"
+      ],
+      "description": "Build Tailwind CSS v4 design systems with tokens, theming, responsive patterns, and accessible components.",
+      "skillsShUrl": "https://www.skills.sh/wshobson/agents/tailwind-design-system"
+    },
+    {
+      "id": "tailwindcss",
+      "name": "Tailwind CSS",
+      "source": "hairyf/skills",
+      "upstreamPath": "skills/tailwindcss",
+      "category": "web/tailwind",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "tailwind"
+      ],
+      "description": "Tailwind CSS v4 utilities, theme variables, variants, responsive design, and setup reference.",
+      "skillsShUrl": "https://www.skills.sh/hairyf/skills/tailwindcss"
+    },
+    {
+      "id": "unocss",
+      "name": "UnoCSS",
+      "source": "antfu/skills",
+      "upstreamPath": "skills/unocss",
+      "category": "web/unocss",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "unocss"
+      ],
+      "description": "UnoCSS presets, rules, shortcuts, variants, transformers, themes, and Vite integration.",
+      "skillsShUrl": "https://www.skills.sh/antfu/skills/unocss"
+    },
+    {
+      "id": "vite",
+      "name": "Vite",
+      "source": "antfu/skills",
+      "upstreamPath": "skills/vite",
+      "category": "toolchain/vite",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "toolchain"
+      ],
+      "description": "Modern Vite configuration, plugins, environments, SSR, and Rolldown-based build guidance.",
+      "skillsShUrl": "https://www.skills.sh/antfu/skills/vite"
+    },
+    {
+      "id": "vitest",
+      "name": "Vitest",
+      "source": "antfu/skills",
+      "upstreamPath": "skills/vitest",
+      "category": "toolchain/testing",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "toolchain"
+      ],
+      "description": "Vitest configuration, mocking, coverage, workspaces, browser environments, and test patterns.",
+      "skillsShUrl": "https://www.skills.sh/antfu/skills/vitest"
+    },
+    {
+      "id": "pnpm",
+      "name": "pnpm",
+      "source": "antfu/skills",
+      "upstreamPath": "skills/pnpm",
+      "category": "toolchain/package-manager",
+      "tier": "A+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "toolchain"
+      ],
+      "description": "pnpm package management, workspace, catalog, CI, and dependency-resolution guidance.",
+      "skillsShUrl": "https://www.skills.sh/antfu/skills/pnpm"
+    },
+    {
+      "id": "nestjs-best-practices",
+      "name": "NestJS Best Practices",
+      "source": "kadajett/agent-nestjs-skills",
+      "upstreamPath": "skills/nestjs-best-practices",
+      "category": "backend/nestjs",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "backend"
+      ],
+      "description": "Production NestJS architecture, dependency injection, security, testing, database, performance, and microservice patterns.",
+      "skillsShUrl": "https://www.skills.sh/kadajett/agent-nestjs-skills/nestjs-best-practices"
+    },
+    {
+      "id": "typescript-advanced-types",
+      "name": "TypeScript Advanced Types",
+      "source": "wshobson/agents",
+      "upstreamPath": "skills/typescript-advanced-types",
+      "category": "backend/typescript",
+      "tier": "A+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "backend"
+      ],
+      "description": "Advanced TypeScript generics, conditional types, mapped types, inference, and type-safe API patterns.",
+      "skillsShUrl": "https://www.skills.sh/wshobson/agents/typescript-advanced-types"
+    },
+    {
+      "id": "prisma-cli",
+      "name": "Prisma CLI",
+      "source": "prisma/skills",
+      "upstreamPath": "skills/prisma-cli",
+      "category": "database/prisma",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "database"
+      ],
+      "description": "Current Prisma CLI commands, migrations, generation, schema operations, and development workflows.",
+      "skillsShUrl": "https://www.skills.sh/prisma/skills/prisma-cli"
+    },
+    {
+      "id": "prisma-client-api",
+      "name": "Prisma Client API",
+      "source": "prisma/skills",
+      "upstreamPath": "skills/prisma-client-api",
+      "category": "database/prisma",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "database"
+      ],
+      "description": "Current Prisma Client querying, relations, transactions, type-safe access, and API patterns.",
+      "skillsShUrl": "https://www.skills.sh/prisma/skills/prisma-client-api"
+    },
+    {
+      "id": "prisma-database-setup",
+      "name": "Prisma Database Setup",
+      "source": "prisma/skills",
+      "upstreamPath": "skills/prisma-database-setup",
+      "category": "database/prisma",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "database"
+      ],
+      "description": "Configure Prisma for PostgreSQL, MySQL, SQLite, and other supported providers.",
+      "skillsShUrl": "https://www.skills.sh/prisma/skills/prisma-database-setup"
+    },
+    {
+      "id": "sql-queries",
+      "name": "SQL Queries",
+      "source": "anthropics/knowledge-work-plugins",
+      "upstreamPath": null,
+      "category": "database/sql",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "database"
+      ],
+      "description": "Write readable and performant SQL across major database dialects.",
+      "skillsShUrl": "https://www.skills.sh/anthropics/knowledge-work-plugins/sql-queries"
+    },
+    {
+      "id": "database-schema-design",
+      "name": "Database Schema Design",
+      "source": "supercent-io/skills-template",
+      "upstreamPath": "skills/database-schema-design",
+      "category": "database/design",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "database"
+      ],
+      "description": "Design normalized relational schemas, relationships, indexes, constraints, and migrations.",
+      "skillsShUrl": "https://www.skills.sh/supercent-io/skills-template/database-schema-design"
+    },
+    {
+      "id": "postgres-best-practices",
+      "name": "Postgres Best Practices",
+      "source": "neondatabase/postgres-skills",
+      "upstreamPath": "skills/postgres-best-practices",
+      "category": "database/postgresql",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "database"
+      ],
+      "description": "PostgreSQL schema, indexing, query optimization, and production best practices for supported modern releases.",
+      "skillsShUrl": "https://www.skills.sh/neondatabase/postgres-skills/postgres-best-practices"
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "source": "planetscale/database-skills",
+      "upstreamPath": "skills/mysql",
+      "category": "database/mysql",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "database"
+      ],
+      "description": "MySQL schema, query, operational, and performance guidance.",
+      "skillsShUrl": "https://www.skills.sh/planetscale/database-skills/mysql"
+    },
+    {
+      "id": "sqlite-best-practices",
+      "name": "SQLite Best Practices",
+      "source": "erayack/sqlite-best-practices",
+      "upstreamPath": "skills/sqlite-best-practices",
+      "category": "database/sqlite",
+      "tier": "A+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "database"
+      ],
+      "description": "SQLite WAL, transactions, concurrency, indexes, JSON, FTS, backup, and production configuration.",
+      "skillsShUrl": "https://www.skills.sh/erayack/sqlite-best-practices/sqlite-best-practices"
+    },
+    {
+      "id": "flutter-apply-architecture-best-practices",
+      "name": "Flutter Architecture Best Practices",
+      "source": "flutter/agent-plugins",
+      "upstreamPath": "skills/flutter-apply-architecture-best-practices",
+      "category": "cross-platform/flutter",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "flutter"
+      ],
+      "description": "Apply Flutter architecture best practices and scalable application structure.",
+      "skillsShUrl": "https://www.skills.sh/flutter/agent-plugins/flutter-apply-architecture-best-practices"
+    },
+    {
+      "id": "flutter-build-responsive-layout",
+      "name": "Flutter Responsive Layout",
+      "source": "flutter/agent-plugins",
+      "upstreamPath": "skills/flutter-build-responsive-layout",
+      "category": "cross-platform/flutter",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "flutter"
+      ],
+      "description": "Build adaptive Flutter layouts based on available window constraints.",
+      "skillsShUrl": "https://www.skills.sh/flutter/agent-plugins/flutter-build-responsive-layout"
+    },
+    {
+      "id": "flutter-fix-layout-issues",
+      "name": "Flutter Fix Layout Issues",
+      "source": "flutter/agent-plugins",
+      "upstreamPath": "skills/flutter-fix-layout-issues",
+      "category": "cross-platform/flutter",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "flutter"
+      ],
+      "description": "Diagnose and fix Flutter overflow, unbounded constraint, and layout negotiation errors.",
+      "skillsShUrl": "https://www.skills.sh/flutter/agent-plugins/flutter-fix-layout-issues"
+    },
+    {
+      "id": "flutter-managing-state",
+      "name": "Flutter Managing State",
+      "source": "flutter/agent-plugins",
+      "upstreamPath": "skills/flutter-managing-state",
+      "category": "cross-platform/flutter",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "flutter"
+      ],
+      "description": "Select and implement scalable Flutter state-management and data-flow patterns.",
+      "skillsShUrl": "https://www.skills.sh/flutter/agent-plugins/flutter-managing-state"
+    },
+    {
+      "id": "flutter-implementing-navigation-and-routing",
+      "name": "Flutter Navigation and Routing",
+      "source": "flutter/agent-plugins",
+      "upstreamPath": "skills/flutter-implementing-navigation-and-routing",
+      "category": "cross-platform/flutter",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "flutter"
+      ],
+      "description": "Implement Flutter Navigator, Router, deep links, and declarative routing patterns.",
+      "skillsShUrl": "https://www.skills.sh/flutter/agent-plugins/flutter-implementing-navigation-and-routing"
+    },
+    {
+      "id": "flutter-handling-http-and-json",
+      "name": "Flutter HTTP and JSON",
+      "source": "flutter/agent-plugins",
+      "upstreamPath": "skills/flutter-handling-http-and-json",
+      "category": "cross-platform/flutter",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "flutter"
+      ],
+      "description": "Implement secure HTTP, status handling, JSON parsing, and isolate-aware network workflows.",
+      "skillsShUrl": "https://www.skills.sh/flutter/agent-plugins/flutter-handling-http-and-json"
+    },
+    {
+      "id": "flutter-add-widget-test",
+      "name": "Flutter Widget Tests",
+      "source": "flutter/agent-plugins",
+      "upstreamPath": "skills/flutter-add-widget-test",
+      "category": "cross-platform/flutter",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "flutter"
+      ],
+      "description": "Add reliable Flutter widget tests with flutter_test.",
+      "skillsShUrl": "https://www.skills.sh/flutter/agent-plugins/flutter-add-widget-test"
+    },
+    {
+      "id": "flutter-add-integration-test",
+      "name": "Flutter Integration Tests",
+      "source": "flutter/agent-plugins",
+      "upstreamPath": "skills/flutter-add-integration-test",
+      "category": "cross-platform/flutter",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "flutter"
+      ],
+      "description": "Add end-to-end Flutter integration tests and interaction workflows.",
+      "skillsShUrl": "https://www.skills.sh/flutter/agent-plugins/flutter-add-integration-test"
+    },
+    {
+      "id": "dart-run-static-analysis",
+      "name": "Dart Static Analysis",
+      "source": "dart-lang/skills",
+      "upstreamPath": "skills/dart-run-static-analysis",
+      "category": "cross-platform/flutter",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "flutter"
+      ],
+      "description": "Configure and execute Dart static analysis, strict type checks, lints, and automated fixes.",
+      "skillsShUrl": "https://www.skills.sh/dart-lang/skills/dart-run-static-analysis"
+    },
+    {
+      "id": "tauri-setup",
+      "name": "Tauri Setup",
+      "source": "full-stack-skills/tauri-skills",
+      "upstreamPath": "skills/tauri-setup",
+      "category": "cross-platform/tauri",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "tauri"
+      ],
+      "description": "Tauri v2 prerequisites, Rust/Node toolchains, and desktop/mobile environment setup.",
+      "skillsShUrl": "https://www.skills.sh/full-stack-skills/tauri-skills/tauri-setup"
+    },
+    {
+      "id": "tauri-config",
+      "name": "Tauri Config",
+      "source": "full-stack-skills/tauri-skills",
+      "upstreamPath": "skills/tauri-config",
+      "category": "cross-platform/tauri",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "tauri"
+      ],
+      "description": "Configure Tauri v2 tauri.conf.json, CSP, and platform-specific settings.",
+      "skillsShUrl": "https://www.skills.sh/full-stack-skills/tauri-skills/tauri-config"
+    },
+    {
+      "id": "tauri-app-sql",
+      "name": "Tauri App SQL",
+      "source": "full-stack-skills/tauri-skills",
+      "upstreamPath": "skills/tauri-app-sql",
+      "category": "cross-platform/tauri",
+      "tier": "A+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "tauri"
+      ],
+      "description": "Use Tauri SQL with SQLite, MySQL, or PostgreSQL including capabilities and migrations.",
+      "skillsShUrl": "https://www.skills.sh/full-stack-skills/tauri-skills/tauri-app-sql"
+    },
+    {
+      "id": "uni-app",
+      "name": "uni-app",
+      "source": "uni-helper/skills",
+      "upstreamPath": "skills/uni-app",
+      "category": "mini-app/uniapp",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "uniapp"
+      ],
+      "description": "uni-app framework, components, APIs, lifecycle, conditional compilation, and multi-platform compatibility.",
+      "skillsShUrl": "https://www.skills.sh/uni-helper/skills/uni-app",
+      "notes": "uni-helper repository is a generated/synchronized skill set; monitor upstream path changes."
+    },
+    {
+      "id": "uni-helper",
+      "name": "uni-helper",
+      "source": "uni-helper/skills",
+      "upstreamPath": "skills/uni-helper",
+      "category": "mini-app/uniapp",
+      "tier": "A+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "uniapp"
+      ],
+      "description": "uni-helper tooling, Vite plugins, auto-routing, layouts, manifest helpers, and uni-app ecosystem utilities.",
+      "skillsShUrl": "https://www.skills.sh/uni-helper/skills/uni-helper"
+    },
+    {
+      "id": "uniappx-project",
+      "name": "uni-app x Project",
+      "source": "full-stack-skills/uniapp-skills",
+      "upstreamPath": "skills/uniappx-project",
+      "category": "mini-app/uniapp-x",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "uniapp"
+      ],
+      "description": "uni-app x project development with Vue 3, TypeScript, platform compatibility, and APIs.",
+      "skillsShUrl": "https://www.skills.sh/full-stack-skills/uniapp-skills/uniappx-project"
+    },
+    {
+      "id": "uniapp-mini-guide",
+      "name": "uni-app Mini Program Guide",
+      "source": "full-stack-skills/uniapp-skills",
+      "upstreamPath": "skills/uniapp-mini-guide",
+      "category": "mini-app/uniapp",
+      "tier": "A+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "uniapp"
+      ],
+      "description": "uni-app mini-program configuration, platform capabilities, components, and limitations.",
+      "skillsShUrl": "https://www.skills.sh/full-stack-skills/uniapp-skills/uniapp-mini-guide"
+    },
+    {
+      "id": "wechat-miniprogram",
+      "name": "WeChat Mini Program",
+      "source": "joneqian/claude-skills-suite",
+      "upstreamPath": "skills/wechat-miniprogram",
+      "category": "mini-app/wechat",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "wechat-miniprogram"
+      ],
+      "description": "Native WeChat Mini Program development using WXML, WXSS, components, APIs, debugging, and performance.",
+      "skillsShUrl": "https://www.skills.sh/joneqian/claude-skills-suite/wechat-miniprogram"
+    },
+    {
+      "id": "miniprogram-development",
+      "name": "CloudBase Mini Program Development",
+      "source": "tencentcloudbase/skills",
+      "upstreamPath": "skills/miniprogram-development",
+      "category": "mini-app/wechat",
+      "tier": "A+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "wechat-miniprogram"
+      ],
+      "description": "WeChat Mini Program structure, preview, publishing, CI, debugging, and CloudBase integration when applicable.",
+      "skillsShUrl": "https://www.skills.sh/tencentcloudbase/skills/miniprogram-development",
+      "notes": "CloudBase-oriented; keep optional unless project uses Tencent CloudBase."
+    },
+    {
+      "id": "threejs-fundamentals",
+      "name": "Three.js Fundamentals",
+      "source": "cloudai-x/threejs-skills",
+      "upstreamPath": "skills/threejs-fundamentals",
+      "category": "3d/threejs",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "threejs"
+      ],
+      "description": "Three.js scene, camera, renderer, geometry, materials, lighting, textures, animation, and interaction fundamentals.",
+      "skillsShUrl": "https://www.skills.sh/cloudai-x/threejs-skills/threejs-fundamentals"
+    },
+    {
+      "id": "threejs-webgl",
+      "name": "Three.js WebGL/WebGPU",
+      "source": "freshtechbro/claudedesignskills",
+      "upstreamPath": ".claude/skills/threejs-webgl",
+      "category": "3d/threejs",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "threejs"
+      ],
+      "description": "Three.js WebGL/WebGPU rendering patterns and advanced real-time 3D workflows.",
+      "skillsShUrl": "https://www.skills.sh/freshtechbro/claudedesignskills/threejs-webgl",
+      "notes": "Repository stores skills under .claude/skills."
+    },
+    {
+      "id": "babylonjs-engine",
+      "name": "Babylon.js Engine",
+      "source": "freshtechbro/claudedesignskills",
+      "upstreamPath": ".claude/skills/babylonjs-engine",
+      "category": "3d/babylonjs",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "babylonjs"
+      ],
+      "description": "Babylon.js engine, scenes, PBR, physics, animation, WebGL/WebGPU, and GLB workflows.",
+      "skillsShUrl": "https://www.skills.sh/freshtechbro/claudedesignskills/babylonjs-engine",
+      "notes": "Current skills.sh security snapshot includes a Snyk warning; review changes before updates."
+    },
+    {
+      "id": "webgpu",
+      "name": "WebGPU",
+      "source": "cazala/webgpu-skill",
+      "upstreamPath": ".",
+      "category": "3d/webgpu",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "webgpu"
+      ],
+      "description": "Portable WebGPU and WGSL rendering/compute workflows, resource layouts, lifecycle, compatibility, and performance.",
+      "skillsShUrl": "https://www.skills.sh/cazala/webgpu-skill/webgpu",
+      "notes": "This repository is a single-skill package with SKILL.md at repository root."
+    },
+    {
+      "id": "using-cesiumjs-skills",
+      "name": "Using CesiumJS Skills",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/using-cesiumjs-skills",
+      "category": "3d/cesiumjs",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Orientation and routing across the official CesiumJS domain skills.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-viewer-setup",
+      "name": "CesiumJS Viewer Setup",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-viewer-setup",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Initialize CesiumJS apps, widgets, Ion tokens, and globe setup.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-camera",
+      "name": "CesiumJS Camera",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-camera",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Camera positioning, flyTo, constraints, tracking, and navigation.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-entities",
+      "name": "CesiumJS Entities",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-entities",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Entities, graphics, time paths, and DataSource formats such as GeoJSON, KML, CZML, and GPX.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-3d-tiles",
+      "name": "CesiumJS 3D Tiles",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-3d-tiles",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "3D Tiles, glTF content, styling, metadata, voxels, clipping, and point clouds.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-imagery",
+      "name": "CesiumJS Imagery",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-imagery",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Imagery layers, providers, base maps, and split-screen comparisons.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-terrain-environment",
+      "name": "CesiumJS Terrain and Environment",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-terrain-environment",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Terrain, heights, atmosphere, sky, fog, lighting, shadows, and environment.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-primitives",
+      "name": "CesiumJS Primitives",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-primitives",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Performance-oriented primitives, geometry, batching, and low-level collections.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-materials-shaders",
+      "name": "CesiumJS Materials and Shaders",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-materials-shaders",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Fabric materials, image-based lighting, post-processing, bloom, and tonemapping.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-custom-shader",
+      "name": "CesiumJS Custom Shader",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-custom-shader",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Custom GLSL for models, 3D Tiles, voxels, metadata, and feature IDs.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-time-properties",
+      "name": "CesiumJS Time Properties",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-time-properties",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Dynamic properties, simulation clocks, intervals, interpolation, and sampled paths.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-spatial-math",
+      "name": "CesiumJS Spatial Math",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-spatial-math",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Coordinate conversions, ellipsoid geometry, model matrices, intersections, and projections.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-interaction",
+      "name": "CesiumJS Interaction",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-interaction",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Picking, clicks, hover, selection, modifiers, and drag interactions.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-models-particles",
+      "name": "CesiumJS Models and Particles",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-models-particles",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "glTF/GLB loading, compression, CAD display extensions, animations, and particles.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "cesiumjs-core-utilities",
+      "name": "CesiumJS Core Utilities",
+      "source": "CesiumGS/cesiumjs-skills",
+      "upstreamPath": "skills/cesiumjs-core-utilities",
+      "category": "3d/cesiumjs",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "cesiumjs"
+      ],
+      "description": "Resource requests, Color, Event, errors, and common CesiumJS helper utilities.",
+      "skillsShUrl": "https://github.com/CesiumGS/cesiumjs-skills"
+    },
+    {
+      "id": "git-workflow-and-versioning",
+      "name": "Git Workflow and Versioning",
+      "source": "addyosmani/agent-skills",
+      "upstreamPath": "skills/git-workflow-and-versioning",
+      "category": "git/workflow",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "git"
+      ],
+      "description": "Use disciplined trunk-based Git workflows, commits as checkpoints, branches as sandboxes, and semantic versioning.",
+      "skillsShUrl": "https://www.skills.sh/addyosmani/agent-skills/git-workflow-and-versioning"
+    },
+    {
+      "id": "git-commit",
+      "name": "Git Commit",
+      "source": "github/awesome-copilot",
+      "upstreamPath": "skills/git-commit",
+      "category": "git/commit",
+      "tier": "S+",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "git"
+      ],
+      "description": "Create Conventional Commits from actual diffs with logical staging and breaking-change detection.",
+      "skillsShUrl": "https://www.skills.sh/github/awesome-copilot/git-commit"
+    },
+    {
+      "id": "git-advanced-workflows",
+      "name": "Git Advanced Workflows",
+      "source": "wshobson/agents",
+      "upstreamPath": "skills/git-advanced-workflows",
+      "category": "git/workflow",
+      "tier": "S+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "git"
+      ],
+      "description": "Use rebase, cherry-pick, bisect, worktrees, reflog, recovery, and history-cleanup workflows.",
+      "skillsShUrl": "https://www.skills.sh/wshobson/agents/git-advanced-workflows"
+    },
+    {
+      "id": "gh-cli",
+      "name": "GitHub CLI",
+      "source": "github/awesome-copilot",
+      "upstreamPath": "skills/gh-cli",
+      "category": "git/github",
+      "tier": "S",
+      "official": true,
+      "enabled": true,
+      "profiles": [
+        "git"
+      ],
+      "description": "Use GitHub CLI for repositories, issues, pull requests, Actions, releases, projects, and API calls.",
+      "skillsShUrl": "https://www.skills.sh/github/awesome-copilot/gh-cli"
+    },
+    {
+      "id": "review-pr",
+      "name": "Review PR",
+      "source": "warpdotdev/common-skills",
+      "upstreamPath": ".agents/skills/review-pr",
+      "category": "git/review",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "git"
+      ],
+      "description": "Review only the current pull request diff and specification context with focused findings.",
+      "skillsShUrl": "https://www.skills.sh/warpdotdev/common-skills/review-pr",
+      "notes": "Upstream common-skills stores the skill in an agent-specific path; verify path during weekly updates."
+    },
+    {
+      "id": "changelog-automation",
+      "name": "Changelog Automation",
+      "source": "wshobson/agents",
+      "upstreamPath": "skills/changelog-automation",
+      "category": "git/release",
+      "tier": "A+",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "git"
+      ],
+      "description": "Generate changelogs and release notes from Conventional Commits and semantic versioning workflows.",
+      "skillsShUrl": "https://www.skills.sh/wshobson/agents/changelog-automation"
+    },
+    {
+      "id": "release-skills",
+      "name": "Release Skills",
+      "source": "jimliu/baoyu-skills",
+      "upstreamPath": "skills/release-skills",
+      "category": "git/release",
+      "tier": "S",
+      "official": false,
+      "enabled": true,
+      "profiles": [
+        "git"
+      ],
+      "description": "Automate version detection, changelogs, release preparation, and multi-language release notes.",
+      "skillsShUrl": "https://www.skills.sh/jimliu/baoyu-skills/release-skills"
+    }
+  ]
 }

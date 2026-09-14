@@ -1,5 +1,15 @@
 {
+  "version": 1,
   "name": "ADui Backend",
-  "description": "NestJS and TypeScript backend development.",
-  "skills": []
+  "description": "NestJS and advanced TypeScript backend engineering profile.",
+  "extends": [
+    "core"
+  ],
+  "skills": [
+    "nestjs-best-practices",
+    "typescript-advanced-types"
+  ],
+  "localSkills": [
+    "adui-nestjs-prisma"
+  ]
 }

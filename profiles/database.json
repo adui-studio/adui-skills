@@ -1,5 +1,19 @@
 {
+  "version": 1,
   "name": "ADui Database",
-  "description": "Prisma, SQL, PostgreSQL, MySQL and SQLite.",
-  "skills": []
+  "description": "Prisma, SQL, PostgreSQL, MySQL, and SQLite database profile.",
+  "extends": [
+    "core"
+  ],
+  "skills": [
+    "prisma-cli",
+    "prisma-client-api",
+    "prisma-database-setup",
+    "sql-queries",
+    "database-schema-design",
+    "postgres-best-practices",
+    "mysql",
+    "sqlite-best-practices"
+  ],
+  "localSkills": []
 }

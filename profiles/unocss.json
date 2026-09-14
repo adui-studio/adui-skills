@@ -1,5 +1,12 @@
 {
+  "version": 1,
   "name": "ADui UnoCSS",
-  "description": "UnoCSS presets, rules, shortcuts, transformers and Vite integration.",
-  "skills": []
+  "description": "UnoCSS presets, rules, shortcuts, transformers, and atomic CSS profile.",
+  "extends": [
+    "web"
+  ],
+  "skills": [
+    "unocss"
+  ],
+  "localSkills": []
 }

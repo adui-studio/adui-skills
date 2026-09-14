@@ -1,5 +1,13 @@
 {
+  "version": 1,
   "name": "ADui WeChat Mini Program",
-  "description": "Native WeChat Mini Program and WeChat AI Mode development.",
-  "skills": []
+  "description": "Native WeChat Mini Program development with optional Tencent CloudBase integration.",
+  "extends": [
+    "core"
+  ],
+  "skills": [
+    "wechat-miniprogram",
+    "miniprogram-development"
+  ],
+  "localSkills": []
 }

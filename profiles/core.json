@@ -1,5 +1,19 @@
 {
+  "version": 1,
   "name": "ADui Core",
-  "description": "Common AI coding workflow, debugging, testing, verification, review and security.",
-  "skills": []
+  "description": "Shared AI coding workflow, planning, debugging, testing, verification, repository exploration, review, and security.",
+  "extends": [],
+  "skills": [
+    "find-skills",
+    "writing-plans",
+    "systematic-debugging",
+    "test-driven-development",
+    "verification-before-completion",
+    "requesting-code-review",
+    "repomix-explorer",
+    "security-guidance"
+  ],
+  "localSkills": [
+    "adui-feature-dev"
+  ]
 }
