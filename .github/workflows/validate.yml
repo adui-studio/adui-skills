@@ -5,49 +5,34 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
+    name: Validate ADui Skills Pack
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate JSON files
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate registry and profiles
+        run: npm run validate
+
+      - name: Show Git diff summary
+        if: always()
         shell: bash
         run: |
-          set -euo pipefail
-
-          python - <<'PY'
-          import json
-          from pathlib import Path
-
-          paths = [
-              Path("registry/skills.json"),
-              Path("registry/skills.lock.json"),
-          ]
-
-          paths.extend(Path("profiles").glob("*.json"))
-
-          for path in paths:
-              with path.open("r", encoding="utf-8") as file:
-                  json.load(file)
-
-              print(f"OK: {path}")
-          PY
-
-      - name: Validate custom skills
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          for skill_dir in skills/adui-*; do
-            test -f "$skill_dir/SKILL.md"
-            test -f "$skill_dir/agents/openai.yaml"
-
-            echo "OK: $skill_dir"
-          done
+          git status --short
