@@ -1,4 +1,4 @@
-name: Sync to CNB
+name: Sync GitHub to CNB
 
 on:
   push:
@@ -22,14 +22,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clone GitHub repository
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          persist-credentials: false
+
+      - name: Fetch main branch and tags
         shell: bash
         run: |
           set -euo pipefail
 
-          git clone --bare \
-            "https://github.com/${GITHUB_REPOSITORY}.git" \
-            repository.git
+          git fetch origin \
+            "+refs/heads/main:refs/remotes/origin/main" \
+            --tags \
+            --force
 
       - name: Configure CNB credentials
         shell: bash
@@ -37,6 +45,11 @@ jobs:
           CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
         run: |
           set -euo pipefail
+
+          if [ -z "${CNB_TOKEN:-}" ]; then
+            echo "::error::CNB_TOKEN is not configured."
+            exit 1
+          fi
 
           cat > /tmp/cnb-askpass.sh <<'EOF'
           #!/usr/bin/env sh
@@ -59,16 +72,21 @@ jobs:
           CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
           GIT_ASKPASS: /tmp/cnb-askpass.sh
           GIT_TERMINAL_PROMPT: "0"
-        working-directory: repository.git
         run: |
           set -euo pipefail
 
           CNB_REPOSITORY="https://cnb.cool/adui-studio/adui-skills"
 
-          git push \
-            "$CNB_REPOSITORY" \
-            "refs/heads/main:refs/heads/main"
+          echo "Syncing main branch..."
 
           git push \
             "$CNB_REPOSITORY" \
-            --tags
+            "refs/remotes/origin/main:refs/heads/main"
+
+          echo "Syncing tags..."
+
+          git push \
+            "$CNB_REPOSITORY" \
+            "refs/tags/*:refs/tags/*"
+
+          echo "GitHub -> CNB synchronization completed."
