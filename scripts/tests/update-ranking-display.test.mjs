@@ -48,17 +48,19 @@ test('解析每个分类第 1 名', () => {
   assert.equal(data.rows[1].category, '3D / GPU');
 });
 
-test('中文 README 区块包含完整排行入口与 Pack', () => {
+test('中文 README 区块包含 Top 10 完整排行入口与 Pack', () => {
   const block = buildChineseBlock(parseWeeklyRanking(REPORT));
   assert.match(block, /skills\.sh 本周分类排行榜/);
+  assert.match(block, /完整 Top 10 排行/);
   assert.match(block, /reports\/skills-sh\/latest\.md/);
   assert.match(block, /DCh7RQegkqCXcXn8/);
   assert.match(block, /vue-best-practices/);
 });
 
-test('英文 README 区块包含分类榜', () => {
+test('英文 README 区块包含 Top 10 分类榜入口', () => {
   const block = buildEnglishBlock(parseWeeklyRanking(REPORT));
   assert.match(block, /Weekly Category Leaderboard/);
+  assert.match(block, /full Top 10 ranking/);
   assert.match(block, /vue-best-practices/);
 });
 
