@@ -11,6 +11,8 @@
     "lock:init": "node scripts/check-updates.mjs --write --prune --report tmp/skill-updates.md",
     "updates:check": "node scripts/check-updates.mjs --report tmp/skill-updates.md",
     "updates:apply": "node scripts/check-updates.mjs --write --prune --report tmp/skill-updates.md",
+    "pack:ranking": "node scripts/skills-sh-ranking.mjs --report tmp/skills-sh-ranking.md",
+    "pack:ranking:apply": "node scripts/skills-sh-ranking.mjs --write --report tmp/skills-sh-ranking.md",
     "test": "node --test scripts/tests/*.test.mjs",
     "test:updates": "node --test scripts/tests/check-updates.test.mjs",
     "test:router": "node --test scripts/tests/stack-router.test.mjs",
