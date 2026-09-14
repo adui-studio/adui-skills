@@ -2,5 +2,66 @@
   "version": 1,
   "packUrl": "https://www.skills.sh/p/DCh7RQegkqCXcXn8",
   "mode": "append-only",
-  "selected": []
+  "selected": [
+    {
+      "key": "vuejs-ai/skills@vue-best-practices",
+      "source": "vuejs-ai/skills",
+      "name": "vue-best-practices",
+      "skillsShUrl": "https://skills.sh/vuejs-ai/skills/vue-best-practices",
+      "category": "vue",
+      "categoryName": "Vue",
+      "installs": 38753,
+      "repoStars": 2848,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-14T11:26:44.345Z"
+    },
+    {
+      "key": "wshobson/agents@nextjs-app-router-patterns",
+      "source": "wshobson/agents",
+      "name": "nextjs-app-router-patterns",
+      "skillsShUrl": "https://skills.sh/wshobson/agents/nextjs-app-router-patterns",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 29788,
+      "repoStars": 39640,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-14T11:26:44.345Z"
+    },
+    {
+      "key": "vercel-labs/agent-skills@web-design-guidelines",
+      "source": "vercel-labs/agent-skills",
+      "name": "web-design-guidelines",
+      "skillsShUrl": "https://skills.sh/vercel-labs/agent-skills/web-design-guidelines",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 631904,
+      "repoStars": 31180,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-14T11:26:44.345Z"
+    },
+    {
+      "key": "google/agents-cli@google-agents-cli-workflow",
+      "source": "google/agents-cli",
+      "name": "google-agents-cli-workflow",
+      "skillsShUrl": "https://skills.sh/google/agents-cli/google-agents-cli-workflow",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 220419,
+      "repoStars": 5925,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-14T11:26:44.345Z"
+    },
+    {
+      "key": "antfu/skills@vite",
+      "source": "antfu/skills",
+      "name": "vite",
+      "skillsShUrl": "https://skills.sh/antfu/skills/vite",
+      "category": "tooling",
+      "categoryName": "工程化",
+      "installs": 35414,
+      "repoStars": 5879,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-14T11:26:44.345Z"
+    }
+  ]
 }
