@@ -1,0 +1,98 @@
+name: 同步 GitHub Wiki
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'profiles/**'
+      - 'registry/skills.json'
+      - 'README.md'
+      - 'README.en.md'
+      - 'CONTRIBUTING.md'
+      - 'CONTRIBUTING.en.md'
+      - 'SECURITY.md'
+      - 'SECURITY.en.md'
+      - 'RELEASE.md'
+      - 'RELEASE.en.md'
+      - 'CHANGELOG.md'
+      - 'CHANGELOG.en.md'
+      - 'scripts/build-wiki.mjs'
+      - 'package.json'
+      - '.github/workflows/wiki.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync-wiki:
+    name: 构建并同步 Wiki
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出主仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 构建 Wiki
+        run: npm run wiki:build
+
+      - name: 检查 Wiki 是否已启用
+        id: wiki
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          HAS_WIKI="$(gh api "repos/${GITHUB_REPOSITORY}" --jq '.has_wiki')"
+          echo "enabled=${HAS_WIKI}" >> "$GITHUB_OUTPUT"
+
+          if [ "$HAS_WIKI" != "true" ]; then
+            echo "::warning::GitHub Wiki 尚未启用。请先在 Settings -> Features -> Wikis 中启用，并创建首个 Wiki 页面。"
+          fi
+
+      - name: 同步到 Wiki 仓库
+        if: steps.wiki.outputs.enabled == 'true'
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${WIKI_TOKEN:-}" ]; then
+            echo "::error::缺少 WIKI_TOKEN。GitHub Wiki 是独立 Git 仓库，需要可写入 Wiki 的凭据。"
+            echo "::error::请创建具备该仓库 Contents 写权限的 Fine-grained PAT，并保存为仓库 Secret：WIKI_TOKEN。"
+            exit 1
+          fi
+
+          WIKI_URL="https://x-access-token:${WIKI_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git"
+          WIKI_DIR="$(mktemp -d)"
+
+          if git ls-remote "$WIKI_URL" >/dev/null 2>&1; then
+            git clone "$WIKI_URL" "$WIKI_DIR"
+          else
+            echo "::error::无法访问 ${GITHUB_REPOSITORY}.wiki.git。请确认 Wiki 已初始化且 WIKI_TOKEN 有写权限。"
+            exit 1
+          fi
+
+          find "$WIKI_DIR" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -R .wiki-build/. "$WIKI_DIR/"
+
+          cd "$WIKI_DIR"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+
+          if git diff --cached --quiet; then
+            echo "Wiki 内容无变化，无需提交。"
+            exit 0
+          fi
+
+          git commit -m "docs: 同步 ${GITHUB_REPOSITORY}@${GITHUB_SHA::7}"
+          git push origin HEAD:master

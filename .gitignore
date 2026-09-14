@@ -1,6 +1,7 @@
 node_modules/
 dist/
 tmp/
+.wiki-build/
 .DS_Store
 Thumbs.db
 *.log
