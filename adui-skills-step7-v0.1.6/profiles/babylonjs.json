@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "name": "ADui Babylon.js",
+  "description": "Babylon.js real-time 3D engine profile.",
+  "extends": [
+    "web",
+    "toolchain"
+  ],
+  "skills": [
+    "babylonjs-engine"
+  ],
+  "localSkills": [
+    "adui-3d-architecture"
+  ]
+}

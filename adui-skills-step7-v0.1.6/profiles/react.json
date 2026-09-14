@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "ADui React",
+  "description": "React component architecture and performance profile for Vite-based React projects.",
+  "extends": [
+    "web",
+    "toolchain"
+  ],
+  "skills": [
+    "vercel-react-best-practices",
+    "vercel-composition-patterns"
+  ],
+  "localSkills": []
+}

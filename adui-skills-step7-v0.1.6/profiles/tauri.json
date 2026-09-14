@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "name": "ADui Tauri",
+  "description": "Tauri v2 setup, configuration, database integration, and ADui architecture conventions.",
+  "extends": [
+    "core",
+    "toolchain"
+  ],
+  "skills": [
+    "tauri-setup",
+    "tauri-config",
+    "tauri-app-sql"
+  ],
+  "localSkills": [
+    "adui-tauri-v2"
+  ]
+}

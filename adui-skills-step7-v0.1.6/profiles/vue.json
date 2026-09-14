@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "ADui Vue",
+  "description": "Vue 3 development with Composition API, Router, Pinia, VueUse, debugging, and testing.",
+  "extends": [
+    "web",
+    "toolchain"
+  ],
+  "skills": [
+    "vue-best-practices",
+    "vue",
+    "vue-router-best-practices",
+    "vue-pinia-best-practices",
+    "vue-testing-best-practices",
+    "vue-debug-guides",
+    "vueuse-functions"
+  ],
+  "localSkills": []
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "ADui WebGL2",
+  "description": "Low-level WebGL2 and GLSL ES profile maintained by ADui.",
+  "extends": [
+    "web",
+    "toolchain"
+  ],
+  "skills": [],
+  "localSkills": [
+    "adui-webgl2",
+    "adui-3d-architecture"
+  ]
+}

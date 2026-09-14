@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "ADui Prisma",
+  "description": "Prisma CLI, Prisma Client, migrations, and database setup profile.",
+  "extends": [
+    "database"
+  ],
+  "skills": [
+    "prisma-cli",
+    "prisma-client-api",
+    "prisma-database-setup"
+  ],
+  "localSkills": []
+}

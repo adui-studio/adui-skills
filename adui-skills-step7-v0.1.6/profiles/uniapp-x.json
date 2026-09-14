@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "name": "ADui UniApp X",
+  "description": "uni-app x, UTS, UVue, Vue 3, TypeScript, and cross-platform runtime profile.",
+  "extends": [
+    "web",
+    "toolchain"
+  ],
+  "skills": [
+    "uniappx-project"
+  ],
+  "localSkills": []
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "name": "ADui pnpm",
+  "description": "pnpm package management and workspace profile.",
+  "extends": [
+    "core"
+  ],
+  "skills": [
+    "pnpm"
+  ],
+  "localSkills": []
+}
