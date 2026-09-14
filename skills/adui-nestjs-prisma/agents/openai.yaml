@@ -1,0 +1,3 @@
+interface:
+  display_name: "ADui Nestjs Prisma"
+  short_description: "Integration conventions for NestJS and Prisma covering module boundaries, PrismaService, transactions, DTOs and database access."

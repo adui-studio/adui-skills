@@ -1,0 +1,3 @@
+interface:
+  display_name: "ADui Viteplus"
+  short_description: "Vite+ development conventions covering vp, Vite, Vitest, Oxc, Rolldown, tsdown and related tooling."

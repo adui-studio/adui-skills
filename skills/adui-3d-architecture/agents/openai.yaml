@@ -1,0 +1,3 @@
+interface:
+  display_name: "ADui 3D Architecture"
+  short_description: "Select and architect Three.js, Babylon.js, CesiumJS, WebGL2 and WebGPU solutions according to project requirements."

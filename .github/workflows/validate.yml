@@ -1,0 +1,53 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          paths = [
+              Path("registry/skills.json"),
+              Path("registry/skills.lock.json"),
+          ]
+
+          paths.extend(Path("profiles").glob("*.json"))
+
+          for path in paths:
+              with path.open("r", encoding="utf-8") as file:
+                  json.load(file)
+
+              print(f"OK: {path}")
+          PY
+
+      - name: Validate custom skills
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          for skill_dir in skills/adui-*; do
+            test -f "$skill_dir/SKILL.md"
+            test -f "$skill_dir/agents/openai.yaml"
+
+            echo "OK: $skill_dir"
+          done

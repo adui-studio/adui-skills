@@ -1,0 +1,20 @@
+name: Weekly Skills Update
+
+on:
+  workflow_dispatch:
+
+# Scheduled checking will be enabled after registry/skills.json
+# contains the initial curated third-party skill list.
+
+permissions:
+  contents: read
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Status
+        run: |
+          echo "Weekly upstream checking is not enabled yet."
+          echo "Populate registry/skills.json first."

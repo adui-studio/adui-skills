@@ -1,0 +1,3 @@
+interface:
+  display_name: "ADui Feature Dev"
+  short_description: "Standard ADui feature development workflow covering requirement analysis, implementation, testing, review and verification."
