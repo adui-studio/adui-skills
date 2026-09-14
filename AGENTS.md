@@ -1,54 +1,40 @@
 # AGENTS.md
 
-## Project
+## 项目定位
 
-ADui Skills Pack is a curated and maintainable AI coding skill collection.
+ADui Skills Pack 是 ADui 自用并可公开复用的 Agent Skills 精选、路由、校验和维护仓库。
 
-GitHub is the canonical repository.
+## 语言规则
 
-CNB is a synchronized mirror and must not be treated as an independent source of truth.
+1. 默认使用简体中文编写 README、docs、CHANGELOG、CONTRIBUTING、维护报告和 GitHub Actions 名称/步骤。
+2. 面向外部英文用户时提供同名 `.en.md` 兜底文档。
+3. 代码标识、第三方 Skill ID、包名、API 名称保持原文，不强制翻译。
 
-## Principles
+## 修改原则
 
-1. Understand before modifying.
-2. Prefer minimal changes.
-3. Do not vendor third-party skills unless explicitly required.
-4. Keep third-party metadata in `registry/`.
-5. Keep ADui-maintained skills in `skills/`.
-6. Keep reusable technology combinations in `profiles/`.
-7. Never automatically merge upstream skill changes.
-8. Validate changes before claiming completion.
-9. Avoid destructive Git operations unless explicitly requested.
-10. Keep skills concise and progressively load detailed references.
+1. 先理解任务和项目结构，再修改。
+2. 只做完成任务所需的最小改动。
+3. 第三方 Skill 不复制到 `skills/`，只维护 Registry、Profile 和 Lock。
+4. ADui 自研 Skill 放在 `skills/`。
+5. 上游 Skill 更新不能自动 merge。
+6. 任何“已完成”结论必须基于实际校验结果。
+7. 不在代码或文档中写入 Token、密码或密钥。
 
-## Skill Changes
+## Registry
 
-Every ADui-maintained skill must contain:
+Registry v2 使用：
 
-- `SKILL.md`
-- `agents/openai.yaml`
+- `skillPath`：上游 `SKILL.md` 路径；
+- `autoResolvePath`：路径失效时是否允许按 frontmatter `name` 自动定位；
+- `status`：`active` / `upstream-unavailable` / `deprecated`；
+- `skills.lock.json`：使用 `skillFolderHash` 锁定 Skill 目录 Git tree SHA。
 
-Use `references/` for detailed technical documentation.
+## 验证
 
-Use `scripts/` only when deterministic automation materially improves reliability.
+提交前至少运行：
 
-## Third-party Skills
+```bash
+npm run validate
+```
 
-Third-party skills must be tracked through:
-
-- source repository
-- skill path
-- category
-- tier
-- reviewed commit
-
-Do not silently replace upstream sources.
-
-## Verification
-
-Before completing repository changes:
-
-1. validate JSON
-2. validate required skill files
-3. inspect Git diff
-4. ensure no unexpected destructive instructions were introduced
+修改上游跟踪逻辑时，还要运行本地 Git fixture 测试或等价的可重复验证。

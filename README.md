@@ -1,286 +1,173 @@
 # ADui Skills Pack
 
-[English](./README.en.md) | 简体中文
+[简体中文](./README.md) | [English](./README.en.md)
 
-ADui Skills Pack 是一套面向 AI Coding / Agent 开发的可维护 Skills 集合，覆盖全栈开发、跨端应用、数据库、Web 3D/GPU、Git 协作与软件交付流程。
+ADui Skills Pack 是一套面向 AI Coding / Agent 开发的个人技能体系，覆盖全栈开发、跨端开发、数据库、Git 交付和 Web 3D/GPU。
 
-> GitHub 是唯一主仓库和事实源；CNB 仅作为国内同步镜像。
+> **语言约定**：仓库内文档、GitHub Actions 名称与维护报告默认使用中文；英文文档使用同名 `.en.md` 文件作为兜底。
 
 ## 仓库
 
-- GitHub 主仓库：<https://github.com/adui-studio/adui-skills>
-- CNB 国内镜像：<https://cnb.cool/adui-studio/adui-skills>
+- GitHub 主仓库：`https://github.com/adui-studio/adui-skills`
+- CNB 国内镜像：`https://cnb.cool/adui-studio/adui-skills`
 
-Issue、Pull Request、Release 与版本管理均以 GitHub 为准。
+GitHub 是唯一事实源。Issue、Pull Request、Release 与每周更新都以 GitHub 为准；CNB 只作为国内同步镜像。
 
-## 技术栈
+## 技术范围
 
-ADui Skills Pack 当前面向：
+- 前端：Vue、React、Tailwind CSS、UnoCSS
+- 工程化：Vite、Vite+、Vitest、pnpm
+- 后端：NestJS、TypeScript
+- 数据库：Prisma、SQL、PostgreSQL、MySQL、SQLite
+- 跨端：Flutter、Tauri
+- 小程序：uni-app、uni-app x、微信小程序、CloudBase
+- 3D/GPU：Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU
+- Git/交付：Git、GitHub、PR、Changelog、Release
 
-- Web：Vue、React、Tailwind CSS、UnoCSS
-- Toolchain：Vite、Vite+、Vitest、pnpm
-- Backend：NestJS、TypeScript
-- Database：Prisma、SQL、PostgreSQL、MySQL、SQLite
-- Cross-platform：Flutter、Tauri
-- Mini App：uni-app、uni-app x、微信小程序
-- 3D / GPU：Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU
-- Delivery：Git、GitHub、Pull Request、Changelog、Release
-
-## 设计原则
-
-ADui Skills Pack 不复制和二次维护第三方 Skill 源码。
+## 核心设计
 
 ```text
-第三方 Skill                 ADui 自研 Skill
-     │                             │
-     ▼                             ▼
-registry/skills.json             skills/
-     │                             │
-     └──────────────┬──────────────┘
-                    ▼
-                profiles/
-                    │
-                    ▼
-            adui-stack-router
+第三方 Skill                ADui 自研 Skill
+    │                            │
+    ├─ Registry                 ├─ adui-stack-router
+    ├─ Folder Hash Lock         ├─ adui-feature-dev（规划）
+    └─ Weekly Update            └─ 技术胶水与路由能力
+             │
+             └──────── Profiles ────────┐
+                                        ↓
+                               按项目技术栈按需组合
 ```
 
-- `registry/`：第三方 Skill 索引与审核版本
-- `profiles/`：按技术栈组织的 Skill 组合
-- `skills/`：ADui 自己维护的 Skills
-- `scripts/`：Registry、更新和文档自动化
-- `docs/`：架构、使用和安全说明
+仓库不复制第三方 Skill 源码。第三方 Skill 只在 `registry/skills.json` 中登记来源，并由 `registry/skills.lock.json` 记录审核过的 Skill 目录 Git tree SHA。
 
 ## 快速开始
 
-### 1. 克隆仓库
-
-GitHub：
-
-```bash
-git clone https://github.com/adui-studio/adui-skills.git
-cd adui-skills
-```
-
-国内只读镜像：
-
-```bash
-git clone https://cnb.cool/adui-studio/adui-skills.git
-cd adui-skills
-```
-
-建议开发、Issue 和 PR 始终使用 GitHub 主仓库。
-
-### 2. 验证 Registry 和 Profiles
-
-需要 Node.js 22+：
+### 1. 校验仓库
 
 ```bash
 npm run validate
 ```
 
-验证内容包括：
+### 2. 检测当前项目技术栈
 
-- Registry Skill ID 是否重复
-- Skill 元数据是否完整
-- Profile 是否引用不存在的 Skill
-- Profile `extends` 是否存在
-- Profile 是否存在循环继承
-- ADui 本地 Skill 是否存在 `SKILL.md`
-- ADui 本地 Skill 是否存在 `agents/openai.yaml`
-- `skills.lock.json` 的来源、路径与 Commit 格式是否与 Registry 一致
-- Lock 尚未初始化时会提示 Warning；初始化后缺失已启用 Skill 会导致验证失败
+```bash
+npm run detect:stack -- .
+```
+
+检测其他项目：
+
+```bash
+npm run detect:stack -- D:/Projects/my-project
+```
+
+机器可读输出：
+
+```bash
+node skills/adui-stack-router/scripts/detect-stack.mjs . --json
+```
 
 ### 3. 安装 ADui 自研 Skill
-
-例如安装技术栈路由器：
 
 ```bash
 npx skills add https://github.com/adui-studio/adui-skills --skill adui-stack-router
 ```
 
-安装功能开发工作流：
+后续其他 ADui Skill 也使用相同方式安装。
 
-```bash
-npx skills add https://github.com/adui-studio/adui-skills --skill adui-feature-dev
-```
+### 4. 安装 Registry 中的第三方 Skill
 
-`skills` CLI 支持直接从 GitHub 仓库发现并安装有效的 `SKILL.md`。当前 Profile 是声明式配置，还不是一键安装器。
-
-### 4. 根据 Registry 安装第三方 Skill
-
-例如 Registry 中：
-
-```json
-{
-  "id": "vue-best-practices",
-  "source": "vuejs-ai/skills"
-}
-```
-
-对应安装：
+例如 Vue：
 
 ```bash
 npx skills add vuejs-ai/skills --skill vue-best-practices
+npx skills add antfu/skills --skill vue
 ```
 
-React 示例：
+React：
 
 ```bash
 npx skills add vercel-labs/agent-skills --skill vercel-react-best-practices
+npx skills add vercel-labs/agent-skills --skill vercel-composition-patterns
 ```
-
-UnoCSS 示例：
-
-```bash
-npx skills add antfu/skills --skill unocss
-```
-
-更多使用方式见 [docs/usage.md](./docs/usage.md)。
-
-### 5. 检测项目技术栈
-
-在 ADui Skills Pack 仓库内可以直接运行：
-
-```bash
-npm run detect:stack -- ../your-project
-```
-
-或者直接调用 Skill 自带脚本：
-
-```bash
-node skills/adui-stack-router/scripts/detect-stack.mjs ../your-project
-```
-
-JSON 输出：
-
-```bash
-node skills/adui-stack-router/scripts/detect-stack.mjs ../your-project --json
-```
-
-检测过程只读取公开项目配置和源码信号，不读取 `.env`、Token、密钥等敏感文件。
 
 ## Profiles
 
-当前 Profile：
+`profiles/*.json` 是声明式技术组合，不是独立 Skill。
 
-| Profile | 主要用途 |
-|---|---|
-| `core` | 规划、Debug、测试、Review、验证、安全 |
-| `web` | UI/UX、可访问性、Web 测试 |
-| `vue` | Vue 3、Router、Pinia、VueUse |
-| `react` | React 性能与组件架构 |
-| `tailwind` | Tailwind CSS |
-| `unocss` | UnoCSS |
-| `toolchain` | Vite、Vitest |
-| `viteplus` | Vite+（仅实际使用 `vite-plus` 时启用） |
-| `pnpm` | pnpm / workspace |
-| `backend` | NestJS、TypeScript |
-| `database` | 通用 SQL 与关系型数据库设计 |
-| `prisma` | Prisma CLI / Client / Migration |
-| `postgresql` | PostgreSQL |
-| `mysql` | MySQL |
-| `sqlite` | SQLite |
-| `flutter` | Flutter / Dart |
-| `tauri` | Tauri v2 |
-| `uniapp` | uni-app |
-| `uniapp-x` | uni-app x / UTS / UVue |
-| `wechat-miniprogram` | 原生微信小程序 |
-| `wechat-cloudbase` | 微信小程序 + Tencent CloudBase |
-| `threejs` | Three.js |
-| `babylonjs` | Babylon.js |
-| `cesiumjs` | CesiumJS |
-| `webgl2` | WebGL2 |
-| `webgpu` | WebGPU |
-| `git` | Git / GitHub / PR / Release |
-
-Profile 支持继承。例如 Vue Profile 会组合 `web` 与 `toolchain`，最终间接继承 `core`。
-
-## ADui 自研 Skills
-
-规划中的核心 Skill：
-
-- `adui-stack-router`：**已实现**，只读识别项目技术栈并选择最小 Profile 集合
-- `adui-feature-dev`：统一需求分析、开发、测试、Review 和验证流程
-- `adui-viteplus`：Vite+ 工程规范
-- `adui-nestjs-prisma`：NestJS + Prisma 集成规范
-- `adui-tauri-v2`：Tauri v2 工程规范
-- `adui-webgl2`：WebGL2 / GLSL ES 3.0 底层规范
-- `adui-3d-architecture`：Three.js / Babylon.js / CesiumJS / WebGL2 / WebGPU 技术决策
-
-## 更新策略
+常见组合：
 
 ```text
-第三方上游更新
-      ↓
-GitHub Actions 每周检查
-      ↓
-更新 skills.lock.json
-      ↓
-生成 Pull Request
-      ↓
-人工 Review
-      ↓
-合并 main
-      ↓
-自动同步 CNB
+Vue + UnoCSS
+core + web + toolchain + vue + unocss + git
+
+React + Tailwind CSS
+core + web + toolchain + react + tailwind + git
+
+NestJS + Prisma + PostgreSQL
+core + backend + database + prisma + postgresql + git
+
+Three.js / Babylon.js / CesiumJS
+按真实项目分别启用 threejs / babylonjs / cesiumjs
 ```
 
-第三方 Skill 更新不会自动合并到 `main`。
+完整使用方法见 [docs/usage.md](./docs/usage.md)。
 
-本地只检查上游：
+## 第三方 Skill 更新机制
+
+v0.1.4 起不再使用 GitHub `commits?path=` API 作为核心版本检测方式，而是：
+
+```text
+按 source 分组
+   ↓
+每个 GitHub 仓库克隆一次
+   ↓
+定位 SKILL.md
+   ↓
+计算 Skill 所在目录 Git tree SHA
+   ↓
+skillFolderHash
+   ↓
+与 skills.lock.json 比较
+```
+
+这种方式只在 Skill 目录实际发生变化时更新 Lock，避免同仓库其他 Skill 修改造成假阳性。
+
+检查但不写入：
 
 ```bash
 npm run updates:check
 ```
 
-检查并刷新本地 Lock：
+检查并更新 Lock：
 
 ```bash
 npm run updates:apply
 ```
 
-首次建立审核基线：
+首次建立基线：
 
 ```bash
 npm run lock:init
 ```
 
-推荐首次初始化直接在 GitHub 的 **Actions → Weekly Skills Update → Run workflow** 手动运行。第一次运行会把全部已启用第三方 Skill 作为 Baseline，并创建人工审核 PR。
+每周一 09:17（Asia/Shanghai）GitHub Actions 会自动检查上游变化；有实际变更时创建 PR，但**永远不会自动合并**。
 
-每周任务固定在 `Asia/Shanghai` 每周一 09:17 运行；如果没有上游变化，不创建 PR。完整维护流程见 [维护指南](./docs/maintenance.md)。
+维护说明见 [docs/maintenance.md](./docs/maintenance.md)。
 
-## 当前状态
+## 当前数据
 
-项目仍处于 `v0.1.x` 基础设施阶段。
-
-已完成：
-
-- GitHub → CNB 自动同步
-- Registry v1
-- 技术 Profile v1
-- Registry / Profile / Lock 验证器
-- `adui-stack-router` 技术栈检测与 Profile 路由
-- 第三方 Skill 上游 Commit 检查器
-- Weekly Update Pull Request 工作流
-- 84 个第三方 Skill 的 `upstreamPath` 已全部解析
-
-下一步：
-
-- 首次运行 Weekly Skills Update，建立 `skills.lock.json` Baseline
-- 人工审核并合并 Baseline PR
-- 实现 `adui-feature-dev`
-- 创建 skills.sh Pack
+- Registry：84 条记录
+- 启用并参与跟踪：83 个第三方 Skill
+- Profiles：27 个
+- 已知停用项：`database-schema-design`（上游当前不可稳定访问）
 
 ## 文档
 
-- [使用指南](./docs/usage.md)
+- [使用方法](./docs/usage.md)
+- [维护与每周更新](./docs/maintenance.md)
 - [架构说明](./docs/architecture.md)
 - [添加 Skill](./docs/adding-skills.md)
-- [安全策略](./docs/security.md)
-- [维护与每周更新](./docs/maintenance.md)
+- [安全规范](./docs/security.md)
+- [贡献指南](./CONTRIBUTING.md)
 
-## License
-
-ADui 自研代码与 Skill 按仓库 LICENSE 发布。
-
-第三方 Skill 仍归各自上游项目所有，并遵循对应上游 License；本仓库默认只保存第三方 Skill 的元数据、来源和审核版本，不重新分发其源码。
+英文兜底：见 [README.en.md](./README.en.md) 及各文档对应的 `.en.md` 文件。

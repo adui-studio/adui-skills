@@ -1,13 +1,17 @@
-# Changelog
+# 更新日志
 
-All notable changes to ADui Skills Pack will be documented in this file.
+[简体中文](./CHANGELOG.md) | [English](./CHANGELOG.en.md)
 
-## Unreleased
+## 未发布
 
-### Added
+### 变更
 
-- Initial repository structure.
-- GitHub to CNB synchronization workflow.
-- ADui Skill placeholders.
-- Technology profile structure.
-- Third-party Skill registry structure.
+- 仓库文档与 GitHub Actions 默认改为中文，英文使用 `.en.md` 兜底。
+- 第三方 Skill 跟踪模型升级到 Registry/Lock v2。
+- 使用 `skillFolderHash`（Skill 目录 Git tree SHA）判断真实变化。
+- 上游仓库按 `source` 分组，每个仓库每次只克隆一次。
+- `skillPath` 失效时支持扫描 `SKILL.md` frontmatter `name` 自动修复路径。
+- 单个第三方仓库失败默认只警告，不阻塞其他 Skill 更新。
+- 修正 Vercel、Prisma、Tailwind、TypeScript、uni-app 等已知路径。
+- `uniapp-mini-guide` 更正为 `uniapp-mini`。
+- 暂停 `database-schema-design`，等待可靠上游恢复或替代。

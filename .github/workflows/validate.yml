@@ -1,4 +1,4 @@
-name: Validate
+name: 校验 ADui Skills Pack
 
 on:
   pull_request:
@@ -16,23 +16,29 @@ concurrency:
 
 jobs:
   validate:
-    name: Validate ADui Skills Pack
+    name: 校验 Registry、Profiles 与本地 Skills
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: 检出仓库
+        uses: actions/checkout@v5
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: 配置 Node.js 22
+        uses: actions/setup-node@v5
         with:
           node-version: 22
 
-      - name: Validate registry and profiles
+      - name: 执行完整校验
         run: npm run validate
 
-      - name: Show Git diff summary
+      - name: 运行上游跟踪器单元测试
+        run: npm run test:updates
+
+      - name: 输出 Git 状态摘要
         if: always()
         shell: bash
         run: |
+          echo "当前 Git 状态："
           git status --short
+          echo
+          echo "English fallback: repository validation finished; see previous steps for details."

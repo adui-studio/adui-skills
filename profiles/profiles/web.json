@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "name": "ADui Web",
+  "description": "Shared web UI, UX, accessibility, metadata, animation performance, and browser testing.",
+  "extends": [
+    "core"
+  ],
+  "skills": [
+    "frontend-design",
+    "web-design-guidelines",
+    "fixing-accessibility",
+    "fixing-metadata",
+    "fixing-motion-performance",
+    "webapp-testing",
+    "playwright-best-practices"
+  ],
+  "localSkills": []
+}

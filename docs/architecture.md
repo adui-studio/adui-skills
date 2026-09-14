@@ -1,35 +1,26 @@
-# Architecture
+# ADui Skills Pack 架构
 
-ADui Skills Pack uses three primary layers.
+[简体中文](./architecture.md) | [English](./architecture.en.md)
 
-## Skills
+## 四层结构
 
-`skills/` contains only ADui-maintained skills.
+1. `registry/`：第三方 Skill 元数据与审核锁。
+2. `profiles/`：按技术栈组织的声明式组合。
+3. `skills/`：ADui 自研 Skill。
+4. `scripts/` + `.github/workflows/`：校验、路由、更新和镜像自动化。
 
-Third-party skills are not vendored into this repository.
+## Registry 与 Lock
 
-## Registry
+`skills.json` 表示“我们选择哪些 Skill”。
 
-`registry/skills.json` defines which upstream third-party skills are curated by ADui Skills Pack.
+`skills.lock.json` 表示“我们审核到了哪个 Skill 文件夹版本”。
 
-`registry/skills.lock.json` records reviewed upstream revisions.
+Lock v2 使用 `skillFolderHash`，避免仓库中无关文件或其他 Skill 修改造成假更新。
 
-## Profiles
+## Profile
 
-`profiles/` defines reusable technology-specific skill combinations.
+Profile 只保存 Skill ID 和 Profile 继承关系，不复制 Skill 内容。项目通过 `adui-stack-router` 检测技术栈，再选择最小组合。
 
-Examples:
+## 主仓与镜像
 
-- Vue
-- React
-- NestJS
-- Prisma
-- Flutter
-- Tauri
-- uni-app
-- WeChat Mini Program
-- Three.js
-- Babylon.js
-- CesiumJS
-- WebGPU
-- Git
+GitHub 是唯一事实源，CNB 为单向国内镜像。所有修改、PR、Release 和自动更新先进入 GitHub。

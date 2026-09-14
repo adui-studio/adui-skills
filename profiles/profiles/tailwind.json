@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "name": "ADui Tailwind CSS",
+  "description": "Tailwind CSS v4 design-system and utility-class profile.",
+  "extends": [
+    "web"
+  ],
+  "skills": [
+    "tailwind-design-system",
+    "tailwindcss"
+  ],
+  "localSkills": []
+}

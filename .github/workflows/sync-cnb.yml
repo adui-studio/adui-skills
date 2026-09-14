@@ -1,4 +1,4 @@
-name: Sync GitHub to CNB
+name: 同步 GitHub 到 CNB
 
 on:
   push:
@@ -6,7 +6,6 @@ on:
       - main
     tags:
       - 'v*'
-
   workflow_dispatch:
 
 permissions:
@@ -18,138 +17,88 @@ concurrency:
 
 jobs:
   sync:
-    name: Sync GitHub to CNB
+    name: 同步主分支与版本标签到 CNB
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout GitHub repository
-        uses: actions/checkout@v4
+      - name: 检出 GitHub 主仓库
+        uses: actions/checkout@v5
         with:
-          # 始终同步 GitHub main，而不是使用 detached HEAD
           ref: main
-
-          # 获取完整 Git 历史
           fetch-depth: 0
-
-          # 获取所有 Tags
           fetch-tags: true
-
-          # Checkout 完成后不保留 GitHub Token
-          # 防止和后面的 CNB 凭据混用
           persist-credentials: false
 
-      - name: Verify repository
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          echo "Repository:"
-          git remote -v
-
-          echo
-          echo "Current branch:"
-          git branch --show-current
-
-          echo
-          echo "Current commit:"
-          git log -1 --oneline
-
-          echo
-          echo "Tags:"
-          git tag --list
-
-      - name: Check CNB token
+      - name: 检查 CNB_TOKEN
         shell: bash
         env:
           CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
         run: |
           set -euo pipefail
-
           if [ -z "${CNB_TOKEN:-}" ]; then
-            echo "::error::CNB_TOKEN is empty or not configured."
+            echo "::error::未配置 CNB_TOKEN。"
             exit 1
           fi
+          echo "CNB_TOKEN 已配置。"
 
-          echo "CNB_TOKEN is configured."
-
-      - name: Configure CNB authentication
+      - name: 配置 CNB HTTPS 认证
         shell: bash
         run: |
           set -euo pipefail
 
-          cat > /tmp/cnb-askpass.sh <<'EOF'
+          cat > /tmp/cnb-askpass.sh <<'SCRIPT'
           #!/usr/bin/env sh
-
           case "$1" in
-            *Username*)
-              echo "cnb"
-              ;;
-            *Password*)
-              echo "$CNB_TOKEN"
-              ;;
-            *)
-              echo ""
-              ;;
+            *Username*) echo "cnb" ;;
+            *Password*) echo "$CNB_TOKEN" ;;
+            *) echo "" ;;
           esac
-          EOF
+          SCRIPT
 
           chmod 700 /tmp/cnb-askpass.sh
 
-      - name: Configure CNB remote
+      - name: 配置 CNB Remote
         shell: bash
         run: |
           set -euo pipefail
-
           git remote remove cnb 2>/dev/null || true
+          git remote add cnb "https://cnb.cool/adui-studio/adui-skills"
+          echo "CNB Remote 已配置。"
 
-          git remote add cnb \
-            "https://cnb.cool/adui-studio/adui-skills"
-
-          echo "CNB remote:"
-          git remote get-url cnb
-
-      - name: Sync main branch to CNB
+      - name: 同步 main 分支
         shell: bash
         env:
           CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
           GIT_ASKPASS: /tmp/cnb-askpass.sh
-          GIT_TERMINAL_PROMPT: "0"
+          GIT_TERMINAL_PROMPT: '0'
         run: |
           set -euo pipefail
+          git push cnb HEAD:refs/heads/main
+          echo "main 分支同步完成。"
 
-          echo "Pushing main branch to CNB..."
-
-          git push \
-            cnb \
-            HEAD:refs/heads/main
-
-          echo "Main branch synchronized successfully."
-
-      - name: Sync tags to CNB
+      - name: 同步版本标签
         shell: bash
         env:
           CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
           GIT_ASKPASS: /tmp/cnb-askpass.sh
-          GIT_TERMINAL_PROMPT: "0"
+          GIT_TERMINAL_PROMPT: '0'
         run: |
           set -euo pipefail
-
-          echo "Pushing tags to CNB..."
-
           git push cnb --tags
+          echo "版本标签同步完成。"
 
-          echo "Tags synchronized successfully."
-
-      - name: Sync summary
+      - name: 写入同步摘要
         shell: bash
         run: |
           {
-            echo "## CNB Sync"
+            echo "## GitHub → CNB 同步"
             echo
-            echo "- GitHub: \`${GITHUB_REPOSITORY}\`"
-            echo "- Branch: \`main\`"
-            echo "- CNB: \`adui-studio/adui-skills\`"
-            echo "- Commit: \`${GITHUB_SHA}\`"
+            echo "- GitHub：\`${GITHUB_REPOSITORY}\`"
+            echo "- CNB：\`adui-studio/adui-skills\`"
+            echo "- 分支：\`main\`"
+            echo "- Commit：\`${GITHUB_SHA}\`"
             echo
-            echo "✅ GitHub → CNB synchronization completed."
+            echo "✅ 同步完成。"
+            echo
+            echo "English fallback: GitHub primary repository was synchronized to the CNB China mirror."
           } >> "$GITHUB_STEP_SUMMARY"

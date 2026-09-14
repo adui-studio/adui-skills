@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "name": "ADui PostgreSQL",
+  "description": "PostgreSQL schema, indexing, query optimization, and production best practices.",
+  "extends": [
+    "database"
+  ],
+  "skills": [
+    "postgres-best-practices"
+  ],
+  "localSkills": []
+}
