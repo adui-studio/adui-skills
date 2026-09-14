@@ -1,13 +1,12 @@
 {
   "version": 1,
   "name": "ADui Database",
-  "description": "Database-neutral SQL query and relational schema design profile.",
+  "description": "数据库通用 Profile：SQL 查询与数据库中立的基础能力。",
   "extends": [
     "core"
   ],
   "skills": [
-    "sql-queries",
-    "database-schema-design"
+    "sql-queries"
   ],
   "localSkills": []
 }

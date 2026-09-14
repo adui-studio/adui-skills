@@ -1,7 +1,7 @@
 {
   "version": 1,
   "name": "ADui UniApp",
-  "description": "uni-app development profile with Vue/Vite ecosystem integration and mini-program guidance.",
+  "description": "uni-app 开发 Profile，组合 Vue/Vite 生态与小程序专项能力。",
   "extends": [
     "web",
     "toolchain"
@@ -9,7 +9,7 @@
   "skills": [
     "uni-app",
     "uni-helper",
-    "uniapp-mini-guide"
+    "uniapp-mini"
   ],
   "localSkills": []
 }

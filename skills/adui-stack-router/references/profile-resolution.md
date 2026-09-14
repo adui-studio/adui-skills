@@ -1,6 +1,8 @@
-# Profile Resolution
+# Profile 解析规则
 
-## Profile graph
+[简体中文](./profile-resolution.md) | [English](./profile-resolution.en.md)
+
+## Profile 图
 
 ```text
 core
@@ -32,17 +34,15 @@ core
 └── git
 ```
 
-The actual repository `profiles/*.json` files are authoritative when this skill is used inside the ADui Skills Pack repository. The bundled graph is a portable snapshot for installed copies of the skill.
+仓库中的 `profiles/*.json` 是权威定义。Skill 内置图只是安装到其他项目后的可移植快照。
 
-## Selection policy
+## 选择策略
 
-Choose **direct profiles** from explicit project evidence. Then expand `extends` to obtain **effective profiles**.
-
-Examples:
+先根据明确项目证据选择**直接 Profiles**，再递归展开 `extends` 得到**有效 Profiles**。
 
 ### Vue + UnoCSS + Prisma + PostgreSQL
 
-Direct:
+直接：
 
 ```text
 vue
@@ -52,7 +52,7 @@ postgresql
 git
 ```
 
-Effective:
+有效：
 
 ```text
 core
@@ -65,41 +65,3 @@ prisma
 postgresql
 git
 ```
-
-### React + Tailwind + Vite+
-
-Direct:
-
-```text
-react
-tailwind
-viteplus
-git
-```
-
-Effective includes `core`, `web`, and `toolchain` through inheritance.
-
-### Native WeChat Mini Program + CloudBase
-
-Direct:
-
-```text
-wechat-miniprogram
-wechat-cloudbase
-git
-```
-
-Do not select `uniapp` unless the repository is actually built with uni-app.
-
-## Manual override
-
-Detection is advisory. Override the router when:
-
-- a monorepo contains multiple unrelated applications;
-- a dependency is installed but unused;
-- generated code produces false signals;
-- database providers vary by package/environment;
-- both Tailwind and UnoCSS are intentionally active;
-- a task concerns only a subset of the detected stack.
-
-When overriding, explain the evidence and keep the selected set minimal.

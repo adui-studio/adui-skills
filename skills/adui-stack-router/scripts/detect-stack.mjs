@@ -15,12 +15,12 @@ const targetArg = args.find((arg) => !arg.startsWith('-')) ?? '.';
 const root = path.resolve(targetArg);
 
 if (helpMode) {
-  console.log(`Usage: node detect-stack.mjs [project-root] [--json]\n\nRead-only ADui technology stack detector.`);
+  console.log(`用法：node detect-stack.mjs [project-root] [--json]\n\n只读检测项目技术栈，并路由到 ADui Profiles。\nEnglish fallback: read-only ADui technology stack detector.`);
   process.exit(0);
 }
 
 if (!fs.existsSync(root) || !fs.statSync(root).isDirectory()) {
-  console.error(`Project root does not exist or is not a directory: ${root}`);
+  console.error(`项目根目录不存在或不是目录：${root}`);
   process.exit(2);
 }
 
@@ -61,7 +61,7 @@ function readJson(filePath) {
   try {
     return JSON.parse(text);
   } catch {
-    warnings.push(`Could not parse JSON: ${rel(filePath)}`);
+    warnings.push(`无法解析 JSON：${rel(filePath)}`);
     return null;
   }
 }
@@ -296,16 +296,16 @@ if (detections.has('tailwind') && detections.has('unocss')) {
   const tailwindStrong = Boolean(tailwindConfig) || detections.get('tailwind').evidence.some((e) => e.includes('Tailwind CSS dependency'));
   const unoStrong = Boolean(unoConfig) || detections.get('unocss').evidence.some((e) => e.includes('configures UnoCSS'));
   if (tailwindStrong && unoStrong) {
-    warnings.push('Tailwind CSS and UnoCSS are both detected. Confirm whether both are intentionally active before changing styling conventions.');
+    warnings.push('同时检测到 Tailwind CSS 和 UnoCSS。修改样式规范前，请确认两者是否确实同时启用。');
   }
 }
 
 if (detections.has('prisma') && !['postgresql', 'mysql', 'sqlite'].some((id) => detections.has(id))) {
-  warnings.push('Prisma is detected but the database provider could not be resolved. Inspect the datasource configuration before selecting a database-engine profile.');
+  warnings.push('检测到 Prisma，但无法确定数据库 provider。选择数据库引擎 Profile 前，请检查 datasource 配置。');
 }
 
 if (detections.has('uniapp') && detections.has('uniapp-x')) {
-  warnings.push('Both uni-app and uni-app x signals are present. UTS/UVue can also appear in normal uni-app plugins; confirm the primary application runtime.');
+  warnings.push('同时检测到 uni-app 与 uni-app x 信号。UTS/UVue 也可能来自普通 uni-app 插件，请确认主应用运行时。');
 }
 
 const graph = readJson(PROFILE_GRAPH_PATH) ?? {};
@@ -379,9 +379,9 @@ if (jsonMode) {
 
 console.log('ADui Stack Router');
 console.log('=================');
-console.log(`Project: ${root}`);
+console.log(`项目：${root}`);
 console.log('');
-console.log('Detected stack');
+console.log('检测到的技术栈');
 if (result.detected.length === 0) {
   console.log('- No supported stack signals detected');
 } else {
@@ -392,14 +392,14 @@ if (result.detected.length === 0) {
 }
 
 console.log('');
-console.log('Direct profiles');
+console.log('直接 Profiles');
 for (const profile of result.directProfiles) console.log(`- ${profile}`);
 
 console.log('');
-console.log('Effective profiles');
+console.log('有效 Profiles');
 for (const profile of result.effectiveProfiles) console.log(`- ${profile}`);
 
 console.log('');
-console.log('Warnings');
-if (result.warnings.length === 0) console.log('- none');
+console.log('警告');
+if (result.warnings.length === 0) console.log('- 无');
 else for (const warning of result.warnings) console.log(`- ${warning}`);

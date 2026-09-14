@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.5
+
+### Fixed
+
+- Fixed v0.1.4 patch installation potentially nesting managed directories instead of replacing their contents.
+- Added cross-platform `apply.mjs`, known bad nested directory cleanup, Registry/Lock v2 assertions, and automatic post-apply validation.
+
 [简体中文](./CHANGELOG.md) | [English](./CHANGELOG.en.md)
 
 ## Unreleased

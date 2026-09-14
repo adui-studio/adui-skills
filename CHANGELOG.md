@@ -1,3 +1,14 @@
+# Changelog
+
+## v0.1.5
+
+### 修复
+
+- 修复 v0.1.4 `apply.ps1` 在已有目录上可能产生同名嵌套目录的问题。
+- 新增跨平台 `apply.mjs`，统一使用“复制目录内容”语义。
+- 自动清理可识别的 `registry/registry`、`profiles/profiles`、`scripts/tests/tests` 和 Stack Router 重复嵌套目录。
+- 应用后强制确认 Registry 与 Lock 已迁移到 v2，并默认执行完整校验。
+
 # 更新日志
 
 [简体中文](./CHANGELOG.md) | [English](./CHANGELOG.en.md)

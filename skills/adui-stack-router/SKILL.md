@@ -1,66 +1,63 @@
 ---
 name: adui-stack-router
-description: Detect a repository's technology stack and choose the smallest appropriate ADui Skills Pack profiles for the current task. Use when starting work in an unfamiliar project, deciding which ADui/third-party skills should apply, or when a repository may contain Vue, React, Tailwind CSS, UnoCSS, Vite, Vite+, NestJS, Prisma, PostgreSQL, MySQL, SQLite, Flutter, Tauri, uni-app, uni-app x, WeChat Mini Program, Three.js, Babylon.js, CesiumJS, WebGL2, WebGPU, pnpm, or Git workflows.
+description: 检测当前代码仓库的技术栈，并选择最小且合适的 ADui Skills Pack Profiles。用于进入陌生项目、决定需要启用哪些 ADui/第三方 Skills，或项目可能包含 Vue、React、Tailwind CSS、UnoCSS、Vite、Vite+、NestJS、Prisma、PostgreSQL、MySQL、SQLite、Flutter、Tauri、uni-app、uni-app x、微信小程序、Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU、pnpm 或 Git 工作流时。
 ---
 
 # ADui Stack Router
 
-Route the current repository to the smallest relevant ADui profiles before implementation begins.
+在开始实质编码前，根据真实项目证据，把当前仓库路由到最小相关 Profile 集合。
 
-## Workflow
+## 工作流程
 
-1. Inspect the repository without changing files.
-2. Run the bundled detector when code execution is available:
+1. 只读检查仓库，不修改文件。
+2. 可执行代码时运行：
    ```bash
    node scripts/detect-stack.mjs <project-root>
    ```
-   Use `--json` when another script or agent needs machine-readable output.
-3. Review the detector's evidence instead of trusting names alone.
-4. Resolve ambiguous signals using `references/detection-rules.md`.
-5. Select only the profiles required by the detected stack and current task.
-6. Expand inherited profiles using `references/profile-resolution.md`.
-7. Report detected technologies, direct profiles, effective profiles, warnings, and uncertain decisions before substantial coding.
+   其他程序或 Agent 需要机器可读结果时增加 `--json`。
+3. 检查检测器给出的证据，不只相信目录名或项目名。
+4. 出现冲突时读取 `references/detection-rules.md`。
+5. 只选择当前技术栈和任务实际需要的直接 Profiles。
+6. 按 `references/profile-resolution.md` 展开继承，得到有效 Profiles。
+7. 在开始大规模修改前，输出：检测到的技术、直接 Profiles、有效 Profiles、警告和不确定项。
 
-## Routing Rules
+## 路由规则
 
-- Always prefer explicit project evidence such as dependencies, config files, framework manifests, and database providers.
-- Never infer a technology only from directory names when stronger evidence exists.
-- Do not activate Tailwind CSS and UnoCSS together merely because both packages are installed. Inspect active config/imports and warn when both appear active.
-- Do not activate PostgreSQL, MySQL, and SQLite together. Prefer the Prisma datasource provider or explicit driver dependencies.
-- Treat `vite-plus` as distinct from normal Vite. Select `viteplus` only when the project actually uses Vite+.
-- Treat uni-app and uni-app x as distinct profiles. UTS/UVue evidence may indicate uni-app x; confirm when evidence is weak.
-- Treat native WeChat Mini Program and CloudBase as separate profiles. Add `wechat-cloudbase` only when CloudBase usage is present.
-- Select Three.js, Babylon.js, CesiumJS, WebGL2, and WebGPU independently. Multiple 3D profiles are valid only when the project genuinely combines them.
-- Select `git` only when the target is a Git worktree/repository.
-- Keep uncertain technologies as warnings or candidates rather than inventing certainty.
+- 优先使用依赖、配置文件、框架 manifest、数据库 provider 等明确证据。
+- 存在更强证据时，不要仅凭目录名推断技术。
+- Tailwind CSS 与 UnoCSS 同时出现时，检查实际配置和 import，不要因为包都存在就默认同时启用。
+- PostgreSQL、MySQL、SQLite 优先依据 Prisma datasource provider 或显式驱动判断，不要无依据同时启用。
+- Vite+ 与普通 Vite 分开判断，只在项目确实使用 Vite+ 时选择 `viteplus`。
+- uni-app 与 uni-app x 分开判断；UTS/UVue 只是中等强度证据，必要时继续确认。
+- 原生微信小程序与 CloudBase 分开判断，只在实际使用 CloudBase 时加入 `wechat-cloudbase`。
+- Three.js、Babylon.js、CesiumJS、WebGL2、WebGPU 可独立组合，但只有项目真实同时使用时才同时选择。
+- 目标目录本身是 Git 仓库/工作树时才选择 `git`。
+- 证据不足时输出候选或警告，不要伪造确定结论。
 
-## Safety
+## 安全要求
 
-- Perform detection read-only.
-- Do not read `.env`, credential files, key files, tokens, or secret stores.
-- Do not install packages or modify configuration during routing.
-- Do not execute project scripts during detection.
-- Do not run destructive Git operations.
+- 技术栈检测必须只读。
+- 不读取 `.env`、凭据、私钥、Token 或 Secret Store。
+- 路由阶段不安装依赖、不修改配置、不执行项目脚本。
+- 不执行破坏性 Git 操作。
 
-## Output Format
-
-Return a compact routing summary like:
+## 输出示例
 
 ```text
-Detected stack
-- Vue 3 — high — package.json: dependencies.vue
-- UnoCSS — high — uno.config.ts + unocss dependency
-- Prisma — high — prisma/schema.prisma
-- PostgreSQL — high — Prisma datasource provider=postgresql
+检测到的技术栈
+- Vue 3 — 高 — package.json: dependencies.vue
+- UnoCSS — 高 — uno.config.ts + unocss dependency
+- Prisma — 高 — prisma/schema.prisma
+- PostgreSQL — 高 — Prisma datasource provider=postgresql
 
-Direct profiles
+直接 Profiles
 - vue
 - unocss
 - prisma
 - postgresql
 - git
 
-Effective profiles
+有效 Profiles
 - core
 - web
 - toolchain
@@ -71,14 +68,13 @@ Effective profiles
 - postgresql
 - git
 
-Warnings
-- none
+警告
+- 无
 ```
 
-If evidence conflicts, include the conflict and the file(s) that must be checked next.
+## 资源
 
-## Resources
-
-- `scripts/detect-stack.mjs`: deterministic read-only stack detector.
-- `references/detection-rules.md`: supported signals, confidence rules, and ambiguity handling.
-- `references/profile-resolution.md`: ADui profile graph and profile-selection policy.
+- 中文检测规则：`references/detection-rules.md`
+- 英文检测规则兜底：`references/detection-rules.en.md`
+- 中文 Profile 解析：`references/profile-resolution.md`
+- 英文 Profile 解析兜底：`references/profile-resolution.en.md`

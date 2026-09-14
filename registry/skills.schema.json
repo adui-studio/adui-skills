@@ -12,13 +12,10 @@
   "properties": {
     "version": {
       "type": "integer",
-      "minimum": 1
+      "minimum": 2
     },
     "updatedAt": {
-      "type": [
-        "string",
-        "null"
-      ],
+      "type": ["string", "null"],
       "format": "date"
     },
     "skills": {
@@ -30,7 +27,9 @@
           "id",
           "name",
           "source",
-          "upstreamPath",
+          "skillPath",
+          "autoResolvePath",
+          "status",
           "category",
           "tier",
           "official",
@@ -52,24 +51,21 @@
             "type": "string",
             "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
           },
-          "upstreamPath": {
-            "type": [
-              "string",
-              "null"
-            ]
+          "skillPath": {
+            "type": ["string", "null"]
+          },
+          "autoResolvePath": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": ["active", "upstream-unavailable", "deprecated"]
           },
           "category": {
             "type": "string",
             "pattern": "^[a-z0-9-]+(?:/[a-z0-9-]+)*$"
           },
           "tier": {
-            "enum": [
-              "S+",
-              "S",
-              "A+",
-              "A",
-              "B"
-            ]
+            "enum": ["S+", "S", "A+", "A", "B"]
           },
           "official": {
             "type": "boolean"
