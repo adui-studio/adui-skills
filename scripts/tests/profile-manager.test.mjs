@@ -42,6 +42,15 @@ test('Tauri Profile 包含 adui-tauri-v2', () => {
   assert.ok(plan.externalSkills.includes('tauri-config'));
 });
 
+
+test('Profile 命令可切换 npm/pnpm/yarn/bun', () => {
+  const group = { source: 'antfu/skills', skills: ['vue'] };
+  assert.deepEqual(buildSkillsCommand(group, { packageManager: 'npm' }).slice(0, 3), ['npx', '--yes', 'skills']);
+  assert.deepEqual(buildSkillsCommand(group, { packageManager: 'pnpm' }).slice(0, 3), ['pnpm', 'dlx', 'skills']);
+  assert.deepEqual(buildSkillsCommand(group, { packageManager: 'yarn' }).slice(0, 3), ['yarn', 'dlx', 'skills']);
+  assert.deepEqual(buildSkillsCommand(group, { packageManager: 'bun' }).slice(0, 2), ['bunx', 'skills']);
+});
+
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';

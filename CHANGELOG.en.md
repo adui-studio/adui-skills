@@ -12,6 +12,21 @@
 - Added Chinese-first Vite+ and NestJS + Prisma documentation with English fallbacks.
 [简体中文](./CHANGELOG.md) | [English](./CHANGELOG.en.md)
 
+## v0.1.11
+
+### Added
+
+- Profile Installer now supports npm, pnpm, Yarn, and Bun.
+- Added `--pm` / `--package-manager`, automatic package-manager detection, `--no-pm-detect`, and `--project-root`.
+- Added workspace-aware detection using `packageManager`, lockfiles, workspace markers, and the current execution environment.
+
+### Improved
+
+- `auto-install` now runs the skills CLI inside the target project instead of the ADui Skills Pack repository.
+- Conflicting lockfiles now stop automatic selection instead of guessing.
+- Actual installs verify the selected package manager; Yarn Classic is rejected because the installer uses `yarn dlx`.
+- Added package-manager and cross-platform command-generation tests.
+
 ## v0.1.10
 
 ### Fixed

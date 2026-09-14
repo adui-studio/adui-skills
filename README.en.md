@@ -100,7 +100,7 @@ For the canonical documentation, use the Chinese files without the `.en` suffix.
 
 ## Profile Installer
 
-Profiles can now be resolved and installed through the ADui Profile Manager. Actual installs require an explicit agent target. See [Profile Installer](./docs/profile-installer.en.md).
+Profiles can now be resolved and installed through the ADui Profile Manager with npm, pnpm, Yarn, or Bun. Package-manager selection follows `--pm` → `package.json#packageManager` → lockfiles → current execution environment → npm fallback. `auto-install` detects and installs inside the target project instead of assuming the package manager used to launch ADui. Actual installs still require an explicit agent target. See [Profile Installer](./docs/profile-installer.en.md).
 
 ## Tauri v2
 

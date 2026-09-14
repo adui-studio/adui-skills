@@ -253,21 +253,23 @@ npm run lock:init
 
 ## Profile 一键安装
 
-现在 `profiles/*.json` 可以直接生成并执行安装计划：
+现在 `profiles/*.json` 可以直接生成并执行安装计划，并支持 npm / pnpm / yarn / bun：
 
 ```powershell
 npm run profile:list
 npm run profile:plan -- vue unocss git --agent codex
-npm run profile:install -- vue unocss git --agent codex
+npm run profile:install -- vue unocss git --agent codex --pm pnpm
 ```
 
-根据项目技术栈自动安装：
+包管理器默认按 `--pm` → `package.json#packageManager` → Lock 文件 → 当前执行环境 → npm 的优先级自动选择。多种 Lock 文件冲突时不会猜测，会要求显式指定 `--pm`。
+
+根据项目技术栈和目标项目包管理器自动安装：
 
 ```powershell
 npm run profile:auto-install -- D:\Projects\my-app --agent codex --dry-run
 ```
 
-第一次建议使用 `--dry-run`。实际安装必须显式指定 `--agent` 或 `--all-agents`。详见 [Profile 一键安装器](./docs/profile-installer.md)。
+即使命令从 ADui Skills Pack 仓库通过 npm 启动，`auto-install` 也会按目标项目识别 pnpm/yarn/bun，并在目标项目目录执行安装。第一次建议使用 `--dry-run`。实际安装必须显式指定 `--agent` 或 `--all-agents`。详见 [Profile 一键安装器](./docs/profile-installer.md)。
 
 ## Tauri v2
 

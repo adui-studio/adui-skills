@@ -158,13 +158,21 @@ npm run profile:show -- vue
 npm run profile:plan -- vue unocss git --agent codex
 ```
 
+显式使用 pnpm：
+
+```powershell
+npm run profile:plan -- vue unocss git --agent codex --pm pnpm
+```
+
 执行安装：
 
 ```powershell
 npm run profile:install -- vue unocss git --agent codex
 ```
 
-根据项目自动检测并安装：
+安装器支持 npm / pnpm / yarn / bun，并优先读取目标项目 `packageManager` 和 Lock 文件；如果发现多个不同包管理器 Lock，会要求显式 `--pm`。
+
+根据项目自动检测技术栈、包管理器并安装：
 
 ```powershell
 npm run profile:auto-install -- D:\Projects\my-app --agent codex --dry-run

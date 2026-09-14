@@ -8,7 +8,10 @@ Before submitting changes, run:
 
 ```bash
 npm run validate
+npm test
 ```
+
+Changes to the Profile Installer should keep npm, pnpm, Yarn, Bun, lockfile-conflict, workspace-root, and Windows `.cmd` runner tests green.
 
 Use `npm run updates:check` for Registry changes and `npm run detect:stack -- <project-root>` for router changes. Third-party upstream updates must be reviewed manually and never auto-merged.
 

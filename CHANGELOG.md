@@ -2,6 +2,21 @@
 
 [简体中文](./CHANGELOG.md) | [English](./CHANGELOG.en.md)
 
+## v0.1.11
+
+### 新增
+
+- Profile 一键安装器正式支持 npm、pnpm、yarn、bun。
+- 新增 `--pm` / `--package-manager`、包管理器自动检测、`--no-pm-detect` 与 `--project-root`。
+- 新增基于 `packageManager`、Lock 文件、Workspace 标记和当前执行环境的包管理器识别。
+
+### 改进
+
+- `auto-install` 现在会在目标项目目录执行 Skills CLI，不再错误地在 ADui Skills Pack 仓库目录安装。
+- 检测到多个不同包管理器 Lock 文件时拒绝猜测，要求显式 `--pm`。
+- 实际安装前检查包管理器是否可用；由于安装器使用 `yarn dlx`，Yarn Classic 1.x 会被明确拒绝。
+- 新增包管理器检测、Monorepo、Windows `.cmd` Runner 与四类命令生成测试。
+
 ## v0.1.10
 
 ### 修复

@@ -14,7 +14,10 @@
 
 ```bash
 npm run validate
+npm test
 ```
+
+修改 Profile 安装器或包管理器检测逻辑时，至少确认 npm / pnpm / yarn / bun 命令生成、Lock 文件冲突、Workspace 向上识别和 Windows `.cmd` Runner 测试通过。
 
 涉及第三方 Registry：
 

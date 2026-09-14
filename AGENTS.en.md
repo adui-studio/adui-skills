@@ -15,3 +15,5 @@ For feature work, bug fixes, or refactoring, follow `skills/adui-feature-dev/SKI
 Use `adui-viteplus` only for actual Vite+ projects. Use `adui-nestjs-prisma` only when both NestJS and Prisma are present. Use `adui-3d-architecture` for 3D/GPU technology selection and multi-engine boundaries. Use `adui-webgl2` only when the project directly uses raw WebGL2 APIs.
 - Tauri v2 projects should use `adui-tauri-v2`; review IPC, capabilities/permissions, scopes, platform differences, and resource lifecycle together.
 - Use `scripts/profile-manager.mjs` for profile installation and require an explicit agent target for actual installs.
+
+- Profile installation uses `scripts/profile-manager.mjs`; support npm, pnpm, Yarn, and Bun, detect from the target project by default, allow explicit `--pm`, and require an explicit agent target for real installs.

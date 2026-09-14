@@ -44,7 +44,7 @@ Use `viteplus` only for actual Vite+ projects. Use `nestjs-prisma` only when bot
 
 ## Profile installer
 
-Use `npm run profile:list`, `profile:show`, `profile:plan`, `profile:install`, or `profile:auto-install`. Actual installs require an explicit agent target. See [profile-installer.en.md](./profile-installer.en.md).
+Use `npm run profile:list`, `profile:show`, `profile:plan`, `profile:install`, or `profile:auto-install`. The installer supports npm, pnpm, Yarn, and Bun, and detects the package manager from the target project unless `--pm` overrides it. Actual installs require an explicit agent target. See [profile-installer.en.md](./profile-installer.en.md).
 
 ## Tauri v2
 

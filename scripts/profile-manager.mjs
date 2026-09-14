@@ -6,13 +6,20 @@ import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 
+import {
+  SUPPORTED_PACKAGE_MANAGERS,
+  buildPackageRunner,
+  checkPackageManagerAvailable,
+  detectPackageManager,
+  parsePackageManagerSpec,
+} from './lib/package-manager.mjs';
+
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 export const REPO_ROOT = path.resolve(SCRIPT_DIR, '..');
 const REGISTRY_PATH = path.join(REPO_ROOT, 'registry', 'skills.json');
 const PROFILES_DIR = path.join(REPO_ROOT, 'profiles');
 const ROUTER_PATH = path.join(REPO_ROOT, 'skills', 'adui-stack-router', 'scripts', 'detect-stack.mjs');
 const ADUI_SOURCE = 'https://github.com/adui-studio/adui-skills';
-const NPX_COMMAND = process.platform === 'win32' ? 'npx.cmd' : 'npx';
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -110,6 +117,9 @@ function parseOptions(args) {
     dryRun: false,
     allAgents: false,
     agents: [],
+    packageManager: null,
+    noPmDetect: false,
+    projectRoot: null,
   };
   const positionals = [];
 
@@ -121,7 +131,21 @@ function parseOptions(args) {
     else if (arg === '--json') options.json = true;
     else if (arg === '--dry-run') options.dryRun = true;
     else if (arg === '--all-agents') options.allAgents = true;
-    else if (arg === '--agent' || arg === '-a') {
+    else if (arg === '--no-pm-detect') options.noPmDetect = true;
+    else if (arg === '--project-root') {
+      const value = args[i + 1];
+      if (!value || value.startsWith('-')) throw new Error('--project-root 需要目录路径。');
+      options.projectRoot = value;
+      i += 1;
+    } else if (arg === '--pm' || arg === '--package-manager') {
+      const value = args[i + 1];
+      if (!value || value.startsWith('-')) throw new Error(`${arg} 需要包管理器名称。`);
+      if (!parsePackageManagerSpec(value)) {
+        throw new Error(`${arg} 仅支持：${SUPPORTED_PACKAGE_MANAGERS.join(', ')}。`);
+      }
+      options.packageManager = value;
+      i += 1;
+    } else if (arg === '--agent' || arg === '-a') {
       const value = args[i + 1];
       if (!value || value.startsWith('-')) throw new Error(`${arg} 需要 agent 名称。`);
       i += 1;
@@ -135,18 +159,35 @@ function parseOptions(args) {
   return { options, positionals };
 }
 
+function buildSkillsArgs(group, options = {}) {
+  const args = ['add', group.source, '--skill', ...group.skills];
+  if (options.global) args.push('--global');
+  if (options.allAgents) args.push('--agent', '*');
+  else for (const agent of options.agents ?? []) args.push('--agent', agent);
+  if (options.copy) args.push('--copy');
+  if (options.yes) args.push('--yes');
+  return args;
+}
+
 export function buildSkillsCommand(group, options = {}) {
-  const command = ['npx', '--yes', 'skills', 'add', group.source, '--skill', ...group.skills];
-  if (options.global) command.push('--global');
-  if (options.allAgents) command.push('--agent', '*');
-  else for (const agent of options.agents ?? []) command.push('--agent', agent);
-  if (options.copy) command.push('--copy');
-  if (options.yes) command.push('--yes');
-  return command;
+  const packageManager = parsePackageManagerSpec(options.packageManager ?? 'npm') ?? 'npm';
+  return buildPackageRunner(packageManager, buildSkillsArgs(group, options), options).display;
+}
+
+function buildSkillsInvocation(group, options = {}) {
+  const packageManager = parsePackageManagerSpec(options.packageManager ?? 'npm') ?? 'npm';
+  return buildPackageRunner(packageManager, buildSkillsArgs(group, options), options);
+}
+
+function buildSkillsListInvocation(options = {}) {
+  const args = ['list'];
+  if (options.global) args.push('--global');
+  const packageManager = parsePackageManagerSpec(options.packageManager ?? 'npm') ?? 'npm';
+  return buildPackageRunner(packageManager, args, options);
 }
 
 function shellQuote(value) {
-  if (/^[A-Za-z0-9_./:@*+-]+$/.test(value)) return value;
+  if (/^[A-Za-z0-9_./:@*+\\-]+$/.test(value)) return value;
   return JSON.stringify(value);
 }
 
@@ -154,19 +195,34 @@ function commandText(parts) {
   return parts.map(shellQuote).join(' ');
 }
 
-function printPlan(plan, options) {
+function pmSourceLabel(selection) {
+  const sourceLabels = {
+    explicit: '命令行参数',
+    packageManager: 'package.json#packageManager',
+    lockfile: 'Lock 文件',
+    environment: '当前执行环境',
+    fallback: '默认回退',
+  };
+  return sourceLabels[selection.source] ?? selection.source;
+}
+
+function printPlan(plan, options, packageManagerSelection, projectRoot) {
   console.log('ADui Profile 安装计划');
   console.log('----------------------');
-  console.log(`请求 Profiles : ${plan.requestedProfiles.join(', ')}`);
-  console.log(`有效 Profiles : ${plan.effectiveProfiles.join(', ')}`);
-  console.log(`第三方 Skills  : ${plan.externalSkills.length}`);
-  console.log(`ADui Skills    : ${plan.localSkills.length}`);
-  console.log(`安装批次       : ${plan.groups.length}`);
+  console.log(`目标项目       : ${projectRoot}`);
+  console.log(`包管理器       : ${packageManagerSelection.name}`);
+  console.log(`检测依据       : ${pmSourceLabel(packageManagerSelection)} (${packageManagerSelection.detail})`);
+  console.log(`请求 Profiles  : ${plan.requestedProfiles.join(', ')}`);
+  console.log(`有效 Profiles  : ${plan.effectiveProfiles.join(', ')}`);
+  console.log(`第三方 Skills   : ${plan.externalSkills.length}`);
+  console.log(`ADui Skills     : ${plan.localSkills.length}`);
+  console.log(`安装批次        : ${plan.groups.length}`);
   console.log('');
+  const effectiveOptions = { ...options, packageManager: packageManagerSelection.name };
   for (const group of plan.groups) {
     console.log(`- ${group.source}`);
     console.log(`  ${group.skills.join(', ')}`);
-    console.log(`  ${commandText(buildSkillsCommand(group, options))}`);
+    console.log(`  ${commandText(buildSkillsCommand(group, effectiveOptions))}`);
   }
 }
 
@@ -187,26 +243,43 @@ function listProfiles(profiles, jsonMode) {
   }
 }
 
-function runInstall(plan, options) {
+function runInstall(plan, options, packageManagerSelection, projectRoot) {
   if (!options.allAgents && options.agents.length === 0) {
     throw new Error('安装必须显式指定 --agent <name>，或使用 --all-agents。这样可避免 skills CLI 在无 TTY/无已安装 Agent 环境中静默不安装。');
   }
-  const effective = { ...options, yes: true };
-  const failures = [];
 
+  const effective = {
+    ...options,
+    yes: true,
+    packageManager: packageManagerSelection.name,
+  };
+
+  if (!options.dryRun) {
+    const available = checkPackageManagerAvailable(packageManagerSelection.name);
+    console.log(`[包管理器] ${available.name} ${available.version || '(版本未知)'}`);
+  }
+
+  const failures = [];
   for (const group of plan.groups) {
-    const parts = buildSkillsCommand(group, effective);
+    const invocation = buildSkillsInvocation(group, effective);
     console.log(`\n[安装] ${group.skills.join(', ')}`);
-    console.log(commandText(parts));
+    console.log(commandText(invocation.display));
     if (options.dryRun) continue;
-    const result = spawnSync(NPX_COMMAND, parts.slice(1), { stdio: 'inherit', shell: false });
+    const result = spawnSync(invocation.executable, invocation.args, {
+      cwd: projectRoot,
+      stdio: 'inherit',
+      shell: false,
+    });
     if (result.status !== 0) failures.push({ source: group.source, skills: group.skills, status: result.status });
   }
 
   if (!options.dryRun) {
-    const listArgs = ['--yes', 'skills', 'list'];
-    if (options.global) listArgs.push('--global');
-    spawnSync(NPX_COMMAND, listArgs, { stdio: 'inherit', shell: false });
+    const listInvocation = buildSkillsListInvocation(effective);
+    spawnSync(listInvocation.executable, listInvocation.args, {
+      cwd: projectRoot,
+      stdio: 'inherit',
+      shell: false,
+    });
   }
 
   if (failures.length) {
@@ -222,8 +295,23 @@ function detectProject(projectRoot) {
   return JSON.parse(result.stdout);
 }
 
+function resolvePm(projectRoot, options) {
+  return detectPackageManager(projectRoot, {
+    explicit: options.packageManager,
+    noDetect: options.noPmDetect,
+  });
+}
+
+function planWithRuntime(plan, projectRoot, packageManagerSelection) {
+  return {
+    ...plan,
+    projectRoot,
+    packageManager: packageManagerSelection,
+  };
+}
+
 function help() {
-  console.log(`ADui Profile Manager\n\n用法：\n  node scripts/profile-manager.mjs list [--json]\n  node scripts/profile-manager.mjs show <profile...> [--json]\n  node scripts/profile-manager.mjs plan <profile...> [--agent codex] [--global]\n  node scripts/profile-manager.mjs install <profile...> --agent codex [--agent opencode] [--global] [--copy] [--dry-run]\n  node scripts/profile-manager.mjs auto-install <project-root> --agent codex [--dry-run]\n\n说明：\n  - 默认安装到当前项目；--global 安装到用户级。\n  - 安装操作必须显式指定 --agent，或使用 --all-agents。\n  - --dry-run 只输出计划，不调用 npx skills。\n  - 中文为默认输出；English fallback is available in docs/profile-installer.en.md.`);
+  console.log(`ADui Profile Manager\n\n用法：\n  node scripts/profile-manager.mjs list [--json]\n  node scripts/profile-manager.mjs show <profile...> [--json]\n  node scripts/profile-manager.mjs plan <profile...> [--agent codex] [--pm pnpm] [--project-root <path>]\n  node scripts/profile-manager.mjs install <profile...> --agent codex [--pm pnpm] [--project-root <path>] [--global] [--copy] [--dry-run]\n  node scripts/profile-manager.mjs auto-install <project-root> --agent codex [--pm pnpm] [--dry-run]\n\n包管理器：\n  - 支持 npm / pnpm / yarn / bun。\n  - 优先级：--pm > package.json#packageManager > Lock 文件 > 当前执行环境 > npm。\n  - --package-manager 是 --pm 的长参数别名。\n  - --no-pm-detect 禁用自动检测并回退 npm；显式 --pm 仍具有最高优先级。\n  - 多种 Lock 文件冲突时拒绝自动选择，要求显式 --pm。\n\n说明：\n  - 默认安装到当前项目；--project-root 可指定目标项目；auto-install 的位置参数就是目标项目。\n  - --global 安装到用户级。\n  - 安装操作必须显式指定 --agent，或使用 --all-agents。\n  - --dry-run 只输出计划，不调用 skills CLI，也不要求本机已经安装所选包管理器。\n  - 中文为默认输出；English fallback is available in docs/profile-installer.en.md.`);
 }
 
 async function main() {
@@ -234,28 +322,48 @@ async function main() {
 
   if (command === 'list') return listProfiles(profiles, options.json);
 
-  if (command === 'show' || command === 'plan' || command === 'install') {
-    if (positionals.length === 0) throw new Error(`${command} 至少需要一个 Profile。`);
+  if (command === 'show') {
+    if (positionals.length === 0) throw new Error('show 至少需要一个 Profile。');
     const plan = buildInstallPlan(positionals, { profiles });
     if (options.json) console.log(JSON.stringify(plan, null, 2));
-    else printPlan(plan, options);
-    if (command === 'install') runInstall(plan, options);
+    else {
+      console.log(`请求 Profiles : ${plan.requestedProfiles.join(', ')}`);
+      console.log(`有效 Profiles : ${plan.effectiveProfiles.join(', ')}`);
+      console.log(`第三方 Skills  : ${plan.externalSkills.join(', ') || '无'}`);
+      console.log(`ADui Skills    : ${plan.localSkills.join(', ') || '无'}`);
+    }
+    return;
+  }
+
+  if (command === 'plan' || command === 'install') {
+    if (positionals.length === 0) throw new Error(`${command} 至少需要一个 Profile。`);
+    const projectRoot = path.resolve(options.projectRoot ?? process.cwd());
+    const packageManagerSelection = resolvePm(projectRoot, options);
+    const plan = buildInstallPlan(positionals, { profiles });
+    if (options.json) console.log(JSON.stringify(planWithRuntime(plan, projectRoot, packageManagerSelection), null, 2));
+    else printPlan(plan, options, packageManagerSelection, projectRoot);
+    if (command === 'install') runInstall(plan, options, packageManagerSelection, projectRoot);
     return;
   }
 
   if (command === 'auto-install') {
-    const projectRoot = positionals[0] ?? '.';
+    const projectRoot = path.resolve(options.projectRoot ?? positionals[0] ?? '.');
     const detected = detectProject(projectRoot);
     if (!detected.directProfiles?.length) throw new Error('没有检测到可安装的 ADui Profile。');
-    console.log(`检测项目：${path.resolve(projectRoot)}`);
+    const packageManagerSelection = resolvePm(projectRoot, options);
+    console.log(`检测项目：${projectRoot}`);
     console.log(`直接 Profiles：${detected.directProfiles.join(', ')}`);
     if (detected.warnings?.length) {
       console.log('检测警告：');
       for (const warning of detected.warnings) console.log(`- ${warning}`);
     }
     const plan = buildInstallPlan(detected.directProfiles, { profiles });
-    printPlan(plan, options);
-    runInstall(plan, options);
+    if (options.json) {
+      console.log(JSON.stringify({ detected, ...planWithRuntime(plan, projectRoot, packageManagerSelection) }, null, 2));
+    } else {
+      printPlan(plan, options, packageManagerSelection, projectRoot);
+    }
+    runInstall(plan, options, packageManagerSelection, projectRoot);
     return;
   }
 
