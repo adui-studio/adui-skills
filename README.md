@@ -136,6 +136,28 @@ npx skills add antfu/skills --skill unocss
 
 更多使用方式见 [docs/usage.md](./docs/usage.md)。
 
+### 5. 检测项目技术栈
+
+在 ADui Skills Pack 仓库内可以直接运行：
+
+```bash
+npm run detect:stack -- ../your-project
+```
+
+或者直接调用 Skill 自带脚本：
+
+```bash
+node skills/adui-stack-router/scripts/detect-stack.mjs ../your-project
+```
+
+JSON 输出：
+
+```bash
+node skills/adui-stack-router/scripts/detect-stack.mjs ../your-project --json
+```
+
+检测过程只读取公开项目配置和源码信号，不读取 `.env`、Token、密钥等敏感文件。
+
 ## Profiles
 
 当前 Profile：
@@ -148,13 +170,21 @@ npx skills add antfu/skills --skill unocss
 | `react` | React 性能与组件架构 |
 | `tailwind` | Tailwind CSS |
 | `unocss` | UnoCSS |
-| `toolchain` | Vite、Vite+、Vitest、pnpm |
+| `toolchain` | Vite、Vitest |
+| `viteplus` | Vite+（仅实际使用 `vite-plus` 时启用） |
+| `pnpm` | pnpm / workspace |
 | `backend` | NestJS、TypeScript |
-| `database` | Prisma、SQL、PostgreSQL、MySQL、SQLite |
+| `database` | 通用 SQL 与关系型数据库设计 |
+| `prisma` | Prisma CLI / Client / Migration |
+| `postgresql` | PostgreSQL |
+| `mysql` | MySQL |
+| `sqlite` | SQLite |
 | `flutter` | Flutter / Dart |
 | `tauri` | Tauri v2 |
-| `uniapp` | uni-app / uni-app x |
-| `wechat-miniprogram` | 微信小程序 |
+| `uniapp` | uni-app |
+| `uniapp-x` | uni-app x / UTS / UVue |
+| `wechat-miniprogram` | 原生微信小程序 |
+| `wechat-cloudbase` | 微信小程序 + Tencent CloudBase |
 | `threejs` | Three.js |
 | `babylonjs` | Babylon.js |
 | `cesiumjs` | CesiumJS |
@@ -168,7 +198,7 @@ Profile 支持继承。例如 Vue Profile 会组合 `web` 与 `toolchain`，最�
 
 规划中的核心 Skill：
 
-- `adui-stack-router`：识别项目技术栈并选择 Profile
+- `adui-stack-router`：**已实现**，只读识别项目技术栈并选择最小 Profile 集合
 - `adui-feature-dev`：统一需求分析、开发、测试、Review 和验证流程
 - `adui-viteplus`：Vite+ 工程规范
 - `adui-nestjs-prisma`：NestJS + Prisma 集成规范
@@ -206,10 +236,10 @@ GitHub Actions 每周检查
 - Registry v1
 - 技术 Profile v1
 - Registry / Profile 验证器
+- `adui-stack-router` 技术栈检测与 Profile 路由
 
 下一步：
 
-- 完成 `adui-stack-router`
 - 初始化 `skills.lock.json`
 - 实现上游更新检查器
 - 开启每周 Update PR

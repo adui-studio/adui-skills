@@ -1,12 +1,13 @@
 {
   "name": "@adui-studio/adui-skills",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "description": "Curated Agent Skills registry, profiles, and ADui-maintained skills for full-stack, cross-platform, 3D/GPU, and Git workflows.",
   "type": "module",
   "scripts": {
     "validate": "node scripts/validate-registry.mjs",
-    "validate:registry": "node scripts/validate-registry.mjs"
+    "validate:registry": "node scripts/validate-registry.mjs",
+    "detect:stack": "node skills/adui-stack-router/scripts/detect-stack.mjs"
   },
   "engines": {
     "node": ">=22"

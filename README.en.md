@@ -136,6 +136,28 @@ npx skills add antfu/skills --skill unocss
 
 See [docs/usage.en.md](./docs/usage.en.md) for more details.
 
+### 5. Detect a project's technology stack
+
+From the ADui Skills Pack repository:
+
+```bash
+npm run detect:stack -- ../your-project
+```
+
+Or run the Skill's bundled detector directly:
+
+```bash
+node skills/adui-stack-router/scripts/detect-stack.mjs ../your-project
+```
+
+JSON output:
+
+```bash
+node skills/adui-stack-router/scripts/detect-stack.mjs ../your-project --json
+```
+
+Detection is read-only and does not read `.env`, tokens, private keys, or secret stores.
+
 ## Profiles
 
 Current Profiles:
@@ -148,13 +170,21 @@ Current Profiles:
 | `react` | React performance and component architecture |
 | `tailwind` | Tailwind CSS |
 | `unocss` | UnoCSS |
-| `toolchain` | Vite, Vite+, Vitest, pnpm |
+| `toolchain` | Vite, Vitest |
+| `viteplus` | Vite+ (only when `vite-plus` is actually used) |
+| `pnpm` | pnpm / workspaces |
 | `backend` | NestJS, TypeScript |
-| `database` | Prisma, SQL, PostgreSQL, MySQL, SQLite |
+| `database` | database-neutral SQL and relational schema design |
+| `prisma` | Prisma CLI / Client / migrations |
+| `postgresql` | PostgreSQL |
+| `mysql` | MySQL |
+| `sqlite` | SQLite |
 | `flutter` | Flutter / Dart |
 | `tauri` | Tauri v2 |
-| `uniapp` | uni-app / uni-app x |
-| `wechat-miniprogram` | WeChat Mini Program |
+| `uniapp` | uni-app |
+| `uniapp-x` | uni-app x / UTS / UVue |
+| `wechat-miniprogram` | native WeChat Mini Program |
+| `wechat-cloudbase` | WeChat Mini Program + Tencent CloudBase |
 | `threejs` | Three.js |
 | `babylonjs` | Babylon.js |
 | `cesiumjs` | CesiumJS |
@@ -168,7 +198,7 @@ Profiles support inheritance. For example, the Vue Profile extends both `web` an
 
 Planned core Skills:
 
-- `adui-stack-router`: detect a project's technology stack and choose Profiles
+- `adui-stack-router`: **implemented**, read-only project stack detection and minimal Profile routing
 - `adui-feature-dev`: standardize requirement analysis, development, testing, review, and verification
 - `adui-viteplus`: Vite+ engineering conventions
 - `adui-nestjs-prisma`: NestJS + Prisma integration conventions
@@ -206,10 +236,10 @@ Completed:
 - Registry v1
 - technology Profiles v1
 - Registry / Profile validator
+- `adui-stack-router` stack detection and Profile routing
 
 Next:
 
-- implement `adui-stack-router`
 - initialize `skills.lock.json`
 - implement upstream update checks
 - enable weekly update pull requests

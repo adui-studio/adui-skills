@@ -1,3 +1,3 @@
 interface:
   display_name: "ADui Stack Router"
-  short_description: "Detect the current project technology stack and route development tasks to the appropriate ADui and third-party skills."
+  short_description: "Detect project stacks and route to ADui profiles"

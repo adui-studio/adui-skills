@@ -100,10 +100,8 @@ core + web + toolchain + react + tailwind + git
 ### NestJS + Prisma + PostgreSQL
 
 ```text
-core + backend + database + git
+core + backend + database + prisma + postgresql + git
 ```
-
-`adui-stack-router` will later make database routing more granular based on actual project dependencies.
 
 ### Flutter
 
@@ -123,6 +121,18 @@ core + web + toolchain + vue + tauri + git
 core + web + toolchain + uniapp + git
 ```
 
+### uni-app x
+
+```text
+core + web + toolchain + uniapp-x + git
+```
+
+### WeChat Mini Program + CloudBase
+
+```text
+core + wechat-miniprogram + wechat-cloudbase + git
+```
+
 ### Three.js / Babylon.js / CesiumJS
 
 Do not load every 3D Skill unconditionally.
@@ -139,7 +149,29 @@ GPU compute / WGSL         → webgpu
 
 `adui-3d-architecture` is responsible for architecture decisions rather than replacing engine-specific API Skills.
 
-## 6. Validate the Repository
+## 6. Detect a Project Stack
+
+From the ADui Skills Pack repository:
+
+```bash
+npm run detect:stack -- ../your-project
+```
+
+Run the detector directly:
+
+```bash
+node skills/adui-stack-router/scripts/detect-stack.mjs ../your-project
+```
+
+Machine-readable output:
+
+```bash
+node skills/adui-stack-router/scripts/detect-stack.mjs ../your-project --json
+```
+
+The router reports detected technologies and evidence, direct Profiles, inherited effective Profiles, and ambiguous/conflicting signals. Detection is read-only and does not inspect `.env`, tokens, private keys, or secret stores.
+
+## 7. Validate the Repository
 
 ```bash
 npm run validate
@@ -149,7 +181,7 @@ A successful validation exits with code `0`.
 
 Unresolved `upstreamPath` values currently produce warnings and do not fail CI.
 
-## 7. Updates
+## 8. Updates
 
 Update a single ADui Skill:
 
@@ -165,7 +197,7 @@ npx skills update
 
 Third-party Registry updates will be tracked by the repository's Weekly Update workflow. Until that automation is implemented, do not manually edit `skills.lock.json` to fabricate reviewed revisions.
 
-## 8. GitHub and CNB
+## 9. GitHub and CNB
 
 GitHub:
 

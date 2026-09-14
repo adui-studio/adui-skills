@@ -450,7 +450,7 @@
       "official": false,
       "enabled": true,
       "profiles": [
-        "toolchain"
+        "pnpm"
       ],
       "description": "pnpm package management, workspace, catalog, CI, and dependency-resolution guidance.",
       "skillsShUrl": "https://www.skills.sh/antfu/skills/pnpm"
@@ -495,7 +495,7 @@
       "official": true,
       "enabled": true,
       "profiles": [
-        "database"
+        "prisma"
       ],
       "description": "Current Prisma CLI commands, migrations, generation, schema operations, and development workflows.",
       "skillsShUrl": "https://www.skills.sh/prisma/skills/prisma-cli"
@@ -510,7 +510,7 @@
       "official": true,
       "enabled": true,
       "profiles": [
-        "database"
+        "prisma"
       ],
       "description": "Current Prisma Client querying, relations, transactions, type-safe access, and API patterns.",
       "skillsShUrl": "https://www.skills.sh/prisma/skills/prisma-client-api"
@@ -525,7 +525,7 @@
       "official": true,
       "enabled": true,
       "profiles": [
-        "database"
+        "prisma"
       ],
       "description": "Configure Prisma for PostgreSQL, MySQL, SQLite, and other supported providers.",
       "skillsShUrl": "https://www.skills.sh/prisma/skills/prisma-database-setup"
@@ -570,7 +570,7 @@
       "official": true,
       "enabled": true,
       "profiles": [
-        "database"
+        "postgresql"
       ],
       "description": "PostgreSQL schema, indexing, query optimization, and production best practices for supported modern releases.",
       "skillsShUrl": "https://www.skills.sh/neondatabase/postgres-skills/postgres-best-practices"
@@ -585,7 +585,7 @@
       "official": true,
       "enabled": true,
       "profiles": [
-        "database"
+        "mysql"
       ],
       "description": "MySQL schema, query, operational, and performance guidance.",
       "skillsShUrl": "https://www.skills.sh/planetscale/database-skills/mysql"
@@ -600,7 +600,7 @@
       "official": false,
       "enabled": true,
       "profiles": [
-        "database"
+        "sqlite"
       ],
       "description": "SQLite WAL, transactions, concurrency, indexes, JSON, FTS, backup, and production configuration.",
       "skillsShUrl": "https://www.skills.sh/erayack/sqlite-best-practices/sqlite-best-practices"
@@ -826,7 +826,7 @@
       "official": false,
       "enabled": true,
       "profiles": [
-        "uniapp"
+        "uniapp-x"
       ],
       "description": "uni-app x project development with Vue 3, TypeScript, platform compatibility, and APIs.",
       "skillsShUrl": "https://www.skills.sh/full-stack-skills/uniapp-skills/uniappx-project"
@@ -871,7 +871,7 @@
       "official": true,
       "enabled": true,
       "profiles": [
-        "wechat-miniprogram"
+        "wechat-cloudbase"
       ],
       "description": "WeChat Mini Program structure, preview, publishing, CI, debugging, and CloudBase integration when applicable.",
       "skillsShUrl": "https://www.skills.sh/tencentcloudbase/skills/miniprogram-development",

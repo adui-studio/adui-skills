@@ -100,10 +100,8 @@ core + web + toolchain + react + tailwind + git
 ### NestJS + Prisma + PostgreSQL
 
 ```text
-core + backend + database + git
+core + backend + database + prisma + postgresql + git
 ```
-
-后续 `adui-stack-router` 会根据项目依赖进一步细分数据库类型。
 
 ### Flutter
 
@@ -123,6 +121,18 @@ core + web + toolchain + vue + tauri + git
 core + web + toolchain + uniapp + git
 ```
 
+### uni-app x
+
+```text
+core + web + toolchain + uniapp-x + git
+```
+
+### 微信小程序 + CloudBase
+
+```text
+core + wechat-miniprogram + wechat-cloudbase + git
+```
+
 ### Three.js / Babylon.js / CesiumJS
 
 不要同时无条件加载全部 3D Skill。
@@ -139,7 +149,36 @@ GPU Compute / WGSL   → webgpu
 
 `adui-3d-architecture` 负责技术决策而不是替代各引擎的 API Skill。
 
-## 6. 验证仓库
+## 6. 自动检测技术栈
+
+在 ADui Skills Pack 仓库中：
+
+```bash
+npm run detect:stack -- ../your-project
+```
+
+直接运行：
+
+```bash
+node skills/adui-stack-router/scripts/detect-stack.mjs ../your-project
+```
+
+机器可读输出：
+
+```bash
+node skills/adui-stack-router/scripts/detect-stack.mjs ../your-project --json
+```
+
+Router 会输出：
+
+- 检测到的技术栈和证据
+- Direct Profiles
+- 展开继承后的 Effective Profiles
+- 冲突和不确定项
+
+检测过程是只读的，不读取 `.env`、Token、私钥等敏感文件。
+
+## 7. 验证仓库
 
 ```bash
 npm run validate
@@ -149,7 +188,7 @@ npm run validate
 
 当前已知未解析的 `upstreamPath` 只产生 Warning，不会导致 CI 失败。
 
-## 7. 更新
+## 8. 更新
 
 ADui 自研 Skill：
 
@@ -165,7 +204,7 @@ npx skills update
 
 第三方 Registry 更新由仓库的 Weekly Update 工作流统一跟踪；在自动化完成前，不应手工修改 `skills.lock.json` 来伪造审核版本。
 
-## 8. GitHub 与 CNB
+## 9. GitHub 与 CNB
 
 GitHub：
 
