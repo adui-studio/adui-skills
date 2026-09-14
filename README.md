@@ -118,22 +118,24 @@ append-only 候选历史
 <!-- skills-sh-weekly-ranking:start -->
 ## skills.sh 本周分类排行榜
 
-> 每周自动更新。最近一次排行：**2026-09-14** · [查看完整 Top 5 排行](./reports/skills-sh/latest.md) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
+> 每周自动更新。最近一次排行：**2026-09-14** · [查看完整 Top 10 排行](./reports/skills-sh/latest.md) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
 
 | 分类 | 第 1 名 | Source | Installs | Stars | Audit |
 | --- | --- | --- | ---: | ---: | --- |
-| 前端 / React | [frontend-react-best-practices](https://skills.sh/sergiodxa/agent-skills/frontend-react-best-practices) | `sergiodxa/agent-skills` | 1,150 | 90 | warn |
-| Vue | [vue-best-practices](https://skills.sh/vuejs-ai/skills/vue-best-practices) | `vuejs-ai/skills` | 38,753 | 2,848 | pass |
-| Next.js | [clerk-nextjs-patterns](https://skills.sh/clerk/skills/clerk-nextjs-patterns) | `clerk/skills` | 43,393 | 72 | pass |
-| 设计 / UI | [web-design-guidelines](https://skills.sh/vercel-labs/agent-skills/web-design-guidelines) | `vercel-labs/agent-skills` | 631,904 | 31,183 | unknown |
-| 移动端 | [agent-spec-mobile-react-native](https://skills.sh/ruvnet/ruflo/agent-spec-mobile-react-native) | `ruvnet/ruflo` | 1,265 | 72,394 | unknown |
-| Agent 工作流 | [google-agents-cli-workflow](https://skills.sh/google/agents-cli/google-agents-cli-workflow) | `google/agents-cli` | 220,419 | 5,925 | unknown |
-| 数据库 | [prisma-database-setup](https://skills.sh/prisma/skills/prisma-database-setup) | `prisma/skills` | 284,314 | 57 | unknown |
+| 前端 | [router](https://skills.sh/lubusin/frappe-skills/router) | `lubusin/frappe-skills` | 63 | 58 | pass |
+| React | [vercel-react-best-practices](https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices) | `vercel-labs/agent-skills` | 711,311 | 31,186 | pass |
+| Vue | [vue-best-practices](https://skills.sh/vuejs-ai/skills/vue-best-practices) | `vuejs-ai/skills` | 38,763 | 2,848 | pass |
+| Next.js | [clerk-nextjs-patterns](https://skills.sh/clerk/skills/clerk-nextjs-patterns) | `clerk/skills` | 43,423 | 72 | unknown |
+| 设计 / UI | [web-design-guidelines](https://skills.sh/vercel-labs/agent-skills/web-design-guidelines) | `vercel-labs/agent-skills` | 632,208 | 31,186 | unknown |
+| UX | [lean-ux](https://skills.sh/wondelai/skills/lean-ux) | `wondelai/skills` | 4,507 | 2,172 | unknown |
+| 移动端 | [agent-spec-mobile-react-native](https://skills.sh/ruvnet/ruflo/agent-spec-mobile-react-native) | `ruvnet/ruflo` | 1,265 | 72,402 | unknown |
+| Agent 工作流 | [google-agents-cli-workflow](https://skills.sh/google/agents-cli/google-agents-cli-workflow) | `google/agents-cli` | 222,092 | 5,925 | warn |
+| 数据库 | [prisma-database-setup](https://skills.sh/prisma/skills/prisma-database-setup) | `prisma/skills` | 284,602 | 57 | pass |
 | 测试 | [playwright-testing](https://skills.sh/maddhruv/absolute/playwright-testing) | `maddhruv/absolute` | 160 | 212 | blocked |
-| 后端 / API | [extension-backend](https://skills.sh/quangpl/browser-extension-skills/extension-backend) | `quangpl/browser-extension-skills` | 128 | 51 | warn |
-| Git / 交付 | [github-release](https://skills.sh/jezweb/claude-skills/github-release) | `jezweb/claude-skills` | 1,255 | 1,005 | blocked |
-| 3D / GPU | [threejs-webgl](https://skills.sh/freshtechbro/claudedesignskills/threejs-webgl) | `freshtechbro/claudedesignskills` | 3,636 | 895 | unknown |
-| 工程化 | [vite](https://skills.sh/antfu/skills/vite) | `antfu/skills` | 35,414 | 5,879 | unknown |
+| 后端 / API | [extension-backend](https://skills.sh/quangpl/browser-extension-skills/extension-backend) | `quangpl/browser-extension-skills` | 129 | 51 | unknown |
+| Git / 交付 | [github-release](https://skills.sh/jezweb/claude-skills/github-release) | `jezweb/claude-skills` | 1,255 | 1,005 | unknown |
+| 3D / GPU | [threejs-webgl](https://skills.sh/freshtechbro/claudedesignskills/threejs-webgl) | `freshtechbro/claudedesignskills` | 3,639 | 896 | unknown |
+| 工程化 | [vite](https://skills.sh/antfu/skills/vite) | `antfu/skills` | 35,422 | 5,879 | unknown |
 
 > 排行展示与 Pack 候选选择是两件事：排行榜每周刷新；候选仍遵循 append-only，不删除、不替换已有 Skill。
 <!-- skills-sh-weekly-ranking:end -->
