@@ -110,6 +110,66 @@
       "repoStars": 94204,
       "auditStatus": "unknown",
       "selectedAt": "2026-09-14T12:00:14.649Z"
+    },
+    {
+      "key": "vercel-labs/agent-skills@vercel-react-best-practices",
+      "source": "vercel-labs/agent-skills",
+      "name": "vercel-react-best-practices",
+      "skillsShUrl": "https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 711311,
+      "repoStars": 31186,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-14T13:55:02.340Z"
+    },
+    {
+      "key": "vuejs-ai/skills@vue-debug-guides",
+      "source": "vuejs-ai/skills",
+      "name": "vue-debug-guides",
+      "skillsShUrl": "https://skills.sh/vuejs-ai/skills/vue-debug-guides",
+      "category": "vue",
+      "categoryName": "Vue",
+      "installs": 24636,
+      "repoStars": 2848,
+      "auditStatus": "warn",
+      "selectedAt": "2026-09-14T13:55:02.340Z"
+    },
+    {
+      "key": "cloudflare/skills@nextjs-on-cloudflare",
+      "source": "cloudflare/skills",
+      "name": "nextjs-on-cloudflare",
+      "skillsShUrl": "https://skills.sh/cloudflare/skills/nextjs-on-cloudflare",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 7580,
+      "repoStars": 2829,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-14T13:55:02.340Z"
+    },
+    {
+      "key": "nextlevelbuilder/ui-ux-pro-max-skill@ckm:design",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "name": "ckm:design",
+      "skillsShUrl": "https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ckm:design",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 32570,
+      "repoStars": 127531,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-14T13:55:02.340Z"
+    },
+    {
+      "key": "wshobson/agents@git-advanced-workflows",
+      "source": "wshobson/agents",
+      "name": "git-advanced-workflows",
+      "skillsShUrl": "https://skills.sh/wshobson/agents/git-advanced-workflows",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 17790,
+      "repoStars": 39642,
+      "auditStatus": "warn",
+      "selectedAt": "2026-09-14T13:55:02.340Z"
     }
   ]
 }
