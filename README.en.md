@@ -152,7 +152,7 @@ npm run updates:check
 npm run updates:apply
 ```
 
-Weekly upstream updates and weekly ranking automation only open pull requests and **never auto-merge**.
+Third-party Registry updates and Pack candidate changes still require Pull Request review and **never auto-merge**; the public leaderboard page itself is refreshed automatically by the weekly Workflow.
 
 ## Documentation
 
