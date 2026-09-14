@@ -127,10 +127,15 @@ export function replaceRankingBlock(content, block) {
 
 export function replaceSkillsBadge(content, packUrl) {
   const packBadge = `[![ADui Skills Pack](https://img.shields.io/badge/skills.sh-ADui%20Skills%20Pack-000000?logo=vercel)](${packUrl})`;
-  const badgePattern = /^\[!\[[^\]]*skills\.sh[^\]]*\]\([^\n]+\)\]\(https:\/\/skills\.sh\/[^\n]+\)$/im;
+  const currentPackBadgePattern = /^\[!\[ADui Skills Pack\]\([^\n]+\)\]\([^\n]+\)$/m;
+  const oldSkillsBadgePattern = /^\[!\[[^\]]*skills\.sh[^\]]*\]\([^\n]+\)\]\(https:\/\/skills\.sh\/[^\n]+\)$/im;
 
-  if (badgePattern.test(content)) {
-    return content.replace(badgePattern, packBadge);
+  if (currentPackBadgePattern.test(content)) {
+    return content.replace(currentPackBadgePattern, packBadge);
+  }
+
+  if (oldSkillsBadgePattern.test(content)) {
+    return content.replace(oldSkillsBadgePattern, packBadge);
   }
 
   const licenseBadgePattern = /^(\[!\[License: MIT\][^\n]+\])$/m;
