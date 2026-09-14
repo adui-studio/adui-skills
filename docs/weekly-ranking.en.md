@@ -23,7 +23,7 @@ npx skills add https://skills.sh/p/DCh7RQegkqCXcXn8
 The leaderboard is published as visible project content instead of living only in Actions logs:
 
 - README: current #1 Skill in every category;
-- GitHub Wiki: `Weekly-Skills-Ranking-Latest` with Top 5 per category;
+- GitHub Wiki: `Weekly-Skills-Ranking-Latest` with Top 10 per category;
 - repository snapshot: `reports/skills-sh/latest.md`;
 - historical snapshots: `reports/skills-sh/YYYY-MM-DD.md`.
 
@@ -33,7 +33,7 @@ Latest full leaderboard:
 https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-Latest
 ```
 
-The weekly Workflow refreshes the Wiki page directly with `WIKI_TOKEN`, so the public leaderboard does not depend on the candidate Pull Request being merged. README and repository report snapshots are updated by the weekly ranking PR.
+The weekly Workflow refreshes the Wiki page directly with `WIKI_TOKEN`; README and repository report snapshots are also committed directly to `main`, so public ranking updates do not depend on the Pack candidate Pull Request being merged.
 
 ## Flow
 
@@ -46,7 +46,7 @@ GitHub Stars gate
       ↓
 best-effort skills.sh audit check
       ↓
-publish README #1 summary + Wiki Top 5 leaderboard
+publish README #1 summary + Wiki Top 10 leaderboard
       ↓
 exclude skills already in the Pack
       ↓
@@ -56,7 +56,7 @@ pick the best candidate per category
       ↓
 append to pack/skills-sh-pack.json
       ↓
-write weekly report and Pull Request
+open a separate Pull Request for candidate changes
 ```
 
 Workflow:
@@ -75,7 +75,7 @@ Categories are configured in `config/skills-sh-ranking.json`. The default set co
 
 ```text
 Search results        : 20
-Report Top N          : 5
+Report Top N          : 10
 Minimum installs      : 5000
 Minimum GitHub stars  : 100
 Blocked risk levels   : HIGH / CRITICAL

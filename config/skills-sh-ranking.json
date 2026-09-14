@@ -2,7 +2,7 @@
   "version": 1,
   "packUrl": "https://www.skills.sh/p/DCh7RQegkqCXcXn8",
   "searchLimit": 20,
-  "reportTopN": 5,
+  "reportTopN": 10,
   "maxNewPerRun": 12,
   "minInstalls": 5000,
   "minRepoStars": 100,

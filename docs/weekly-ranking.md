@@ -23,7 +23,7 @@ npx skills add https://skills.sh/p/DCh7RQegkqCXcXn8
 排行榜不是只放在 Actions 日志里，而是作为公开内容持续展示：
 
 - README：展示每个分类当前第 1 名；
-- GitHub Wiki：`Weekly-Skills-Ranking-Latest` 展示每个分类 Top 5；
+- GitHub Wiki：`Weekly-Skills-Ranking-Latest` 展示每个分类 Top 10；
 - 仓库快照：`reports/skills-sh/latest.md`；
 - 历史快照：`reports/skills-sh/YYYY-MM-DD.md`。
 
@@ -33,7 +33,7 @@ npx skills add https://skills.sh/p/DCh7RQegkqCXcXn8
 https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-Latest
 ```
 
-GitHub Wiki 最新榜单由每周 Workflow 使用 `WIKI_TOKEN` 直接刷新，因此榜单展示不依赖候选 PR 是否合并。README 和仓库内报告快照会随每周排行榜 PR 更新。
+GitHub Wiki 最新榜单由每周 Workflow 使用 `WIKI_TOKEN` 直接刷新；README 和仓库内报告快照也会直接自动更新到 `main`，因此排行榜展示不依赖 Pack 候选 PR 是否合并。
 
 ## 工作流
 
@@ -46,7 +46,7 @@ GitHub Stars 门禁
       ↓
 skills.sh Audit 最佳努力安全检查
       ↓
-生成 README 第 1 名摘要 + Wiki Top 5 完整榜单
+生成 README 第 1 名摘要 + Wiki Top 10 完整榜单
       ↓
 排除 Pack 已存在 Skill
       ↓
@@ -56,7 +56,7 @@ skills.sh Audit 最佳努力安全检查
       ↓
 追加到 pack/skills-sh-pack.json
       ↓
-生成每周报告与 Pull Request
+候选变更生成独立 Pull Request
 ```
 
 工作流文件：
@@ -92,7 +92,7 @@ skills.sh Audit 最佳努力安全检查
 
 ```text
 搜索结果数量       : 20
-报告展示 Top       : 5
+报告展示 Top       : 10
 最低 installs      : 5000
 最低 GitHub Stars  : 100
 阻断风险等级       : HIGH / CRITICAL

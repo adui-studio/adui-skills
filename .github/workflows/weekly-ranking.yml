@@ -194,7 +194,7 @@ jobs:
             echo "- README / 排行快照自动刷新：\`${{ steps.display.outputs.changed || 'false' }}\`"
             echo "- Pack 候选状态变化：\`${{ steps.ranking.outputs.changed || 'false' }}\`"
             echo "- README：每个分类第 1 名，直接更新 main"
-            echo "- Wiki：每个分类 Top 5，直接自动发布"
+            echo "- Wiki：每个分类 Top 10，直接自动发布"
             echo "- 仓库快照：\`reports/skills-sh/latest.md\`"
             echo
             echo "排行榜展示每周自动更新；Pack 候选清单只追加，并继续通过 PR 人工 Review，永远不会自动合并。"
