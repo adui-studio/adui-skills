@@ -87,7 +87,8 @@ npm run validate
 - Profile 是否存在循环继承
 - ADui 本地 Skill 是否存在 `SKILL.md`
 - ADui 本地 Skill 是否存在 `agents/openai.yaml`
-- 尚未确定的 `upstreamPath` 会以 Warning 显示
+- `skills.lock.json` 的来源、路径与 Commit 格式是否与 Registry 一致
+- Lock 尚未初始化时会提示 Warning；初始化后缺失已启用 Skill 会导致验证失败
 
 ### 3. 安装 ADui 自研 Skill
 
@@ -226,6 +227,28 @@ GitHub Actions 每周检查
 
 第三方 Skill 更新不会自动合并到 `main`。
 
+本地只检查上游：
+
+```bash
+npm run updates:check
+```
+
+检查并刷新本地 Lock：
+
+```bash
+npm run updates:apply
+```
+
+首次建立审核基线：
+
+```bash
+npm run lock:init
+```
+
+推荐首次初始化直接在 GitHub 的 **Actions → Weekly Skills Update → Run workflow** 手动运行。第一次运行会把全部已启用第三方 Skill 作为 Baseline，并创建人工审核 PR。
+
+每周任务固定在 `Asia/Shanghai` 每周一 09:17 运行；如果没有上游变化，不创建 PR。完整维护流程见 [维护指南](./docs/maintenance.md)。
+
 ## 当前状态
 
 项目仍处于 `v0.1.x` 基础设施阶段。
@@ -235,14 +258,17 @@ GitHub Actions 每周检查
 - GitHub → CNB 自动同步
 - Registry v1
 - 技术 Profile v1
-- Registry / Profile 验证器
+- Registry / Profile / Lock 验证器
 - `adui-stack-router` 技术栈检测与 Profile 路由
+- 第三方 Skill 上游 Commit 检查器
+- Weekly Update Pull Request 工作流
+- 84 个第三方 Skill 的 `upstreamPath` 已全部解析
 
 下一步：
 
-- 初始化 `skills.lock.json`
-- 实现上游更新检查器
-- 开启每周 Update PR
+- 首次运行 Weekly Skills Update，建立 `skills.lock.json` Baseline
+- 人工审核并合并 Baseline PR
+- 实现 `adui-feature-dev`
 - 创建 skills.sh Pack
 
 ## 文档
@@ -251,6 +277,7 @@ GitHub Actions 每周检查
 - [架构说明](./docs/architecture.md)
 - [添加 Skill](./docs/adding-skills.md)
 - [安全策略](./docs/security.md)
+- [维护与每周更新](./docs/maintenance.md)
 
 ## License
 

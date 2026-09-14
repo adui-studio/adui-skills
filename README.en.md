@@ -87,7 +87,8 @@ The validator checks:
 - Profile inheritance cycles
 - missing `SKILL.md` files for local ADui Skills
 - missing `agents/openai.yaml` files for local ADui Skills
-- unresolved `upstreamPath` values are reported as warnings
+- lock source/path/commit metadata is checked against the Registry
+- an uninitialized lock produces a warning; after initialization, missing enabled Skills fail validation
 
 ### 3. Install an ADui-maintained Skill
 
@@ -226,6 +227,28 @@ Synchronize to CNB
 
 Third-party Skill changes are never automatically merged into `main`.
 
+Check upstream without modifying the lock:
+
+```bash
+npm run updates:check
+```
+
+Check and refresh the local lock:
+
+```bash
+npm run updates:apply
+```
+
+Create the initial reviewed baseline:
+
+```bash
+npm run lock:init
+```
+
+For the first baseline, the recommended path is **Actions → Weekly Skills Update → Run workflow** on GitHub. The first run classifies all enabled third-party Skills as Baseline and opens a pull request for human review.
+
+The weekly schedule runs every Monday at 09:17 in `Asia/Shanghai`. If nothing changed upstream, no PR is created. See the [Maintenance Guide](./docs/maintenance.en.md) for the full process.
+
 ## Current Status
 
 The project is currently in the `v0.1.x` infrastructure phase.
@@ -235,14 +258,17 @@ Completed:
 - GitHub → CNB synchronization
 - Registry v1
 - technology Profiles v1
-- Registry / Profile validator
+- Registry / Profile / Lock validator
 - `adui-stack-router` stack detection and Profile routing
+- third-party Skill upstream commit checker
+- Weekly Update pull request workflow
+- all 84 third-party Skills have resolved `upstreamPath` values
 
 Next:
 
-- initialize `skills.lock.json`
-- implement upstream update checks
-- enable weekly update pull requests
+- run Weekly Skills Update once to establish the `skills.lock.json` baseline
+- review and merge the baseline PR
+- implement `adui-feature-dev`
 - create a skills.sh Pack
 
 ## Documentation
@@ -251,6 +277,7 @@ Next:
 - [Architecture](./docs/architecture.md)
 - [Adding Skills](./docs/adding-skills.md)
 - [Security](./docs/security.md)
+- [Maintenance and Weekly Updates](./docs/maintenance.en.md)
 
 ## License
 

@@ -6,6 +6,7 @@ import process from 'node:process';
 
 const root = process.cwd();
 const registryPath = path.join(root, 'registry', 'skills.json');
+const lockPath = path.join(root, 'registry', 'skills.lock.json');
 const profilesDir = path.join(root, 'profiles');
 const localSkillsDir = path.join(root, 'skills');
 
@@ -141,6 +142,91 @@ function validateRegistry(registry) {
   });
 
   return skillMap;
+}
+
+
+function validateLock(lock, registry, skillMap) {
+  if (!lock || typeof lock !== 'object' || Array.isArray(lock)) {
+    fail('registry/skills.lock.json must contain a JSON object.');
+    return;
+  }
+
+  if (!Number.isInteger(lock.version) || lock.version < 1) {
+    fail('skills.lock.version must be an integer >= 1.');
+  }
+
+  if (lock.generatedAt !== null && !isNonEmptyString(lock.generatedAt)) {
+    fail('skills.lock.generatedAt must be an ISO date string or null.');
+  }
+
+  if (lock.checkedAt !== undefined && lock.checkedAt !== null && !isNonEmptyString(lock.checkedAt)) {
+    fail('skills.lock.checkedAt must be an ISO date string or null when present.');
+  }
+
+  if (!lock.skills || typeof lock.skills !== 'object' || Array.isArray(lock.skills)) {
+    fail('skills.lock.skills must be an object.');
+    return;
+  }
+
+  const commitPattern = /^[a-f0-9]{40,64}$/i;
+  const lockedIds = new Set(Object.keys(lock.skills));
+
+  for (const [skillId, entry] of Object.entries(lock.skills)) {
+    if (!skillMap.has(skillId)) {
+      warn(`skills.lock contains stale or unknown skill: ${skillId}`);
+      continue;
+    }
+
+    if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
+      fail(`skills.lock.${skillId} must be an object.`);
+      continue;
+    }
+
+    const skill = skillMap.get(skillId);
+
+    if (!isNonEmptyString(entry.source)) {
+      fail(`skills.lock.${skillId}.source is required.`);
+    } else if (entry.source !== skill.source) {
+      fail(`skills.lock.${skillId}.source does not match registry (${entry.source} != ${skill.source}).`);
+    }
+
+    if (!isNonEmptyString(entry.upstreamPath)) {
+      fail(`skills.lock.${skillId}.upstreamPath is required.`);
+    } else if (entry.upstreamPath !== skill.upstreamPath) {
+      fail(`skills.lock.${skillId}.upstreamPath does not match registry (${entry.upstreamPath} != ${skill.upstreamPath}).`);
+    }
+
+    if (!isNonEmptyString(entry.commit) || !commitPattern.test(entry.commit)) {
+      fail(`skills.lock.${skillId}.commit must be a 40-64 character hexadecimal commit SHA.`);
+    }
+
+    if (entry.committedAt !== null && entry.committedAt !== undefined && !isNonEmptyString(entry.committedAt)) {
+      fail(`skills.lock.${skillId}.committedAt must be a string or null.`);
+    }
+
+    if (entry.checkedAt !== null && entry.checkedAt !== undefined && !isNonEmptyString(entry.checkedAt)) {
+      fail(`skills.lock.${skillId}.checkedAt must be a string or null.`);
+    }
+
+    if (entry.url !== null && entry.url !== undefined && !isNonEmptyString(entry.url)) {
+      fail(`skills.lock.${skillId}.url must be a string or null.`);
+    }
+  }
+
+  const enabledSkills = Array.isArray(registry?.skills)
+    ? registry.skills.filter((skill) => skill?.enabled === true)
+    : [];
+  const missing = enabledSkills.filter((skill) => !lockedIds.has(skill.id));
+
+  if (missing.length > 0) {
+    if (lock.generatedAt === null) {
+      warn(`skills.lock.json is not initialized yet (${missing.length} enabled Skills are not pinned).`);
+    } else {
+      for (const skill of missing) {
+        fail(`skills.lock is missing enabled skill: ${skill.id}`);
+      }
+    }
+  }
 }
 
 function loadProfiles() {
@@ -396,6 +482,12 @@ if (!fs.existsSync(registryPath)) {
 
 const registry = readJson(registryPath);
 const skillMap = validateRegistry(registry);
+const lock = fs.existsSync(lockPath) ? readJson(lockPath) : null;
+if (!lock) {
+  fail('Missing or invalid registry/skills.lock.json');
+} else {
+  validateLock(lock, registry, skillMap);
+}
 const profiles = loadProfiles();
 
 validateProfiles(profiles, skillMap);

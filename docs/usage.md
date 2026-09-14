@@ -184,11 +184,41 @@ Router 会输出：
 npm run validate
 ```
 
-成功时退出码为 `0`。
+成功时退出码为 `0`。验证器同时检查 Registry、Profiles、本地 ADui Skill 与 `skills.lock.json`。
 
-当前已知未解析的 `upstreamPath` 只产生 Warning，不会导致 CI 失败。
+在 Lock 尚未建立 Baseline 时会得到 Warning；一旦 `generatedAt` 已初始化，任何已启用第三方 Skill 缺失 Lock 都会作为 Error。
 
-## 8. 更新
+## 8. 第三方 Skill 上游更新
+
+只检查，不修改 Lock：
+
+```bash
+npm run updates:check
+```
+
+检查并刷新本地 Lock：
+
+```bash
+npm run updates:apply
+```
+
+首次初始化：
+
+```bash
+npm run lock:init
+```
+
+推荐通过 GitHub 的 **Actions → Weekly Skills Update → Run workflow** 完成首次初始化。第一次运行会为所有启用 Skill 建立 Baseline，并创建人工审核 PR。
+
+只检查部分 Skill：
+
+```bash
+node scripts/check-updates.mjs --only vue-best-practices,unocss
+```
+
+完整维护方式见 [maintenance.md](./maintenance.md)。
+
+## 9. 已安装 Skill 的客户端更新
 
 ADui 自研 Skill：
 
@@ -202,9 +232,9 @@ npx skills update adui-stack-router
 npx skills update
 ```
 
-第三方 Registry 更新由仓库的 Weekly Update 工作流统一跟踪；在自动化完成前，不应手工修改 `skills.lock.json` 来伪造审核版本。
+这里更新的是开发者本地安装的 Skill；`registry/skills.lock.json` 则用于 ADui Skills Pack 自己跟踪已审核的上游版本，两者职责不同。
 
-## 9. GitHub 与 CNB
+## 10. GitHub 与 CNB
 
 GitHub：
 

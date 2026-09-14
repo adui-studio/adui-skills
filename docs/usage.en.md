@@ -177,11 +177,41 @@ The router reports detected technologies and evidence, direct Profiles, inherite
 npm run validate
 ```
 
-A successful validation exits with code `0`.
+A successful validation exits with code `0`. The validator checks Registry, Profiles, local ADui Skills, and `skills.lock.json`.
 
-Unresolved `upstreamPath` values currently produce warnings and do not fail CI.
+Before the lock baseline exists, validation reports a warning. After `generatedAt` is initialized, any enabled third-party Skill missing from the lock becomes an error.
 
-## 8. Updates
+## 8. Track Third-party Upstream Updates
+
+Check without modifying the lock:
+
+```bash
+npm run updates:check
+```
+
+Check and refresh the local lock:
+
+```bash
+npm run updates:apply
+```
+
+Initialize the baseline:
+
+```bash
+npm run lock:init
+```
+
+The recommended first initialization path is **GitHub → Actions → Weekly Skills Update → Run workflow**. The first run pins all enabled Skills as Baseline and opens a pull request for human review.
+
+Check only selected Skills:
+
+```bash
+node scripts/check-updates.mjs --only vue-best-practices,unocss
+```
+
+See [maintenance.en.md](./maintenance.en.md) for the complete maintenance workflow.
+
+## 9. Update Installed Skills on a Developer Machine
 
 Update a single ADui Skill:
 
@@ -195,9 +225,9 @@ Update installed Skills:
 npx skills update
 ```
 
-Third-party Registry updates will be tracked by the repository's Weekly Update workflow. Until that automation is implemented, do not manually edit `skills.lock.json` to fabricate reviewed revisions.
+This updates Skills installed on a developer machine. `registry/skills.lock.json` serves a different purpose: it records upstream revisions reviewed by ADui Skills Pack.
 
-## 9. GitHub and CNB
+## 10. GitHub and CNB
 
 GitHub:
 
