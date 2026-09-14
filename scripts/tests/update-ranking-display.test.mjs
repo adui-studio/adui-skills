@@ -6,6 +6,7 @@ import {
   buildChineseBlock,
   buildEnglishBlock,
   replaceRankingBlock,
+  replaceSkillsBadge,
 } from '../update-ranking-display.mjs';
 
 const REPORT = `# skills.sh 每周分类排行与 Pack 候选
@@ -69,4 +70,12 @@ test('排行榜区块可重复更新且不重复插入', () => {
   const twice = replaceRankingBlock(once, block);
   assert.equal((twice.match(/skills-sh-weekly-ranking:start/g) || []).length, 1);
   assert.equal((twice.match(/skills-sh-weekly-ranking:end/g) || []).length, 1);
+});
+
+test('skills.sh Badge 指向用户自己的 Pack 地址', () => {
+  const initial = '[![skills.sh](https://skills.sh/b/adui-studio/adui-skills)](https://skills.sh/adui-studio/adui-skills)\n';
+  const output = replaceSkillsBadge(initial, 'https://www.skills.sh/p/DCh7RQegkqCXcXn8');
+  assert.match(output, /ADui Skills Pack/);
+  assert.match(output, /https:\/\/www\.skills\.sh\/p\/DCh7RQegkqCXcXn8/);
+  assert.doesNotMatch(output, /skills\.sh\/adui-studio\/adui-skills/);
 });
