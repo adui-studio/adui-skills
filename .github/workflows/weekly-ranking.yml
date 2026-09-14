@@ -1,0 +1,130 @@
+name: 每周精选 skills.sh 排行 Skill
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 9 * * 1'
+      timezone: 'Asia/Shanghai'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: weekly-skills-ranking
+  cancel-in-progress: false
+
+jobs:
+  ranking:
+    name: 分类排行并生成 Pack 候选 PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出主仓库
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: 配置 Node.js 22
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: 运行前校验
+        run: npm run validate
+
+      - name: 生成 skills.sh 分类排行与候选
+        id: ranking
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          DATE="$(date -u +%F)"
+          REPORT="reports/skills-sh/${DATE}.md"
+
+          node scripts/skills-sh-ranking.mjs \
+            --write \
+            --report "$REPORT"
+
+      - name: 候选变更后运行测试
+        if: steps.ranking.outputs.changed == 'true'
+        run: npm test
+
+      - name: 准备每周排行分支
+        if: steps.ranking.outputs.changed == 'true'
+        id: branch
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BRANCH="chore/weekly-skills-ranking"
+          echo "name=${BRANCH}" >> "$GITHUB_OUTPUT"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin "${BRANCH}:refs/remotes/origin/${BRANCH}" || true
+          git checkout -B "$BRANCH"
+
+          git add pack/skills-sh-pack.json reports/skills-sh
+
+          if git diff --cached --quiet; then
+            echo "没有需要提交的 Pack 候选变化。"
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git commit -m "chore(pack): 每周补充 skills.sh 优选候选"
+          git push --force-with-lease origin "HEAD:${BRANCH}"
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: 创建或更新 Pull Request
+        if: steps.ranking.outputs.changed == 'true' && steps.branch.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ steps.branch.outputs.name }}
+          REPORT_PATH: ${{ steps.ranking.outputs.report_path }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          TITLE="chore(pack): 每周补充 skills.sh 优选 Skill"
+
+          if gh pr view "$BRANCH" --json number,url >/dev/null 2>&1; then
+            gh pr edit "$BRANCH" \
+              --title "$TITLE" \
+              --body-file "$REPORT_PATH"
+            gh pr view "$BRANCH" --json url --jq '.url'
+          else
+            gh pr create \
+              --base main \
+              --head "$BRANCH" \
+              --title "$TITLE" \
+              --body-file "$REPORT_PATH"
+          fi
+
+      - name: 写入 Actions 摘要
+        if: always()
+        env:
+          REPORT_PATH: ${{ steps.ranking.outputs.report_path }}
+        shell: bash
+        run: |
+          {
+            echo "## skills.sh 每周分类排行"
+            echo
+            echo "- Pack：https://www.skills.sh/p/DCh7RQegkqCXcXn8"
+            echo "- 当前读取 Pack Skill 数：\`${{ steps.ranking.outputs.pack_count || '0' }}\`"
+            echo "- 本周新增候选：\`${{ steps.ranking.outputs.selected_count || '0' }}\`"
+            echo "- 是否产生候选变更：\`${{ steps.ranking.outputs.changed || 'false' }}\`"
+            echo
+            echo "候选清单只追加，不删除历史记录；PR 永远不会自动合并。"
+            echo
+            echo "skills.sh 暂无公开 Pack 写入 API，最终加入 Pack 需要在 Pack 管理页确认。"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ -n "${REPORT_PATH:-}" ] && [ -f "$REPORT_PATH" ]; then
+            echo >> "$GITHUB_STEP_SUMMARY"
+            cat "$REPORT_PATH" >> "$GITHUB_STEP_SUMMARY"
+          fi

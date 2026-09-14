@@ -9,114 +9,156 @@
 
 > **Current release: v0.2.0 Public Preview.** Registry/Profile schema and installer UX may continue to evolve before `v1.0.0`.
 
-ADui Skills Pack is a personal AI Coding / Agent development skill system covering full-stack development, cross-platform apps, databases, Git delivery, and Web 3D/GPU.
+ADui Skills Pack is a maintainable AI Coding / Agent Skills system covering full-stack development, cross-platform apps, databases, Git delivery, and Web 3D/GPU. GitHub is the source of truth and CNB is a read-oriented China mirror.
 
-> **Language policy:** Chinese is the primary language for repository documentation, GitHub Actions labels, and maintenance reports. Matching `.en.md` files provide the English fallback.
+## ADui Skills Pack
 
-## Repositories
+GitHub:
 
-- GitHub primary: `https://github.com/adui-studio/adui-skills`
-- CNB China mirror: `https://cnb.cool/adui-studio/adui-skills`
+```text
+https://github.com/adui-studio/adui-skills
+```
 
-GitHub is the single source of truth. CNB is a synchronized read-oriented mirror for China access.
+CNB mirror:
 
-## Technology scope
+```text
+https://cnb.cool/adui-studio/adui-skills
+```
 
-Vue, React, Tailwind CSS, UnoCSS, Vite, Vite+, Vitest, pnpm, NestJS, TypeScript, Prisma, SQL, PostgreSQL, MySQL, SQLite, Flutter, Tauri, uni-app, uni-app x, WeChat Mini Program, Three.js, Babylon.js, CesiumJS, WebGL2, WebGPU, Git and GitHub delivery workflows.
+skills.sh Pack:
+
+```text
+https://www.skills.sh/p/DCh7RQegkqCXcXn8
+```
+
+Install the Pack:
+
+```bash
+npx skills add https://skills.sh/p/DCh7RQegkqCXcXn8
+```
+
+## Core capabilities
+
+```text
+Third-party Skills             ADui-maintained Skills
+      │                                │
+      ├─ Registry                     ├─ adui-stack-router
+      ├─ Folder Hash Lock             ├─ adui-feature-dev
+      └─ Weekly Update                ├─ adui-viteplus
+               │                      ├─ adui-nestjs-prisma
+               │                      ├─ adui-3d-architecture
+               │                      ├─ adui-webgl2
+               │                      └─ adui-tauri-v2
+               │
+               └──────── Profiles ─────────┐
+                                           ↓
+                                  minimal per-project set
+```
+
+Current data:
+
+- Registry: 84 records
+- Enabled tracked third-party Skills: 82
+- Profiles: 29
+- ADui-maintained core Skills: 7
 
 ## Quick start
 
+Validate:
+
 ```bash
 npm run validate
+npm test
+```
+
+Detect a project stack:
+
+```bash
 npm run detect:stack -- .
 ```
 
-Install an ADui-maintained Skill:
+Install Profiles:
 
-```bash
-npx skills add https://github.com/adui-studio/adui-skills --skill adui-stack-router
-npx skills add https://github.com/adui-studio/adui-skills --skill adui-feature-dev
-npx skills add https://github.com/adui-studio/adui-skills --skill adui-viteplus
-npx skills add https://github.com/adui-studio/adui-skills --skill adui-nestjs-prisma
-npx skills add https://github.com/adui-studio/adui-skills --skill adui-3d-architecture
-npx skills add https://github.com/adui-studio/adui-skills --skill adui-webgl2
-npx skills add https://github.com/adui-studio/adui-skills --skill adui-tauri-v2
+```powershell
+npm run profile:list
+npm run profile:plan -- vue unocss git --agent codex
+npm run profile:install -- vue unocss git --agent codex --pm pnpm
 ```
 
-Check upstream changes without writing:
+Auto-detect stack and npm / pnpm / yarn / bun for a target project:
+
+```powershell
+npm run profile:auto-install -- D:\Projects\my-app --agent codex --dry-run
+```
+
+## Weekly skills.sh ranking and Pack curation
+
+Every week the repository searches skills.sh by category and filters candidates with install counts, GitHub Stars, and available security-audit results:
+
+```text
+skills.sh category search
+      ↓
+rank by installs
+      ↓
+GitHub Stars / Audit gates
+      ↓
+exclude skills already in the Pack
+      ↓
+exclude previously selected skills
+      ↓
+pick one best new candidate per category
+      ↓
+append-only candidate history
+      ↓
+automated PR for manual review
+```
+
+Selection history is **append-only**: previous selections are never deleted, replaced, or overwritten.
+
+Preview locally:
+
+```bash
+npm run pack:ranking
+```
+
+Write candidate state:
+
+```bash
+npm run pack:ranking:apply
+```
+
+> The public skills.sh documentation does not currently expose a stable API for mutating an existing Pack's membership. Automation therefore handles discovery, ranking, quality gates, deduplication, selection, and PR creation; adding the selected candidates to the existing Pack still requires confirmation in the skills.sh Pack UI. The workflow does not rely on undocumented internal endpoints, browser cookies, or persistent login sessions.
+
+See [Weekly skills.sh Ranking](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-EN).
+
+## Third-party Skill updates
+
+Third-party Skill source code is not vendored. The Registry stores references and reviewed Skill-folder Git tree SHA values (`skillFolderHash`).
 
 ```bash
 npm run updates:check
-```
-
-Initialize or refresh the reviewed lock:
-
-```bash
-npm run lock:init
 npm run updates:apply
 ```
 
-## ADui feature development workflow
-
-`adui-feature-dev` standardizes feature work, bug fixes and refactoring into requirement understanding, minimal changes, quality gates, diff review and explicit delivery. Chinese documentation is canonical; see [docs/development.en.md](https://github.com/adui-studio/adui-skills/wiki/Development-EN) for the English fallback.
-
-
-## Specialized Vite+ and NestJS + Prisma skills
-
-- `adui-viteplus` is used only for real Vite+ projects and coordinates `vp check`, `vp test`, `vp build`, `vp pack`, configuration, and incremental migration.
-- `adui-nestjs-prisma` is selected only when both NestJS and Prisma are detected. It adds integration rules for module boundaries, data access, transactions, migrations, error mapping, and real database testing.
-
-The Stack Router uses the combined `nestjs-prisma` profile so NestJS-only or Prisma-only projects do not load this integration skill.
-
-## 3D / GPU architecture and WebGL2
-
-`adui-3d-architecture` provides engine selection, coordinate ownership, integration boundaries, performance budgets, and resource-lifecycle guidance across Three.js, Babylon.js, CesiumJS, WebGL2, and WebGPU. `adui-webgl2` adds raw WebGL2 / GLSL ES 3.0 pipeline, shader, framebuffer, context-loss, and disposal rules.
-
-## Upstream tracking v2
-
-v0.1.4 tracks the Git tree SHA of each Skill folder (`skillFolderHash`) instead of relying on the GitHub commits-by-path API. Repositories are grouped by `source`, cloned once per run, and moved `SKILL.md` files can be auto-resolved by frontmatter `name`.
-
-A single unavailable third-party repository is reported as a warning and does not invalidate successful checks for other Skills. Weekly update PRs are never auto-merged.
-
-## Current ADui-maintained core Skills
-
-- `adui-stack-router`
-- `adui-feature-dev`
-- `adui-viteplus`
-- `adui-nestjs-prisma`
-- `adui-3d-architecture`
-- `adui-webgl2`
-- `adui-tauri-v2`
+Weekly upstream updates and weekly ranking automation only open pull requests and **never auto-merge**.
 
 ## Documentation
 
+Browse detailed documentation in the GitHub Wiki:
+
+- [Wiki Home](https://github.com/adui-studio/adui-skills/wiki/Home-EN)
 - [Usage](https://github.com/adui-studio/adui-skills/wiki/Usage-EN)
+- [Profile Installer](https://github.com/adui-studio/adui-skills/wiki/Profile-Installer-EN)
+- [Weekly skills.sh Ranking](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-EN)
 - [Feature Development](https://github.com/adui-studio/adui-skills/wiki/Development-EN)
+- [Architecture](https://github.com/adui-studio/adui-skills/wiki/Architecture-EN)
 - [Vite+](https://github.com/adui-studio/adui-skills/wiki/VitePlus-EN)
 - [NestJS + Prisma](https://github.com/adui-studio/adui-skills/wiki/NestJS-Prisma-EN)
 - [3D / GPU Architecture](https://github.com/adui-studio/adui-skills/wiki/3D-Architecture-EN)
 - [WebGL2](https://github.com/adui-studio/adui-skills/wiki/WebGL2-EN)
 - [Tauri v2](https://github.com/adui-studio/adui-skills/wiki/Tauri-v2-EN)
-- [Profile Installer](https://github.com/adui-studio/adui-skills/wiki/Profile-Installer-EN)
 - [Maintenance](https://github.com/adui-studio/adui-skills/wiki/Maintenance-EN)
-- [Architecture](https://github.com/adui-studio/adui-skills/wiki/Architecture-EN)
-- [Adding Skills](https://github.com/adui-studio/adui-skills/wiki/Adding-Skills-EN)
 - [Security](https://github.com/adui-studio/adui-skills/wiki/Security-EN)
-- [Contributing](https://github.com/adui-studio/adui-skills/wiki/Contributing-EN)
 - [Release Process](https://github.com/adui-studio/adui-skills/wiki/Releasing-EN)
-- [Security Policy](https://github.com/adui-studio/adui-skills/wiki/Security-Policy-EN)
 
-For documentation browsing, use the [GitHub Wiki](https://github.com/adui-studio/adui-skills/wiki/Home-EN). Chinese remains the canonical source language.
-
-## Profile Installer
-
-Profiles can now be resolved and installed through the ADui Profile Manager with npm, pnpm, Yarn, or Bun. Package-manager selection follows `--pm` → `package.json#packageManager` → lockfiles → current execution environment → npm fallback. `auto-install` detects and installs inside the target project instead of assuming the package manager used to launch ADui. Actual installs still require an explicit agent target. See [Profile Installer](https://github.com/adui-studio/adui-skills/wiki/Profile-Installer-EN).
-
-## Tauri v2
-
-The Tauri profile now includes `adui-tauri-v2` for IPC, state, capabilities, permissions, plugins, sidecars, updater, and packaging conventions. See [Tauri v2 Engineering](https://github.com/adui-studio/adui-skills/wiki/Tauri-v2-EN).
-
-
-## Release and skills.sh Pack
-
-GitHub releases are driven by `v*` tags and require validation, tests, and a complete Folder Hash lock. See [Release Process](https://github.com/adui-studio/adui-skills/wiki/Releasing-EN). The skills.sh Pack must be created after Vercel sign-in; the repository does not publish a fake pack ID before the real URL exists.
+Repository `docs/*.md` files remain the single source of truth and GitHub Actions publishes them to the Wiki. Chinese remains the canonical source language.
