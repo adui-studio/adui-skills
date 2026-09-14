@@ -1,6 +1,14 @@
 name: 每周精选 skills.sh 排行 Skill
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/weekly-ranking.yml'
+      - 'config/skills-sh-ranking.json'
+      - 'scripts/skills-sh-ranking.mjs'
+      - 'scripts/update-ranking-display.mjs'
   workflow_dispatch:
   schedule:
     - cron: '37 9 * * 1'
