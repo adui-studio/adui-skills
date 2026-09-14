@@ -72,10 +72,13 @@ test('排行榜区块可重复更新且不重复插入', () => {
   assert.equal((twice.match(/skills-sh-weekly-ranking:end/g) || []).length, 1);
 });
 
-test('skills.sh Badge 指向用户自己的 Pack 地址', () => {
+test('skills.sh Badge 指向用户自己的 Pack 地址并保持幂等', () => {
   const initial = '[![skills.sh](https://skills.sh/b/adui-studio/adui-skills)](https://skills.sh/adui-studio/adui-skills)\n';
-  const output = replaceSkillsBadge(initial, 'https://www.skills.sh/p/DCh7RQegkqCXcXn8');
-  assert.match(output, /ADui Skills Pack/);
-  assert.match(output, /https:\/\/www\.skills\.sh\/p\/DCh7RQegkqCXcXn8/);
-  assert.doesNotMatch(output, /skills\.sh\/adui-studio\/adui-skills/);
+  const packUrl = 'https://www.skills.sh/p/DCh7RQegkqCXcXn8';
+  const once = replaceSkillsBadge(initial, packUrl);
+  const twice = replaceSkillsBadge(once, packUrl);
+  assert.match(twice, /ADui Skills Pack/);
+  assert.match(twice, /https:\/\/www\.skills\.sh\/p\/DCh7RQegkqCXcXn8/);
+  assert.doesNotMatch(twice, /skills\.sh\/adui-studio\/adui-skills/);
+  assert.equal((twice.match(/ADui Skills Pack/g) || []).length, 1);
 });
