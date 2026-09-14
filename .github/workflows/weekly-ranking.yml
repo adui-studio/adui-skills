@@ -59,6 +59,37 @@ jobs:
       - name: 运行测试
         run: npm test
 
+      - name: 自动发布最新完整排行榜到 Wiki
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ -z "${WIKI_TOKEN:-}" ]; then
+            echo "::error::缺少 WIKI_TOKEN，无法自动发布排行榜到 GitHub Wiki。"
+            exit 1
+          fi
+
+          WIKI_URL="https://x-access-token:${WIKI_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git"
+          WIKI_DIR="$(mktemp -d)"
+
+          git clone "$WIKI_URL" "$WIKI_DIR"
+          cp reports/skills-sh/latest.md "$WIKI_DIR/Weekly-Skills-Ranking-Latest.md"
+
+          cd "$WIKI_DIR"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Weekly-Skills-Ranking-Latest.md
+
+          if git diff --cached --quiet; then
+            echo "Wiki 最新排行榜无变化。"
+            exit 0
+          fi
+
+          git commit -m "docs(rankings): 更新 skills.sh 每周分类排行"
+          git push origin HEAD:master
+
       - name: 准备每周排行分支
         id: branch
         shell: bash
@@ -129,9 +160,10 @@ jobs:
             echo "- 本周新增候选：\`${{ steps.ranking.outputs.selected_count || '0' }}\`"
             echo "- 是否产生候选变更：\`${{ steps.ranking.outputs.changed || 'false' }}\`"
             echo "- README：展示每个分类第 1 名"
-            echo "- 完整排行：\`reports/skills-sh/latest.md\`，每分类 Top 5"
+            echo "- Wiki：自动发布每分类 Top 5 完整榜单"
+            echo "- 仓库快照：\`reports/skills-sh/latest.md\`"
             echo
-            echo "排行榜每周更新；候选清单只追加，不删除历史记录；PR 永远不会自动合并。"
+            echo "排行榜每周自动更新；候选清单只追加，不删除历史记录；候选 PR 永远不会自动合并。"
             echo
             echo "skills.sh 暂无公开 Pack 写入 API，最终加入 Pack 需要在 Pack 管理页确认。"
           } >> "$GITHUB_STEP_SUMMARY"
