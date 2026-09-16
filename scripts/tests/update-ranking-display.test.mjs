@@ -7,6 +7,7 @@ import {
   buildEnglishBlock,
   replaceRankingBlock,
   replaceSkillsBadge,
+  normalizeDailyWording,
 } from '../update-ranking-display.mjs';
 
 const REPORT = `# skills.sh 每周分类排行与 Pack 候选
@@ -48,18 +49,20 @@ test('解析每个分类第 1 名', () => {
   assert.equal(data.rows[1].category, '3D / GPU');
 });
 
-test('中文 README 区块包含 Top 10 完整排行入口与 Pack', () => {
+test('中文 README 区块包含每日 Top 10 完整排行入口与 Pack', () => {
   const block = buildChineseBlock(parseWeeklyRanking(REPORT));
-  assert.match(block, /skills\.sh 本周分类排行榜/);
+  assert.match(block, /skills\.sh 今日分类排行榜/);
+  assert.match(block, /每日自动更新/);
   assert.match(block, /完整 Top 10 排行/);
   assert.match(block, /reports\/skills-sh\/latest\.md/);
   assert.match(block, /DCh7RQegkqCXcXn8/);
   assert.match(block, /vue-best-practices/);
 });
 
-test('英文 README 区块包含 Top 10 分类榜入口', () => {
+test('英文 README 区块包含每日 Top 10 分类榜入口', () => {
   const block = buildEnglishBlock(parseWeeklyRanking(REPORT));
-  assert.match(block, /Weekly Category Leaderboard/);
+  assert.match(block, /Daily Category Leaderboard/);
+  assert.match(block, /Updated daily/);
   assert.match(block, /full Top 10 ranking/);
   assert.match(block, /vue-best-practices/);
 });
@@ -72,6 +75,15 @@ test('排行榜区块可重复更新且不重复插入', () => {
   const twice = replaceRankingBlock(once, block);
   assert.equal((twice.match(/skills-sh-weekly-ranking:start/g) || []).length, 1);
   assert.equal((twice.match(/skills-sh-weekly-ranking:end/g) || []).length, 1);
+});
+
+test('静态 README 周期文案统一改为每日', () => {
+  const chinese = normalizeDailyWording('## 每周 skills.sh 分类排行与 Pack 精选\n仓库会每周从 skills.sh 获取数据\n');
+  const english = normalizeDailyWording('## Weekly skills.sh ranking and Pack curation\nEvery week the repository searches skills.sh\n');
+  assert.match(chinese, /## 每日 skills\.sh 分类排行与 Pack 精选/);
+  assert.match(chinese, /仓库会每日从 skills\.sh/);
+  assert.match(english, /## Daily skills\.sh ranking and Pack curation/);
+  assert.match(english, /Every day the repository searches skills\.sh/);
 });
 
 test('skills.sh Badge 指向用户自己的 Pack 地址并保持幂等', () => {
