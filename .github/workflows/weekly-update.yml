@@ -1,9 +1,9 @@
-name: 每周检查第三方 Skills 更新
+name: 每日检查第三方 Skills 更新
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 9 * * 1'
+    - cron: '17 9 * * *'
       timezone: 'Asia/Shanghai'
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: weekly-skills-update
+  group: daily-skills-update
   cancel-in-progress: false
 
 jobs:
@@ -48,7 +48,7 @@ jobs:
         if: steps.updates.outputs.changed == 'true'
         run: npm run validate
 
-      - name: 准备每周更新分支
+      - name: 准备每日更新分支
         if: steps.updates.outputs.changed == 'true'
         id: branch
         shell: bash
@@ -86,7 +86,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          TITLE="chore(skills): 每周更新第三方 Skills"
+          TITLE="chore(skills): 每日更新第三方 Skills"
 
           if gh pr view "$BRANCH" --json number,url >/dev/null 2>&1; then
             gh pr edit "$BRANCH" \
@@ -108,7 +108,7 @@ jobs:
         shell: bash
         run: |
           {
-            echo "## ADui Skills Pack 每周更新"
+            echo "## ADui Skills Pack 每日更新"
             echo
             echo "- 是否产生变更：\`${{ steps.updates.outputs.changed || 'false' }}\`"
             echo "- 实际检查：\`${{ steps.updates.outputs.checked || '0' }}\`"

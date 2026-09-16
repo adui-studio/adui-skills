@@ -1,4 +1,4 @@
-name: 每周精选 skills.sh 排行 Skill
+name: 每日精选 skills.sh 排行 Skill
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
       - 'scripts/update-ranking-display.mjs'
   workflow_dispatch:
   schedule:
-    - cron: '37 9 * * 1'
+    - cron: '37 9 * * *'
       timezone: 'Asia/Shanghai'
 
 permissions:
@@ -19,7 +19,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: weekly-skills-ranking
+  group: daily-skills-ranking
   cancel-in-progress: false
 
 jobs:
@@ -96,7 +96,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "docs(rankings): 更新 skills.sh 每周分类排行"
+          git commit -m "docs(rankings): 更新 skills.sh 每日分类排行"
           git push origin HEAD:master
 
       - name: 自动更新 README 与排行榜快照
@@ -114,7 +114,7 @@ jobs:
             echo "README 与排行榜快照无变化。"
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            git commit -m "chore(rankings): 刷新 skills.sh 每周排行榜"
+            git commit -m "chore(rankings): 刷新 skills.sh 每日排行榜"
             git push origin HEAD:main
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
@@ -144,7 +144,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore(pack): 追加 skills.sh 每周优选候选"
+          git commit -m "chore(pack): 追加 skills.sh 每日优选候选"
           git push --force-with-lease origin "HEAD:${BRANCH}"
           echo "committed=true" >> "$GITHUB_OUTPUT"
 
@@ -158,7 +158,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          TITLE="chore(pack): 追加 skills.sh 每周优选候选"
+          TITLE="chore(pack): 追加 skills.sh 每日优选候选"
           PR_NUMBER="$(gh pr list \
             --base main \
             --head "$BRANCH" \
@@ -186,18 +186,18 @@ jobs:
         shell: bash
         run: |
           {
-            echo "## skills.sh 每周分类排行"
+            echo "## skills.sh 每日分类排行"
             echo
             echo "- Pack：https://www.skills.sh/p/DCh7RQegkqCXcXn8"
             echo "- 当前读取 Pack Skill 数：\`${{ steps.ranking.outputs.pack_count || '0' }}\`"
-            echo "- 本周新增候选：\`${{ steps.ranking.outputs.selected_count || '0' }}\`"
+            echo "- 今日新增候选：\`${{ steps.ranking.outputs.selected_count || '0' }}\`"
             echo "- README / 排行快照自动刷新：\`${{ steps.display.outputs.changed || 'false' }}\`"
             echo "- Pack 候选状态变化：\`${{ steps.ranking.outputs.changed || 'false' }}\`"
             echo "- README：每个分类第 1 名，直接更新 main"
             echo "- Wiki：每个分类 Top 10，直接自动发布"
             echo "- 仓库快照：\`reports/skills-sh/latest.md\`"
             echo
-            echo "排行榜展示每周自动更新；Pack 候选清单只追加，并继续通过 PR 人工 Review，永远不会自动合并。"
+            echo "排行榜展示每日自动更新；Pack 候选清单只追加，并继续通过 PR 人工 Review，永远不会自动合并。"
             echo
             echo "skills.sh 暂无公开 Pack 写入 API，最终加入 Pack 需要在 Pack 管理页确认。"
           } >> "$GITHUB_STEP_SUMMARY"
