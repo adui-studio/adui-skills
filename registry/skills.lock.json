@@ -425,107 +425,107 @@
     "using-cesiumjs-skills": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/using-cesiumjs-skills/SKILL.md",
-      "skillFolderHash": "f6a0662d661be5572e48e6e395a32ba4a2e173ea",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "be337c60262d8844c9074c2be44b91fe8512eab2",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-viewer-setup": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-viewer-setup/SKILL.md",
-      "skillFolderHash": "f2ac8f9c301388334b9d109fd3c4487403f42ece",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "9ae02505aa109365b2d59291f3151bb3033a02ef",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-camera": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-camera/SKILL.md",
-      "skillFolderHash": "39b46ef06162f76cf9247d06c1afea43ce1b016a",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "b78e47971c80b806c653c7d0ef6aafd7bfb256d1",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-entities": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-entities/SKILL.md",
-      "skillFolderHash": "b66cadf575e652b4a27440260ddd69f74b748287",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "bde8e17c0e03116b0ec68e551a6a938f68b2c193",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-3d-tiles": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-3d-tiles/SKILL.md",
-      "skillFolderHash": "e37244bddc59f602822d7fd5c16c705449894882",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "9bdc63ea91b1166f16c0ea08d5766844b995c6fa",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-imagery": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-imagery/SKILL.md",
-      "skillFolderHash": "139a51748f56f8ec33bbc0fc5798c8fe59caa66e",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "14d06b658a4f1f0081ef63d9d0a405f044d9d33b",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-terrain-environment": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-terrain-environment/SKILL.md",
-      "skillFolderHash": "26bfd7b11e0d63cceb0b3223118a1ebc5b225141",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "9c24471c36f808bd9fb80813d1f945819398951f",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-primitives": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-primitives/SKILL.md",
-      "skillFolderHash": "0d1ef9dd657982de4172e3a0276e6f219bbc6694",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "cdb23a21280d91974fd6d9e2824c5e1450979061",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-materials-shaders": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-materials-shaders/SKILL.md",
-      "skillFolderHash": "2776bc6609d8723394bde45ab09067d470326bed",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "4df22365b4fa02ef3b1b39b80a5e96a5cea885e8",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-custom-shader": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-custom-shader/SKILL.md",
-      "skillFolderHash": "0901c877ddf562a8abafe158fc54e9f3575b1c72",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "a283fffb33adf1a222ac7a2b44cbb6b872316324",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-time-properties": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-time-properties/SKILL.md",
-      "skillFolderHash": "ffddb788342f0a28d272e3a9faf57d810b8839a3",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "08bd9d6a3a4e114c08e2df07540d04d407392ee5",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-spatial-math": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-spatial-math/SKILL.md",
-      "skillFolderHash": "c9814c001e3528f97f4b4b85ab8f86f6a042cff6",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "7e9bda0b8a6d67fa0cf288fcfae13e8ac41ca659",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-interaction": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-interaction/SKILL.md",
-      "skillFolderHash": "6fef3e60e52c79c1d09ad4f3d88be30da3aa175d",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "cf7d16891f276b266f5faedb44e8af4e621a29e7",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-models-particles": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-models-particles/SKILL.md",
-      "skillFolderHash": "1f33c857cdd06e3556ad32ea413f7e0f3970db9e",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "905f66a7b3e9e146f989279c40a1da8fd73496d0",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "cesiumjs-core-utilities": {
       "source": "CesiumGS/cesiumjs-skills",
       "skillPath": "skills/cesiumjs-core-utilities/SKILL.md",
-      "skillFolderHash": "661232f4ad4f66b51d29971b8428c0759df77a23",
-      "repoCommit": "066c44ba85b4001cd5084d96179d6b73fc1a32e1",
-      "committedAt": "2026-08-07T09:13:44-05:00"
+      "skillFolderHash": "a725085a22fdde85b93b091f34d04e36f0c288b1",
+      "repoCommit": "5f4792c09c4496f214ba9679cac6d7b3b014dcdd",
+      "committedAt": "2026-09-14T08:06:10-05:00"
     },
     "git-workflow-and-versioning": {
       "source": "addyosmani/agent-skills",
