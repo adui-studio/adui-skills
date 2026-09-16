@@ -230,6 +230,66 @@
       "repoStars": 39697,
       "auditStatus": "pass",
       "selectedAt": "2026-09-16T03:21:52.694Z"
+    },
+    {
+      "key": "vercel-labs/agent-skills@vercel-react-view-transitions",
+      "source": "vercel-labs/agent-skills",
+      "name": "vercel-react-view-transitions",
+      "skillsShUrl": "https://skills.sh/vercel-labs/agent-skills/vercel-react-view-transitions",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 121622,
+      "repoStars": 31227,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-16T03:36:51.384Z"
+    },
+    {
+      "key": "vuejs-ai/skills@vue-router-best-practices",
+      "source": "vuejs-ai/skills",
+      "name": "vue-router-best-practices",
+      "skillsShUrl": "https://skills.sh/vuejs-ai/skills/vue-router-best-practices",
+      "category": "vue",
+      "categoryName": "Vue",
+      "installs": 12882,
+      "repoStars": 2852,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-16T03:36:51.384Z"
+    },
+    {
+      "key": "jeffallan/claude-skills@nextjs-developer",
+      "source": "jeffallan/claude-skills",
+      "name": "nextjs-developer",
+      "skillsShUrl": "https://skills.sh/jeffallan/claude-skills/nextjs-developer",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 5089,
+      "repoStars": 11534,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-16T03:36:51.384Z"
+    },
+    {
+      "key": "nextlevelbuilder/ui-ux-pro-max-skill@design-system",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "name": "design-system",
+      "skillsShUrl": "https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/design-system",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 28813,
+      "repoStars": 127963,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-16T03:36:51.384Z"
+    },
+    {
+      "key": "wshobson/agents@gitops-workflow",
+      "source": "wshobson/agents",
+      "name": "gitops-workflow",
+      "skillsShUrl": "https://skills.sh/wshobson/agents/gitops-workflow",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 10400,
+      "repoStars": 39698,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-16T03:36:51.384Z"
     }
   ]
 }
