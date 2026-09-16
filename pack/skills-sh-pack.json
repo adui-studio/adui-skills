@@ -290,6 +290,66 @@
       "repoStars": 39698,
       "auditStatus": "unknown",
       "selectedAt": "2026-09-16T03:36:51.384Z"
+    },
+    {
+      "key": "greensock/gsap-skills@gsap-react",
+      "source": "greensock/gsap-skills",
+      "name": "gsap-react",
+      "skillsShUrl": "https://skills.sh/greensock/gsap-skills/gsap-react",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 50081,
+      "repoStars": 15349,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-16T03:50:22.680Z"
+    },
+    {
+      "key": "vuejs-ai/skills@create-adaptable-composable",
+      "source": "vuejs-ai/skills",
+      "name": "create-adaptable-composable",
+      "skillsShUrl": "https://skills.sh/vuejs-ai/skills/create-adaptable-composable",
+      "category": "vue",
+      "categoryName": "Vue",
+      "installs": 12126,
+      "repoStars": 2852,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-16T03:50:22.680Z"
+    },
+    {
+      "key": "mindrally/skills@nextjs-react-typescript",
+      "source": "mindrally/skills",
+      "name": "nextjs-react-typescript",
+      "skillsShUrl": "https://skills.sh/mindrally/skills/nextjs-react-typescript",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 5014,
+      "repoStars": 259,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-16T03:50:22.680Z"
+    },
+    {
+      "key": "nextlevelbuilder/ui-ux-pro-max-skill@design",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "name": "design",
+      "skillsShUrl": "https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/design",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 27861,
+      "repoStars": 127967,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-16T03:50:22.680Z"
+    },
+    {
+      "key": "wshobson/agents@ml-pipeline-workflow",
+      "source": "wshobson/agents",
+      "name": "ml-pipeline-workflow",
+      "skillsShUrl": "https://skills.sh/wshobson/agents/ml-pipeline-workflow",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 9782,
+      "repoStars": 39698,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-16T03:50:22.680Z"
     }
   ]
 }
