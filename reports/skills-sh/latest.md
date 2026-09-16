@@ -4,17 +4,17 @@
 - Pack：https://www.skills.sh/p/DCh7RQegkqCXcXn8
 - Pack 当前可读取 Skill 数：7
 - 本次新增候选：5
-- 本地累计选择记录：19
+- 本地累计选择记录：24
 
 > 选择记录是 append-only：脚本只追加，不删除历史候选，也不会删除或覆盖 Pack 中已有 Skill。
 
 ## 本周建议追加
 
-- **React**：`vercel-labs/agent-skills@vercel-react-native-skills` — 211,563 installs / 31,226 stars / audit: warn
-- **Vue**：`vuejs-ai/skills@vue-pinia-best-practices` — 14,878 installs / 2,852 stars / audit: pass
-- **Next.js**：`sickn33/agentic-awesome-skills@nextjs-supabase-auth` — 6,441 installs / 46,469 stars / audit: unknown
-- **设计 / UI**：`nextlevelbuilder/ui-ux-pro-max-skill@ckm:banner-design` — 32,044 installs / 127,959 stars / audit: unknown
-- **Agent 工作流**：`wshobson/agents@workflow-orchestration-patterns` — 10,944 installs / 39,697 stars / audit: pass
+- **React**：`vercel-labs/agent-skills@vercel-react-view-transitions` — 121,622 installs / 31,227 stars / audit: pass
+- **Vue**：`vuejs-ai/skills@vue-router-best-practices` — 12,882 installs / 2,852 stars / audit: pass
+- **Next.js**：`jeffallan/claude-skills@nextjs-developer` — 5,089 installs / 11,534 stars / audit: unknown
+- **设计 / UI**：`nextlevelbuilder/ui-ux-pro-max-skill@design-system` — 28,813 installs / 127,963 stars / audit: pass
+- **Agent 工作流**：`wshobson/agents@gitops-workflow` — 10,400 installs / 39,698 stars / audit: unknown
 
 ## 分类排行
 
@@ -41,11 +41,11 @@
 
 | 排名 | Skill | Source | Installs | Stars | Audit | 结果 |
 | ---: | --- | --- | ---: | ---: | --- | --- |
-| 1 | [vercel-react-best-practices](https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices) | `vercel-labs/agent-skills` | 716,489 | 31,226 | pass | already-selected |
-| 2 | [vercel-react-native-skills](https://skills.sh/vercel-labs/agent-skills/vercel-react-native-skills) | `vercel-labs/agent-skills` | 211,563 | 31,226 | warn | 本周候选 |
-| 3 | [vercel-react-view-transitions](https://skills.sh/vercel-labs/agent-skills/vercel-react-view-transitions) | `vercel-labs/agent-skills` | 121,622 | 31,226 | pass |  |
+| 1 | [vercel-react-best-practices](https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices) | `vercel-labs/agent-skills` | 716,489 | 31,227 | pass | already-selected |
+| 2 | [vercel-react-native-skills](https://skills.sh/vercel-labs/agent-skills/vercel-react-native-skills) | `vercel-labs/agent-skills` | 211,563 | 31,227 | warn | already-selected |
+| 3 | [vercel-react-view-transitions](https://skills.sh/vercel-labs/agent-skills/vercel-react-view-transitions) | `vercel-labs/agent-skills` | 121,622 | 31,227 | pass | 本周候选 |
 | 4 | [react:components](https://skills.sh/google-labs-code/stitch-skills/react:components) | `google-labs-code/stitch-skills` | 50,687 | 8,321 | blocked |  |
-| 5 | [gsap-react](https://skills.sh/greensock/gsap-skills/gsap-react) | `greensock/gsap-skills` | 50,081 | 15,345 | pass |  |
+| 5 | [gsap-react](https://skills.sh/greensock/gsap-skills/gsap-react) | `greensock/gsap-skills` | 50,081 | 15,348 | pass |  |
 | 6 | [react-native-best-practices](https://skills.sh/callstackincubator/agent-skills/react-native-best-practices) | `callstackincubator/agent-skills` | 25,885 | 1,645 | blocked |  |
 | 7 | [clerk-react-patterns](https://skills.sh/clerk/skills/clerk-react-patterns) | `clerk/skills` | 16,667 | 73 | pass |  |
 | 8 | [react-doctor](https://skills.sh/millionco/react-doctor/react-doctor) | `millionco/react-doctor` | 14,563 | 14,853 | blocked |  |
@@ -61,8 +61,8 @@
 | 1 | [vue-best-practices](https://skills.sh/vuejs-ai/skills/vue-best-practices) | `vuejs-ai/skills` | 38,879 | 2,852 | pass | already-selected |
 | 2 | [vue](https://skills.sh/antfu/skills/vue) | `antfu/skills` | 33,803 | 5,888 | pass | already-selected |
 | 3 | [vue-debug-guides](https://skills.sh/vuejs-ai/skills/vue-debug-guides) | `vuejs-ai/skills` | 24,703 | 2,852 | warn | already-selected |
-| 4 | [vue-pinia-best-practices](https://skills.sh/vuejs-ai/skills/vue-pinia-best-practices) | `vuejs-ai/skills` | 14,878 | 2,852 | pass | 本周候选 |
-| 5 | [vue-router-best-practices](https://skills.sh/vuejs-ai/skills/vue-router-best-practices) | `vuejs-ai/skills` | 12,882 | 2,852 | pass |  |
+| 4 | [vue-pinia-best-practices](https://skills.sh/vuejs-ai/skills/vue-pinia-best-practices) | `vuejs-ai/skills` | 14,878 | 2,852 | pass | already-selected |
+| 5 | [vue-router-best-practices](https://skills.sh/vuejs-ai/skills/vue-router-best-practices) | `vuejs-ai/skills` | 12,882 | 2,852 | pass | 本周候选 |
 | 6 | [create-adaptable-composable](https://skills.sh/vuejs-ai/skills/create-adaptable-composable) | `vuejs-ai/skills` | 12,126 | 2,852 | pass |  |
 | 7 | [clerk-vue-patterns](https://skills.sh/clerk/skills/clerk-vue-patterns) | `clerk/skills` | 12,001 | 73 | pass |  |
 | 8 | [vue-testing-best-practices](https://skills.sh/vuejs-ai/skills/vue-testing-best-practices) | `vuejs-ai/skills` | 11,711 | 2,852 | pass |  |
@@ -76,11 +76,11 @@
 | 排名 | Skill | Source | Installs | Stars | Audit | 结果 |
 | ---: | --- | --- | ---: | ---: | --- | --- |
 | 1 | [clerk-nextjs-patterns](https://skills.sh/clerk/skills/clerk-nextjs-patterns) | `clerk/skills` | 43,982 | 73 | unknown | stars-below-threshold |
-| 2 | [nextjs-app-router-patterns](https://skills.sh/wshobson/agents/nextjs-app-router-patterns) | `wshobson/agents` | 29,931 | 39,697 | unknown | already-selected |
+| 2 | [nextjs-app-router-patterns](https://skills.sh/wshobson/agents/nextjs-app-router-patterns) | `wshobson/agents` | 29,931 | 39,698 | unknown | already-selected |
 | 3 | [nextjs-on-cloudflare](https://skills.sh/cloudflare/skills/nextjs-on-cloudflare) | `cloudflare/skills` | 8,981 | 2,837 | unknown | already-selected |
-| 4 | [nextjs-turbopack](https://skills.sh/affaan-m/ecc/nextjs-turbopack) | `affaan-m/ecc` | 8,936 | 259,404 | unknown | already-selected |
-| 5 | [nextjs-supabase-auth](https://skills.sh/sickn33/agentic-awesome-skills/nextjs-supabase-auth) | `sickn33/agentic-awesome-skills` | 6,441 | 46,469 | unknown | 本周候选 |
-| 6 | [nextjs-developer](https://skills.sh/jeffallan/claude-skills/nextjs-developer) | `jeffallan/claude-skills` | 5,089 | 11,534 | unknown |  |
+| 4 | [nextjs-turbopack](https://skills.sh/affaan-m/ecc/nextjs-turbopack) | `affaan-m/ecc` | 8,936 | 259,413 | unknown | already-selected |
+| 5 | [nextjs-supabase-auth](https://skills.sh/sickn33/agentic-awesome-skills/nextjs-supabase-auth) | `sickn33/agentic-awesome-skills` | 6,441 | 46,471 | unknown | already-selected |
+| 6 | [nextjs-developer](https://skills.sh/jeffallan/claude-skills/nextjs-developer) | `jeffallan/claude-skills` | 5,089 | 11,534 | unknown | 本周候选 |
 | 7 | [nextjs-react-typescript](https://skills.sh/mindrally/skills/nextjs-react-typescript) | `mindrally/skills` | 5,014 | 259 | unknown |  |
 | 8 | [nextjs-cache-architecture](https://skills.sh/mohamed-hossam1/nextjs-skills/nextjs-cache-architecture) | `mohamed-hossam1/nextjs-skills` | 4,122 | 9 | unknown |  |
 | 9 | [nextjs-performance](https://skills.sh/giuseppe-trisciuoglio/developer-kit/nextjs-performance) | `giuseppe-trisciuoglio/developer-kit` | 4,008 | 345 | unknown |  |
@@ -92,16 +92,16 @@
 
 | 排名 | Skill | Source | Installs | Stars | Audit | 结果 |
 | ---: | --- | --- | ---: | ---: | --- | --- |
-| 1 | [web-design-guidelines](https://skills.sh/vercel-labs/agent-skills/web-design-guidelines) | `vercel-labs/agent-skills` | 637,486 | 31,226 | unknown | already-selected |
-| 2 | [ckm:design-system](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ckm:design-system) | `nextlevelbuilder/ui-ux-pro-max-skill` | 32,870 | 127,959 | unknown | already-selected |
-| 3 | [ckm:design](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ckm:design) | `nextlevelbuilder/ui-ux-pro-max-skill` | 32,571 | 127,959 | unknown | already-selected |
-| 4 | [ckm:banner-design](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ckm:banner-design) | `nextlevelbuilder/ui-ux-pro-max-skill` | 32,044 | 127,959 | unknown | 本周候选 |
-| 5 | [design-system](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/design-system) | `nextlevelbuilder/ui-ux-pro-max-skill` | 28,813 | 127,959 | unknown |  |
-| 6 | [design](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/design) | `nextlevelbuilder/ui-ux-pro-max-skill` | 27,861 | 127,959 | unknown |  |
-| 7 | [banner-design](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/banner-design) | `nextlevelbuilder/ui-ux-pro-max-skill` | 26,546 | 127,959 | unknown |  |
-| 8 | [penpot-uiux-design](https://skills.sh/github/awesome-copilot/penpot-uiux-design) | `github/awesome-copilot` | 12,648 | 39,047 | unknown |  |
-| 9 | [liquid-glass-design](https://skills.sh/affaan-m/ecc/liquid-glass-design) | `affaan-m/ecc` | 10,031 | 259,404 | unknown |  |
-| 10 | [mobile-app-ui-design](https://skills.sh/ceorkm/mobile-app-ui-design/mobile-app-ui-design) | `ceorkm/mobile-app-ui-design` | 9,126 | 337 | unknown |  |
+| 1 | [web-design-guidelines](https://skills.sh/vercel-labs/agent-skills/web-design-guidelines) | `vercel-labs/agent-skills` | 637,486 | 31,227 | unknown | already-selected |
+| 2 | [ckm:design-system](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ckm:design-system) | `nextlevelbuilder/ui-ux-pro-max-skill` | 32,870 | 127,963 | unknown | already-selected |
+| 3 | [ckm:design](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ckm:design) | `nextlevelbuilder/ui-ux-pro-max-skill` | 32,571 | 127,963 | unknown | already-selected |
+| 4 | [ckm:banner-design](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ckm:banner-design) | `nextlevelbuilder/ui-ux-pro-max-skill` | 32,044 | 127,963 | warn | already-selected |
+| 5 | [design-system](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/design-system) | `nextlevelbuilder/ui-ux-pro-max-skill` | 28,813 | 127,963 | pass | 本周候选 |
+| 6 | [design](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/design) | `nextlevelbuilder/ui-ux-pro-max-skill` | 27,861 | 127,963 | pass |  |
+| 7 | [banner-design](https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/banner-design) | `nextlevelbuilder/ui-ux-pro-max-skill` | 26,546 | 127,963 | warn |  |
+| 8 | [penpot-uiux-design](https://skills.sh/github/awesome-copilot/penpot-uiux-design) | `github/awesome-copilot` | 12,648 | 39,047 | warn |  |
+| 9 | [liquid-glass-design](https://skills.sh/affaan-m/ecc/liquid-glass-design) | `affaan-m/ecc` | 10,031 | 259,413 | pass |  |
+| 10 | [mobile-app-ui-design](https://skills.sh/ceorkm/mobile-app-ui-design/mobile-app-ui-design) | `ceorkm/mobile-app-ui-design` | 9,126 | 337 | pass |  |
 
 ### UX
 
@@ -109,16 +109,16 @@
 
 | 排名 | Skill | Source | Installs | Stars | Audit | 结果 |
 | ---: | --- | --- | ---: | ---: | --- | --- |
-| 1 | [lean-ux](https://skills.sh/wondelai/skills/lean-ux) | `wondelai/skills` | 4,568 | 2,181 | unknown | installs-below-threshold |
-| 2 | [ux-researcher](https://skills.sh/dylantarre/animation-principles/ux-researcher) | `dylantarre/animation-principles` | 438 | 83 | unknown | installs-below-threshold |
-| 3 | [hwc-ux-feedback](https://skills.sh/thehotwireclub/hotwire_club-skills/hwc-ux-feedback) | `thehotwireclub/hotwire_club-skills` | 206 | 127 | unknown | installs-below-threshold |
-| 4 | [designing-user-experience](https://skills.sh/osmontero/opencode-skills/designing-user-experience) | `osmontero/opencode-skills` | 147 | 10 | unknown | installs-below-threshold |
-| 5 | [bmad-ux-design](https://skills.sh/bacoco/bmad-skills/bmad-ux-design) | `bacoco/bmad-skills` | 35 | 68 | unknown | installs-below-threshold |
-| 6 | [hwc-ux-feedback](https://skills.sh/lucianghinda/superpowers-ruby/hwc-ux-feedback) | `lucianghinda/superpowers-ruby` | 34 | 407 | unknown | installs-below-threshold |
-| 7 | [user experience design](https://skills.sh/kaakati/rails-enterprise-dev/user-experience-design) | `kaakati/rails-enterprise-dev` | 32 | 10 | unknown | installs-below-threshold |
-| 8 | [designing-user-experiences](https://skills.sh/narumiruna/skills/designing-user-experiences) | `narumiruna/skills` | 24 | 14 | unknown | installs-below-threshold |
-| 9 | [implementing-cli-patterns](https://skills.sh/saleor/configurator/implementing-cli-patterns) | `saleor/configurator` | 21 | 29 | unknown | installs-below-threshold |
-| 10 | [ux-metrics-measurement](https://skills.sh/phazurlabs/sumi/ux-metrics-measurement) | `phazurlabs/sumi` | 15 | 45 | unknown | installs-below-threshold |
+| 1 | [lean-ux](https://skills.sh/wondelai/skills/lean-ux) | `wondelai/skills` | 4,568 | 2,181 | warn | installs-below-threshold |
+| 2 | [ux-researcher](https://skills.sh/dylantarre/animation-principles/ux-researcher) | `dylantarre/animation-principles` | 438 | 83 | warn | installs-below-threshold |
+| 3 | [hwc-ux-feedback](https://skills.sh/thehotwireclub/hotwire_club-skills/hwc-ux-feedback) | `thehotwireclub/hotwire_club-skills` | 206 | 127 | warn | installs-below-threshold |
+| 4 | [designing-user-experience](https://skills.sh/osmontero/opencode-skills/designing-user-experience) | `osmontero/opencode-skills` | 147 | 10 | pass | installs-below-threshold |
+| 5 | [bmad-ux-design](https://skills.sh/bacoco/bmad-skills/bmad-ux-design) | `bacoco/bmad-skills` | 35 | 68 | warn | installs-below-threshold |
+| 6 | [hwc-ux-feedback](https://skills.sh/lucianghinda/superpowers-ruby/hwc-ux-feedback) | `lucianghinda/superpowers-ruby` | 34 | 407 | pass | installs-below-threshold |
+| 7 | [user experience design](https://skills.sh/kaakati/rails-enterprise-dev/user-experience-design) | `kaakati/rails-enterprise-dev` | 32 | 10 | pass | installs-below-threshold |
+| 8 | [designing-user-experiences](https://skills.sh/narumiruna/skills/designing-user-experiences) | `narumiruna/skills` | 24 | 14 | pass | installs-below-threshold |
+| 9 | [implementing-cli-patterns](https://skills.sh/saleor/configurator/implementing-cli-patterns) | `saleor/configurator` | 21 | 29 | warn | installs-below-threshold |
+| 10 | [ux-metrics-measurement](https://skills.sh/phazurlabs/sumi/ux-metrics-measurement) | `phazurlabs/sumi` | 15 | 45 | pass | installs-below-threshold |
 
 ### 移动端
 
@@ -126,16 +126,16 @@
 
 | 排名 | Skill | Source | Installs | Stars | Audit | 结果 |
 | ---: | --- | --- | ---: | ---: | --- | --- |
-| 1 | [agent-spec-mobile-react-native](https://skills.sh/ruvnet/ruflo/agent-spec-mobile-react-native) | `ruvnet/ruflo` | 1,266 | 72,564 | unknown | installs-below-threshold |
-| 2 | [react-native](https://skills.sh/gentleman-programming/gentleman-skills/react-native) | `gentleman-programming/gentleman-skills` | 246 | 654 | unknown | installs-below-threshold |
-| 3 | [react-native](https://skills.sh/hairyf/skills/react-native) | `hairyf/skills` | 200 | 25 | unknown | installs-below-threshold |
-| 4 | [mobile-development](https://skills.sh/samhvw8/dot-claude/mobile-development) | `samhvw8/dot-claude` | 106 | 11 | unknown | installs-below-threshold |
-| 5 | [cross-platform](https://skills.sh/alphaonedev/openclaw-graph/cross-platform) | `alphaonedev/openclaw-graph` | 51 | 0 | unknown | installs-below-threshold |
-| 6 | [react-native](https://skills.sh/partme-ai/full-stack-skills/react-native) | `partme-ai/full-stack-skills` | 39 | 661 | unknown | installs-below-threshold |
-| 7 | [ck:mobile-development](https://skills.sh/binjuhor/shadcn-lar/ckmobile-development) | `binjuhor/shadcn-lar` | 33 | 100 | unknown | installs-below-threshold |
-| 8 | [react-native](https://skills.sh/fearovex-labs/agent-config/react-native) | `fearovex-labs/agent-config` | 26 | 0 | unknown | installs-below-threshold |
-| 9 | [mobile-development](https://skills.sh/binjuhor/shadcn-lar/mobile-development) | `binjuhor/shadcn-lar` | 21 | 100 | unknown | installs-below-threshold |
-| 10 | [mobile-platform-architect](https://skills.sh/organvm-iv-taxis/a-i--skills/mobile-platform-architect) | `organvm-iv-taxis/a-i--skills` | 16 | 17 | unknown | installs-below-threshold |
+| 1 | [agent-spec-mobile-react-native](https://skills.sh/ruvnet/ruflo/agent-spec-mobile-react-native) | `ruvnet/ruflo` | 1,266 | 72,564 | pass | installs-below-threshold |
+| 2 | [react-native](https://skills.sh/gentleman-programming/gentleman-skills/react-native) | `gentleman-programming/gentleman-skills` | 246 | 654 | warn | installs-below-threshold |
+| 3 | [react-native](https://skills.sh/hairyf/skills/react-native) | `hairyf/skills` | 200 | 25 | pass | installs-below-threshold |
+| 4 | [mobile-development](https://skills.sh/samhvw8/dot-claude/mobile-development) | `samhvw8/dot-claude` | 106 | 11 | warn | installs-below-threshold |
+| 5 | [cross-platform](https://skills.sh/alphaonedev/openclaw-graph/cross-platform) | `alphaonedev/openclaw-graph` | 51 | 0 | pass | installs-below-threshold |
+| 6 | [react-native](https://skills.sh/partme-ai/full-stack-skills/react-native) | `partme-ai/full-stack-skills` | 39 | 661 | pass | installs-below-threshold |
+| 7 | [ck:mobile-development](https://skills.sh/binjuhor/shadcn-lar/ckmobile-development) | `binjuhor/shadcn-lar` | 33 | 100 | pass | installs-below-threshold |
+| 8 | [react-native](https://skills.sh/fearovex-labs/agent-config/react-native) | `fearovex-labs/agent-config` | 26 | 0 | pass | installs-below-threshold |
+| 9 | [mobile-development](https://skills.sh/binjuhor/shadcn-lar/mobile-development) | `binjuhor/shadcn-lar` | 21 | 100 | warn | installs-below-threshold |
+| 10 | [mobile-platform-architect](https://skills.sh/organvm-iv-taxis/a-i--skills/mobile-platform-architect) | `organvm-iv-taxis/a-i--skills` | 16 | 17 | pass | installs-below-threshold |
 
 ### Agent 工作流
 
@@ -143,16 +143,16 @@
 
 | 排名 | Skill | Source | Installs | Stars | Audit | 结果 |
 | ---: | --- | --- | ---: | ---: | --- | --- |
-| 1 | [google-agents-cli-workflow](https://skills.sh/google/agents-cli/google-agents-cli-workflow) | `google/agents-cli` | 238,142 | 5,938 | warn | already-selected |
-| 2 | [git-workflow-and-versioning](https://skills.sh/addyosmani/agent-skills/git-workflow-and-versioning) | `addyosmani/agent-skills` | 33,270 | 94,878 | warn | already-selected |
-| 3 | [git-advanced-workflows](https://skills.sh/wshobson/agents/git-advanced-workflows) | `wshobson/agents` | 17,852 | 39,697 | warn | already-selected |
-| 4 | [workflow-orchestration-patterns](https://skills.sh/wshobson/agents/workflow-orchestration-patterns) | `wshobson/agents` | 10,944 | 39,697 | pass | 本周候选 |
-| 5 | [gitops-workflow](https://skills.sh/wshobson/agents/gitops-workflow) | `wshobson/agents` | 10,400 | 39,697 | warn |  |
-| 6 | [ml-pipeline-workflow](https://skills.sh/wshobson/agents/ml-pipeline-workflow) | `wshobson/agents` | 9,782 | 39,697 | pass |  |
-| 7 | [workflow-patterns](https://skills.sh/wshobson/agents/workflow-patterns) | `wshobson/agents` | 9,668 | 39,697 | pass |  |
-| 8 | [google-cloud-solution-agentic-ai-data-science-workflow](https://skills.sh/google/skills/google-cloud-solution-agentic-ai-data-science-workflow) | `google/skills` | 3,187 | 19,994 | warn |  |
-| 9 | [workflow](https://skills.sh/brianlovin/agent-config/workflow) | `brianlovin/agent-config` | 2,194 | 369 | pass |  |
-| 10 | [github-workflow-automation](https://skills.sh/sickn33/agentic-awesome-skills/github-workflow-automation) | `sickn33/agentic-awesome-skills` | 1,476 | 46,469 | warn |  |
+| 1 | [google-agents-cli-workflow](https://skills.sh/google/agents-cli/google-agents-cli-workflow) | `google/agents-cli` | 238,142 | 5,939 | warn | already-selected |
+| 2 | [git-workflow-and-versioning](https://skills.sh/addyosmani/agent-skills/git-workflow-and-versioning) | `addyosmani/agent-skills` | 33,270 | 94,886 | warn | already-selected |
+| 3 | [git-advanced-workflows](https://skills.sh/wshobson/agents/git-advanced-workflows) | `wshobson/agents` | 17,852 | 39,698 | warn | already-selected |
+| 4 | [workflow-orchestration-patterns](https://skills.sh/wshobson/agents/workflow-orchestration-patterns) | `wshobson/agents` | 10,944 | 39,698 | unknown | already-selected |
+| 5 | [gitops-workflow](https://skills.sh/wshobson/agents/gitops-workflow) | `wshobson/agents` | 10,400 | 39,698 | unknown | 本周候选 |
+| 6 | [ml-pipeline-workflow](https://skills.sh/wshobson/agents/ml-pipeline-workflow) | `wshobson/agents` | 9,782 | 39,698 | unknown |  |
+| 7 | [workflow-patterns](https://skills.sh/wshobson/agents/workflow-patterns) | `wshobson/agents` | 9,668 | 39,698 | unknown |  |
+| 8 | [google-cloud-solution-agentic-ai-data-science-workflow](https://skills.sh/google/skills/google-cloud-solution-agentic-ai-data-science-workflow) | `google/skills` | 3,187 | 19,994 | unknown |  |
+| 9 | [workflow](https://skills.sh/brianlovin/agent-config/workflow) | `brianlovin/agent-config` | 2,194 | 369 | unknown |  |
+| 10 | [github-workflow-automation](https://skills.sh/sickn33/agentic-awesome-skills/github-workflow-automation) | `sickn33/agentic-awesome-skills` | 1,476 | 46,472 | unknown |  |
 
 ### 数据库
 
@@ -160,16 +160,16 @@
 
 | 排名 | Skill | Source | Installs | Stars | Audit | 结果 |
 | ---: | --- | --- | ---: | ---: | --- | --- |
-| 1 | [prisma-database-setup](https://skills.sh/prisma/skills/prisma-database-setup) | `prisma/skills` | 289,228 | 57 | pass | stars-below-threshold |
-| 2 | [prisma-postgres](https://skills.sh/prisma/skills/prisma-postgres) | `prisma/skills` | 282,254 | 57 | warn | stars-below-threshold |
-| 3 | [prisma-postgres-setup](https://skills.sh/prisma/skills/prisma-postgres-setup) | `prisma/skills` | 276,562 | 57 | pass | stars-below-threshold |
-| 4 | [database](https://skills.sh/sickn33/agentic-awesome-skills/database) | `sickn33/agentic-awesome-skills` | 268 | 46,469 | pass | installs-below-threshold |
-| 5 | [neon-serverless-postgres](https://skills.sh/bobmatnyc/claude-mpm-skills/neon-serverless-postgres) | `bobmatnyc/claude-mpm-skills` | 157 | 75 | warn | installs-below-threshold |
-| 6 | [neon](https://skills.sh/bobmatnyc/claude-mpm-skills/neon) | `bobmatnyc/claude-mpm-skills` | 142 | 75 | pass | installs-below-threshold |
-| 7 | [neon-instagres](https://skills.sh/davila7/claude-code-templates/neon-instagres) | `davila7/claude-code-templates` | 98 | 30,751 | blocked | installs-below-threshold |
-| 8 | [prisma-postgres](https://skills.sh/vm0-ai/vm0-skills/prisma-postgres) | `vm0-ai/vm0-skills` | 49 | 77 | pass | installs-below-threshold |
-| 9 | [prisma-database-setup-postgresql](https://skills.sh/prisma/cursor-plugin/prisma-database-setup-postgresql) | `prisma/cursor-plugin` | 39 | 9 | pass | installs-below-threshold |
-| 10 | [api-database-prisma](https://skills.sh/agents-inc/skills/api-database-prisma) | `agents-inc/skills` | 30 | 24 | pass | installs-below-threshold |
+| 1 | [prisma-database-setup](https://skills.sh/prisma/skills/prisma-database-setup) | `prisma/skills` | 289,228 | 57 | unknown | stars-below-threshold |
+| 2 | [prisma-postgres](https://skills.sh/prisma/skills/prisma-postgres) | `prisma/skills` | 282,254 | 57 | unknown | stars-below-threshold |
+| 3 | [prisma-postgres-setup](https://skills.sh/prisma/skills/prisma-postgres-setup) | `prisma/skills` | 276,562 | 57 | unknown | stars-below-threshold |
+| 4 | [database](https://skills.sh/sickn33/agentic-awesome-skills/database) | `sickn33/agentic-awesome-skills` | 268 | 46,472 | unknown | installs-below-threshold |
+| 5 | [neon-serverless-postgres](https://skills.sh/bobmatnyc/claude-mpm-skills/neon-serverless-postgres) | `bobmatnyc/claude-mpm-skills` | 157 | 75 | unknown | installs-below-threshold |
+| 6 | [neon](https://skills.sh/bobmatnyc/claude-mpm-skills/neon) | `bobmatnyc/claude-mpm-skills` | 142 | 75 | unknown | installs-below-threshold |
+| 7 | [neon-instagres](https://skills.sh/davila7/claude-code-templates/neon-instagres) | `davila7/claude-code-templates` | 98 | 30,751 | unknown | installs-below-threshold |
+| 8 | [prisma-postgres](https://skills.sh/vm0-ai/vm0-skills/prisma-postgres) | `vm0-ai/vm0-skills` | 49 | 77 | unknown | installs-below-threshold |
+| 9 | [prisma-database-setup-postgresql](https://skills.sh/prisma/cursor-plugin/prisma-database-setup-postgresql) | `prisma/cursor-plugin` | 39 | 9 | unknown | installs-below-threshold |
+| 10 | [api-database-prisma](https://skills.sh/agents-inc/skills/api-database-prisma) | `agents-inc/skills` | 30 | 24 | unknown | installs-below-threshold |
 
 ### 测试
 
@@ -194,16 +194,16 @@
 
 | 排名 | Skill | Source | Installs | Stars | Audit | 结果 |
 | ---: | --- | --- | ---: | ---: | --- | --- |
-| 1 | [extension-backend](https://skills.sh/quangpl/browser-extension-skills/extension-backend) | `quangpl/browser-extension-skills` | 132 | 52 | unknown | installs-below-threshold |
-| 2 | [nestjs](https://skills.sh/alexander-danilenko/cortex-ai-skills/nestjs) | `alexander-danilenko/cortex-ai-skills` | 56 | 15 | unknown | installs-below-threshold |
-| 3 | [nestjs-best-practices](https://skills.sh/xirothedev/skills/nestjs-best-practices) | `xirothedev/skills` | 30 | 2 | unknown | installs-below-threshold |
-| 4 | [backend](https://skills.sh/redis/redisinsight/backend) | `redis/redisinsight` | 15 | 8,838 | unknown | installs-below-threshold |
-| 5 | [nestjs-expert](https://skills.sh/thesaifalitai/claude-setup/nestjs-expert) | `thesaifalitai/claude-setup` | 13 | 8 | unknown | installs-below-threshold |
-| 6 | [veracity-auth-node](https://skills.sh/veracity/veracity-agent-skills/veracity-auth-node) | `veracity/veracity-agent-skills` | 10 | 0 | unknown | installs-below-threshold |
+| 1 | [extension-backend](https://skills.sh/quangpl/browser-extension-skills/extension-backend) | `quangpl/browser-extension-skills` | 132 | 52 | pass | installs-below-threshold |
+| 2 | [nestjs](https://skills.sh/alexander-danilenko/cortex-ai-skills/nestjs) | `alexander-danilenko/cortex-ai-skills` | 56 | 15 | pass | installs-below-threshold |
+| 3 | [nestjs-best-practices](https://skills.sh/xirothedev/skills/nestjs-best-practices) | `xirothedev/skills` | 30 | 2 | warn | installs-below-threshold |
+| 4 | [backend](https://skills.sh/redis/redisinsight/backend) | `redis/redisinsight` | 15 | 8,838 | pass | installs-below-threshold |
+| 5 | [nestjs-expert](https://skills.sh/thesaifalitai/claude-setup/nestjs-expert) | `thesaifalitai/claude-setup` | 13 | 8 | pass | installs-below-threshold |
+| 6 | [veracity-auth-node](https://skills.sh/veracity/veracity-agent-skills/veracity-auth-node) | `veracity/veracity-agent-skills` | 10 | 0 | blocked | installs-below-threshold |
 | 7 | [backend api](https://skills.sh/smithery.ai/backend-api) | `smithery.ai` | 9 | 0 | unknown | installs-below-threshold |
-| 8 | [backend api](https://skills.sh/coreyja/coreyja.com/backend-api) | `coreyja/coreyja.com` | 8 | 6 | unknown | installs-below-threshold |
-| 9 | [backend api](https://skills.sh/maksimtereshin/biz-assess-platform/backend-api) | `maksimtereshin/biz-assess-platform` | 7 | 0 | unknown | installs-below-threshold |
-| 10 | [backend-nestjs](https://skills.sh/arvoreeducacao/rhm/backend-nestjs) | `arvoreeducacao/rhm` | 5 | 19 | unknown | installs-below-threshold |
+| 8 | [backend api](https://skills.sh/coreyja/coreyja.com/backend-api) | `coreyja/coreyja.com` | 8 | 6 | pass | installs-below-threshold |
+| 9 | [backend api](https://skills.sh/maksimtereshin/biz-assess-platform/backend-api) | `maksimtereshin/biz-assess-platform` | 7 | 0 | pass | installs-below-threshold |
+| 10 | [backend-nestjs](https://skills.sh/arvoreeducacao/rhm/backend-nestjs) | `arvoreeducacao/rhm` | 5 | 19 | pass | installs-below-threshold |
 
 ### Git / 交付
 
@@ -211,16 +211,16 @@
 
 | 排名 | Skill | Source | Installs | Stars | Audit | 结果 |
 | ---: | --- | --- | ---: | ---: | --- | --- |
-| 1 | [github-release](https://skills.sh/jezweb/claude-skills/github-release) | `jezweb/claude-skills` | 1,256 | 1,008 | unknown | installs-below-threshold |
-| 2 | [github-release-management](https://skills.sh/ruvnet/ruflo/github-release-management) | `ruvnet/ruflo` | 1,164 | 72,564 | unknown | installs-below-threshold |
-| 3 | [github-release](https://skills.sh/github/awesome-copilot/github-release) | `github/awesome-copilot` | 562 | 39,047 | unknown | installs-below-threshold |
-| 4 | [github-release](https://skills.sh/ilteoood/harness/github-release) | `ilteoood/harness` | 366 | 2 | unknown | installs-below-threshold |
-| 5 | [qe-github-release-management](https://skills.sh/proffesor-for-testing/agentic-qe/qe-github-release-management) | `proffesor-for-testing/agentic-qe` | 73 | 478 | unknown | installs-below-threshold |
-| 6 | [git-release-start](https://skills.sh/fudesign2008/open-skills/git-release-start) | `fudesign2008/open-skills` | 67 | 6 | unknown | installs-below-threshold |
-| 7 | [dotnet-github-releases](https://skills.sh/wshaddix/dotnet-skills/dotnet-github-releases) | `wshaddix/dotnet-skills` | 67 | 79 | unknown | installs-below-threshold |
-| 8 | [release-pr-gates](https://skills.sh/shipshitdev/skills/release-pr-gates) | `shipshitdev/skills` | 57 | 35 | unknown | installs-below-threshold |
-| 9 | [git-release](https://skills.sh/wojons/skills/git-release) | `wojons/skills` | 42 | 3 | unknown | installs-below-threshold |
-| 10 | [github-release-assistant](https://skills.sh/zhanlincui/agent-skills-hunter/github-release-assistant) | `zhanlincui/agent-skills-hunter` | 41 | 186 | unknown | installs-below-threshold |
+| 1 | [github-release](https://skills.sh/jezweb/claude-skills/github-release) | `jezweb/claude-skills` | 1,256 | 1,008 | blocked | installs-below-threshold |
+| 2 | [github-release-management](https://skills.sh/ruvnet/ruflo/github-release-management) | `ruvnet/ruflo` | 1,164 | 72,564 | blocked | installs-below-threshold |
+| 3 | [github-release](https://skills.sh/github/awesome-copilot/github-release) | `github/awesome-copilot` | 562 | 39,047 | warn | installs-below-threshold |
+| 4 | [github-release](https://skills.sh/ilteoood/harness/github-release) | `ilteoood/harness` | 366 | 2 | warn | installs-below-threshold |
+| 5 | [qe-github-release-management](https://skills.sh/proffesor-for-testing/agentic-qe/qe-github-release-management) | `proffesor-for-testing/agentic-qe` | 73 | 478 | blocked | installs-below-threshold |
+| 6 | [git-release-start](https://skills.sh/fudesign2008/open-skills/git-release-start) | `fudesign2008/open-skills` | 67 | 6 | pass | installs-below-threshold |
+| 7 | [dotnet-github-releases](https://skills.sh/wshaddix/dotnet-skills/dotnet-github-releases) | `wshaddix/dotnet-skills` | 67 | 79 | warn | installs-below-threshold |
+| 8 | [release-pr-gates](https://skills.sh/shipshitdev/skills/release-pr-gates) | `shipshitdev/skills` | 57 | 35 | warn | installs-below-threshold |
+| 9 | [git-release](https://skills.sh/wojons/skills/git-release) | `wojons/skills` | 42 | 3 | pass | installs-below-threshold |
+| 10 | [github-release-assistant](https://skills.sh/zhanlincui/agent-skills-hunter/github-release-assistant) | `zhanlincui/agent-skills-hunter` | 41 | 186 | pass | installs-below-threshold |
 
 ### 3D / GPU
 
@@ -229,7 +229,7 @@
 | 排名 | Skill | Source | Installs | Stars | Audit | 结果 |
 | ---: | --- | --- | ---: | ---: | --- | --- |
 | 1 | [threejs-webgl](https://skills.sh/freshtechbro/claudedesignskills/threejs-webgl) | `freshtechbro/claudedesignskills` | 3,674 | 903 | unknown | installs-below-threshold |
-| 2 | [threejs](https://skills.sh/nexu-io/open-design/threejs) | `nexu-io/open-design` | 2,986 | 96,402 | unknown | installs-below-threshold |
+| 2 | [threejs](https://skills.sh/nexu-io/open-design/threejs) | `nexu-io/open-design` | 2,986 | 96,404 | unknown | installs-below-threshold |
 | 3 | [webgpu](https://skills.sh/cazala/webgpu-skill/webgpu) | `cazala/webgpu-skill` | 800 | 31 | unknown | installs-below-threshold |
 | 4 | [threejs-renderers](https://skills.sh/full-stack-skills/threejs-skills/threejs-renderers) | `full-stack-skills/threejs-skills` | 213 | 5 | unknown | installs-below-threshold |
 | 5 | [threejs-node-tsl](https://skills.sh/full-stack-skills/threejs-skills/threejs-node-tsl) | `full-stack-skills/threejs-skills` | 203 | 5 | unknown | installs-below-threshold |
@@ -245,9 +245,9 @@
 
 | 排名 | Skill | Source | Installs | Stars | Audit | 结果 |
 | ---: | --- | --- | ---: | ---: | --- | --- |
-| 1 | [vite](https://skills.sh/antfu/skills/vite) | `antfu/skills` | 35,573 | 5,888 | pass | already-selected |
-| 2 | [building-tools](https://skills.sh/celigo/ai/building-tools) | `celigo/ai` | 1,208 | 4 | pass | installs-below-threshold |
-| 3 | [vite-plus](https://skills.sh/maddhruv/absolute/vite-plus) | `maddhruv/absolute` | 199 | 212 | blocked | installs-below-threshold |
+| 1 | [vite](https://skills.sh/antfu/skills/vite) | `antfu/skills` | 35,573 | 5,888 | unknown | already-selected |
+| 2 | [building-tools](https://skills.sh/celigo/ai/building-tools) | `celigo/ai` | 1,208 | 4 | unknown | installs-below-threshold |
+| 3 | [vite-plus](https://skills.sh/maddhruv/absolute/vite-plus) | `maddhruv/absolute` | 199 | 212 | unknown | installs-below-threshold |
 | 4 | [vite](https://skills.sh/hairyf/skills/vite) | `hairyf/skills` | 181 | 25 | pass | already-selected |
 | 5 | [unlayer-custom-tools](https://skills.sh/unlayer/unlayer-skills/unlayer-custom-tools) | `unlayer/unlayer-skills` | 123 | 13 | pass | installs-below-threshold |
 | 6 | [vite](https://skills.sh/midudev/autoskills/vite) | `midudev/autoskills` | 57 | 6,871 | pass | already-selected |
