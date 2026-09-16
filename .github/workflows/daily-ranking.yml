@@ -5,13 +5,13 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/weekly-ranking.yml'
+      - '.github/workflows/daily-ranking.yml'
       - 'config/skills-sh-ranking.json'
       - 'scripts/skills-sh-ranking.mjs'
       - 'scripts/update-ranking-display.mjs'
   workflow_dispatch:
   schedule:
-    - cron: '37 9 * * *'
+    - cron: '0 8 * * *'
       timezone: 'Asia/Shanghai'
 
 permissions:
@@ -125,7 +125,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          BRANCH="chore/weekly-skills-ranking"
+          BRANCH="chore/daily-skills-ranking"
           PACK_STATE="${RUNNER_TEMP}/skills-sh-pack.json"
           echo "name=${BRANCH}" >> "$GITHUB_OUTPUT"
 

@@ -1,10 +1,10 @@
-# skills.sh 每周分类排行与 Pack 增量精选
+# skills.sh 每日分类排行与 Pack 增量精选
 
 [简体中文](./weekly-ranking.md) | [English](./weekly-ranking.en.md)
 
 ## 目标
 
-每周从 skills.sh 获取分类搜索结果，按安装量排序，在满足基础质量门禁后为每个分类选择一个新的优选 Skill，并维护一个 **append-only** 的候选历史。
+每日从 skills.sh 获取分类搜索结果，按安装量排序，在满足基础质量门禁后为每个分类选择一个新的优选 Skill，并维护一个 **append-only** 的候选历史。
 
 目标 Pack：
 
@@ -33,7 +33,9 @@ npx skills add https://skills.sh/p/DCh7RQegkqCXcXn8
 https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-Latest
 ```
 
-GitHub Wiki 最新榜单由每周 Workflow 使用 `WIKI_TOKEN` 直接刷新；README 和仓库内报告快照也会直接自动更新到 `main`，因此排行榜展示不依赖 Pack 候选 PR 是否合并。
+> Wiki 页面 slug 暂时保留 `Weekly-Skills-Ranking-*`，用于兼容已有外部链接；展示内容和自动更新周期已经改为每日。
+
+GitHub Wiki 最新榜单由每日 Workflow 使用 `WIKI_TOKEN` 直接刷新；README 和仓库内报告快照也会直接自动更新到 `main`，因此排行榜展示不依赖 Pack 候选 PR 是否合并。
 
 ## 工作流
 
@@ -62,10 +64,10 @@ skills.sh Audit 最佳努力安全检查
 工作流文件：
 
 ```text
-.github/workflows/weekly-ranking.yml
+.github/workflows/daily-ranking.yml
 ```
 
-默认每周一 09:37（Asia/Shanghai）执行，也支持手动运行。
+默认每日 08:00（Asia/Shanghai）执行，也支持手动运行。
 
 ## 分类
 

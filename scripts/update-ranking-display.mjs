@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(scriptDir, '..');
 
+// 保留旧 marker，避免历史 README 区块重复插入。
 const START_MARKER = '<!-- skills-sh-weekly-ranking:start -->';
 const END_MARKER = '<!-- skills-sh-weekly-ranking:end -->';
 
@@ -61,9 +62,9 @@ function link(label, url) {
 export function buildChineseBlock(data) {
   const lines = [
     START_MARKER,
-    '## skills.sh 本周分类排行榜',
+    '## skills.sh 今日分类排行榜',
     '',
-    `> 每周自动更新。最近一次排行：**${data.date || '未生成'}** · [查看完整 Top 10 排行](./reports/skills-sh/latest.md) · [ADui Skills Pack](${data.packUrl})`,
+    `> 每日自动更新。最近一次排行：**${data.date || '未生成'}** · [查看完整 Top 10 排行](./reports/skills-sh/latest.md) · [ADui Skills Pack](${data.packUrl})`,
     '',
     '| 分类 | 第 1 名 | Source | Installs | Stars | Audit |',
     '| --- | --- | --- | ---: | ---: | --- |',
@@ -77,16 +78,16 @@ export function buildChineseBlock(data) {
     lines.push('| - | 暂无排行数据 | - | - | - | - |');
   }
 
-  lines.push('', '> 排行展示与 Pack 候选选择是两件事：排行榜每周刷新；候选仍遵循 append-only，不删除、不替换已有 Skill。', END_MARKER);
+  lines.push('', '> 排行展示与 Pack 候选选择是两件事：排行榜每日刷新；候选仍遵循 append-only，不删除、不替换已有 Skill。', END_MARKER);
   return lines.join('\n');
 }
 
 export function buildEnglishBlock(data) {
   const lines = [
     START_MARKER,
-    '## skills.sh Weekly Category Leaderboard',
+    '## skills.sh Daily Category Leaderboard',
     '',
-    `> Updated weekly. Latest ranking: **${data.date || 'not generated'}** · [View full Top 10 ranking](./reports/skills-sh/latest.md) · [ADui Skills Pack](${data.packUrl})`,
+    `> Updated daily. Latest ranking: **${data.date || 'not generated'}** · [View full Top 10 ranking](./reports/skills-sh/latest.md) · [ADui Skills Pack](${data.packUrl})`,
     '',
     '| Category | #1 Skill | Source | Installs | Stars | Audit |',
     '| --- | --- | --- | ---: | ---: | --- |',
@@ -100,7 +101,7 @@ export function buildEnglishBlock(data) {
     lines.push('| - | No ranking data yet | - | - | - | - |');
   }
 
-  lines.push('', '> Leaderboard display and Pack candidate selection are separate: the ranking refreshes weekly, while Pack candidates remain append-only and never replace existing Skills.', END_MARKER);
+  lines.push('', '> Leaderboard display and Pack candidate selection are separate: the ranking refreshes daily, while Pack candidates remain append-only and never replace existing Skills.', END_MARKER);
   return lines.join('\n');
 }
 
@@ -146,6 +147,22 @@ export function replaceSkillsBadge(content, packUrl) {
   return content;
 }
 
+export function normalizeDailyWording(content) {
+  return content
+    .replace(/Weekly Update/g, 'Daily Update')
+    .replace(/## 每周 skills\.sh 分类排行与 Pack 精选/g, '## 每日 skills.sh 分类排行与 Pack 精选')
+    .replace(/仓库会每周从 skills\.sh/g, '仓库会每日从 skills.sh')
+    .replace(/详细说明见 \[skills\.sh 每周分类排行\]/g, '详细说明见 [skills.sh 每日分类排行]')
+    .replace(/由每周 Workflow 自动刷新/g, '由每日 Workflow 自动刷新')
+    .replace(/\[skills\.sh 每周分类排行\]/g, '[skills.sh 每日分类排行]')
+    .replace(/\[维护与每周更新\]/g, '[维护与每日更新]')
+    .replace(/## Weekly skills\.sh ranking and Pack curation/g, '## Daily skills.sh ranking and Pack curation')
+    .replace(/Every week the repository searches skills\.sh/g, 'Every day the repository searches skills.sh')
+    .replace(/See \[Weekly skills\.sh Ranking\]/g, 'See [Daily skills.sh Ranking]')
+    .replace(/refreshed automatically by the weekly Workflow/g, 'refreshed automatically by the daily Workflow')
+    .replace(/\[Weekly skills\.sh Ranking\]/g, '[Daily skills.sh Ranking]');
+}
+
 function main() {
   const args = process.argv.slice(2);
   const reportPath = path.resolve(repoRoot, argValue(args, '--report', 'reports/skills-sh/latest.md'));
@@ -154,11 +171,11 @@ function main() {
 
   const data = parseWeeklyRanking(readText(reportPath));
   const readme = replaceSkillsBadge(
-    replaceRankingBlock(readText(readmePath), buildChineseBlock(data)),
+    replaceRankingBlock(normalizeDailyWording(readText(readmePath)), buildChineseBlock(data)),
     data.packUrl,
   );
   const readmeEn = replaceSkillsBadge(
-    replaceRankingBlock(readText(readmeEnPath), buildEnglishBlock(data)),
+    replaceRankingBlock(normalizeDailyWording(readText(readmeEnPath)), buildEnglishBlock(data)),
     data.packUrl,
   );
 
