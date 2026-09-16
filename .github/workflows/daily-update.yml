@@ -1,0 +1,129 @@
+name: 每日检查第三方 Skills 更新
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 8 * * *'
+      timezone: 'Asia/Shanghai'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: daily-skills-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: 检查并生成第三方 Skills 更新 PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出主仓库
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: 配置 Node.js 22
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: 更新前校验
+        run: npm run validate
+
+      - name: 检查第三方 Skills 上游变化
+        id: updates
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          node scripts/check-updates.mjs \
+            --write \
+            --prune \
+            --report "${RUNNER_TEMP}/adui-skills-update.md"
+
+      - name: 更新后再次校验
+        if: steps.updates.outputs.changed == 'true'
+        run: npm run validate
+
+      - name: 准备每日更新分支
+        if: steps.updates.outputs.changed == 'true'
+        id: branch
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BRANCH="chore/daily-skills-update"
+          echo "name=${BRANCH}" >> "$GITHUB_OUTPUT"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin "${BRANCH}:refs/remotes/origin/${BRANCH}" || true
+          git checkout -B "$BRANCH"
+
+          git add registry/skills.json registry/skills.lock.json
+
+          if git diff --cached --quiet; then
+            echo "没有需要提交的 Registry/Lock 变化。"
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git commit -m "chore(skills): 更新第三方 Skills 上游锁定"
+          git push --force-with-lease origin "HEAD:${BRANCH}"
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: 创建或更新 Pull Request
+        if: steps.updates.outputs.changed == 'true' && steps.branch.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ steps.branch.outputs.name }}
+          REPORT_PATH: ${{ steps.updates.outputs.report_path }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          TITLE="chore(skills): 每日更新第三方 Skills"
+
+          if gh pr view "$BRANCH" --json number,url >/dev/null 2>&1; then
+            gh pr edit "$BRANCH" \
+              --title "$TITLE" \
+              --body-file "$REPORT_PATH"
+            gh pr view "$BRANCH" --json url --jq '.url'
+          else
+            gh pr create \
+              --base main \
+              --head "$BRANCH" \
+              --title "$TITLE" \
+              --body-file "$REPORT_PATH"
+          fi
+
+      - name: 写入 Actions 摘要
+        if: always()
+        env:
+          REPORT_PATH: ${{ steps.updates.outputs.report_path }}
+        shell: bash
+        run: |
+          {
+            echo "## ADui Skills Pack 每日更新"
+            echo
+            echo "- 是否产生变更：\`${{ steps.updates.outputs.changed || 'false' }}\`"
+            echo "- 实际检查：\`${{ steps.updates.outputs.checked || '0' }}\`"
+            echo "- 内容更新：\`${{ steps.updates.outputs.updated_count || '0' }}\`"
+            echo "- 首次基线：\`${{ steps.updates.outputs.baseline_count || '0' }}\`"
+            echo "- 路径修复：\`${{ steps.updates.outputs.repaired_count || '0' }}\`"
+            echo "- 上游仓库失败：\`${{ steps.updates.outputs.source_failure_count || '0' }}\`"
+            echo "- Skill 未定位：\`${{ steps.updates.outputs.unresolved_count || '0' }}\`"
+            echo
+            echo "第三方 Skill 更新永远不会自动合并，必须人工 Review。"
+            echo
+            echo "English fallback: third-party Skill updates are never auto-merged."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ -n "${REPORT_PATH:-}" ] && [ -f "$REPORT_PATH" ]; then
+            echo >> "$GITHUB_STEP_SUMMARY"
+            cat "$REPORT_PATH" >> "$GITHUB_STEP_SUMMARY"
+          fi
