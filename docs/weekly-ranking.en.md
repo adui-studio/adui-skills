@@ -1,10 +1,10 @@
-# Weekly skills.sh Ranking and Append-only Pack Curation
+# Daily skills.sh Ranking and Append-only Pack Curation
 
 [简体中文](./weekly-ranking.md) | [English](./weekly-ranking.en.md)
 
 ## Goal
 
-Each week, query skills.sh by category, rank results by install count, apply lightweight quality gates, and select one new strong candidate per category while keeping an append-only selection history.
+Each day, query skills.sh by category, rank results by install count, apply lightweight quality gates, and select one new strong candidate per category while keeping an append-only selection history.
 
 Target Pack:
 
@@ -33,7 +33,9 @@ Latest full leaderboard:
 https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-Latest
 ```
 
-The weekly Workflow refreshes the Wiki page directly with `WIKI_TOKEN`; README and repository report snapshots are also committed directly to `main`, so public ranking updates do not depend on the Pack candidate Pull Request being merged.
+> The existing `Weekly-Skills-Ranking-*` Wiki slugs are intentionally retained for backward compatibility with external links; the published content and refresh cadence are now daily.
+
+The daily Workflow refreshes the Wiki page directly with `WIKI_TOKEN`; README and repository report snapshots are also committed directly to `main`, so public ranking updates do not depend on the Pack candidate Pull Request being merged.
 
 ## Flow
 
@@ -62,31 +64,16 @@ open a separate Pull Request for candidate changes
 Workflow:
 
 ```text
-.github/workflows/weekly-ranking.yml
+.github/workflows/daily-ranking.yml
 ```
 
-It runs every Monday at 09:37 Asia/Shanghai and can also be triggered manually.
+It runs every day at 08:00 Asia/Shanghai and can also be triggered manually.
 
 ## Categories
 
-Categories are configured in `config/skills-sh-ranking.json`. The default set now contains 14 categories:
+Categories are configured in `config/skills-sh-ranking.json`. The current set has 14 categories: Frontend, React, Vue, Next.js, Design/UI, UX, mobile, agent workflows, databases, testing, backend/API, Git/delivery, 3D/GPU, and tooling.
 
-- Frontend
-- React
-- Vue
-- Next.js
-- Design / UI
-- UX
-- Mobile
-- Agent workflows
-- Databases
-- Testing
-- Backend / API
-- Git / delivery
-- 3D / GPU
-- Tooling
-
-Frontend and React are ranked separately so general frontend skills are not continuously displaced by React-specific results. UX is also a dedicated category rather than being folded into Design / UI.
+Frontend and React are ranked separately so general frontend results are not dominated by React. UX is also ranked separately from visual Design/UI.
 
 ## Default quality gates
 
@@ -97,7 +84,7 @@ Minimum installs      : 5000
 Minimum GitHub stars  : 100
 Blocked risk levels   : HIGH / CRITICAL
 Candidate per category: 1
-Maximum new per run   : 14
+Max additions per run : 14
 ```
 
 Audit checks are best-effort. Explicit `fail`, `HIGH`, or `CRITICAL` findings block a candidate. If the audit endpoint is unavailable, the report uses `unknown` rather than inventing a safe result.
