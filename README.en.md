@@ -44,7 +44,7 @@ Third-party Skills             ADui-maintained Skills
       │                                │
       ├─ Registry                     ├─ adui-stack-router
       ├─ Folder Hash Lock             ├─ adui-feature-dev
-      └─ Weekly Update                ├─ adui-viteplus
+      └─ Daily Update                ├─ adui-viteplus
                │                      ├─ adui-nestjs-prisma
                │                      ├─ adui-3d-architecture
                │                      ├─ adui-webgl2
@@ -91,9 +91,9 @@ Auto-detect stack and npm / pnpm / yarn / bun for a target project:
 npm run profile:auto-install -- D:\Projects\my-app --agent codex --dry-run
 ```
 
-## Weekly skills.sh ranking and Pack curation
+## Daily skills.sh ranking and Pack curation
 
-Every week the repository searches skills.sh by category and filters candidates with install counts, GitHub Stars, and available security-audit results:
+Every day the repository searches skills.sh by category and filters candidates with install counts, GitHub Stars, and available security-audit results:
 
 ```text
 skills.sh category search
@@ -116,9 +116,9 @@ automated PR for manual review
 Selection history is **append-only**: previous selections are never deleted, replaced, or overwritten.
 
 <!-- skills-sh-weekly-ranking:start -->
-## skills.sh Weekly Category Leaderboard
+## skills.sh Daily Category Leaderboard
 
-> Updated weekly. Latest ranking: **2026-09-16** · [View full Top 10 ranking](./reports/skills-sh/latest.md) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
+> Updated daily. Latest ranking: **2026-09-16** · [View full Top 10 ranking](./reports/skills-sh/latest.md) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
 
 | Category | #1 Skill | Source | Installs | Stars | Audit |
 | --- | --- | --- | ---: | ---: | --- |
@@ -127,17 +127,17 @@ Selection history is **append-only**: previous selections are never deleted, rep
 | Vue | [vue-best-practices](https://skills.sh/vuejs-ai/skills/vue-best-practices) | `vuejs-ai/skills` | 38,879 | 2,852 | pass |
 | Next.js | [clerk-nextjs-patterns](https://skills.sh/clerk/skills/clerk-nextjs-patterns) | `clerk/skills` | 43,982 | 73 | unknown |
 | 设计 / UI | [web-design-guidelines](https://skills.sh/vercel-labs/agent-skills/web-design-guidelines) | `vercel-labs/agent-skills` | 637,486 | 31,227 | unknown |
-| UX | [lean-ux](https://skills.sh/wondelai/skills/lean-ux) | `wondelai/skills` | 4,568 | 2,181 | warn |
-| 移动端 | [agent-spec-mobile-react-native](https://skills.sh/ruvnet/ruflo/agent-spec-mobile-react-native) | `ruvnet/ruflo` | 1,266 | 72,564 | pass |
-| Agent 工作流 | [google-agents-cli-workflow](https://skills.sh/google/agents-cli/google-agents-cli-workflow) | `google/agents-cli` | 238,142 | 5,939 | warn |
-| 数据库 | [prisma-database-setup](https://skills.sh/prisma/skills/prisma-database-setup) | `prisma/skills` | 289,228 | 57 | unknown |
+| UX | [lean-ux](https://skills.sh/wondelai/skills/lean-ux) | `wondelai/skills` | 4,568 | 2,181 | unknown |
+| 移动端 | [agent-spec-mobile-react-native](https://skills.sh/ruvnet/ruflo/agent-spec-mobile-react-native) | `ruvnet/ruflo` | 1,266 | 72,564 | unknown |
+| Agent 工作流 | [google-agents-cli-workflow](https://skills.sh/google/agents-cli/google-agents-cli-workflow) | `google/agents-cli` | 238,142 | 5,939 | unknown |
+| 数据库 | [prisma-database-setup](https://skills.sh/prisma/skills/prisma-database-setup) | `prisma/skills` | 289,228 | 57 | pass |
 | 测试 | [playwright-testing](https://skills.sh/maddhruv/absolute/playwright-testing) | `maddhruv/absolute` | 160 | 212 | blocked |
 | 后端 / API | [extension-backend](https://skills.sh/quangpl/browser-extension-skills/extension-backend) | `quangpl/browser-extension-skills` | 132 | 52 | pass |
-| Git / 交付 | [github-release](https://skills.sh/jezweb/claude-skills/github-release) | `jezweb/claude-skills` | 1,256 | 1,008 | blocked |
+| Git / 交付 | [github-release](https://skills.sh/jezweb/claude-skills/github-release) | `jezweb/claude-skills` | 1,256 | 1,008 | unknown |
 | 3D / GPU | [threejs-webgl](https://skills.sh/freshtechbro/claudedesignskills/threejs-webgl) | `freshtechbro/claudedesignskills` | 3,674 | 903 | unknown |
 | 工程化 | [vite](https://skills.sh/antfu/skills/vite) | `antfu/skills` | 35,573 | 5,888 | unknown |
 
-> Leaderboard display and Pack candidate selection are separate: the ranking refreshes weekly, while Pack candidates remain append-only and never replace existing Skills.
+> Leaderboard display and Pack candidate selection are separate: the ranking refreshes daily, while Pack candidates remain append-only and never replace existing Skills.
 <!-- skills-sh-weekly-ranking:end -->
 
 Preview locally:
@@ -154,7 +154,7 @@ npm run pack:ranking:apply
 
 > The public skills.sh documentation does not currently expose a stable API for mutating an existing Pack's membership. Automation therefore handles discovery, ranking, quality gates, deduplication, selection, and PR creation; adding the selected candidates to the existing Pack still requires confirmation in the skills.sh Pack UI. The workflow does not rely on undocumented internal endpoints, browser cookies, or persistent login sessions.
 
-See [Weekly skills.sh Ranking](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-EN).
+See [Daily skills.sh Ranking](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-EN).
 
 ## Third-party Skill updates
 
@@ -165,7 +165,7 @@ npm run updates:check
 npm run updates:apply
 ```
 
-Third-party Registry updates and Pack candidate changes still require Pull Request review and **never auto-merge**; the public leaderboard page itself is refreshed automatically by the weekly Workflow.
+Third-party Registry updates and Pack candidate changes still require Pull Request review and **never auto-merge**; the public leaderboard page itself is refreshed automatically by the daily Workflow.
 
 ## Documentation
 
@@ -174,7 +174,7 @@ Browse detailed documentation in the GitHub Wiki:
 - [Wiki Home](https://github.com/adui-studio/adui-skills/wiki/Home-EN)
 - [Usage](https://github.com/adui-studio/adui-skills/wiki/Usage-EN)
 - [Profile Installer](https://github.com/adui-studio/adui-skills/wiki/Profile-Installer-EN)
-- [Weekly skills.sh Ranking](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-EN)
+- [Daily skills.sh Ranking](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-EN)
 - [Latest full skills.sh ranking](https://github.com/adui-studio/adui-skills/wiki/Weekly-Skills-Ranking-Latest)
 - [Feature Development](https://github.com/adui-studio/adui-skills/wiki/Development-EN)
 - [Architecture](https://github.com/adui-studio/adui-skills/wiki/Architecture-EN)
