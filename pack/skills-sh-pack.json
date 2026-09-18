@@ -350,6 +350,54 @@
       "repoStars": 39698,
       "auditStatus": "pass",
       "selectedAt": "2026-09-16T03:50:22.680Z"
+    },
+    {
+      "key": "vercel-labs/json-render@react",
+      "source": "vercel-labs/json-render",
+      "name": "react",
+      "skillsShUrl": "https://skills.sh/vercel-labs/json-render/react",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 10496,
+      "repoStars": 16196,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-18T03:51:43.235Z"
+    },
+    {
+      "key": "vuejs-ai/skills@vue-testing-best-practices",
+      "source": "vuejs-ai/skills",
+      "name": "vue-testing-best-practices",
+      "skillsShUrl": "https://skills.sh/vuejs-ai/skills/vue-testing-best-practices",
+      "category": "vue",
+      "categoryName": "Vue",
+      "installs": 11783,
+      "repoStars": 2858,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-18T03:51:43.235Z"
+    },
+    {
+      "key": "nextlevelbuilder/ui-ux-pro-max-skill@banner-design",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "name": "banner-design",
+      "skillsShUrl": "https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/banner-design",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 27100,
+      "repoStars": 128559,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-18T03:51:43.235Z"
+    },
+    {
+      "key": "wshobson/agents@workflow-patterns",
+      "source": "wshobson/agents",
+      "name": "workflow-patterns",
+      "skillsShUrl": "https://skills.sh/wshobson/agents/workflow-patterns",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 9721,
+      "repoStars": 39763,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-18T03:51:43.235Z"
     }
   ]
 }
