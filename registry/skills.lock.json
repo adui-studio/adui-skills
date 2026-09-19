@@ -12,23 +12,23 @@
     "writing-plans": {
       "source": "obra/superpowers",
       "skillPath": "skills/writing-plans/SKILL.md",
-      "skillFolderHash": "e4d3c3faf3853a453016cece5de2ca0581807742",
-      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "committedAt": "2026-08-12T09:53:21-07:00"
+      "skillFolderHash": "bcaac5df52c27d16685a35932c17a1c418d8ce98",
+      "repoCommit": "5bf4e78011075bcfc0dc295f0724994cd123ee71",
+      "committedAt": "2026-09-18T17:31:35-07:00"
     },
     "systematic-debugging": {
       "source": "obra/superpowers",
       "skillPath": "skills/systematic-debugging/SKILL.md",
-      "skillFolderHash": "ab83fc82f82582e047d96fc516bac9bc03095ee0",
-      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "committedAt": "2026-08-12T09:53:21-07:00"
+      "skillFolderHash": "9a48dfda84bf339cba4b03fd803ba0dca2e158e3",
+      "repoCommit": "5bf4e78011075bcfc0dc295f0724994cd123ee71",
+      "committedAt": "2026-09-18T17:31:35-07:00"
     },
     "test-driven-development": {
       "source": "obra/superpowers",
       "skillPath": "skills/test-driven-development/SKILL.md",
-      "skillFolderHash": "a82cf8b413600c6bd7c4b482272d7990e9588cf1",
-      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "committedAt": "2026-08-12T09:53:21-07:00"
+      "skillFolderHash": "847144cf0824095922c0d4875648b9fa74877e1a",
+      "repoCommit": "5bf4e78011075bcfc0dc295f0724994cd123ee71",
+      "committedAt": "2026-09-18T17:31:35-07:00"
     },
     "verification-before-completion": {
       "source": "obra/superpowers",
@@ -40,9 +40,9 @@
     "requesting-code-review": {
       "source": "obra/superpowers",
       "skillPath": "skills/requesting-code-review/SKILL.md",
-      "skillFolderHash": "2ef6b5734813e7504d9866a7ec1ae89b505bfe70",
-      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "committedAt": "2026-08-12T09:53:21-07:00"
+      "skillFolderHash": "5fcdadfccd8c90987a11969d2f8c844820fee6e1",
+      "repoCommit": "5bf4e78011075bcfc0dc295f0724994cd123ee71",
+      "committedAt": "2026-09-18T17:31:35-07:00"
     },
     "repomix-explorer": {
       "source": "yamadashy/repomix",
