@@ -398,6 +398,54 @@
       "repoStars": 39763,
       "auditStatus": "pass",
       "selectedAt": "2026-09-18T03:51:43.235Z"
+    },
+    {
+      "key": "callstackincubator/agent-skills@upgrading-react-native",
+      "source": "callstackincubator/agent-skills",
+      "name": "upgrading-react-native",
+      "skillsShUrl": "https://skills.sh/callstackincubator/agent-skills/upgrading-react-native",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 10399,
+      "repoStars": 1654,
+      "auditStatus": "warn",
+      "selectedAt": "2026-09-20T04:04:18.305Z"
+    },
+    {
+      "key": "vuejs-ai/skills@vue-options-api-best-practices",
+      "source": "vuejs-ai/skills",
+      "name": "vue-options-api-best-practices",
+      "skillsShUrl": "https://skills.sh/vuejs-ai/skills/vue-options-api-best-practices",
+      "category": "vue",
+      "categoryName": "Vue",
+      "installs": 10523,
+      "repoStars": 2862,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-20T04:04:18.305Z"
+    },
+    {
+      "key": "sickn33/agentic-awesome-skills@nextjs-best-practices",
+      "source": "sickn33/agentic-awesome-skills",
+      "name": "nextjs-best-practices",
+      "skillsShUrl": "https://skills.sh/sickn33/agentic-awesome-skills/nextjs-best-practices",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 7080,
+      "repoStars": 46611,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-20T04:04:18.305Z"
+    },
+    {
+      "key": "github/awesome-copilot@penpot-uiux-design",
+      "source": "github/awesome-copilot",
+      "name": "penpot-uiux-design",
+      "skillsShUrl": "https://skills.sh/github/awesome-copilot/penpot-uiux-design",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 12686,
+      "repoStars": 39172,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-20T04:04:18.305Z"
     }
   ]
 }
