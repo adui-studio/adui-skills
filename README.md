@@ -118,24 +118,24 @@ append-only 候选历史
 <!-- skills-sh-weekly-ranking:start -->
 ## skills.sh 今日分类排行榜
 
-> 每日自动更新。最近一次排行：**2026-09-20** · [查看完整 Top 10 排行](./reports/skills-sh/latest.md) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
+> 每日自动更新。最近一次排行：**2026-09-21** · [查看完整 Top 10 排行](./reports/skills-sh/latest.md) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
 
 | 分类 | 第 1 名 | Source | Installs | Stars | Audit |
 | --- | --- | --- | ---: | ---: | --- |
 | 前端 | [router](https://skills.sh/lubusin/frappe-skills/router) | `lubusin/frappe-skills` | 70 | 63 | pass |
-| React | [vercel-react-best-practices](https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices) | `vercel-labs/agent-skills` | 727,374 | 31,377 | pass |
-| Vue | [vue-best-practices](https://skills.sh/vuejs-ai/skills/vue-best-practices) | `vuejs-ai/skills` | 39,162 | 2,862 | pass |
-| Next.js | [clerk-nextjs-patterns](https://skills.sh/clerk/skills/clerk-nextjs-patterns) | `clerk/skills` | 45,284 | 74 | unknown |
-| 设计 / UI | [web-design-guidelines](https://skills.sh/vercel-labs/agent-skills/web-design-guidelines) | `vercel-labs/agent-skills` | 649,372 | 31,377 | unknown |
-| UX | [lean-ux](https://skills.sh/wondelai/skills/lean-ux) | `wondelai/skills` | 4,640 | 2,218 | unknown |
-| 移动端 | [agent-spec-mobile-react-native](https://skills.sh/ruvnet/ruflo/agent-spec-mobile-react-native) | `ruvnet/ruflo` | 1,266 | 72,875 | pass |
-| Agent 工作流 | [google-agents-cli-workflow](https://skills.sh/google/agents-cli/google-agents-cli-workflow) | `google/agents-cli` | 276,126 | 5,968 | warn |
-| 数据库 | [prisma-database-setup](https://skills.sh/prisma/skills/prisma-database-setup) | `prisma/skills` | 298,827 | 58 | pass |
-| 测试 | [playwright-testing](https://skills.sh/maddhruv/absolute/playwright-testing) | `maddhruv/absolute` | 160 | 214 | unknown |
+| React | [vercel-react-best-practices](https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices) | `vercel-labs/agent-skills` | 729,844 | 31,407 | pass |
+| Vue | [vue-best-practices](https://skills.sh/vuejs-ai/skills/vue-best-practices) | `vuejs-ai/skills` | 39,223 | 2,866 | pass |
+| Next.js | [clerk-nextjs-patterns](https://skills.sh/clerk/skills/clerk-nextjs-patterns) | `clerk/skills` | 45,583 | 75 | unknown |
+| 设计 / UI | [web-design-guidelines](https://skills.sh/vercel-labs/agent-skills/web-design-guidelines) | `vercel-labs/agent-skills` | 652,074 | 31,407 | unknown |
+| UX | [lean-ux](https://skills.sh/wondelai/skills/lean-ux) | `wondelai/skills` | 4,656 | 2,227 | unknown |
+| 移动端 | [agent-spec-mobile-react-native](https://skills.sh/ruvnet/ruflo/agent-spec-mobile-react-native) | `ruvnet/ruflo` | 1,266 | 72,950 | unknown |
+| Agent 工作流 | [google-agents-cli-workflow](https://skills.sh/google/agents-cli/google-agents-cli-workflow) | `google/agents-cli` | 286,351 | 5,968 | warn |
+| 数据库 | [prisma-database-setup](https://skills.sh/prisma/skills/prisma-database-setup) | `prisma/skills` | 300,639 | 58 | pass |
+| 测试 | [playwright-testing](https://skills.sh/maddhruv/absolute/playwright-testing) | `maddhruv/absolute` | 160 | 214 | blocked |
 | 后端 / API | [extension-backend](https://skills.sh/quangpl/browser-extension-skills/extension-backend) | `quangpl/browser-extension-skills` | 137 | 53 | unknown |
-| Git / 交付 | [github-release](https://skills.sh/jezweb/claude-skills/github-release) | `jezweb/claude-skills` | 1,269 | 1,017 | unknown |
-| 3D / GPU | [threejs-webgl](https://skills.sh/freshtechbro/claudedesignskills/threejs-webgl) | `freshtechbro/claudedesignskills` | 3,764 | 915 | unknown |
-| 工程化 | [vite](https://skills.sh/onmax/nuxt-skills/vite) | `onmax/nuxt-skills` | 2,156 | 711 | pass |
+| Git / 交付 | [github-release](https://skills.sh/jezweb/claude-skills/github-release) | `jezweb/claude-skills` | 1,271 | 1,018 | unknown |
+| 3D / GPU | [threejs-webgl](https://skills.sh/freshtechbro/claudedesignskills/threejs-webgl) | `freshtechbro/claudedesignskills` | 3,780 | 915 | unknown |
+| 工程化 | [vite](https://skills.sh/onmax/nuxt-skills/vite) | `onmax/nuxt-skills` | 2,163 | 711 | pass |
 
 > 排行展示与 Pack 候选选择是两件事：排行榜每日刷新；候选仍遵循 append-only，不删除、不替换已有 Skill。
 <!-- skills-sh-weekly-ranking:end -->
