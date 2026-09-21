@@ -446,6 +446,42 @@
       "repoStars": 39172,
       "auditStatus": "unknown",
       "selectedAt": "2026-09-20T04:04:18.305Z"
+    },
+    {
+      "key": "resend/react-email@react-email",
+      "source": "resend/react-email",
+      "name": "react-email",
+      "skillsShUrl": "https://skills.sh/resend/react-email/react-email",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 8537,
+      "repoStars": 19760,
+      "auditStatus": "warn",
+      "selectedAt": "2026-09-21T04:01:59.296Z"
+    },
+    {
+      "key": "vuejs-ai/skills@vue-jsx-best-practices",
+      "source": "vuejs-ai/skills",
+      "name": "vue-jsx-best-practices",
+      "skillsShUrl": "https://skills.sh/vuejs-ai/skills/vue-jsx-best-practices",
+      "category": "vue",
+      "categoryName": "Vue",
+      "installs": 10039,
+      "repoStars": 2866,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-21T04:01:59.296Z"
+    },
+    {
+      "key": "affaan-m/ecc@liquid-glass-design",
+      "source": "affaan-m/ecc",
+      "name": "liquid-glass-design",
+      "skillsShUrl": "https://skills.sh/affaan-m/ecc/liquid-glass-design",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 10253,
+      "repoStars": 263901,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-21T04:01:59.296Z"
     }
   ]
 }
