@@ -482,6 +482,30 @@
       "repoStars": 263901,
       "auditStatus": "unknown",
       "selectedAt": "2026-09-21T04:01:59.296Z"
+    },
+    {
+      "key": "affaan-m/ecc@ui-to-vue",
+      "source": "affaan-m/ecc",
+      "name": "ui-to-vue",
+      "skillsShUrl": "https://skills.sh/affaan-m/ecc/ui-to-vue",
+      "category": "vue",
+      "categoryName": "Vue",
+      "installs": 5594,
+      "repoStars": 265540,
+      "auditStatus": "warn",
+      "selectedAt": "2026-09-23T03:56:21.877Z"
+    },
+    {
+      "key": "ceorkm/mobile-app-ui-design@mobile-app-ui-design",
+      "source": "ceorkm/mobile-app-ui-design",
+      "name": "mobile-app-ui-design",
+      "skillsShUrl": "https://skills.sh/ceorkm/mobile-app-ui-design/mobile-app-ui-design",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 9601,
+      "repoStars": 354,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-23T03:56:21.877Z"
     }
   ]
 }
