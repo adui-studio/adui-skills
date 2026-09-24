@@ -118,24 +118,24 @@ Selection history is **append-only**: previous selections are never deleted, rep
 <!-- skills-sh-weekly-ranking:start -->
 ## skills.sh Daily Category Leaderboard
 
-> Updated daily. Latest ranking: **2026-09-23** · [View full Top 10 ranking](./reports/skills-sh/latest.md) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
+> Updated daily. Latest ranking: **2026-09-24** · [View full Top 10 ranking](./reports/skills-sh/latest.md) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
 
 | Category | #1 Skill | Source | Installs | Stars | Audit |
 | --- | --- | --- | ---: | ---: | --- |
-| 前端 | [router](https://skills.sh/lubusin/frappe-skills/router) | `lubusin/frappe-skills` | 70 | 63 | pass |
-| React | [vercel-react-best-practices](https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices) | `vercel-labs/agent-skills` | 736,478 | 31,473 | pass |
-| Vue | [vue-best-practices](https://skills.sh/vuejs-ai/skills/vue-best-practices) | `vuejs-ai/skills` | 39,435 | 2,869 | pass |
-| Next.js | [clerk-nextjs-patterns](https://skills.sh/clerk/skills/clerk-nextjs-patterns) | `clerk/skills` | 46,171 | 76 | unknown |
-| 设计 / UI | [web-design-guidelines](https://skills.sh/vercel-labs/agent-skills/web-design-guidelines) | `vercel-labs/agent-skills` | 659,014 | 31,473 | unknown |
-| UX | [lean-ux](https://skills.sh/wondelai/skills/lean-ux) | `wondelai/skills` | 4,713 | 2,243 | unknown |
-| 移动端 | [agent-spec-mobile-react-native](https://skills.sh/ruvnet/ruflo/agent-spec-mobile-react-native) | `ruvnet/ruflo` | 1,266 | 73,092 | pass |
-| Agent 工作流 | [google-agents-cli-workflow](https://skills.sh/google/agents-cli/google-agents-cli-workflow) | `google/agents-cli` | 312,830 | 5,980 | warn |
-| 数据库 | [prisma-database-setup](https://skills.sh/prisma/skills/prisma-database-setup) | `prisma/skills` | 306,390 | 58 | pass |
-| 测试 | [playwright-testing](https://skills.sh/maddhruv/absolute/playwright-testing) | `maddhruv/absolute` | 160 | 215 | unknown |
-| 后端 / API | [extension-backend](https://skills.sh/quangpl/browser-extension-skills/extension-backend) | `quangpl/browser-extension-skills` | 140 | 54 | unknown |
-| Git / 交付 | [github-release](https://skills.sh/jezweb/claude-skills/github-release) | `jezweb/claude-skills` | 1,278 | 1,024 | unknown |
-| 3D / GPU | [threejs-webgl](https://skills.sh/freshtechbro/claudedesignskills/threejs-webgl) | `freshtechbro/claudedesignskills` | 3,824 | 922 | pass |
-| 工程化 | [vite](https://skills.sh/onmax/nuxt-skills/vite) | `onmax/nuxt-skills` | 2,192 | 711 | pass |
+| 前端 | [discover-frontend](https://skills.sh/rand/cc-polymath/discover-frontend) | `rand/cc-polymath` | 204 | 176 | pass |
+| React | [react](https://skills.sh/vercel-labs/json-render/react) | `vercel-labs/json-render` | 11,446 | 18,200 | pass |
+| Vue | [vue](https://skills.sh/onmax/nuxt-skills/vue) | `onmax/nuxt-skills` | 7,509 | 712 | pass |
+| Next.js | [nextjs](https://skills.sh/jezweb/claude-skills/nextjs) | `jezweb/claude-skills` | 1,052 | 1,025 | unknown |
+| 设计 / UI | [ui-design](https://skills.sh/shajith003/awesome-claude-skills/ui-design) | `shajith003/awesome-claude-skills` | 3,683 | 25 | unknown |
+| UX | [ux-researcher](https://skills.sh/dylantarre/animation-principles/ux-researcher) | `dylantarre/animation-principles` | 448 | 87 | unknown |
+| 移动端 | [cloudbase](https://skills.sh/tencentcloudbase/cloudbase-skills/cloudbase) | `tencentcloudbase/cloudbase-skills` | 11,783 | 33 | unknown |
+| Agent 工作流 | [agent-workflow](https://skills.sh/ruvnet/ruflo/agent-workflow) | `ruvnet/ruflo` | 1,415 | 73,163 | unknown |
+| 数据库 | [prisma-database-setup](https://skills.sh/prisma/skills/prisma-database-setup) | `prisma/skills` | 309,132 | 58 | unknown |
+| 测试 | [playwright-test](https://skills.sh/posthog/posthog/playwright-test) | `posthog/posthog` | 172 | 39,909 | pass |
+| 后端 / API | [code-to-prd](https://skills.sh/alirezarezvani/claude-skills/code-to-prd) | `alirezarezvani/claude-skills` | 723 | 26,360 | pass |
+| Git / 交付 | [claude-code-plugin-release](https://skills.sh/thedotmack/claude-mem/claude-code-plugin-release) | `thedotmack/claude-mem` | 4,212 | 94,565 | warn |
+| 3D / GPU | [threejs-webgl](https://skills.sh/freshtechbro/claudedesignskills/threejs-webgl) | `freshtechbro/claudedesignskills` | 3,837 | 925 | unknown |
+| 工程化 | [angular-tooling](https://skills.sh/analogjs/angular-skills/angular-tooling) | `analogjs/angular-skills` | 5,087 | 591 | unknown |
 
 > Leaderboard display and Pack candidate selection are separate: the ranking refreshes daily, while Pack candidates remain append-only and never replace existing Skills.
 <!-- skills-sh-weekly-ranking:end -->
