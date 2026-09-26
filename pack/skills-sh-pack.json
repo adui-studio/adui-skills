@@ -506,6 +506,126 @@
       "repoStars": 354,
       "auditStatus": "unknown",
       "selectedAt": "2026-09-23T03:56:21.877Z"
+    },
+    {
+      "key": "anthropics/skills@frontend-design",
+      "source": "anthropics/skills",
+      "name": "frontend-design",
+      "skillsShUrl": "https://skills.sh/anthropics/skills/frontend-design",
+      "category": "frontend",
+      "categoryName": "前端",
+      "installs": 922994,
+      "repoStars": 178374,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-26T04:10:11.258Z"
+    },
+    {
+      "key": "mattpocock/skills@tdd",
+      "source": "mattpocock/skills",
+      "name": "tdd",
+      "skillsShUrl": "https://skills.sh/mattpocock/skills/tdd",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 966917,
+      "repoStars": 269789,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-26T04:10:11.258Z"
+    },
+    {
+      "key": "greensock/gsap-skills@gsap-core",
+      "source": "greensock/gsap-skills",
+      "name": "gsap-core",
+      "skillsShUrl": "https://skills.sh/greensock/gsap-skills/gsap-core",
+      "category": "vue",
+      "categoryName": "Vue",
+      "installs": 59488,
+      "repoStars": 15673,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-26T04:10:11.258Z"
+    },
+    {
+      "key": "supabase/agent-skills@supabase",
+      "source": "supabase/agent-skills",
+      "name": "supabase",
+      "skillsShUrl": "https://skills.sh/supabase/agent-skills/supabase",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 293287,
+      "repoStars": 2655,
+      "auditStatus": "warn",
+      "selectedAt": "2026-09-26T04:10:11.258Z"
+    },
+    {
+      "key": "leonxlnx/taste-skill@high-end-visual-design",
+      "source": "leonxlnx/taste-skill",
+      "name": "high-end-visual-design",
+      "skillsShUrl": "https://skills.sh/leonxlnx/taste-skill/high-end-visual-design",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 380666,
+      "repoStars": 90169,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-26T04:10:11.258Z"
+    },
+    {
+      "key": "vercel-labs/agent-browser@agent-browser",
+      "source": "vercel-labs/agent-browser",
+      "name": "agent-browser",
+      "skillsShUrl": "https://skills.sh/vercel-labs/agent-browser/agent-browser",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 870763,
+      "repoStars": 43198,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-26T04:10:11.258Z"
+    },
+    {
+      "key": "supabase/agent-skills@supabase-postgres-best-practices",
+      "source": "supabase/agent-skills",
+      "name": "supabase-postgres-best-practices",
+      "skillsShUrl": "https://skills.sh/supabase/agent-skills/supabase-postgres-best-practices",
+      "category": "databases",
+      "categoryName": "数据库",
+      "installs": 417440,
+      "repoStars": 2655,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-26T04:10:11.258Z"
+    },
+    {
+      "key": "affaan-m/ecc@backend-patterns",
+      "source": "affaan-m/ecc",
+      "name": "backend-patterns",
+      "skillsShUrl": "https://skills.sh/affaan-m/ecc/backend-patterns",
+      "category": "backend-api",
+      "categoryName": "后端 / API",
+      "installs": 13923,
+      "repoStars": 267563,
+      "auditStatus": "pass",
+      "selectedAt": "2026-09-26T04:10:11.258Z"
+    },
+    {
+      "key": "affaan-m/ecc@github-ops",
+      "source": "affaan-m/ecc",
+      "name": "github-ops",
+      "skillsShUrl": "https://skills.sh/affaan-m/ecc/github-ops",
+      "category": "git-delivery",
+      "categoryName": "Git / 交付",
+      "installs": 7621,
+      "repoStars": 267563,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-26T04:10:11.258Z"
+    },
+    {
+      "key": "analogjs/angular-skills@angular-tooling",
+      "source": "analogjs/angular-skills",
+      "name": "angular-tooling",
+      "skillsShUrl": "https://skills.sh/analogjs/angular-skills/angular-tooling",
+      "category": "tooling",
+      "categoryName": "工程化",
+      "installs": 5107,
+      "repoStars": 590,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-09-26T04:10:11.258Z"
     }
   ]
 }
