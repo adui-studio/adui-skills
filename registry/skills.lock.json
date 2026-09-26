@@ -12,23 +12,23 @@
     "writing-plans": {
       "source": "obra/superpowers",
       "skillPath": "skills/writing-plans/SKILL.md",
-      "skillFolderHash": "e4d3c3faf3853a453016cece5de2ca0581807742",
-      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "committedAt": "2026-08-12T09:53:21-07:00"
+      "skillFolderHash": "cc97fa00eb2ccd4f283e34eb2ba06a48e1e679f7",
+      "repoCommit": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
+      "committedAt": "2026-09-25T11:06:27-07:00"
     },
     "systematic-debugging": {
       "source": "obra/superpowers",
       "skillPath": "skills/systematic-debugging/SKILL.md",
-      "skillFolderHash": "ab83fc82f82582e047d96fc516bac9bc03095ee0",
-      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "committedAt": "2026-08-12T09:53:21-07:00"
+      "skillFolderHash": "9a48dfda84bf339cba4b03fd803ba0dca2e158e3",
+      "repoCommit": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
+      "committedAt": "2026-09-25T11:06:27-07:00"
     },
     "test-driven-development": {
       "source": "obra/superpowers",
       "skillPath": "skills/test-driven-development/SKILL.md",
-      "skillFolderHash": "a82cf8b413600c6bd7c4b482272d7990e9588cf1",
-      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "committedAt": "2026-08-12T09:53:21-07:00"
+      "skillFolderHash": "847144cf0824095922c0d4875648b9fa74877e1a",
+      "repoCommit": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
+      "committedAt": "2026-09-25T11:06:27-07:00"
     },
     "verification-before-completion": {
       "source": "obra/superpowers",
@@ -40,9 +40,9 @@
     "requesting-code-review": {
       "source": "obra/superpowers",
       "skillPath": "skills/requesting-code-review/SKILL.md",
-      "skillFolderHash": "2ef6b5734813e7504d9866a7ec1ae89b505bfe70",
-      "repoCommit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "committedAt": "2026-08-12T09:53:21-07:00"
+      "skillFolderHash": "5fcdadfccd8c90987a11969d2f8c844820fee6e1",
+      "repoCommit": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
+      "committedAt": "2026-09-25T11:06:27-07:00"
     },
     "repomix-explorer": {
       "source": "yamadashy/repomix",
@@ -369,16 +369,16 @@
     "uniappx-project": {
       "source": "full-stack-skills/uniapp-skills",
       "skillPath": "skills/uniappx-project/SKILL.md",
-      "skillFolderHash": "9bfc6989c12acad441db4d4aceaaa30836771b27",
-      "repoCommit": "3782329a08d632661cb92f6f02bb8c9d64550d15",
-      "committedAt": "2026-09-11T21:43:48+08:00"
+      "skillFolderHash": "492e1f49645421f604f3090732c69b492ef8f3da",
+      "repoCommit": "e504968767d6c030105310c56235c96a17312a06",
+      "committedAt": "2026-09-24T00:59:56+08:00"
     },
     "uniapp-mini": {
       "source": "full-stack-skills/uniapp-skills",
       "skillPath": "skills/uniapp-mini/SKILL.md",
-      "skillFolderHash": "ef946486e748468029024cfe6e64d1b64ae129eb",
-      "repoCommit": "3782329a08d632661cb92f6f02bb8c9d64550d15",
-      "committedAt": "2026-09-11T21:43:48+08:00"
+      "skillFolderHash": "290b72eb33a1f6957db59356d218deab96424d06",
+      "repoCommit": "e504968767d6c030105310c56235c96a17312a06",
+      "committedAt": "2026-09-24T00:59:56+08:00"
     },
     "wechat-miniprogram": {
       "source": "joneqian/claude-skills-suite",
@@ -390,9 +390,9 @@
     "miniprogram-development": {
       "source": "tencentcloudbase/skills",
       "skillPath": "skills/miniprogram-development/SKILL.md",
-      "skillFolderHash": "4526171eea124ac23e1bde6b529087d58bc5bbc8",
-      "repoCommit": "ead79f4d3898b6b89a2ec04cbe9cd4ef1bf54010",
-      "committedAt": "2026-09-18T03:50:14Z"
+      "skillFolderHash": "445c5820a6dcdd59e58e9b24e5ec3cc758394039",
+      "repoCommit": "c97a456cd561768390ae1093c5a7d72eea0257ef",
+      "committedAt": "2026-09-24T15:45:46Z"
     },
     "threejs-fundamentals": {
       "source": "cloudai-x/threejs-skills",
