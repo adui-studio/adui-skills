@@ -118,24 +118,24 @@ Selection history is **append-only**: previous selections are never deleted, rep
 <!-- skills-sh-weekly-ranking:start -->
 ## skills.sh Daily Category Leaderboard
 
-> Updated daily. Latest ranking: **2026-10-03** · [View full Top 10 ranking](./reports/skills-sh/latest.md) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
+> Updated daily. Latest ranking: **2026-10-04** · [View full Top 10 ranking](./reports/skills-sh/latest.md) · [ADui Skills Pack](https://www.skills.sh/p/DCh7RQegkqCXcXn8)
 
 | Category | #1 Skill | Source | Installs | Stars | Audit |
 | --- | --- | --- | ---: | ---: | --- |
-| 前端 | [improve-codebase-architecture](https://skills.sh/mattpocock/skills/improve-codebase-architecture) | `mattpocock/skills` | 1,034,241 | 274,803 | warn |
-| React | [tdd](https://skills.sh/mattpocock/skills/tdd) | `mattpocock/skills` | 1,007,134 | 274,803 | pass |
-| Vue | [vercel-react-view-transitions](https://skills.sh/vercel-labs/agent-skills/vercel-react-view-transitions) | `vercel-labs/agent-skills` | 141,383 | 31,855 | pass |
-| Next.js | [vercel-react-best-practices](https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices) | `vercel-labs/agent-skills` | 766,243 | 31,855 | pass |
-| 设计 / UI | [grill-me](https://skills.sh/mattpocock/skills/grill-me) | `mattpocock/skills` | 1,272,329 | 274,803 | unknown |
-| UX | [find-skills](https://skills.sh/vercel-labs/skills/find-skills) | `vercel-labs/skills` | 3,674,627 | 33,002 | unknown |
-| 移动端 | [lark-im](https://skills.sh/open.feishu.cn/lark-im) | `open.feishu.cn` | 741,581 | 0 | unknown |
-| Agent 工作流 | [find-skills](https://skills.sh/vercel-labs/skills/find-skills) | `vercel-labs/skills` | 3,674,627 | 33,002 | unknown |
-| 数据库 | [supabase-postgres-best-practices](https://skills.sh/supabase/agent-skills/supabase-postgres-best-practices) | `supabase/agent-skills` | 427,985 | 2,686 | unknown |
-| 测试 | [tdd](https://skills.sh/mattpocock/skills/tdd) | `mattpocock/skills` | 1,007,134 | 274,803 | pass |
-| 后端 / API | [vercel-react-best-practices](https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices) | `vercel-labs/agent-skills` | 766,243 | 31,855 | pass |
-| Git / 交付 | [azure-prepare](https://skills.sh/microsoft/azure-skills/azure-prepare) | `microsoft/azure-skills` | 617,876 | 1,530 | warn |
-| 3D / GPU | [hyperframes-animation](https://skills.sh/heygen-com/hyperframes/hyperframes-animation) | `heygen-com/hyperframes` | 621,082 | 55,968 | pass |
-| 工程化 | [fastify-best-practices](https://skills.sh/mcollina/skills/fastify-best-practices) | `mcollina/skills` | 63,410 | 1,948 | warn |
+| 前端 | [improve-codebase-architecture](https://skills.sh/mattpocock/skills/improve-codebase-architecture) | `mattpocock/skills` | 1,038,663 | 275,449 | warn |
+| React | [tdd](https://skills.sh/mattpocock/skills/tdd) | `mattpocock/skills` | 1,011,674 | 275,449 | pass |
+| Vue | [vercel-react-view-transitions](https://skills.sh/vercel-labs/agent-skills/vercel-react-view-transitions) | `vercel-labs/agent-skills` | 141,961 | 31,893 | pass |
+| Next.js | [vercel-react-best-practices](https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices) | `vercel-labs/agent-skills` | 768,187 | 31,893 | pass |
+| 设计 / UI | [grill-me](https://skills.sh/mattpocock/skills/grill-me) | `mattpocock/skills` | 1,277,170 | 275,449 | unknown |
+| UX | [frontend-design](https://skills.sh/anthropics/skills/frontend-design) | `anthropics/skills` | 950,223 | 179,548 | pass |
+| 移动端 | [lark-im](https://skills.sh/open.feishu.cn/lark-im) | `open.feishu.cn` | 742,565 | 0 | unknown |
+| Agent 工作流 | [find-skills](https://skills.sh/vercel-labs/skills/find-skills) | `vercel-labs/skills` | 3,687,187 | 33,070 | unknown |
+| 数据库 | [supabase-postgres-best-practices](https://skills.sh/supabase/agent-skills/supabase-postgres-best-practices) | `supabase/agent-skills` | 429,321 | 2,694 | unknown |
+| 测试 | [tdd](https://skills.sh/mattpocock/skills/tdd) | `mattpocock/skills` | 1,011,674 | 275,449 | pass |
+| 后端 / API | [vercel-react-best-practices](https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices) | `vercel-labs/agent-skills` | 768,187 | 31,893 | pass |
+| Git / 交付 | [azure-prepare](https://skills.sh/microsoft/azure-skills/azure-prepare) | `microsoft/azure-skills` | 618,587 | 1,533 | warn |
+| 3D / GPU | [hyperframes-animation](https://skills.sh/heygen-com/hyperframes/hyperframes-animation) | `heygen-com/hyperframes` | 632,679 | 56,355 | pass |
+| 工程化 | [fastify-best-practices](https://skills.sh/mcollina/skills/fastify-best-practices) | `mcollina/skills` | 63,835 | 1,949 | warn |
 
 > Leaderboard display and Pack candidate selection are separate: the ranking refreshes daily, while Pack candidates remain append-only and never replace existing Skills.
 <!-- skills-sh-weekly-ranking:end -->
