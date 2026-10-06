@@ -1382,6 +1382,126 @@
       "repoStars": 273062,
       "auditStatus": "unknown",
       "selectedAt": "2026-10-05T04:45:24.536Z"
+    },
+    {
+      "key": "leonxlnx/taste-skill@imagegen-frontend-web",
+      "source": "leonxlnx/taste-skill",
+      "name": "imagegen-frontend-web",
+      "skillsShUrl": "https://skills.sh/leonxlnx/taste-skill/imagegen-frontend-web",
+      "category": "frontend",
+      "categoryName": "前端",
+      "installs": 338570,
+      "repoStars": 92905,
+      "auditStatus": "pass",
+      "selectedAt": "2026-10-06T05:32:36.061Z"
+    },
+    {
+      "key": "affaan-m/ecc@react-performance",
+      "source": "affaan-m/ecc",
+      "name": "react-performance",
+      "skillsShUrl": "https://skills.sh/affaan-m/ecc/react-performance",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 5312,
+      "repoStars": 273746,
+      "auditStatus": "pass",
+      "selectedAt": "2026-10-06T05:32:36.061Z"
+    },
+    {
+      "key": "sanity-io/agent-toolkit@sanity-best-practices",
+      "source": "sanity-io/agent-toolkit",
+      "name": "sanity-best-practices",
+      "skillsShUrl": "https://skills.sh/sanity-io/agent-toolkit/sanity-best-practices",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 28857,
+      "repoStars": 188,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-06T05:32:36.061Z"
+    },
+    {
+      "key": "leonxlnx/taste-skill@stitch-design-taste",
+      "source": "leonxlnx/taste-skill",
+      "name": "stitch-design-taste",
+      "skillsShUrl": "https://skills.sh/leonxlnx/taste-skill/stitch-design-taste",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 353442,
+      "repoStars": 92905,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-06T05:32:36.061Z"
+    },
+    {
+      "key": "larksuite/cli@lark-okr",
+      "source": "larksuite/cli",
+      "name": "lark-okr",
+      "skillsShUrl": "https://skills.sh/larksuite/cli/lark-okr",
+      "category": "ux",
+      "categoryName": "UX",
+      "installs": 389267,
+      "repoStars": 17542,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-06T05:32:36.061Z"
+    },
+    {
+      "key": "microsoft/azure-skills@azure-validate",
+      "source": "microsoft/azure-skills",
+      "name": "azure-validate",
+      "skillsShUrl": "https://skills.sh/microsoft/azure-skills/azure-validate",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 620617,
+      "repoStars": 1541,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-06T05:32:36.061Z"
+    },
+    {
+      "key": "wshobson/agents@postgresql-table-design",
+      "source": "wshobson/agents",
+      "name": "postgresql-table-design",
+      "skillsShUrl": "https://skills.sh/wshobson/agents/postgresql-table-design",
+      "category": "databases",
+      "categoryName": "数据库",
+      "installs": 26672,
+      "repoStars": 40232,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-06T05:32:36.061Z"
+    },
+    {
+      "key": "currents-dev/playwright-best-practices-skill@playwright-best-practices",
+      "source": "currents-dev/playwright-best-practices-skill",
+      "name": "playwright-best-practices",
+      "skillsShUrl": "https://skills.sh/currents-dev/playwright-best-practices-skill/playwright-best-practices",
+      "category": "testing",
+      "categoryName": "测试",
+      "installs": 90281,
+      "repoStars": 391,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-06T05:32:36.061Z"
+    },
+    {
+      "key": "mattpocock/skills@setup-pre-commit",
+      "source": "mattpocock/skills",
+      "name": "setup-pre-commit",
+      "skillsShUrl": "https://skills.sh/mattpocock/skills/setup-pre-commit",
+      "category": "git-delivery",
+      "categoryName": "Git / 交付",
+      "installs": 420004,
+      "repoStars": 277229,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-06T05:32:36.061Z"
+    },
+    {
+      "key": "heygen-com/hyperframes@animejs",
+      "source": "heygen-com/hyperframes",
+      "name": "animejs",
+      "skillsShUrl": "https://skills.sh/heygen-com/hyperframes/animejs",
+      "category": "3d-gpu",
+      "categoryName": "3D / GPU",
+      "installs": 72478,
+      "repoStars": 57416,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-06T05:32:36.061Z"
     }
   ]
 }
