@@ -1502,6 +1502,114 @@
       "repoStars": 57416,
       "auditStatus": "warn",
       "selectedAt": "2026-10-06T05:32:36.061Z"
+    },
+    {
+      "key": "emilkowalski/skills@emil-design-eng",
+      "source": "emilkowalski/skills",
+      "name": "emil-design-eng",
+      "skillsShUrl": "https://skills.sh/emilkowalski/skills/emil-design-eng",
+      "category": "frontend",
+      "categoryName": "前端",
+      "installs": 327006,
+      "repoStars": 43964,
+      "auditStatus": "pass",
+      "selectedAt": "2026-10-07T05:01:42.249Z"
+    },
+    {
+      "key": "affaan-m/ecc@react-patterns",
+      "source": "affaan-m/ecc",
+      "name": "react-patterns",
+      "skillsShUrl": "https://skills.sh/affaan-m/ecc/react-patterns",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 5293,
+      "repoStars": 274400,
+      "auditStatus": "pass",
+      "selectedAt": "2026-10-07T05:01:42.249Z"
+    },
+    {
+      "key": "kadajett/agent-nestjs-skills@nestjs-best-practices",
+      "source": "kadajett/agent-nestjs-skills",
+      "name": "nestjs-best-practices",
+      "skillsShUrl": "https://skills.sh/kadajett/agent-nestjs-skills/nestjs-best-practices",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 28947,
+      "repoStars": 287,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-07T05:01:42.249Z"
+    },
+    {
+      "key": "pbakaus/impeccable@impeccable",
+      "source": "pbakaus/impeccable",
+      "name": "impeccable",
+      "skillsShUrl": "https://skills.sh/pbakaus/impeccable/impeccable",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 315102,
+      "repoStars": 77817,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-07T05:01:42.249Z"
+    },
+    {
+      "key": "bmad-code-org/bmad-method@bmad-ux",
+      "source": "bmad-code-org/bmad-method",
+      "name": "bmad-ux",
+      "skillsShUrl": "https://skills.sh/bmad-code-org/bmad-method/bmad-ux",
+      "category": "ux",
+      "categoryName": "UX",
+      "installs": 6574,
+      "repoStars": 53866,
+      "auditStatus": "pass",
+      "selectedAt": "2026-10-07T05:01:42.249Z"
+    },
+    {
+      "key": "mattpocock/skills@wayfinder",
+      "source": "mattpocock/skills",
+      "name": "wayfinder",
+      "skillsShUrl": "https://skills.sh/mattpocock/skills/wayfinder",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 618300,
+      "repoStars": 278349,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-07T05:01:42.249Z"
+    },
+    {
+      "key": "vercel-labs/agent-skills@writing-guidelines",
+      "source": "vercel-labs/agent-skills",
+      "name": "writing-guidelines",
+      "skillsShUrl": "https://skills.sh/vercel-labs/agent-skills/writing-guidelines",
+      "category": "testing",
+      "categoryName": "测试",
+      "installs": 85807,
+      "repoStars": 32013,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-07T05:01:42.249Z"
+    },
+    {
+      "key": "heygen-com/hyperframes@product-launch-video",
+      "source": "heygen-com/hyperframes",
+      "name": "product-launch-video",
+      "skillsShUrl": "https://skills.sh/heygen-com/hyperframes/product-launch-video",
+      "category": "git-delivery",
+      "categoryName": "Git / 交付",
+      "installs": 372260,
+      "repoStars": 58051,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-07T05:01:42.249Z"
+    },
+    {
+      "key": "greensock/gsap-skills@gsap-performance",
+      "source": "greensock/gsap-skills",
+      "name": "gsap-performance",
+      "skillsShUrl": "https://skills.sh/greensock/gsap-skills/gsap-performance",
+      "category": "3d-gpu",
+      "categoryName": "3D / GPU",
+      "installs": 59230,
+      "repoStars": 15991,
+      "auditStatus": "pass",
+      "selectedAt": "2026-10-07T05:01:42.249Z"
     }
   ]
 }
