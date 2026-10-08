@@ -1610,6 +1610,78 @@
       "repoStars": 15991,
       "auditStatus": "pass",
       "selectedAt": "2026-10-07T05:01:42.249Z"
+    },
+    {
+      "key": "github/awesome-copilot@web-coder",
+      "source": "github/awesome-copilot",
+      "name": "web-coder",
+      "skillsShUrl": "https://skills.sh/github/awesome-copilot/web-coder",
+      "category": "frontend",
+      "categoryName": "前端",
+      "installs": 5545,
+      "repoStars": 39794,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-08T05:12:23.381Z"
+    },
+    {
+      "key": "larksuite/cli@lark-event",
+      "source": "larksuite/cli",
+      "name": "lark-event",
+      "skillsShUrl": "https://skills.sh/larksuite/cli/lark-event",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 452317,
+      "repoStars": 17558,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-08T05:12:23.381Z"
+    },
+    {
+      "key": "wshobson/agents@web-component-design",
+      "source": "wshobson/agents",
+      "name": "web-component-design",
+      "skillsShUrl": "https://skills.sh/wshobson/agents/web-component-design",
+      "category": "vue",
+      "categoryName": "Vue",
+      "installs": 12674,
+      "repoStars": 40287,
+      "auditStatus": "pass",
+      "selectedAt": "2026-10-08T05:12:23.381Z"
+    },
+    {
+      "key": "vercel/next.js@next-dev-loop",
+      "source": "vercel/next.js",
+      "name": "next-dev-loop",
+      "skillsShUrl": "https://skills.sh/vercel/next.js/next-dev-loop",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 18713,
+      "repoStars": 143243,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-08T05:12:23.381Z"
+    },
+    {
+      "key": "emilkowalski/skills@apple-design",
+      "source": "emilkowalski/skills",
+      "name": "apple-design",
+      "skillsShUrl": "https://skills.sh/emilkowalski/skills/apple-design",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 192307,
+      "repoStars": 44159,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-08T05:12:23.381Z"
+    },
+    {
+      "key": "firecrawl/skills@firecrawl-build-search",
+      "source": "firecrawl/skills",
+      "name": "firecrawl-build-search",
+      "skillsShUrl": "https://skills.sh/firecrawl/skills/firecrawl-build-search",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 60388,
+      "repoStars": 116,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-08T05:12:23.381Z"
     }
   ]
 }
