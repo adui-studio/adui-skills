@@ -1682,6 +1682,54 @@
       "repoStars": 116,
       "auditStatus": "warn",
       "selectedAt": "2026-10-08T05:12:23.381Z"
+    },
+    {
+      "key": "vercel-labs/agent-skills@vercel-composition-patterns",
+      "source": "vercel-labs/agent-skills",
+      "name": "vercel-composition-patterns",
+      "skillsShUrl": "https://skills.sh/vercel-labs/agent-skills/vercel-composition-patterns",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 384604,
+      "repoStars": 32189,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-11T04:48:25.753Z"
+    },
+    {
+      "key": "vercel/next.js@next-cache-components-adoption",
+      "source": "vercel/next.js",
+      "name": "next-cache-components-adoption",
+      "skillsShUrl": "https://skills.sh/vercel/next.js/next-cache-components-adoption",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 17764,
+      "repoStars": 143111,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-11T04:48:25.753Z"
+    },
+    {
+      "key": "mattpocock/skills@prototype",
+      "source": "mattpocock/skills",
+      "name": "prototype",
+      "skillsShUrl": "https://skills.sh/mattpocock/skills/prototype",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 916565,
+      "repoStars": 284747,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-11T04:48:25.753Z"
+    },
+    {
+      "key": "addyosmani/agent-skills@using-agent-skills",
+      "source": "addyosmani/agent-skills",
+      "name": "using-agent-skills",
+      "skillsShUrl": "https://skills.sh/addyosmani/agent-skills/using-agent-skills",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 47643,
+      "repoStars": 104574,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-11T04:48:25.753Z"
     }
   ]
 }
