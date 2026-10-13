@@ -1730,6 +1730,54 @@
       "repoStars": 104574,
       "auditStatus": "warn",
       "selectedAt": "2026-10-11T04:48:25.753Z"
+    },
+    {
+      "key": "emilkowalski/skills@ask-sonner",
+      "source": "emilkowalski/skills",
+      "name": "ask-sonner",
+      "skillsShUrl": "https://skills.sh/emilkowalski/skills/ask-sonner",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 110746,
+      "repoStars": 45776,
+      "auditStatus": "pass",
+      "selectedAt": "2026-10-13T06:03:23.605Z"
+    },
+    {
+      "key": "expo/skills@expo-web-to-native",
+      "source": "expo/skills",
+      "name": "expo-web-to-native",
+      "skillsShUrl": "https://skills.sh/expo/skills/expo-web-to-native",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 16931,
+      "repoStars": 2801,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-13T06:03:23.605Z"
+    },
+    {
+      "key": "google-labs-code/stitch-skills@enhance-prompt",
+      "source": "google-labs-code/stitch-skills",
+      "name": "enhance-prompt",
+      "skillsShUrl": "https://skills.sh/google-labs-code/stitch-skills/enhance-prompt",
+      "category": "design-ui",
+      "categoryName": "设计 / UI",
+      "installs": 57397,
+      "repoStars": 8485,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-13T06:03:23.605Z"
+    },
+    {
+      "key": "coreyhaines31/marketingskills@marketing-loops",
+      "source": "coreyhaines31/marketingskills",
+      "name": "marketing-loops",
+      "skillsShUrl": "https://skills.sh/coreyhaines31/marketingskills/marketing-loops",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 41653,
+      "repoStars": 54420,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-13T06:03:23.605Z"
     }
   ]
 }
