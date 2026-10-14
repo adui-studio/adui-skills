@@ -1778,6 +1778,42 @@
       "repoStars": 54420,
       "auditStatus": "warn",
       "selectedAt": "2026-10-13T06:03:23.605Z"
+    },
+    {
+      "key": "anthropics/skills@web-artifacts-builder",
+      "source": "anthropics/skills",
+      "name": "web-artifacts-builder",
+      "skillsShUrl": "https://skills.sh/anthropics/skills/web-artifacts-builder",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 108476,
+      "repoStars": 180969,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-14T04:06:33.152Z"
+    },
+    {
+      "key": "vercel/next.js@next-cache-components-optimizer",
+      "source": "vercel/next.js",
+      "name": "next-cache-components-optimizer",
+      "skillsShUrl": "https://skills.sh/vercel/next.js/next-cache-components-optimizer",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 17041,
+      "repoStars": 143221,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-14T04:06:33.152Z"
+    },
+    {
+      "key": "firecrawl/firecrawl-workflows@firecrawl-website-design-clone",
+      "source": "firecrawl/firecrawl-workflows",
+      "name": "firecrawl-website-design-clone",
+      "skillsShUrl": "https://skills.sh/firecrawl/firecrawl-workflows/firecrawl-website-design-clone",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 32821,
+      "repoStars": 192,
+      "auditStatus": "warn",
+      "selectedAt": "2026-10-14T04:06:33.152Z"
     }
   ]
 }
