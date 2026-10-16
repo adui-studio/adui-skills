@@ -1814,6 +1814,42 @@
       "repoStars": 192,
       "auditStatus": "warn",
       "selectedAt": "2026-10-14T04:06:33.152Z"
+    },
+    {
+      "key": "emilkowalski/skills@animate-expo",
+      "source": "emilkowalski/skills",
+      "name": "animate-expo",
+      "skillsShUrl": "https://skills.sh/emilkowalski/skills/animate-expo",
+      "category": "react",
+      "categoryName": "React",
+      "installs": 109303,
+      "repoStars": 46294,
+      "auditStatus": "pass",
+      "selectedAt": "2026-10-15T03:49:06.403Z"
+    },
+    {
+      "key": "github/awesome-copilot@next-intl-add-language",
+      "source": "github/awesome-copilot",
+      "name": "next-intl-add-language",
+      "skillsShUrl": "https://skills.sh/github/awesome-copilot/next-intl-add-language",
+      "category": "nextjs",
+      "categoryName": "Next.js",
+      "installs": 9322,
+      "repoStars": 40030,
+      "auditStatus": "unknown",
+      "selectedAt": "2026-10-15T03:49:06.403Z"
+    },
+    {
+      "key": "tt-a1i/archify@archify",
+      "source": "tt-a1i/archify",
+      "name": "archify",
+      "skillsShUrl": "https://skills.sh/tt-a1i/archify/archify",
+      "category": "agent-workflows",
+      "categoryName": "Agent 工作流",
+      "installs": 153870,
+      "repoStars": 83639,
+      "auditStatus": "pass",
+      "selectedAt": "2026-10-15T03:49:06.403Z"
     }
   ]
 }
